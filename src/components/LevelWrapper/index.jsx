@@ -3,7 +3,6 @@ import { Dimensions, ImageBackground, StyleSheet, View } from 'react-native'
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 export const LevelWrapper = ({ children, jC = 'space-between', paddingTop, img, img2 }) => {
-    console.log(paddingTop, img, img2)
     return (
 
         <ImageBackground source={img2} resizeMode="cover" style={styles.image}>
