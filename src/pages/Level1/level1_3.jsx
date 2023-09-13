@@ -1,14 +1,59 @@
 import { Dimensions, StyleSheet, View } from "react-native"
 import { LevelWrapper } from "../../components/LevelWrapper"
-import { Butterfly1, Butterfly2 } from "../../assets/svg"
+import { BlueButterFly, BlueButterFly1, BlueGlass, BlueGlass1, Butterfly1, Butterfly2, Butterfly3, GreenGlass, GreenGlass1, RedButterFly1, RedButterfily, RedGlass, RedGlass1, YellowButterFly, YellowButterfly1 } from "../../assets/svg"
 import { ImgButton } from "../../components/ImgButton";
 import { useEffect, useState } from "react";
 import Sound from "react-native-sound";
 
 const windowWidth = Dimensions.get('window').width;
-const height = Dimensions.get('window').height;
 
 export const Level1_3 = () => {
+    const [side1, setSide1] = useState([
+        [
+            [
+                { icone: <Butterfly3 key={1} />, id: 1, active: false },
+                { icone: <RedButterfily key={2} />, id: 2, active: false },
+                { icone: <BlueButterFly key={4} />, id: 3, active: false }
+            ],
+            [
+                { icone: <Butterfly2 key={1} />, id: 4, active: false },
+                { icone: <RedButterFly1 key={2} />, id: 5, active: false },
+                { icone: <BlueButterFly1 key={4} />, id: 6, active: false }
+            ]
+        ],
+        [
+            [
+                { icone: <BlueGlass key={1} />, id: 1, active: false },
+                { icone: <RedGlass key={2} />, id: 2, active: false },
+                { icone: <GreenGlass key={4} />, id: 3, active: false }
+            ],
+            [
+                { icone: <BlueGlass1 key={1} />, id: 4, active: false },
+                { icone: <RedGlass1 key={2} />, id: 5, active: false },
+                { icone: <GreenGlass1 key={4} />, id: 6, active: false }
+            ]
+        ],
+
+    ])
+
+
+    function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
+
+        while (currentIndex > 0) {
+
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+
+        return array;
+    }
+
+
+
+    const [activeGame, setActiveGame] = useState([])
     const [active, setActive] = useState([
         { value1: '', value2: '' },
         { value1: '', value2: '' },
@@ -21,42 +66,75 @@ export const Level1_3 = () => {
                 return
             }
         });
+    const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
     const [activeNumber, setActiveNumber] = useState({ number1: '', number2: '' })
     const [answer, setAnswer] = useState([false, false, false, false, false, false, false])
     const Game = (number) => {
         let item = [...active]
         let tepm = [...answer]
         let item2 = { ...activeNumber }
+        let item3 = [...activeGame]
         for (let i = 0; i < item.length; i++) {
-            if (item[i].value1 == '' && number % 2 == 1) {
+            if (number <= 3) {
                 item[i].value1 = number
                 item2.number1 = number
                 break
             }
-            else if (item[i].value2 == '' && number % 2 == 0) {
+            else if (number > 3) {
                 item[i].value2 = number
                 item2.number2 = number
                 break
             }
         }
-        if ((item2.number1 != '' && item2.number2 != '')) {
-            tepm[item2.number1] = true
-            tepm[item2.number2] = true
-            item2.number2 = ''
+
+        if (item2.number1 + 3 == item2.number2) {
+            const isLargeNumber = (element) => element.id == item2.number1;
+            const isLargeNumber1 = (element) => element.id == item2.number2;
+            let i1 = item3[0].findIndex(isLargeNumber)
+            let i2 = item3[1].findIndex(isLargeNumber1)
+            item3[0][i1].active = true
+            item3[1][i2].active = true
             item2.number1 = ''
+            item2.number2 = ''
+            setActive(item3)
+
         }
+        else if (item2.number1 != '' && item2.number2 != '') {
+            setTimeout(() => {
+                music.play();
+            }, 100);
+            setTimeout(() => {
+                music.stop()
+                item2.number1 = ''
+                item2.number2 = ''
+                item3[0].map((elm, i) => {
+                    elm.active = false
+                })
+                item3[1].map((elm, i) => {
+                    elm.active = false
+                })
+                setActive(item3)
+                setActiveNumber(item2)
+            }, 1000);
+        }
+        setActiveNumber(item2)
         setActive(item)
         setAnswer(tepm)
-        setActiveNumber(item2)
     }
     useEffect(() => {
         let win = true
-        answer.map((elm, i) => {
-            if (i !== 0 && !elm) {
+        activeGame.length && activeGame[0].map((elm, i) => {
+            if (!elm.active) {
                 win = false
             }
         })
-        if (win) {
+        if (win && activeGame.length) {
             setTimeout(() => {
                 musicSuccess.play();
             }, 100);
@@ -65,35 +143,33 @@ export const Level1_3 = () => {
             }, 5000);
         }
     }, [answer])
+
+    useEffect(() => {
+        const randomZeroOrOne = Math.floor(Math.random() * 2);
+        if (!activeGame.length) {
+            let arr1 = shuffle(side1[randomZeroOrOne][0])
+            let arr2 = shuffle(side1[randomZeroOrOne][1])
+            setActiveGame([arr1, arr2])
+        }
+    }, [])
     return (
         <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')}>
             <View style={{ flexDirection: 'row', justifyContent: "space-around", paddingHorizontal: 100 }}>
                 <View style={styles.block}>
-                    {!answer[1] ?
-                        <ImgButton onPress={() => Game(1)} svg={<Butterfly1 />} border={activeNumber.number1 == 1 ? 'green' : 'rgba(160, 205, 212, 0.50)'} /> :
-                        <View style={{ width: 90, height: 90 }}></View>
-                    }
-                    {!answer[3] ?
-                        <ImgButton onPress={() => Game(3)} svg={<Butterfly1 />} border={activeNumber.number1 == 3 ? 'green' : 'rgba(160, 205, 212, 0.50)'} /> :
-                        <View style={{ width: 90, height: 90 }}></View>
-                    }
-                    {!answer[5] ?
-                        <ImgButton onPress={() => Game(5)} svg={<Butterfly1 />} border={activeNumber.number1 == 5 ? 'green' : 'rgba(160, 205, 212, 0.50)'} /> :
-                        <View style={{ width: 90, height: 90 }}></View>
-                    }
+                    {activeGame.length > 0 && activeGame[0].map((elm, i) => {
+                        if (elm.active) {
+                            return <View key={i} style={{ width: 90, height: 90 }} />
+                        }
+                        return <ImgButton key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number1 == elm.id ? 'green' : 'rgba(160, 205, 212, 0.50)'} />
+                    })}
                 </View>
                 <View style={styles.block}>
-                    {!answer[2] ? <ImgButton onPress={() => Game(2)} svg={<Butterfly2 />} border={activeNumber.number2 == 2 ? 'green' : 'rgba(160, 205, 212, 0.50)'} />
-                        : <View style={{ width: 90, height: 90 }}></View>
-                    }
-                    {!answer[4] ?
-                        <ImgButton onPress={() => Game(4)} svg={<Butterfly2 />} border={activeNumber.number2 == 4 ? 'green' : 'rgba(160, 205, 212, 0.50)'} /> :
-                        <View style={{ width: 90, height: 90 }}></View>
-                    }
-                    {!answer[6] ?
-                        <ImgButton onPress={() => Game(6)} svg={<Butterfly2 />} border={activeNumber.number2 == 6 ? 'green' : 'rgba(160, 205, 212, 0.50)'} /> :
-                        <View style={{ width: 90, height: 90 }}></View>
-                    }
+                    {activeGame.length > 0 && activeGame[1].map((elm, i) => {
+                        if (elm.active) {
+                            return <View key={i} style={{ width: 90, height: 90 }} />
+                        }
+                        return <ImgButton key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number2 == elm.id ? 'green' : 'rgba(160, 205, 212, 0.50)'} />
+                    })}
                 </View>
             </View>
         </LevelWrapper>

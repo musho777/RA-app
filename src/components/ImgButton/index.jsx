@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native"
 
-export const ImgButton = ({ svg, border = 'rgba(153, 204, 51, 0.40)', onPress }) => {
-    return <TouchableOpacity onPress={onPress} style={[styles.button, { borderColor: border }]}>
+export const ImgButton = ({ svg, border = 'rgba(153, 204, 51, 0.40)', onPress, big }) => {
+    return <TouchableOpacity onPress={onPress} style={[styles.button, { borderColor: border }, big && { width: 300, height: 300 }]}>
         {svg}
     </TouchableOpacity>
 }
