@@ -1,27 +1,84 @@
 import { View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
-import { Cendy1 } from '../../assets/svg'
+import { Cendy1, Cendy2, Cendy3, Cendy4, Cendy5 } from '../../assets/svg'
+import { useState } from 'react'
+import Sound from 'react-native-sound'
 
 export const Level2_5 = () => {
+    const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const [arr, setArr] = useState([
+        { icone: <Cendy4 />, id: 4, active: false },
+        { icone: <Cendy3 />, id: 3, active: false },
+        { icone: <Cendy1 />, id: 1, active: false },
+        { icone: <Cendy5 />, id: 5, active: false },
+        { icone: <Cendy2 />, id: 2, active: false },
+    ])
+    const [answer, setAnswer] = useState([
+        { icone: '', id: '' },
+        { icone: '', id: '' },
+        { icone: '', id: '' },
+        { icone: '', id: '' },
+        { icone: '', id: '' },
+
+    ])
+    const Game = (id, icone, i) => {
+        let item = [...arr]
+        let temp = [...answer]
+        for (let i = 0; i < temp.length; i++) {
+            if (temp[i].id == '') {
+                temp[i].id = id
+                temp[i].icone = icone
+                break
+            }
+        }
+        item[i].active = true
+
+        temp.map((elm, i) => {
+            if (temp[i].id != '' && temp[i].id != i + 1) {
+                temp.map((elm, i) => {
+                    elm.id = ''
+                    elm.icone = ''
+                })
+                item.map((elm, i) => {
+                    elm.active = false
+                })
+                setTimeout(() => {
+                    music.play();
+                }, 100);
+            }
+        })
+        setAnswer(temp)
+        setArr(item)
+    }
     return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 50 }}>
-                <ImgButton />
-                <ImgButton />
-                <ImgButton />
-                <ImgButton />
-                <ImgButton />
-                <ImgButton />
+                {answer.map((elm, i) => {
+                    return <ImgButton key={i} svg={elm.icone} />
+                })}
             </View>
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#9C3', borderRadius: 10 }}></View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 50 }}>
-                <ImgButton svg={<Cendy1 />} />
-                <ImgButton svg={<Cendy1 />} />
-                <ImgButton svg={<Cendy1 />} />
-                <ImgButton svg={<Cendy1 />} />
-                <ImgButton svg={<Cendy1 />} />
-                <ImgButton svg={<Cendy1 />} />
+                {arr.map((elm, i) => {
+                    if (elm.active) {
+                        return <View key={i} style={{ width: 90, height: 90 }}></View>
+                    }
+                    return <ImgButton onPress={() => Game(elm.id, elm.icone, i,)} key={i} svg={elm.icone} />
+                })}
             </View>
         </View>
     </LevelWrapper>

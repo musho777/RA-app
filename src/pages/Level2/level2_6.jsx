@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
-import { Cendy1, Turtle } from '../../assets/svg'
+import { Turtle } from '../../assets/svg'
 
 export const Level2_6 = () => {
     return <LevelWrapper img2={require('../../assets/img/bg5.png')} img={require('../../assets/img/5bg.png')} >
