@@ -1,7 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Appearance } from 'react-native';
-import { useEffect } from 'react';
 import { LevelScreen } from './src/pages/Level';
 import { Selection } from './src/pages/Selection';
 import { Level1_1 } from './src/pages/Level1/level1_1';
@@ -10,24 +8,18 @@ import { Level1_3 } from './src/pages/Level1/level1_3';
 import { Level1_4 } from './src/pages/Level1/level1_4';
 import { Level1_5 } from './src/pages/Level1/level1_5';
 import { Level1_6 } from './src/pages/Level1/level1_6';
+import { Level2_1 } from './src/pages/Level2/level2_1';
+import { Level2_2 } from './src/pages/Level2/level2_2';
+import { Level2_5 } from './src/pages/Level2/level2_5';
+import { Level2_6 } from './src/pages/Level2/level2_6';
+import Sound from 'react-native-sound';
 
 
 export default Navigation = () => {
   const Stack = createStackNavigator();
-
-  // let color = mainData.mood
-  // const MyTheme = {
-  //   dark: false,
-  //   colors: {
-  //     primary: color,
-  //     background: color === '#ECF3FB' ? "#FFFFFF" : color,
-  //     border: color,
-  //   },
-  // };
-
   return (
     <NavigationContainer >
-      <Stack.Navigator initialRouteName={'LevelScreen'} >
+      <Stack.Navigator initialRouteName={'Level2_6'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}
@@ -80,6 +72,34 @@ export default Navigation = () => {
         <Stack.Screen
           name="Level1_6"
           component={Level1_6}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level2_1"
+          component={Level2_1}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level2_2"
+          component={Level2_2}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level2_5"
+          component={Level2_5}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level2_6"
+          component={Level2_6}
           options={{
             headerShown: false
           }}
