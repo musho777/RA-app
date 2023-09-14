@@ -5,9 +5,9 @@ import { ImgButton } from "../../components/ImgButton";
 import { useEffect, useState } from "react";
 import Sound from "react-native-sound";
 
-const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
-export const Level1_3 = () => {
+export const Level1_3 = ({ navigation }) => {
     const [side1, setSide1] = useState([
         [
             [
@@ -140,7 +140,8 @@ export const Level1_3 = () => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-            }, 5000);
+                navigation.navigate('Level1_4')
+            }, 2000);
         }
     }, [answer])
 
@@ -180,6 +181,6 @@ const styles = StyleSheet.create({
     block: {
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: windowWidth - 80
+        height: windowHeight - 80
     }
 })

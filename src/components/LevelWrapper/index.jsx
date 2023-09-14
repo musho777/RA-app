@@ -7,8 +7,8 @@ export const LevelWrapper = ({ children, jC = 'space-between', paddingTop, img, 
 
         <ImageBackground source={img2} resizeMode="cover" style={styles.image}>
             <ImageBackground style={[styles.opacity]} source={img} >
-                <View style={{ transform: [{ rotate: '-90deg' }] }}>
-                    <View style={{ justifyContent: jC, height: windowWidth - 80, paddingTop: paddingTop, width: windowHeight - 80 }}>
+                <View>
+                    <View style={{ justifyContent: jC, height: windowHeight - 80, paddingTop: paddingTop, width: windowWidth - 80 }}>
                         {children}
                     </View>
                 </View>

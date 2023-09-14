@@ -7,13 +7,7 @@ import Sound from 'react-native-sound';
 
 
 const windowWidth = Dimensions.get('window').width;
-export const Level1_5 = () => {
-    // const [active, setActive] = useState([
-    //     { value1: '', value2: '' },
-    //     { value1: '', value2: '' },
-    //     { value1: '', value2: '' },
-    // ])
-    // const [activeGame, setActiveGame] = useState([])
+export const Level1_5 = ({ navigation }) => {
     const [arr, setArr] = useState([
         [
             { icone: <WhiteTrain />, id: 1, active: false },
@@ -71,12 +65,12 @@ export const Level1_5 = () => {
             item[1][i2].active = true
             item2.number1 = ''
             item2.number2 = ''
-            setTimeout(() => {
-                musicSuccess.play();
-            }, 100);
-            setTimeout(() => {
-                musicSuccess.stop()
-            }, 5000);
+            // setTimeout(() => {
+            //     musicSuccess.play();
+            // }, 100);
+            // setTimeout(() => {
+            //     musicSuccess.stop()
+            // }, 5000);
             setArr(item)
 
         }
@@ -120,6 +114,31 @@ export const Level1_5 = () => {
         let arr2 = shuffle(arr[1])
         setArr([arr1, arr2])
     }, [])
+
+    useEffect(() => {
+        // navigation
+        let win = true
+        arr[0].map((elm, i) => {
+            console.log(elm)
+            if (!elm.active) {
+                win = false
+            }
+        })
+        arr[1].map((elm, i) => {
+            if (!elm.active) {
+                win = false
+            }
+        })
+        if (win) {
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+                navigation.navigate('Level1_6')
+            }, 2000);
+        }
+    }, [arr])
 
     if (game) {
         return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>

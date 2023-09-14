@@ -12,10 +12,8 @@ export const Level1_6 = () => {
     ])
     const [svg, setSvg] = useState([
         { icone: <Lisa />, id: 1 },
-        // <Wolf1 />,
         { icone: < Hedgehog />, id: 2 },
         { icone: <Chicken />, id: 3 },
-        // <Rooster1 />
     ])
 
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
@@ -104,8 +102,8 @@ export const Level1_6 = () => {
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 30 }}>
             {active?.map((elm, i) => {
-                return <View style={i == 1 && { marginHorizontal: 30 }}>
-                    <ImgButton onPress={() => Game(elm.id)} key={i} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
+                return <View key={i} style={i == 1 && { marginHorizontal: 30 }}>
+                    <ImgButton onPress={() => Game(elm.id)} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
                 </View>
             })}
         </View>

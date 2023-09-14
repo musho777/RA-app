@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react';
 import Sound from 'react-native-sound';
 
 
-const windowWidth = Dimensions.get('window').width;
-export const Level1_4 = () => {
+const windowHeight = Dimensions.get('window').height;
+export const Level1_4 = ({ navigation }) => {
 
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -62,7 +62,8 @@ export const Level1_4 = () => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-            }, 1000);
+                navigation.navigate('Level1_5')
+            }, 2000);
         }
         else {
             setTimeout(() => {
@@ -95,13 +96,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-        height: windowWidth - 80,
+        height: windowHeight - 80,
         paddingHorizontal: 100
     },
     block2: {
         alignItems: 'center',
         justifyContent: 'center',
-        height: windowWidth - 80,
+        height: windowHeight - 80,
         paddingHorizontal: 100
     }
 })

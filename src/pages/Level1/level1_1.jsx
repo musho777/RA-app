@@ -8,7 +8,7 @@ import Sound from 'react-native-sound';
 Sound.setCategory('Playback');
 const windowWidth = Dimensions.get('window').width;
 
-export const Level1_1 = () => {
+export const Level1_1 = ({ navigation }) => {
     const [value1, setValue1] = useState('')
     const [value2, setValue2] = useState('')
 
@@ -92,8 +92,9 @@ export const Level1_1 = () => {
                     musicSuccess.play();
                 }, 100);
                 setTimeout(() => {
+                    navigation.navigate('Level1_2')
                     musicSuccess.stop()
-                }, 5000);
+                }, 2000);
             }
         }
     }, [value1, value2])
@@ -104,8 +105,8 @@ export const Level1_1 = () => {
         img2={require('../../assets/img/33.png')}
     >
         <View style={{ flexDirection: 'row' }}>
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: windowWidth - 40 }}>
-                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: windowWidth - 40 }}>
+            <View style={{ justifyContent: 'center', alignItems: 'center', width: '50%' }}>
+                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '100%' }}>
                     {
                         activeGame[0]?.icone.map((elm, i) => {
                             return elm
@@ -117,8 +118,8 @@ export const Level1_1 = () => {
                     <NumberButton disabled={true} number={value1} />
                 }
             </View>
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: windowWidth - 40, }}>
-                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: windowWidth - 40 }}>
+            <View style={{ justifyContent: 'center', alignItems: 'center', width: '50%' }}>
+                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '100%' }}>
                     {
                         activeGame[1]?.icone.map((elm, i) => {
                             return elm
