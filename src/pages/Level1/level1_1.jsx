@@ -11,7 +11,7 @@ const windowWidth = Dimensions.get('window').width;
 export const Level1_1 = ({ navigation }) => {
     const [value1, setValue1] = useState('')
     const [value2, setValue2] = useState('')
-
+    const [disable, setDisable] = useState(false)
     const buuton = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
     const [game, setGame] = useState([
         [
@@ -73,6 +73,7 @@ export const Level1_1 = ({ navigation }) => {
             if (value1 != activeGame[0]?.count || value2 != activeGame[1]?.count) {
                 // music.play()
                 setTimeout(() => {
+                    setDisable(true)
                     music.play();
                 }, 100);
                 setTimeout(() => {
@@ -81,6 +82,7 @@ export const Level1_1 = ({ navigation }) => {
                 setTimeout(() => {
                     setValue1('')
                     setValue2("")
+                    setDisable(false)
                     setActiveGame([
                         activeGame[1],
                         activeGame[0]
@@ -106,7 +108,7 @@ export const Level1_1 = ({ navigation }) => {
     >
         <View style={{ flexDirection: 'row' }}>
             <View style={{ justifyContent: 'center', alignItems: 'center', width: '50%' }}>
-                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '100%' }}>
+                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '80%' }}>
                     {
                         activeGame[0]?.icone.map((elm, i) => {
                             return elm
@@ -119,7 +121,7 @@ export const Level1_1 = ({ navigation }) => {
                 }
             </View>
             <View style={{ justifyContent: 'center', alignItems: 'center', width: '50%' }}>
-                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '100%' }}>
+                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '80%' }}>
                     {
                         activeGame[1]?.icone.map((elm, i) => {
                             return elm
@@ -135,7 +137,7 @@ export const Level1_1 = ({ navigation }) => {
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             {buuton.map((elm, i) => {
                 if (elm != value1 && elm != value2)
-                    return <NumberButton key={i} onPress={() => Answer(elm)} number={elm} />
+                    return <NumberButton disabled={disable} key={i} onPress={() => Answer(elm)} number={elm} />
             })}
         </View>
     </LevelWrapper>

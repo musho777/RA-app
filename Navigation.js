@@ -12,7 +12,6 @@ import { Level2_1 } from './src/pages/Level2/level2_1';
 import { Level2_2 } from './src/pages/Level2/level2_2';
 import { Level2_5 } from './src/pages/Level2/level2_5';
 import { Level2_6 } from './src/pages/Level2/level2_6';
-import Sound from 'react-native-sound';
 
 
 export default Navigation = () => {

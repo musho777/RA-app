@@ -102,7 +102,7 @@ export const Level1_6 = () => {
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 30 }}>
             {active?.map((elm, i) => {
-                return <View key={i} style={i == 1 && { marginHorizontal: 30 }}>
+                return <View key={i} style={i == 1 && { marginHorizontal: 80 }}>
                     <ImgButton onPress={() => Game(elm.id)} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
                 </View>
             })}

@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 
 export default SwiperComponent = ({ navigation }) => {
     return (
-        <Swiper vertical={false} >
+        <Swiper loop={false} vertical={false} >
             <View style={styles.slide1}>
                 <TouchableOpacity onPress={() => navigation.navigate('Selection')}>
                     <Image style={styles.img} source={require('../../assets/img/image1.png')} />
