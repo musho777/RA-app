@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     text: {
         color: '#fff',
         fontSize: 35,
-        fontWeight: '400',
-        fontFamily: 'Pacifico',
-        textAlign: 'center'
+        fontFamily: 'Pacifico-Regular',
+        textAlign: 'center',
+        marginTop: -17
     }
 });
