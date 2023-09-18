@@ -89,7 +89,6 @@ export const Level2_1 = () => {
 
     useEffect(() => {
         let item = GetRandomItemsFromArray(glass, 2)
-        console.log(item)
         if (item[0].id == 2 && item[1].id == 4) {
             item[0] = glass[1]
         }

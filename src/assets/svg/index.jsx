@@ -6932,3 +6932,275 @@ export const Ballon3 = () => {
         </G>
     </Svg>
 }
+
+export const Button1 = () => {
+    return <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 90.62 58.92"
+    >
+        <G id="\u0421\u043B\u043E\u0439_2" data-name="\u0421\u043B\u043E\u0439 2">
+            <G id="_1" data-name={1}>
+                <Path
+                    d="M.24.24h90.14v58.44H.24V.24zM11.38 10v38.9h68.23V10z"
+                    stroke="#000"
+                    strokeMiterlimit={22.93}
+                    strokeWidth=".48px"
+                    fillRule="evenodd"
+                    fill="#c93"
+                />
+                <Path
+                    d="M7.61 7.85h75.81v43.21H7.61V7.85zM55 35.51a4.26 4.26 0 104.26 4.26A4.25 4.25 0 0055 35.51zm-19.62 0a4.26 4.26 0 104.26 4.26 4.26 4.26 0 00-4.26-4.26zM55 16.34a4.26 4.26 0 104.26 4.26A4.26 4.26 0 0055 16.34zm-19.62 0a4.26 4.26 0 104.26 4.26 4.26 4.26 0 00-4.26-4.26z"
+                    fill="#963"
+                    stroke="#000"
+                    strokeMiterlimit={22.93}
+                    strokeWidth=".48px"
+                    fillRule="evenodd"
+                />
+            </G>
+        </G>
+    </Svg>
+}
+
+export const Button2 = () => {
+    return <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 76.44 64.25"
+    >
+        <G id="\u0421\u043B\u043E\u0439_2" data-name="\u0421\u043B\u043E\u0439 2">
+            <G id="_1" data-name={1}>
+                <Path
+                    d="M38.22.47l18.9 31.77L76 64H.42l18.9-31.77L38.22.47zm0 14.44L25.77 35.83 13.33 56.75h49.78L50.66 35.83z"
+                    stroke="#000"
+                    strokeMiterlimit={22.93}
+                    strokeWidth=".48px"
+                    fillRule="evenodd"
+                    fill="#c93"
+                />
+                <Path
+                    d="M38.22 14.91l12.44 20.92 12.45 20.92H13.33l12.44-20.92 12.45-20.92zm7.7 28.94A3.19 3.19 0 1049.1 47a3.18 3.18 0 00-3.18-3.18zm-14.65 0A3.19 3.19 0 1034.45 47a3.19 3.19 0 00-3.18-3.18zm7-11.77a3.19 3.19 0 103.18 3.18 3.18 3.18 0 00-3.23-3.18z"
+                    fill="#963"
+                    stroke="#000"
+                    strokeMiterlimit={22.93}
+                    strokeWidth=".48px"
+                    fillRule="evenodd"
+                />
+            </G>
+        </G>
+    </Svg>
+}
+
+export const Button3 = () => {
+    return <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 58.48 65.54"
+    >
+        <G id="\u0421\u043B\u043E\u0439_2" data-name="\u0421\u043B\u043E\u0439 2">
+            <G id="_1" data-name={1}>
+                <Path
+                    d="M29.24.36l14.46 16.2 14.46 16.21L43.7 49 29.24 65.18 14.78 49 .32 32.77l14.46-16.21L29.24.36zm0 10.09l-10 11.16-10 11.16 10 11.16 10 11.15 10-11.15 10-11.16-10-11.16z"
+                    stroke="#000"
+                    strokeMiterlimit={22.93}
+                    strokeWidth=".48px"
+                    fillRule="evenodd"
+                    fill="#c93"
+                />
+                <Path
+                    d="M29.24 10.45l10 11.16 10 11.16-10 11.16-10 11.15-10-11.15-10-11.16 10-11.16 10-11.16zm8.1 20.27a3.18 3.18 0 104.5 0 3.19 3.19 0 00-4.5 0zM27 41.08a3.18 3.18 0 104.5 0 3.19 3.19 0 00-4.5 0zm.24-20.48a3.18 3.18 0 104.5 0 3.19 3.19 0 00-4.5 0zM16.86 31a3.18 3.18 0 104.5 0 3.19 3.19 0 00-4.5 0z"
+                    fill="#963"
+                    stroke="#000"
+                    strokeMiterlimit={22.93}
+                    strokeWidth=".48px"
+                    fillRule="evenodd"
+                />
+            </G>
+        </G>
+    </Svg>
+}
+
+export const PotLevel3 = () => {
+    return <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 102.03 66.17"
+        style={{ width: 30, height: 30 }}
+    >
+        <Defs></Defs>
+        <G id="\u0421\u043B\u043E\u0439_2" data-name="\u0421\u043B\u043E\u0439 2">
+            <G id="_1" data-name={1}>
+                <Path
+                    className="cls-1"
+                    d="M79.35 4.57a20.36 20.36 0 019.9-4.26 14.65 14.65 0 0111 3.19c2.1 1.93 2.1 4.44-.16 7.47s-7 9.21-7.72 10.09-.63 1.14-.67 1.39-.09 3.14-.09 4 0 1.43-.5 1.6-.72-.09-.72-.51-.21-4.4-.33-5.2.5-2.14 1.68-3.61a76.1 76.1 0 004.44-7.33c.84-1.51 1.1-4.19-2.09-6.46a9.36 9.36 0 00-7.85-1.26 20.54 20.54 0 00-4.46 1.91c-.78-.36-1.59-.7-2.43-1.02z"
+                />
+                <Path
+                    d="M16.1 20s-.17 17.95.16 21.73 5 14.18 10.49 17.54c5.09 3.13 13.49 6.82 26.57 6.63 13.08.19 21.49-3.5 26.57-6.63 5.46-3.36 10.16-13.76 10.49-17.54S90.55 20 90.55 20a60.87 60.87 0 01-34 10.6.35.35 0 00-.22-.11c-.39 0-1.45 0-3 .09s-2.65-.13-3-.09a.41.41 0 00-.22.11A60.84 60.84 0 0116.1 20z"
+                    fill="#999"
+                    fillRule="evenodd"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+                <Path
+                    d="M53.34 2.15c17.91 0 33 4.61 37.28 10.85.36-.74.76.07.76.07a6.08 6.08 0 01.43 4.52c-.82 2.24-.5 1.68-.76 2-3.64 6.61-19.14 11.56-37.71 11.56-19.45 0-35.54-5.43-38.15-12.48l-.07-.07s-.75-3.86.21-5 .67-1.52 1-1C20.94 6.59 35.77 2.15 53.34 2.15z"
+                    fill="gray"
+                    fillRule="evenodd"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+                <Path
+                    className="cls-4"
+                    d="M21.25 53.46C26 57.75 35.39 63.57 51.66 63.83c17.83.29 27.57-4.66 33.52-10"
+                />
+                <Path
+                    className="cls-1"
+                    d="M16 20.45S12.31 16 7.65 14.91s-7.76.38-7.39 3.52S5.55 23 10.08 25c4 1.79 11.23 4.34 14.56 7.55 0 0-.13 2.94-.08 4.7s2.05 3.61 3.56 2.77 2-1.93 1.93-3.73a6.2 6.2 0 00-2.93-5 108.88 108.88 0 00-11.67-6.84c-3.61-1.59-9.1-5-9.1-6.5s1.05-1.26 3.48-.38a13.64 13.64 0 014.83 3.15C16 21.87 16 22.25 16 22.25z"
+                />
+                <Path
+                    className="cls-4"
+                    d="M24.64 32.61s3 1.72 3.11 4.2-1 2.48-1 2.48"
+                />
+                <Path
+                    className="cls-5"
+                    d="M53.34 29.86c21.21 0 38.51-6.52 38.51-14.51S74.55.85 53.34.85s-38.52 6.52-38.52 14.5 17.3 14.51 38.52 14.51z"
+                />
+                <Ellipse
+                    cx={53.33}
+                    cy={15.02}
+                    rx={37.28}
+                    ry={13.24}
+                    fill="#e6e6e6"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+                <Path
+                    className="cls-5"
+                    d="M53.33 4.06c20.59 0 36 7.32 35.89 11 1.34 7.92-15.3 13.24-35.89 13.24S16.9 23 17.55 15c.12-5.13 15.19-10.94 35.78-10.94z"
+                />
+            </G>
+        </G>
+    </Svg>
+}
+
+export const BlueGlassLevle2 = () => {
+    return <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 79.32 62.8"
+        style={{ width: 30, height: 30 }}
+    >
+        <Defs></Defs>
+        <G id="\u0421\u043B\u043E\u0439_2" data-name="\u0421\u043B\u043E\u0439 2">
+            <G id="_1" data-name={1}>
+                <Ellipse
+                    cx={30.86}
+                    cy={56.45}
+                    rx={16.52}
+                    ry={6.12}
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                    fill="#0086a8"
+                />
+                <Path
+                    className="cls-2"
+                    d="M43 58.41c-7.07 2.84-17.69 2.87-24.71-.16-4.79-1.79-11.79-5.71-14.64-15C0 31.27.41 18.47.25 13.72s.62-5 .62-5c7.9-1.33 22.53-.26 30 .44 7.5-.7 22.13-1.77 30-.44 0 0 .76.21.61 5s.25 17.55-3.42 29.53C55.17 52.83 47.82 56.71 43 58.41z"
+                />
+                <Path
+                    className="cls-2"
+                    d="M61.73 12c1.75-.42 7.22-1.48 11.48.49 5.15 2.39 8.21 9.22 3.66 18S60 44.31 56.81 44.82s-.57-7.76 1.37-8.1 9.57-3.24 12.59-9 2-9.89.16-10.66a5.8 5.8 0 00-6.37 2c-1.75 2.14-2.75 3.07-3.18 3s-1.32-9.65.35-10.06z"
+                />
+                <Path
+                    d="M70.41 16.93s5.86 0 5.72 7.93S65.07 39.45 61 40.73"
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+                <Path
+                    d="M30.86 19.73c16.81 0 30.52-4.38 30.52-9.75S47.67.23 30.86.23.35 4.61.35 10s13.71 9.73 30.51 9.73z"
+                    fill="#87e3fa"
+                    fillRule="evenodd"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+                <Path
+                    d="M30.86 18C45.79 18 58 14.41 58 10S45.82 2 30.89 2 3.76 5.55 3.76 10s12.18 8 27.1 8z"
+                    fill="#fff"
+                    fillRule="evenodd"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+            </G>
+        </G>
+    </Svg>
+}
+
+export const RedGlassLevel2 = () => {
+    return <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 79.32 62.8"
+        style={{ width: 30, height: 30 }}
+    >
+        <Defs></Defs>
+        <G id="\u0421\u043B\u043E\u0439_2" data-name="\u0421\u043B\u043E\u0439 2">
+            <G id="_1" data-name={1}>
+                <Ellipse
+                    cx={30.86}
+                    cy={56.45}
+                    rx={16.52}
+                    ry={6.12}
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                    fill="#c21f1f"
+                />
+                <Path
+                    className="cls-2"
+                    d="M43 58.41c-7.07 2.84-17.69 2.87-24.71-.16-4.79-1.79-11.79-5.71-14.64-15C0 31.27.41 18.47.25 13.72s.62-5 .62-5c7.9-1.33 22.53-.26 30 .44 7.5-.7 22.13-1.77 30-.44 0 0 .76.21.61 5s.25 17.55-3.42 29.53C55.17 52.83 47.82 56.71 43 58.41z"
+                />
+                <Path
+                    className="cls-2"
+                    d="M61.73 12c1.75-.42 7.22-1.48 11.48.49 5.15 2.39 8.21 9.22 3.66 18S60 44.31 56.81 44.82s-.57-7.76 1.37-8.1 9.57-3.24 12.59-9 2-9.89.16-10.66a5.8 5.8 0 00-6.37 2c-1.75 2.14-2.75 3.07-3.18 3s-1.32-9.65.35-10.06z"
+                />
+                <Path
+                    d="M70.41 16.93s5.86 0 5.72 7.93S65.07 39.45 61 40.73"
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+                <Path
+                    d="M30.86 19.73c16.81 0 30.52-4.38 30.52-9.75S47.67.23 30.86.23.35 4.61.35 10s13.71 9.73 30.51 9.73z"
+                    fill="#fc8888"
+                    fillRule="evenodd"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+                <Path
+                    d="M30.86 18C45.79 18 58 14.41 58 10S45.82 2 30.89 2 3.76 5.55 3.76 10s12.18 8 27.1 8z"
+                    fill="#fff"
+                    fillRule="evenodd"
+                    stroke="#2b2a29"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth=".47px"
+                />
+            </G>
+        </G>
+    </Svg>
+}
+// PotLevel3

@@ -71,7 +71,6 @@ export const Level1_1 = ({ navigation }) => {
     useEffect(() => {
         if (value1 != '' && value2 != '') {
             if (value1 != activeGame[0]?.count || value2 != activeGame[1]?.count) {
-                // music.play()
                 setTimeout(() => {
                     setDisable(true)
                     music.play();
