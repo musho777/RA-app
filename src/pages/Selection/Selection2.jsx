@@ -1,27 +1,33 @@
 import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native"
 
-export const Selection = ({ navigation }) => {
+export const Selection2 = ({ navigation }) => {
     return <View >
         <ImageBackground source={require('../../assets/img/2.png')} resizeMode="cover" style={styles.image}>
             <View style={{ transform: [{ rotate: '90deg' }], marginTop: -100, }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Level1_4')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Level2_4')}>
                     <Image style={styles.img} source={require('../../assets/img/4_1.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Level1_3')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Level2_3')}>
                     <Image style={styles.img} source={require('../../assets/img/3_1.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Level1_2')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Level2_2')}>
                     <Image style={styles.img} source={require('../../assets/img/2_1.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Level1_1')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Level2_1')}>
                     <Image style={styles.img} source={require('../../assets/img/1_1.png')} />
                 </TouchableOpacity>
             </View>
             <View style={{ transform: [{ rotate: '90deg' }], marginTop: 100, marginLeft: -102 }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Level1_6')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Level2_6')}>
+                    <Image style={styles.img} source={require('../../assets/img/8_1.png')} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Level2_5')}>
+                    <Image style={styles.img} source={require('../../assets/img/7_1.png')} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Level2_5')}>
                     <Image style={styles.img} source={require('../../assets/img/6_1.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Level1_5')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Level2_5')}>
                     <Image style={styles.img} source={require('../../assets/img/5_1.png')} />
                 </TouchableOpacity>
             </View>

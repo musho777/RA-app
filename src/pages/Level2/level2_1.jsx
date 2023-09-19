@@ -5,11 +5,11 @@ import { GetRandomItemsFromArray } from "../../components/Funtion/getRandomItems
 import { FGenerateRandomPosition, GenerateRandomPosition } from "../../components/Funtion/generateRandomCoordinates"
 import { Dimensions } from 'react-native';
 import Sound from "react-native-sound"
-export const Level2_1 = () => {
+export const Level2_1 = ({ navigation }) => {
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
     const glass = [
-        { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glassyellow2.png')} />, id: 2, type: 'yellow1' },
+        { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glassyellow2.png')} />, id: 2, type: 'yellow' },
         { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glasspink3.png')} />, id: 3, type: 'pink' },
         { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glassyellow4.png')} />, id: 4, type: 'yellow' },
         { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glassblue5.png')} />, id: 5, type: 'blue' },
@@ -150,6 +150,7 @@ export const Level2_1 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                navigation.navigate('Level2_2')
                 musicSuccess.stop()
             }, 2000);
         }

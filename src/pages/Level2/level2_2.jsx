@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level2_2 = () => {
+export const Level2_2 = ({ navigation }) => {
     const [button, setButton] = useState([
         { icon: <Button1 />, id: 1, active: false },
         { icon: <Button2 />, id: 2, active: false },
@@ -65,6 +65,7 @@ export const Level2_2 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                navigation.navigate('Level2_3')
                 musicSuccess.stop()
             }, 2000);
         }

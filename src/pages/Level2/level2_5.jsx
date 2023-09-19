@@ -2,10 +2,10 @@ import { View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { Cendy1, Cendy2, Cendy3, Cendy4, Cendy5 } from '../../assets/svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
 
-export const Level2_5 = () => {
+export const Level2_5 = ({ navigation }) => {
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -59,11 +59,32 @@ export const Level2_5 = () => {
                 setTimeout(() => {
                     music.play();
                 }, 100);
+                setTimeout(() => {
+                    music.stop()
+                }, 2000);
             }
         })
         setAnswer(temp)
         setArr(item)
     }
+
+    useEffect(() => {
+        let win = true
+        arr.map((elm, i) => {
+            if (!elm.active) {
+                win = false
+            }
+        })
+        if (win) {
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                navigation.navigate('Level2_6')
+                musicSuccess.stop()
+            }, 2000);
+        }
+    }, [arr])
     return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 50 }}>
