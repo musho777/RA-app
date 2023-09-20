@@ -46,7 +46,6 @@ export const Level3_4 = () => {
                 // navigation.navigate('Level1_2')
                 musicSuccess.stop()
             }, 2000);
-            console.log('loss')
         }
     }
     useEffect(() => {
