@@ -1,7 +1,6 @@
-import { Dimensions, Image, StyleSheet, View } from "react-native"
+import { Image, View } from "react-native"
 import { Input } from "../../components/Input"
 import { LevelWrapper } from "../../components/LevelWrapper";
-import { Butterfly, Chickens, MushRoom } from "../../assets/svg";
 import { NumberButton } from "../../components/NumberBuuton";
 import { useEffect, useState } from "react";
 import Sound from 'react-native-sound';

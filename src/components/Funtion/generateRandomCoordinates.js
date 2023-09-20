@@ -4,9 +4,9 @@ export const FGenerateRandomPosition = (count, w, h) => {
 
     const GenerateRandomPosition = () => {
         const minX = 0;
-        const maxX = w; // Adjust this to your desired maximum x-coordinate
+        const maxX = w;
         const minY = 0;
-        const maxY = h; // Adjust this to your desired maximum y-coordinate
+        const maxY = h;
 
         let randomX, randomY;
 
@@ -32,8 +32,6 @@ export const FGenerateRandomPosition = (count, w, h) => {
         return positionsArray;
     };
 
-    // Generate an array of 15 random positions
     const randomPositions = generateRandomPositionsArray(count);
     return randomPositions
 }
-// console.log(randomPositions);
