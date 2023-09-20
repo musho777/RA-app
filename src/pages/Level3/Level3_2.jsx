@@ -4,7 +4,6 @@ import { Dimensions, Image, View } from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-console.log(windowWidth)
 export const Level3_2 = () => {
     const [blue, setBlue] = useState([])
     const [green, setGreen] = useState([])
@@ -42,7 +41,6 @@ export const Level3_2 = () => {
     >
         <View style={{ borderWidth: 1, padding: 10, marginTop: -35, height: windowHeight - 55 }}>
             {arr.map((elm, i) => {
-                console.log(elm)
                 return <View key={i} style={{ position: 'absolute', top: elm.y, left: elm.x }}>
                     {elm.type == 'blue' ?
                         <Image source={require('../../assets/img/circleBlue.png')} style={{ width: elm.w, height: elm.h }} /> :

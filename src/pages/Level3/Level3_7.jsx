@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level3_7 = () => {
+export const Level3_7 = ({ navigation }) => {
     let subjects = [
         { icon: <Image source={require('../../assets/img/blueberry.png')} style={{ width: 50, height: 50 }} />, id: 1 },
         { icon: <Image source={require('../../assets/img/apple.png')} style={{ width: 50, height: 50 }} />, id: 2 },
@@ -60,7 +60,6 @@ export const Level3_7 = () => {
         setActiveGame(arr1)
     }, [])
     const Game = (elm) => {
-        console.log(elm.id)
         setSub(elm)
         if (elm.id === activeGame[0]?.id) {
             setTimeout(() => {
@@ -68,7 +67,7 @@ export const Level3_7 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                // navigation.navigate('Level1_2')
+                navigation.navigate('Level3_8')
                 setDisable(false)
 
                 musicSuccess.stop()

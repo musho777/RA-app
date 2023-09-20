@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { NumberButton } from '../../components/NumberBuuton'
 import Sound from 'react-native-sound'
 
-export const Level3_4 = () => {
+export const Level3_4 = ({ navigation }) => {
     const buuton = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     const [value1, setValue1] = useState('')
     const [disable, setDisable] = useState(false)
@@ -43,7 +43,7 @@ export const Level3_4 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                // navigation.navigate('Level1_2')
+                navigation.navigate('Level3_5')
                 musicSuccess.stop()
             }, 2000);
         }
