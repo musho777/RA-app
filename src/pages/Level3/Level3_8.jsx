@@ -87,9 +87,8 @@ export const Level3_8 = () => {
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     {arr?.proble}
                 </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 40 }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 25, paddingHorizontal: 180 }}>
                     {arr?.icon?.map((elm, i) => {
-                        console.log('11')
                         return <TouchableOpacity onPress={() => Game(elm.id)} key={i}>
                             {elm?.icon}
                         </TouchableOpacity>
