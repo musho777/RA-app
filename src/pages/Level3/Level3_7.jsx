@@ -86,7 +86,7 @@ export const Level3_7 = ({ navigation }) => {
         }
     }
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')}>
-        <View style={{ flexDirection: 'row', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ flexDirection: 'row', height: '100%', alignItems: 'center', justifyContent: 'space-around' }}>
             <View style={{ alignItems: 'center', flexDirection: 'row', marginRight: 100, marginLeft: -10 }}>
                 <View style={{ flexDirection: 'column' }}>
                     <View style={{ marginRight: 20, marginBottom: 20 }}>
@@ -101,9 +101,6 @@ export const Level3_7 = ({ navigation }) => {
                     </View>
                 </View>
             </View>
-            {
-                console.log(activeGame.length)
-            }
             <View style={{ flexDirection: 'column' }}>
                 {randomSubject?.map((elm, i) => {
                     return <TouchableOpacity style={{ marginVertical: 10 }} onPress={() => Game(elm)} key={i}>

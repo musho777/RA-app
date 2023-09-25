@@ -19,7 +19,24 @@ export const Level2_1 = ({ navigation }) => {
         { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/yellowpencil.png')} />, id: 1, type: 'yellow' },
         { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/pinkpencil.png')} />, id: 2, type: 'pink' },
         { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/bluepencil.png')} />, id: 3, type: 'blue' },
+    ]
 
+    const position = [
+        { x: 14, y: 124 },
+        { x: 26, y: 249 },
+        { x: 84, y: 242 },
+        { x: 232, y: 228 },
+        { x: 368, y: 187 },
+        { x: 458, y: 96 },
+        { x: 578, y: 66 },
+        { x: 686, y: 101 },
+        { x: 656, y: 253 },
+        { x: 356, y: 53 },
+        { x: 256, y: 53 },
+        { x: 296, y: 83 },
+        { x: 0, y: 13 },
+        { x: 286, y: 13 },
+        { x: 340, y: 39 },
     ]
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -37,7 +54,7 @@ export const Level2_1 = ({ navigation }) => {
             }
         });
     const [completid, setCompletid] = useState([])
-    const [position, setPosition] = useState([])
+    // const [position, setPosition] = useState([])
     const [selectedGlass, setSelectedGlass] = useState([])
     const [selectedPencil, setSelectedPencil] = useState([])
     const [activeGlass, setActiveGlass] = useState()
@@ -138,11 +155,11 @@ export const Level2_1 = ({ navigation }) => {
     }, [])
 
 
-    useEffect(() => {
-        if (!position.length) {
-            setPosition(FGenerateRandomPosition(selectedPencil.length, windowWidth - 150, windowHeight - 150))
-        }
-    }, [selectedPencil])
+    // useEffect(() => {
+    //     if (!position.length) {
+    //         // setPosition(FGenerateRandomPosition(selectedPencil.length, windowWidth - 150, windowHeight - 150))
+    //     }
+    // }, [selectedPencil])
 
     useEffect(() => {
         if (completid.length == 2) {

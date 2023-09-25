@@ -74,6 +74,7 @@ export const Level3_3 = ({ navigation }) => {
         })
         if (count == lengthh) {
             setTimeout(() => {
+                setDisable(true)
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
@@ -93,7 +94,6 @@ export const Level3_3 = ({ navigation }) => {
                 elm.active = false
             })
             setTimeout(() => {
-                setDisable(true)
                 music.play();
             }, 100);
             setTimeout(() => {
