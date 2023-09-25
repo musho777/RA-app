@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet, Touchable, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, Touchable, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton';
 import { Air, Bucket, Butterfly1, CarSvg, Green, Red, Train, WhiteAir, WhiteCar, WhiteTrain, Yellow } from '../../assets/svg';
@@ -10,9 +10,9 @@ const windowWidth = Dimensions.get('window').width;
 export const Level1_5 = ({ navigation }) => {
     const [arr, setArr] = useState([
         [
-            { icone: <WhiteTrain />, id: 1, active: false },
-            { icone: <WhiteAir />, id: 2, active: false },
-            { icone: <WhiteCar />, id: 3, active: false },
+            { icone: <Image source={require('../../assets/img/level1/game4/whiteTrain.png')} style={{ width: 50, height: 40 }} />, id: 1, active: false },
+            { icone: <Image source={require('../../assets/img/level1/game4/planeWhite.png')} style={{ width: 50, height: 40 }} />, id: 2, active: false },
+            { icone: <Image source={require('../../assets/img/level1/game4/whiteCar.png')} style={{ width: 50, height: 40 }} />, id: 3, active: false },
         ],
         [
             { icone: <Red />, id: 4, active: false },
@@ -65,12 +65,6 @@ export const Level1_5 = ({ navigation }) => {
             item[1][i2].active = true
             item2.number1 = ''
             item2.number2 = ''
-            // setTimeout(() => {
-            //     musicSuccess.play();
-            // }, 100);
-            // setTimeout(() => {
-            //     musicSuccess.stop()
-            // }, 5000);
             setArr(item)
 
         }
@@ -143,9 +137,9 @@ export const Level1_5 = ({ navigation }) => {
     if (game) {
         return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
             <View style={styles.block}>
-                <ImgButton svg={<Train />} border={'rgba(255, 111, 23, 0.50)'} />
-                <ImgButton svg={<Air />} border={'rgba(255, 111, 23, 0.50)'} />
-                <ImgButton svg={<CarSvg />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 50, height: 40 }} source={require('../../assets/img/level1/game4/redTrain.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 50, height: 40 }} source={require('../../assets/img/level1/game4/yellowPlane.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 50, height: 40 }} source={require('../../assets/img/level1/game4/greenCar.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
             </View>
         </LevelWrapper>
     }

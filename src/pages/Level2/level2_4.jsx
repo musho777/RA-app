@@ -1,10 +1,9 @@
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
-import { BlueGlassLevle2, PotLevel3, RedGlassLevel2 } from '../../assets/svg'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
-export const Level2_4 = () => {
+export const Level2_4 = ({ navigation }) => {
     const item = [
         { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/redGlass1.png')} />, id: 1 },
         { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/BlueGlass.png')} />, id: 2 },
@@ -64,7 +63,7 @@ export const Level2_4 = () => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                navigation.navigate('Level2_4_1')
+                navigation.navigate('Level2_4_2')
 
             }, 2000);
         }
@@ -88,7 +87,6 @@ export const Level2_4 = () => {
                 </View>
                 <View style={styles.line}></View>
                 <View style={styles.block1}>
-                    {console.log(selected1.length)}
                     {selected1.length >= 1 ?
                         < ImgButton svg={selected1[0].icon} border='rgba(240, 129, 67, 0.4)' /> :
                         < ImgButton border='rgba(240, 129, 67, 0.4)' />

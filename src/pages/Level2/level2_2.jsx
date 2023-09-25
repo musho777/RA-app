@@ -36,7 +36,7 @@ export const Level2_2 = ({ navigation }) => {
 
     const Game = (i, id) => {
         let item = [...button]
-        if (id == 2 || id == 4) {
+        if (id == 1 || id == 2) {
             item[i].active = true
         }
         else {
@@ -78,12 +78,12 @@ export const Level2_2 = ({ navigation }) => {
             </View>
             <View style={{ alignItems: 'center', height: 200, justifyContent: 'space-between' }}>
                 <View style={{ flexDirection: 'row', width: 200, justifyContent: 'space-between' }}>
-                    <ImgButton onPress={() => Game(0, button[0].id)} svg={button[0].icon} border={button[0].active ? 'green' : 'rgba(204, 102, 204, 0.40)'} />
-                    <ImgButton onPress={() => Game(1, button[1].id)} svg={button[1].icon} border={button[1].active ? 'green' : 'rgba(204, 102, 204, 0.40)'} />
+                    <ImgButton borderRadius={20} onPress={() => Game(0, button[0].id)} svg={button[0].icon} border={button[0].active ? 'green' : 'rgba(204, 102, 204, 0.40)'} />
+                    <ImgButton borderRadius={20} onPress={() => Game(1, button[1].id)} svg={button[1].icon} border={button[1].active ? 'green' : 'rgba(204, 102, 204, 0.40)'} />
                 </View>
                 <View style={{ flexDirection: 'row', width: 200, justifyContent: 'space-between' }}>
-                    <ImgButton onPress={() => Game(2, button[2].id)} svg={button[2].icon} border={button[2].active ? 'green' : 'rgba(204, 102, 204, 0.40)'} />
-                    <ImgButton onPress={() => Game(3, button[3].id)} svg={button[3].icon} border={button[3].active ? 'green' : 'rgba(204, 102, 204, 0.40)'} />
+                    <ImgButton borderRadius={20} onPress={() => Game(2, button[2].id)} svg={button[2].icon} border={button[2].active ? 'green' : 'rgba(204, 102, 204, 0.40)'} />
+                    <ImgButton borderRadius={20} onPress={() => Game(3, button[3].id)} svg={button[3].icon} border={button[3].active ? 'green' : 'rgba(204, 102, 204, 0.40)'} />
                 </View>
             </View>
         </View>

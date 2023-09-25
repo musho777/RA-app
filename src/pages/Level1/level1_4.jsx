@@ -1,7 +1,7 @@
-import { Dimensions, StyleSheet, View } from 'react-native'
+import { Dimensions, StyleSheet, View, Image } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton';
-import { BigBucket, Bucket, Butterfly1, PinkBuket, RedBuket } from '../../assets/svg';
+import { BigBucket, PinkBuket, RedBuket } from '../../assets/svg';
 import { useEffect, useState } from 'react';
 import Sound from 'react-native-sound';
 
@@ -31,9 +31,9 @@ export const Level1_4 = ({ navigation }) => {
     }, [])
     const [game, setGame] = useState(true)
     const [bucket, setBucket] = useState([
-        { icone: <Bucket />, id: 1 },
-        { icone: <PinkBuket />, id: 2 },
-        { icone: <RedBuket />, id: 3 },
+        { icone: <Image source={require('../../assets/img/level1/game4/greenbuket.png')} style={{ width: 40, height: 50 }} />, id: 1 },
+        { icone: <Image source={require('../../assets/img/level1/game4/pinkbuket.png')} style={{ width: 40, height: 50 }} />, id: 2 },
+        { icone: <Image source={require('../../assets/img/level1/game4/orangebuket.png')} style={{ width: 40, height: 50 }} />, id: 3 },
     ])
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;

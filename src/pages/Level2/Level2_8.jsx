@@ -1,7 +1,7 @@
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton';
-import { Air, Ballon1, Ballon2, Ballon3, Blue1, CarSvg, Green, Red, Red1, Train, WhiteAir, WhiteCar, WhiteTrain, Yellow, Yellow1 } from '../../assets/svg';
+import { Ballon1, Ballon2, Ballon3, Blue1, Green, Red, Red1, Yellow, Yellow1 } from '../../assets/svg';
 import { useEffect, useState } from 'react';
 import Sound from 'react-native-sound';
 
@@ -9,7 +9,7 @@ import Sound from 'react-native-sound';
 export const Level2_8 = ({ navigation }) => {
     const [arr, setArr] = useState([
         [
-            { icone: <Ballon1 />, id: 1, active: false },
+            { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level2/game7/whiteHeart.png')} />, id: 1, active: false },
             { icone: <Ballon2 />, id: 3, active: false },
             { icone: <Ballon3 />, id: 2, active: false },
         ],
@@ -44,7 +44,6 @@ export const Level2_8 = ({ navigation }) => {
     const Game = (number) => {
         let item = [...arr]
         let item2 = { ...activeNumber }
-        // let temp = [...active]
         for (let i = 0; i < item.length; i++) {
             if (number <= 3) {
                 item2.number1 = number
@@ -64,12 +63,6 @@ export const Level2_8 = ({ navigation }) => {
             item[1][i2].active = true
             item2.number1 = ''
             item2.number2 = ''
-            // setTimeout(() => {
-            //     musicSuccess.play();
-            // }, 100);
-            // setTimeout(() => {
-            //     musicSuccess.stop()
-            // }, 5000);
             setArr(item)
 
         }
@@ -118,7 +111,6 @@ export const Level2_8 = ({ navigation }) => {
         // navigation
         let win = true
         arr[0].map((elm, i) => {
-            console.log(elm)
             if (!elm.active) {
                 win = false
             }
@@ -143,7 +135,7 @@ export const Level2_8 = ({ navigation }) => {
         return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
             <View style={styles.block}>
                 <ImgButton svg={<Blue1 />} border={'rgba(255, 111, 23, 0.50)'} />
-                <ImgButton svg={<Red1 />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level2/game7/redHeart.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
                 <ImgButton svg={<Yellow1 />} border={'rgba(255, 111, 23, 0.50)'} />
             </View>
         </LevelWrapper>

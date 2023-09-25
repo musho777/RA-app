@@ -1,7 +1,6 @@
-import { Dimensions, StyleSheet, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton';
-import { BigBucket, Bucket, Butterfly1, DollBlue, DollRed, DollYellow, PinkBuket, RedBuket, TeddyGreen, TeddyRed, TeddyYellow } from '../../assets/svg';
 import { useEffect, useState } from 'react';
 import Sound from 'react-native-sound';
 
@@ -31,15 +30,25 @@ export const Level2_7 = ({ navigation }) => {
     }, [])
     const [game, setGame] = useState(true)
     const [tedy, setTedy] = useState([
-        { icone: <TeddyYellow />, id: 1 },
-        { icone: <TeddyGreen />, id: 2 },
-        { icone: <TeddyRed />, id: 3 },
+        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/yellowTedy.png')} />, id: 1 },
+        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/greenTedy.png')} />, id: 2 },
+        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/purpleTedy.png')} />, id: 3 },
     ])
-    const [doll, setDoll] = useState([
-        { icone: <DollBlue />, id: 1 },
-        { icone: <DollRed />, id: 2 },
-        { icone: <DollYellow />, id: 3 },
-    ])
+    const bigTedy = [
+        { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/yellowTedy.png')} />, id: 1 },
+        { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/greenTedy.png')} />, id: 2 },
+        { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/purpleTedy.png')} />, id: 3 },
+    ]
+    const doll = [
+        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/blueDoll.png')} />, id: 1 },
+        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/pinkDoll.png')} />, id: 2 },
+        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/yellowDoll.png')} />, id: 3 },
+    ]
+    const bigDoll = [
+        { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/blueDoll.png')} />, id: 1 },
+        { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/pinkDoll.png')} />, id: 2 },
+        { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/yellowDoll.png')} />, id: 3 },
+    ]
     const [activeGame, setActiveGame] = useState()
     const [activeArr, setAcgtiveArr] = useState([])
     function shuffle(array) {
@@ -60,17 +69,26 @@ export const Level2_7 = ({ navigation }) => {
     useEffect(() => {
         let arr = []
         randomNum = Math.floor(Math.random() * 2);
+        let type = ''
         if (randomNum == 1) {
             arr = shuffle(tedy)
-
+            type = 'tedy'
         }
         else {
             arr = shuffle(doll)
+            type = 'doll'
         }
-        // shuffle(tedy)
         randomIndex = Math.floor(Math.random() * 3);
-        setActiveGame(arr[randomIndex])
-        // setTedy(arr)
+        if (type == 'doll') {
+            let _id = arr[randomIndex].id
+            const result = bigDoll.find(({ id }) => id === _id);
+            setActiveGame(result)
+        }
+        else {
+            let _id = arr[randomIndex].id
+            const result = bigTedy.find(({ id }) => id === _id);
+            setActiveGame(result)
+        }
         setAcgtiveArr(arr)
     }, [])
 
