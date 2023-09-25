@@ -7203,4 +7203,257 @@ export const RedGlassLevel2 = () => {
         </G>
     </Svg>
 }
-// PotLevel3
+export const VaseBig = () => {
+    return <Svg
+        width={87}
+        height={94}
+        viewBox="0 0 87 94"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_29_12417)">
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M75.622 4.364c4.172 2.3 8.014 5.478 9.448 10.481 2.812 9.988 1.654 18.26-5.386 31.443S61.67 64.109 60.402 68.345c-1.269 4.237-.552 5.971.845 6.41a27.59 27.59 0 019.08 5.88c2.519 2.811 2.942 7.978-8.436 10.955a74.225 74.225 0 01-18.382 1.826 74.129 74.129 0 01-18.382-1.826C13.731 88.613 14.1 83.446 16.69 80.634a27.443 27.443 0 019.044-5.88c1.415-.438 2.114-2.172.846-6.409-1.269-4.236-12.224-8.91-19.228-22.057C.35 33.14-.883 24.833 1.948 14.845c1.416-5.076 5.257-8.18 9.43-10.481h64.244z"
+                fill="#008CCC"
+                stroke="#2B2A29"
+                strokeWidth={0.57}
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M76.136 4.656a22.646 22.646 0 015.662 4.346c-4.228 4.017-19.89 6.007-36.01 6.026-16.12.018-33.344-1.826-39.888-5.332a3.235 3.235 0 01-.79-.566 22.33 22.33 0 015.625-4.4c5.367 2.738 20.514 4.126 35.053 4.108 14.117 0 27.26-1.242 29.742-3.652.177-.203.381-.381.606-.53zM65.64 76.964a24.405 24.405 0 013.824 2.794v.164a9.287 9.287 0 01-2.592 3.214c-4.485 3.378-12.28 5.149-20.496 5.386a55.771 55.771 0 01-23.491-3.944 11.44 11.44 0 01-4.688-3.652 6.402 6.402 0 01-.606-1.095 25.356 25.356 0 013.805-2.776 2.522 2.522 0 00.386 2.374 7.842 7.842 0 003.162 2.465 50.797 50.797 0 0021.304 3.542c7.352-.219 14.098-1.716 17.83-4.528a5.666 5.666 0 001.599-2.027c.202-.438.33-.803.239-.931a1.22 1.22 0 01-.276-.986z"
+                fill="#FBA800"
+                stroke="#2B2A29"
+                strokeWidth={0.57}
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M43.766 8.892c17.757 0 32.241-1.826 32.241-4.236 0-2.41-14.484-4.236-32.24-4.236-17.757 0-32.242 1.899-32.242 4.236 0 2.337 14.485 4.236 32.241 4.236z"
+                fill="#003882"
+                stroke="#000"
+                strokeWidth={0.47}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M27.407 64.438s20.863 6.025 32.958-.712M29.135 74.188s10.643 4.31 29.41.439"
+                stroke="#000"
+                strokeWidth={0.47}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_29_12417">
+                <Path fill="#fff" d="M0 0H87V94H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const VaseSmoll = () => {
+    return <Svg
+        width={65}
+        height={70}
+        viewBox="0 0 65 70"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_29_12506)">
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M56.5 3.25c3.117 1.713 5.987 4.08 7.058 7.805 2.101 7.438 1.236 13.597-4.024 23.415-5.26 9.817-13.458 13.27-14.406 16.425-.948 3.155-.412 4.447.632 4.773 2.532 1 4.837 2.49 6.784 4.379 1.882 2.094 2.197 5.942-6.304 8.158a55.626 55.626 0 01-13.733 1.36 55.558 55.558 0 01-13.733-1.36c-8.515-2.216-8.24-6.064-6.304-8.158a20.51 20.51 0 016.757-4.379c1.057-.326 1.58-1.618.632-4.773-.948-3.154-9.133-6.635-14.365-16.425C.26 24.68-.66 18.493 1.456 11.055 2.513 7.275 5.384 4.963 8.5 3.25H56.5z"
+                fill="#008CCC"
+                stroke="#2B2A29"
+                strokeWidth={0.57}
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M56.884 3.467a16.916 16.916 0 014.23 3.237c-3.16 2.991-14.86 4.473-26.904 4.487-12.044.013-24.913-1.36-29.802-3.97a2.416 2.416 0 01-.59-.422A16.676 16.676 0 018.02 3.522c4.01 2.04 15.327 3.073 26.19 3.06 10.547 0 20.366-.925 22.22-2.72.133-.151.285-.284.454-.395zM49.042 57.313c1.018.6 1.975 1.297 2.857 2.081v.122a6.92 6.92 0 01-1.937 2.394c-3.35 2.515-9.174 3.834-15.313 4.01a41.791 41.791 0 01-17.55-2.936 8.544 8.544 0 01-3.503-2.72 4.751 4.751 0 01-.453-.816 18.942 18.942 0 012.843-2.066 1.872 1.872 0 00.288 1.767 5.856 5.856 0 002.362 1.836 38.066 38.066 0 0015.917 2.638c5.494-.163 10.534-1.278 13.322-3.372a4.22 4.22 0 001.194-1.51c.152-.326.248-.598.18-.693a.908.908 0 01-.207-.735z"
+                fill="#FBA800"
+                stroke="#2B2A29"
+                strokeWidth={0.57}
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M32.7 6.622c13.266 0 24.087-1.36 24.087-3.155C56.788 1.673 45.967.313 32.7.313 19.433.313 8.611 1.727 8.611 3.467s10.822 3.155 24.088 3.155z"
+                fill="#003882"
+                stroke="#000"
+                strokeWidth={0.47}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M20.477 47.986s15.587 4.487 24.623-.53M21.768 55.247s7.951 3.209 21.973.326"
+                stroke="#000"
+                strokeWidth={0.47}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_29_12506">
+                <Path fill="#fff" d="M0 0H65V70H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const Scuare = () => {
+    return <Svg
+        width={46}
+        height={46}
+        viewBox="0 0 46 46"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Path
+            d="M44.91.24H.24v44.67h44.67V.24z"
+            fill="#C0C"
+            stroke="#000"
+            strokeWidth={0.48}
+            strokeMiterlimit={22.93}
+        />
+    </Svg>
+}
+
+export const Round = () => {
+    return <Svg
+        width={46}
+        height={46}
+        viewBox="0 0 46 46"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_29_12426)">
+            <Path
+                d="M22.945 45.356c12.459-.078 22.496-10.242 22.417-22.701C45.284 10.195 35.12.158 22.662.237 10.201.315.164 10.479.242 22.938c.079 12.46 10.242 22.496 22.702 22.418z"
+                fill="#63F"
+                stroke="#000"
+                strokeWidth={0.48}
+                strokeMiterlimit={22.93}
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_29_12426">
+                <Path fill="#fff" d="M0 0H45.6V45.6H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const Tringle = () => {
+    return <Svg
+        width={53}
+        height={46}
+        viewBox="0 0 53 46"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_29_12413)">
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M26.43.48L13.42 22.99l-13 22.52h52.03L39.44 22.99 26.43.48z"
+                fill="#F96"
+                stroke="#000"
+                strokeWidth={0.48}
+                strokeMiterlimit={22.93}
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_29_12413">
+                <Path fill="#fff" d="M0 0H52.86V45.75H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const HedgehogSvg = () => {
+    return <Svg
+        width={40}
+        height={46}
+        viewBox="0 0 40 46"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_29_12409)">
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M19.73.28l9.74 5.64 9.74 5.64v22.56l-9.74 5.64-9.74 5.64-9.75-5.64-9.74-5.64V11.56l9.74-5.64L19.73.28z"
+                fill="#C00"
+                stroke="#000"
+                strokeWidth={0.48}
+                strokeMiterlimit={22.93}
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_29_12409">
+                <Path fill="#fff" d="M0 0H39.45V45.67H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const Trapezium = () => {
+    return <Svg
+        width={69}
+        height={46}
+        viewBox="0 0 69 46"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_29_12405)">
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M11.48.24h46L68.6 44.91H.31L11.48.24z"
+                fill="#9F0"
+                stroke="#000"
+                strokeWidth={0.48}
+                strokeMiterlimit={22.93}
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_29_12405">
+                <Path fill="#fff" d="M0 0H68.91V45.15H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const RombSvg = () => {
+    return <Svg
+        width={46}
+        height={46}
+        viewBox="0 0 46 46"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_29_12401)">
+            <Path
+                d="M22.896.343L.339 22.9l22.557 22.557L45.452 22.9 22.896.343z"
+                fill="#87E3FA"
+                stroke="#000"
+                strokeWidth={0.48}
+                strokeMiterlimit={22.93}
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_29_12401">
+                <Path fill="#fff" d="M0 0H45.8V45.8H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}

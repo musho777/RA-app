@@ -1,7 +1,6 @@
 import { Image, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
-import { Cendy1, Cendy2, Cendy3, Cendy4, Cendy5 } from '../../assets/svg'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
 

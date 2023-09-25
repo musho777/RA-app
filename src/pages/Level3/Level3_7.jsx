@@ -69,7 +69,6 @@ export const Level3_7 = ({ navigation }) => {
             setTimeout(() => {
                 navigation.navigate('Level3_8')
                 setDisable(false)
-
                 musicSuccess.stop()
             }, 2000);
         }

@@ -1,13 +1,9 @@
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native"
+import { Image, StyleSheet, TouchableOpacity } from "react-native"
 import { LevelWrapper } from "../../components/LevelWrapper"
 import { useEffect, useState } from "react"
 import { GetRandomItemsFromArray } from "../../components/Funtion/getRandomItemsFromArray"
-import { FGenerateRandomPosition, GenerateRandomPosition } from "../../components/Funtion/generateRandomCoordinates"
-import { Dimensions } from 'react-native';
 import Sound from "react-native-sound"
 export const Level2_1 = ({ navigation }) => {
-    const windowWidth = Dimensions.get('window').width;
-    const windowHeight = Dimensions.get('window').height;
     const glass = [
         { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glassyellow2.png')} />, id: 2, type: 'yellow' },
         { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glasspink3.png')} />, id: 3, type: 'pink' },
@@ -155,11 +151,6 @@ export const Level2_1 = ({ navigation }) => {
     }, [])
 
 
-    // useEffect(() => {
-    //     if (!position.length) {
-    //         // setPosition(FGenerateRandomPosition(selectedPencil.length, windowWidth - 150, windowHeight - 150))
-    //     }
-    // }, [selectedPencil])
 
     useEffect(() => {
         if (completid.length == 2) {
