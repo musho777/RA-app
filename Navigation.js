@@ -31,12 +31,13 @@ import { Level4_1 } from './src/pages/Level4/level4_1';
 import { Level4_4 } from './src/pages/Level4/level4_4';
 import { Level4_5 } from './src/pages/Level4/level4_5';
 import { Level4_6 } from './src/pages/Level4/level4_6';
+import { Level4_7 } from './src/pages/Level4/level4_7';
 
 export default Navigation = () => {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer >
-      <Stack.Navigator initialRouteName={'Level4_6'} >
+      <Stack.Navigator initialRouteName={'Level1_4'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}
@@ -254,10 +255,15 @@ export default Navigation = () => {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name="Level4_7"
+          component={Level4_7}
+          options={{
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>
   );
 };
-// Level4_1
-// Level4_6
