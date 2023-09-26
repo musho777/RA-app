@@ -1,14 +1,13 @@
 import { View, TextInput, StyleSheet } from "react-native"
 
-export const Input = ({ value, setValue }) => {
+export const Input = ({ value, setValue, width = 180, height = 50 }) => {
     return <TextInput
         editable={false}
         onChangeText={(e) => setValue(e)}
         value={value}
         style={[
             styles.Input,
-            { color: 'black', },
-            { color: 'black', },
+            { color: 'black', width: width, height: height },
         ]}
     >
 
@@ -16,8 +15,6 @@ export const Input = ({ value, setValue }) => {
 }
 const styles = StyleSheet.create({
     Input: {
-        width: 180,
-        height: 50,
         flexShrink: 0,
         borderRadius: 10,
         borderWidth: 4,
