@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level3_8 = () => {
+export const Level3_8 = ({ navigation }) => {
     const [win, setWin] = useState(false)
     const [image, setImage] = useState({
         proble: <Image source={require('../../assets/img/t-shirt.png')} style={{ width: 100, height: 100 }} />,
@@ -63,7 +63,7 @@ export const Level3_8 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                // navigation.navigate('Level1_2')
+                navigation.navigate('LevelScreen')
                 setWin(false)
                 musicSuccess.stop()
             }, 2000);

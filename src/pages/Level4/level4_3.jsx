@@ -210,12 +210,6 @@ export const Level4_3 = ({ navigation }) => {
                             <NumberButton disabled={true} number={value3} />
                         </View>
                     }
-                    {
-                        console.log(activeArr.answer)
-                    }
-                    {
-
-                    }
                     {activeArr.answer?.length > 3 && (value4 == '' ?
                         <View style={styles.block}>
                             {activeArr?.answer?.length > 0 && activeArr?.answer[3].icon}
@@ -223,7 +217,7 @@ export const Level4_3 = ({ navigation }) => {
                         </View> :
                         <View style={styles.block}>
                             {activeArr?.answer[3]?.icon}
-                            <NumberButton disabled={true} number={value3} />
+                            <NumberButton disabled={true} number={value4} />
                         </View>)
                     }
                 </View>

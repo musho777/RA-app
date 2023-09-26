@@ -80,7 +80,7 @@ export const Level3_1 = ({ navigation }) => {
                 }, 100);
                 setTimeout(() => {
                     music.stop()
-                }, 5000);
+                }, 2000);
                 setTimeout(() => {
                     setValue1('')
                     setValue2("")

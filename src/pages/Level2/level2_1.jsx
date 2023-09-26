@@ -25,14 +25,14 @@ export const Level2_1 = ({ navigation }) => {
         { x: 368, y: 187 },
         { x: 458, y: 96 },
         { x: 578, y: 66 },
-        { x: 686, y: 101 },
-        { x: 656, y: 253 },
+        { x: 686, y: 11 },
+        { x: 656, y: 23 },
         { x: 356, y: 53 },
         { x: 256, y: 53 },
         { x: 296, y: 83 },
         { x: 0, y: 13 },
         { x: 286, y: 13 },
-        { x: 340, y: 39 },
+        { x: 340, y: 9 },
     ]
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -50,7 +50,6 @@ export const Level2_1 = ({ navigation }) => {
             }
         });
     const [completid, setCompletid] = useState([])
-    // const [position, setPosition] = useState([])
     const [selectedGlass, setSelectedGlass] = useState([])
     const [selectedPencil, setSelectedPencil] = useState([])
     const [activeGlass, setActiveGlass] = useState()

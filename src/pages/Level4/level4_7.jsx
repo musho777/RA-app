@@ -3,8 +3,23 @@ import { ImgButton } from '../../components/ImgButton'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
+import Sound from 'react-native-sound'
 
 export const Level4_7 = () => {
+    const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
     const [arr, setArr] = useState([
         [
             [
@@ -67,7 +82,12 @@ export const Level4_7 = () => {
                 item2[i2] = true
             }
             else {
-                console.log('11112')
+                setTimeout(() => {
+                    music.play();
+                }, 100);
+                setTimeout(() => {
+                    music.stop()
+                }, 1000);
                 item1.map((elm, i) => {
                     elm = false
                 })

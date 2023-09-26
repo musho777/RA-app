@@ -85,11 +85,11 @@ export const Level4_1 = ({ navigation }) => {
         { x: 504, y: 107 },
         { x: 486, y: 36 },
         { x: 574, y: 107 },
-        { x: 607, y: 166 },
-        { x: 676, y: 241 },
-        { x: 705, y: 159 },
-        { x: 681, y: 95 },
-        { x: 600, y: 20 },
+        { x: 387, y: 16 },
+        { x: 276, y: 241 },
+        { x: 305, y: 159 },
+        { x: 601, y: 45 },
+        { x: 290, y: 20 },
     ])
 
     const [activeGame, setActiveGame] = useState({})

@@ -5,7 +5,7 @@ import { Chicken, Hedgehog, Lisa, Rooster, Rooster1, Wolf, Wolf1 } from '../../a
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
 
-export const Level1_6 = () => {
+export const Level1_6 = ({ navigation }) => {
     const [shdaow, setShadow] = useState([
         <Rooster />,
         <Wolf />
@@ -82,8 +82,9 @@ export const Level1_6 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                navigation.navigate('LevelScreen')
                 musicSuccess.stop();
-            }, 5000);
+            }, 2000);
         }
         else {
             setTimeout(() => {
@@ -91,7 +92,7 @@ export const Level1_6 = () => {
             }, 100);
             setTimeout(() => {
                 music.stop();
-            }, 5000);
+            }, 2000);
 
         }
     }

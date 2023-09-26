@@ -98,7 +98,7 @@ export const Level3_3 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 music.stop()
-            }, 5000);
+            }, 2000);
         }
         setActiveGame(item)
     }

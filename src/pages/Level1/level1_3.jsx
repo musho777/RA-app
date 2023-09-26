@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet, View } from "react-native"
+import { Dimensions, Image, StyleSheet, View } from "react-native"
 import { LevelWrapper } from "../../components/LevelWrapper"
 import { BlueButterFly, BlueButterFly1, BlueGlass, BlueGlass1, Butterfly1, Butterfly2, Butterfly3, GreenGlass, GreenGlass1, RedButterFly1, RedButterfily, RedGlass, RedGlass1, YellowButterFly, YellowButterfly1 } from "../../assets/svg"
 import { ImgButton } from "../../components/ImgButton";
@@ -23,14 +23,14 @@ export const Level1_3 = ({ navigation }) => {
         ],
         [
             [
-                { icone: <BlueGlass key={1} />, id: 1, active: false },
-                { icone: <RedGlass key={2} />, id: 2, active: false },
-                { icone: <GreenGlass key={4} />, id: 3, active: false }
+                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/BlueGlass.png')} />, id: 1, active: false },
+                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/RedGlass.png')} />, id: 2, active: false },
+                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/GreenGlass.png')} />, id: 3, active: false }
             ],
             [
-                { icone: <BlueGlass1 key={1} />, id: 4, active: false },
-                { icone: <RedGlass1 key={2} />, id: 5, active: false },
-                { icone: <GreenGlass1 key={4} />, id: 6, active: false }
+                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/BlueGlass1.png')} />, id: 4, active: false },
+                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/BlueGlass1.png')} />, id: 5, active: false },
+                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/GreenGlass1.png')} />, id: 6, active: false }
             ]
         ],
 

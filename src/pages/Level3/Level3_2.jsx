@@ -16,8 +16,6 @@ export const Level3_2 = () => {
         for (i = 0; i < randomNum1; i++) {
             let randomW = Math.floor(Math.random() * (55 - 25 + 1)) + 25;
             let randomH = Math.floor(Math.random() * (55 - 25 + 1)) + 25;
-            // let randomX = Math.floor(Math.random() * windowWidth * 0.7)
-            // let randomY = Math.floor(Math.random() * windowHeight * 0.7)
             let randomX = Math.floor(Math.random() * (windowWidth * 0.7 - i * 20)) + 20;
             let randomY = Math.floor(Math.random() * (windowHeight * 0.7 - i * 20)) + 20;
             item1.push({ w: randomW + 20, h: randomW, x: randomX, y: randomY, type: 'blue' })
