@@ -39,7 +39,7 @@ export default Navigation = () => {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer >
-      <Stack.Navigator initialRouteName={'Level4_3'} >
+      <Stack.Navigator initialRouteName={'Level4_4'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}

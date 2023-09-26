@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { NumberButton } from '../../components/NumberBuuton'
-import { Image, StyleSheet, Touchable, View } from 'react-native'
+import { Image, StyleSheet, View } from 'react-native'
 import { Input } from '../../components/Input'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
