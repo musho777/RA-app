@@ -131,7 +131,7 @@ export const Level4_1 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 setDisable(true)
-                // navigation.navigate('Level3_2')
+                navigation.navigate('Level4_2')
                 musicSuccess.stop()
             }, 2000);
         }

@@ -4,7 +4,7 @@ import { Blue, Green, Red } from '../../assets/svg'
 import { useState } from 'react'
 import Sound from 'react-native-sound'
 
-export const Level4_4 = () => {
+export const Level4_4 = ({ navigation }) => {
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -23,7 +23,6 @@ export const Level4_4 = () => {
 
     const [colors, setColors] = useState(['', '', ''])
     const Game = (i) => {
-        console.log(i)
         let item = [...colors]
         if (i == 1) {
             item[0] = 1
@@ -58,6 +57,7 @@ export const Level4_4 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                navigation.navigate('Level4_5')
                 musicSuccess.stop()
             }, 2000);
         }

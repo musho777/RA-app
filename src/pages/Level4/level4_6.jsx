@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 
-export const Level4_6 = () => {
+export const Level4_6 = ({ navigation }) => {
 
     const [svg, setSvg] = useState({
         icone: [
@@ -64,8 +64,9 @@ export const Level4_6 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                navigation.navigate('Level4_7')
                 musicSuccess.stop();
-            }, 500);
+            }, 2000);
         }
         else {
             setTimeout(() => {

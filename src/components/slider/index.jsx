@@ -42,7 +42,7 @@ export default SwiperComponent = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.navigate('Selection3')}>
                     <Image style={styles.img} source={require('../../assets/img/image3.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Selection4')}>
                     <Image style={styles.img} source={require('../../assets/img/image4.png')} />
                 </TouchableOpacity>
             </View>

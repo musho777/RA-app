@@ -6,7 +6,7 @@ import { Input } from '../../components/Input'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level4_3 = () => {
+export const Level4_3 = ({ navigation }) => {
     const buuton = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     const [disable, setDisable] = useState(false)
     const [value1, setValue1] = useState('')
@@ -90,8 +90,9 @@ export const Level4_3 = () => {
 
     useEffect(() => {
         let item = GetRandomItemsFromArray(position, 9)
+        const randomNum = Math.floor(Math.random() * 2)
         setPosition(item)
-        setActiveArr(arr[1])
+        setActiveArr(arr[randomNum])
     }, [])
 
     const Answer = (e) => {
@@ -136,6 +137,7 @@ export const Level4_3 = () => {
                 }, 100);
                 setTimeout(() => {
                     musicSuccess.stop()
+                    navigation.navigate('Level4_4')
                 }, 2000);
             }
         }
@@ -155,6 +157,7 @@ export const Level4_3 = () => {
                     musicSuccess.play();
                 }, 100);
                 setTimeout(() => {
+                    navigation.navigate('Level4_4')
                     musicSuccess.stop()
                 }, 2000);
             }

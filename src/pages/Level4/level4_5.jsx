@@ -95,7 +95,7 @@ export const Level4_5 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                navigation.navigate('Level3_6')
+                navigation.navigate('Level4_6')
                 musicSuccess.stop()
             }, 2000);
         }

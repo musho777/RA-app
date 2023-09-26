@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level4_2 = () => {
+export const Level4_2 = ({ navigation }) => {
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -118,6 +118,7 @@ export const Level4_2 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                navigation.navigate('Level4_3')
                 musicSuccess.stop()
             }, 2000);
         }
