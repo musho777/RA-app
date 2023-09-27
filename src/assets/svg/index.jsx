@@ -7480,3 +7480,1553 @@ export const RombSvg = () => {
         </Defs>
     </Svg>
 }
+
+export const Image1 = () => {
+    return <Svg
+        width={109}
+        height={114}
+        viewBox="0 0 109 114"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_33_17344)" strokeWidth={0.48}>
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 .24v109.14a4.24 4.24 0 01-4.23 4.23H.24V.24H108z"
+                fill="#99E2FF"
+                stroke="#000"
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 67.59c14.25 4 23 9.39 23 15.31s-8.75 11.3-23 15.3V67.59z"
+                fill="#CFAA4A"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M76.37 47.06c-.26 19.84-31.16 37-76.13 45.4v-45.4h76.13z"
+                fill="#EDAA00"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 15.34c45.17 5.93 76.14 18.08 76.14 32.12S45.41 73.65.24 79.58V15.34z"
+                fill="#FEFEFE"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 18.32C39 24.06 65.1 35 65.1 47.46S39 70.86.24 76.6V18.32z"
+                fill="#D9DADA"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M78 .24a3.777 3.777 0 00-.28.74s-3.56-.26-5.41 1-.66 5.65.32 8.87c.98 3.22.69 9.56-3 13-3.69 3.44-3.81 11.4-3.81 11.4S57.45 30.53 52 25.21c-5.45-5.32-3.74-5.56-6.13-5.62-2.39-.06-6.23 5.54-6.23 5.54s-.72-3.91-3.31-5.66-6.81 2.07-6.81 2.07a5.29 5.29 0 00-2.64-3c-2-.94-5.42 1.43-7.09 3.23s-6.18 3.65-14.2 5.37C4 27.51 2.12 28 .24 28.6V.24H78z"
+                fill="#668E00"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M9.13.24L.24 13.13V.24h8.89z"
+                fill="#74A10F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M56.6.24C59 10.1 61.08 17 62.87 19.67M13.33.24a39.464 39.464 0 011.56 10.09M24.76.24c0 .94-.12 1.9-.24 2.86M34.83.24c0 .84-.06 1.69-.1 2.56"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M22.37.24a13 13 0 0014.3 2.1A13.939 13.939 0 0039.8.24H22.37zM1.79 6.82A16.64 16.64 0 00.24 4.37v21.11A18 18 0 001.79 6.82z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M4.51.24A26.2 26.2 0 00.24 10.8v6.85a18.13 18.13 0 003.61 8.26c7.22 9.22 22.06 9.66 33.15 1C46 19.87 49.74 9 47 .24H4.51z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 7.1a26.29 26.29 0 0017.14-6c.34-.27.67-.55 1-.84H.24V7.1z"
+                fill="#EBEB88"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M40.18 3a40.057 40.057 0 00-7.6-2.76h-16.9a19.722 19.722 0 00-4.58 2.22C4.73 6.62 1.77 12.1.24 18.91v46.28a12.14 12.14 0 004.05 5.69c10.05 7 55.05-7.63 61.6-20.95 5.59-11.37-1.21-25.08-9.2-33.59C48.7 7.83 42 4.68 40.18 3z"
+                fill="#E53624"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M43.85 12.56C37.15 9.27 26.92 11.4 25.31.24h19a20 20 0 013.74 4.26A31.33 31.33 0 0052.11.24h9.36a21.19 21.19 0 00-7 9.53 23.6 23.6 0 0115.6 7.66h5c-1.77 10.64-12.37 10-18.39 3.5-.53 3.21-3.22 10.66-6.3 11.78.04.04-11.82-12.95-6.53-20.15z"
+                fill="#487101"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M43.85 12.56C37.15 9.27 26.92 11.4 25.31.24h1.58a10.22 10.22 0 002.31 2.33C33.2 5.34 40 5.84 42.81 8c3.89 3 .95 4.73 1 4.6l.04-.04zm26.46 4.87h4.8c-1.77 10.62-12.34 10-18.36 3.53l-.35-1.69S67.66 17 70.31 17.43z"
+                fill="#203E02"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M48.1 7.36a5.37 5.37 0 004.67 2.84M7.83 61.67a1.56 1.56 0 01-1 1.51m12 1.78a1.58 1.58 0 01-1 1.51m12.13-3a1.58 1.58 0 01-1 1.51m11.54-19a1.58 1.58 0 01-1 1.51M60 37a1.56 1.56 0 01-1 1.51m-9.89-1.88a1.57 1.57 0 01-1 1.52m3.07 8.45a1.56 1.56 0 01-1 1.51m0 10.14a1.56 1.56 0 01-1 1.51m9.37-8.82a1.58 1.58 0 01-1 1.51M43 56.42a1.59 1.59 0 00-1.43 1.09m-9.97-1.19a1.56 1.56 0 001.07-1.44M20 58.1a1.58 1.58 0 001.25-1.29M28 48a1.56 1.56 0 00-1.43 1.08M36 38.64l-1.26 1.67M8.24 52.14l-.52 1.44m8.09-6l-2 2.53m-10-3.27A1.57 1.57 0 002.52 48m16.74-9.88a1.6 1.6 0 00-1.44 1.09m-8.67-2.38a1.59 1.59 0 00-1.43 1.09m-5.37 1.56a1.59 1.59 0 00-1.43 1.09m3.33-10.83a1.57 1.57 0 00-1.43 1.08m23.61 8.1a1.58 1.58 0 00-1.32 1.21m16.73-9.87a1.56 1.56 0 00-1.43 1.08m-8.67-2.4A1.56 1.56 0 0030.31 30m-10.11.77a1.57 1.57 0 00-1.43 1.08m8.07-10a1.56 1.56 0 00-1.43 1.08m-9.81.52a1.57 1.57 0 00-1.33 1.21M31 14.79a1.57 1.57 0 00-1.43 1.08m-8.67-2.4a1.56 1.56 0 00-1.43 1.08m-10.11.77a1.57 1.57 0 00-1.43 1.08M16 6.37a1.58 1.58 0 00-1.43 1.09"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16.33 73.77a8.059 8.059 0 002.87-3.06c2.85-5.09-2.08-9-2.77-9.41-.69-.41-7.74 4.43-8.57 7.37-.76 2.7 2.58 5.67 3.14 6.14a184.37 184.37 0 005.33-1.04z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12.25 74.58a8.68 8.68 0 00-1.65-5.64c-.77-.73-6.25-2.25-10.36-1.55v9.2C4.39 76 8.4 75.3 12.25 74.58z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 76.05c1.2-3.07 1.2-6.48 0-9.55v9.55z"
+                fill="#C9245B"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12.83 47.53c.88.06 7.14.58 8.88 6 1.74 5.42-1.71 10.36-8.12 9.52-6.41-.84-5.08-14.05-.76-15.52z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 67.5c2.25 2.57 6 5.3 10.45 2.68a7.35 7.35 0 003.85-7.46c-.95-2.9-3.15-6.15-4.44-6.9-3.42-1.32-6.94-1.92-9.86 2.9v8.78z"
+                fill="#B8184D"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M11.32 31.6a11.39 11.39 0 019.49 6.88c3.12 6.76-.49 11-4.18 11.41C12.94 50.3 5 40.4 4.69 38.46c-.31-1.94 6.63-6.86 6.63-6.86z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M4.85 37.2s4.69.25 8.52 6.28C17.2 49.51 14.2 55.41 9 56.7c-3.43.84-6.59-1.4-8.71-3.92v-10a57.16 57.16 0 014.56-5.58z"
+                fill="#B8184D"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 48.92c2 2.37 4.71 6.7 2.8 11.14a9.82 9.82 0 01-2.8 3.82V48.92z"
+                fill="#C9245B"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M1.24 25.15S5.34 37.7 10.75 39c5.41 1.3 9.31-6 5-11.66-4.31-5.66-12.66-7.24-14.51-2.19z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 47a4.86 4.86 0 001.27.15C8.06 47.1 12.19 40 8.21 33a9 9 0 00-8-4.6L.24 47z"
+                fill="#C9245B"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 11a9.09 9.09 0 017.14 4.94c2 4.22-1.25 11.28-7.14 12.2V11z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_33_17344">
+                <Path fill="#fff" d="M0 0H108.2V113.85H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const Image2 = () => {
+    return <Svg
+        width={109}
+        height={114}
+        viewBox="0 0 109 114"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_33_17256)" strokeWidth={0.48}>
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 113.61H4.47a4.24 4.24 0 01-4.23-4.23V.24H108v113.37z"
+                fill="#99E2FF"
+                stroke="#000"
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 101.9c-24.06-4-40-11-40-19s16-15 40.05-19l-.05 38z"
+                fill="#CFAA4A"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 95.12c-54-6.9-92.91-25.8-93.2-48.06H108v48.06z"
+                fill="#EDAA00"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 81.45c-54.25-4.87-93.21-18.25-93.21-34s39-29.12 93.21-34v68z"
+                fill="#FEFEFE"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 78.7c-47.94-4.8-82-16.97-82-31.24S60.06 21 108 16.22V78.7z"
+                fill="#D9DADA"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M81.68.24C74.93 5.62 72 13.55 75.13 19.55c3.72 7.16 14.62 8.87 24.34 3.82a25.117 25.117 0 008.49-7V.24H81.68z"
+                fill="#3E008F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 .62c-7.44 5.69-10.49 14.8-6.81 21.88a14.37 14.37 0 006.81 6.39V.62z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M96 .24a18.14 18.14 0 0012 6.6V.24H96z"
+                fill="#BFBF3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M11.2.24c.32 1.44.66 2.78 1 4a36.888 36.888 0 012.91-4H11.2z"
+                fill="#789662"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M40.65 19.73s-3-10.1 1.47-19.49h60.12a47.039 47.039 0 011.32 8.67c.59 5.46.53 22.2-18.44 30.12-18.97 7.92-38.07 2.43-44.47-19.3z"
+                fill="#73150D"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M65.16.24c-1.16.233-2.4.487-3.72.76-11.8 2.63-14.88 6.23-18.69 6-1.47-.09-2.08-1.32-2-3.19A24.595 24.595 0 0142.12.24"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M11.2.24c.31 1.39.63 2.69 1 3.88.13-1.3.28-2.59.46-3.88H11.2z"
+                fill="#618548"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 5.62a84.36 84.36 0 01-15-.82C86.4 3.62 75.6 6 69.2 17.06 62.8 28.12 61.37 54 83.26 64.92A40.519 40.519 0 00108 69V5.62z"
+                fill="#BD2900"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 18.65c-9.51 0-16.91-4.81-17.95-7.9-1.14-3.39 4.26-5 8.68-4.34A33.895 33.895 0 01108 9.49v9.16z"
+                fill="#73150D"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M84.83 10.8c-2.27.85.57 6 12.26 9.19a68.267 68.267 0 0010.91 2.1m0-15.18l-.56-.08"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M103.33.24c.79 6.21 2.39 9.49 4.12 10.77l.51.38v4.81c-.806.01-1.612-.07-2.4-.24-5.28-1.09-7.75-1.86-7.71-2.46.544-4.398.699-8.835.46-13.26h5.02z"
+                fill="#817F27"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M72.77 22.72a7.08 7.08 0 011.52-9.62c5.19-4.52 11.22-2.33 11.94.82.72 3.15-11.63 10.22-13.46 8.8z"
+                fill="#030764"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M59.63 24.05s-7.84-8.41-15.88-11.54c-8.04-3.13-13.82-4.78-13.82-4.78a2.5 2.5 0 00-1.35 1.87c-.16 1.33.79 1.57.79 1.57s11.63 2.6 17.36 6.28c5.73 3.68 9.53 11.05 9.53 11.05s4.53-1.85 3.37-4.45z"
+                fill="#203E02"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M71.43 27.7s3.36-9.64-.77-14.75C66.53 7.84 62 6.69 60.79 3.41A18.148 18.148 0 0160 .24h-1.74a8.59 8.59 0 00.33 4.42c1.55 5 4 6.91 4.49 10.65.49 3.74.14 9.43-.43 8.48-.57-.95-5.71-14.38-7.38-15.52-1.67-1.14-7.09-2.09-8.16-2.17a3.47 3.47 0 00-1.75.28s6 2.49 7.25 6.08 3.55 12.84 3.55 12.84-6.56 1.7-8.93-1.44c-2.37-3.14-2.07-12.55-2.07-12.55A115.65 115.65 0 0041.27 25c-.91 5.18 3.54 8 7.4 8.45 1.571.251 3.16.381 4.75.39l1.58-.1s-4.34 4-13.68 3-12.21-5.46-12.21-5.46 6.39 18.5 23.48 13.09S71.43 27.7 71.43 27.7z"
+                fill="#487101"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M82.19 71.54a7.63 7.63 0 01-1.79 3.32c-4-.733-7.806-1.523-11.42-2.37a4.79 4.79 0 01-.26-.88c-.08-.72 6.4-5.17 9.21-4.9 2.81.27 4.26 4.83 4.26 4.83z"
+                fill="#030764"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M98.1 52.8s3.73 5.77 1 9.77-6.71 2.83-9.72.7c1 2.07 2.85 7.09-2.41 9.07a8.2 8.2 0 01-9.68-3.19c-.45-1.11.45-8.77 3.74-11.34 3.29-2.57 16.43-6 17.07-5.01z"
+                fill="#130778"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M95.49 39.51s5.6 2.62 5.78 8.92c.18 6.3-8 8.12-11.07 6.32-3.07-1.8 2.46-14.75 5.29-15.24z"
+                fill="#130778"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M89.49 47.9s6.2 5.41 2.52 11.58-12.62 2-14.71-1.62c-2.09-3.62 3.23-12.6 12.19-9.96z"
+                fill="#4607A6"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M58.08 63.91a11.29 11.29 0 00-.29 5.64c3.76 1.12 7.794 2.173 12.1 3.16a8.721 8.721 0 001.28-3c1.41-5.71-10.38-9.02-13.09-5.8z"
+                fill="#030764"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M77.4 56.67s7.08 8 .88 13a6.77 6.77 0 01-7.7.82c-2.18-1.78-4.24-4.76-4.45-6.13 0-4.36 1.08-8.45 11.27-7.69z"
+                fill="#2E078E"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M88.94 26a8.26 8.26 0 019.16 4.36c3.21 5.91-.75 11.6-7.09 11.14C84.67 41.04 81 29.38 88.94 26z"
+                fill="#130778"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M44.87 57.3a10.34 10.34 0 001 8.07c3.851 1.575 7.78 2.954 11.77 4.13a5.449 5.449 0 001.2-1.5c1.56-3-4.27-13.22-5.85-14.1-1.58-.88-8.12 3.4-8.12 3.4z"
+                fill="#030764"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M51.85 53.6s-1.35 4.12 2.56 9.4 10 4.7 12.85.61c2.85-4.09-.7-10-3-12.13-2.3-2.13-12.41 2.12-12.41 2.12z"
+                fill="#2E078E"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M62.69 52s2.82 8 9.45 7.7c6.63-.3 9.52-6 7.29-12a8.09 8.09 0 00-11.83-4.58C64 45.17 62.27 50.8 62.69 52z"
+                fill="#4607A6"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M73.06 41.63S76 51 83.74 50.36c7.74-.64 10.82-6.82 8.26-12.5-2.56-5.68-7.53-7-9.58-5.65-2.05 1.35-9.05 5.26-9.36 9.42z"
+                fill="#4607A6"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M51 44.23s-5.6-1.81-8.93.65-3.9 8.44-.69 11.8c3.21 3.36 11.31 2.61 13.47-3.3S51 44.23 51 44.23z"
+                fill="#030764"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M59 37a10.72 10.72 0 00-6.39 2.63c-3.41 2.72-3.4 8.38-.65 12.2 2.75 3.82 9.88 4.1 14.2-.27 4.32-4.37-1.86-11.19-1.86-11.19L59 37z"
+                fill="#7007C4"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M77.25 22s-1.9-6.61 5.92-9.11c7.82-2.5 9.57 4.21 9.54 8.15-.03 3.94-4.4 6.89-7.3 7-2.9.11-8.16-6.04-8.16-6.04z"
+                fill="#130778"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M68.54 28.16a8.77 8.77 0 015.62-7.85C79.84 18 86.75 22 87.91 27.65 89.07 33.3 81.07 40 74 37.37c-7.07-2.63-5.46-9.21-5.46-9.21z"
+                fill="#7007C4"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M61.23 29.15s5.25-4.83 11.12.48c5.87 5.31 3 11.59-.26 14s-8.11 2-11.72-1.82c-3.61-3.82-3.1-10.32.86-12.66z"
+                fill="#7007C4"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_33_17256">
+                <Path fill="#fff" d="M0 0H108.2V113.85H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const Image3 = () => {
+    return <Svg
+        width={109}
+        height={114}
+        viewBox="0 0 109 114"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_33_17294)" strokeWidth={0.48}>
+            <Path
+                d="M107.96.24H.24v113.37h107.72V.24z"
+                fill="#99E2FF"
+                stroke="#000"
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M45.63 60.47c24.59 0 46.75 2.74 62.33 7.11v30.64c-15.58 4.37-37.74 7.1-62.33 7.1a282.6 282.6 0 01-45.39-3.43v-38a283.86 283.86 0 0145.39-3.42z"
+                fill="#CFAA4A"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 92.47a343.763 343.763 0 01-62.33 5.46A359.134 359.134 0 01.24 95.12V47.06H108v45.41z"
+                fill="#EDAA00"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M45.63 11.5A484.36 484.36 0 01108 15.34v64.24a484.39 484.39 0 01-62.33 3.84c-15.9 0-31.17-.69-45.39-2v-68c14.18-1.23 29.45-1.92 45.35-1.92z"
+                fill="#FEFEFE"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M45.63 14A432.977 432.977 0 01108 18.31V76.6a431.55 431.55 0 01-62.33 4.28c-16 0-31.29-.77-45.39-2.19V16.23C14.34 14.81 29.64 14 45.63 14z"
+                fill="#D9DADA"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 28.62c-4 1.23-8.12 2.79-11 3.93-3.2 1.69-3.32 1.14-2.72-2a118.691 118.691 0 00-.69-17.2c-.9-6.18-1-10.47-.55-13.14H108v28.41z"
+                fill="#668E00"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M94.11 33.28c-.26-.38-.14-1.27.14-2.7a118.72 118.72 0 00-.69-17.2c-.9-6.18-1-10.47-.55-13.14H108v13L94.11 33.28z"
+                fill="#74A10F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M2.69 1.26c-.18-.35-.39-.69-.6-1H.24v16.15C3.93 11.56 5.07 5.85 2.69 1.26z"
+                fill="#3E008F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M29.83 3.63A13.768 13.768 0 0027.35.24H.82L.24.67v28.19c5.39 2.55 12.57 2.37 19.1-1 10.03-5.23 14.73-16.07 10.49-24.23z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 6.83A20 20 0 0012.1 4.69 20.35 20.35 0 0017.87.24H.24v6.59z"
+                fill="#BFBF3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M78.24 9.7C74.3 2.13 63.78-.2 54.73 4.5s-13.2 14.66-9.27 22.23c3.93 7.57 14.46 9.89 23.54 5.19 9.08-4.7 13.17-14.65 9.24-22.22z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M23.34.24c-3.64 5.63-4.43 12.44-1.46 18.15 4.72 9.08 17.16 12 27.78 6.46C59.58 19.69 64.41 9 61.16.24H23.34z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M20.23.24A22.66 22.66 0 0039 .24H20.23z"
+                fill="#BFBF3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 4.29a17.204 17.204 0 00-4.47-4H82.75C73.7 5.48 70 16.39 74.49 25c4.64 8.94 16.26 12.1 26 7.07a20.995 20.995 0 007.51-6.5V4.29z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M52.21.24c5 9.74 18.14 13 29.22 7.22A25.06 25.06 0 0090 .24H52.21z"
+                fill="#D4D45D"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 11.21a21.086 21.086 0 000 6v-6z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M92.94.24A20.43 20.43 0 00108 7.1V.24H92.94z"
+                fill="#EBEB88"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 19.2c-1.38 6.33-1.56 13.78-2.1 22.37-.72 11.2.26 18.7 2.1 23.46V19.2z"
+                fill="#E53624"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M6.49.24c-.24.69-.49 1.4-.66 2.14-3.05 11.67 2 35.43 24.62 40S71.82 32 72.09 13.58A49.142 49.142 0 0070.63.24H6.49z"
+                fill="#B10B17"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.74 5.6h-.5V69c12.5-2 22.76-10.28 26.1-21.92 5.44-18.83.21-30.4-7.87-36.26C10.39 4.96 4.27 5.45.74 5.6z"
+                fill="#BD2900"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M6.59 12.05c1 .83 7.3 5.35-3.52 6.45-.94.099-1.884.15-2.83.15V9.46l1.25.54c2.08 1 3.74 1 5.1 2.05z"
+                fill="#73150D"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M.24 22.08c3.081.362 6.196.335 9.27-.08 2.11-.27 10.14-2.48 9-6.92C17.37 10.64 10.16 8.34.24 6.9"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 11.34a42.715 42.715 0 013.36 2.9s-.27 1.92-3.36 2v-4.9z"
+                fill="#817F27"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M38.34 25.14a85.36 85.36 0 01-15.07 3.29C16.61 29 6.8 34.12 3.56 46.52c-2.25 8.6-.35 23.37 9 33.22 10.54.75 21.61 1.14 33 1.14 6.1 0 12.1-.11 18-.33A30.35 30.35 0 0074 58.42c.29-19.6-7.8-29.39-17.13-32.91-9.33-3.52-15.16-1.44-18.53-.37z"
+                fill="#BD2900"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M45.68 29.83c1.24.52 8.45 3.24-1.69 7.15-10.14 3.91-20 .93-22-2s2.77-5.98 7.21-6.5c4.44-.52 8.78.38 11 .75 2.22.37 3.9-.07 5.48.6z"
+                fill="#73150D"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M17 36.36C15 37.78 19.11 42 31.23 42c12.12 0 17.92-2.53 19.89-3.34 1.97-.81 9.13-5.06 6.88-9.06-2.25-4-10.11-4.3-20.3-3"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M28.39 12.8a50.726 50.726 0 012.67 5.94c2.72 7.55 5.51 11 7.8 11.87a41.896 41.896 0 014.52 2.11s.35 2.81-5 3.16c-5.35.35-8 .25-8.09-.34A76.781 76.781 0 0025 16.72c-.25-.58-.52-1.21-.82-1.86a8.869 8.869 0 004.21-2.06z"
+                fill="#817F27"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M68.56 34.25A7.67 7.67 0 0058.25 32c-6.6 3.47-6.75 10.42-3.85 12.38 2.9 1.96 14.88-7.72 14.16-10.13z"
+                fill="#8F0030"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 67.4a7.263 7.263 0 00-2.5.87c-2.26 1.35-6.14 6-8.84 9.82A377.87 377.87 0 00108 76.6v-9.2z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M81.29 75.74c.13 1.29.467 2.549 1 3.73 5.64-.453 11.11-.997 16.41-1.63a4.765 4.765 0 000-1.46c-.56-3.79-15.81-3.3-17.41-.64z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M92.11 73a13.688 13.688 0 003.7 5.21c4.08-.46 8.06-1 11.91-1.54.09-.15.16-.3.24-.46v-9.86a7.472 7.472 0 00-1-1.78C104.14 61.05 93 62.89 92.11 73z"
+                fill="#C9245B"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M105.71 64.2a18.424 18.424 0 002.29 3.23v-8.61a24.692 24.692 0 00-2.29 5.38z"
+                fill="#B8184D"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M70.23 63.84a9 9 0 00.8 11c4.71 5.55 12 3.78 14-2.79s-8.28-14.94-14.8-8.21z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 52.71a14.536 14.536 0 01-2.36-3.71c-.54-1.34.72-3.76 2.32-6.05l.04 9.76z"
+                fill="#B8184D"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M106.23 47.06a18.832 18.832 0 011.77 1.79v15.08c-3.44 2.7-8.4 2.08-12.57-1.58-5.57-4.9-3.89-11.23-.35-14.08 3.54-2.85 10.06-2.15 11.15-1.21z"
+                fill="#C9245B"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M92.22 53.93s8.3 6.63 4.63 14.2C93.18 75.7 85.72 76.39 81 71.59c-4.72-4.8-4.16-10.35-2-11.89 2.16-1.54 8.9-7.1 13.22-5.77z"
+                fill="#C9245B"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M59.89 52.54s-2.5 7.27 3.65 11.82c6.15 4.55 11.53 2.52 14.31-2.57 2.78-5.09-3.33-11.79-9.1-11.57-5.77.22-9.16 2.26-8.86 2.32z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M71.93 50.08s.78 9.31 8.57 10.11a9.87 9.87 0 0010.3-13.57c-2.9-6.62-16.45-7.04-18.87 3.46z"
+                fill="#E02F6A"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M84.7 41.16s.66 12.27 10.65 13.54c9.99 1.27 15.28-14.12 6.83-17.83-8.45-3.71-14.02 1.18-17.48 4.29z"
+                fill="#E02F6A"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M99.63 34.36S102.33 45.47 108 47V28.41a8.65 8.65 0 00-8.37 5.95z"
+                fill="#C9245B"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M73.38 20.42S68.11 9.51 68 .24h3.31c.05 1.531.221 3.056.51 4.56 1.49 7.2 7.41 14 7.41 14s-3.69 3.8-5.85 1.62z"
+                fill="#203E02"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M71.1 35.31c-18.34-.24-11.59-11.64-19.47-19.53a21.482 21.482 0 00-6.37-4.14A10.999 10.999 0 0154.08 14C58 17.38 64 32.4 70.81 24.65 65.35 21.35 52 9.1 61.74.54c0 10.05 6 14.38 13.36 17.89C80.39 11 82.71 4.32 80 .24h6.66C91.47 4 92.12 11 85.81 21.3c0 0 5.56.18 8.39-10A27.123 27.123 0 0094.84.24H99c3.2 5.65 5.09 13.75-1.8 22.3-12.77 15.81-26.1 12.77-26.1 12.77z"
+                fill="#487101"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M98.81 20.75s.36-6.37 4.19-8.75a7.62 7.62 0 015-1v17.13c-.47.07-.945.1-1.42.09-6.86-.14-7.77-7.47-7.77-7.47z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M88.42 26a11.58 11.58 0 015.15-5.42c4.09-2.38 9.81-.16 12.58 4.11 2.77 4.27.27 11.59-5.84 14.24-6.11 2.65-10.57-6.27-10.57-6.27L88.42 26z"
+                fill="#E02F6A"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M66.12 38.52S60.19 34 54.6 40.92s.5 11.32 4.49 12.83c3.99 1.51 8.68-1.75 9.91-4.63 1.23-2.88-2.88-10.6-2.88-10.6z"
+                fill="#A10F3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M75.71 32.12a9.49 9.49 0 00-10.12 2.59c-4.58 4.84-3.24 13.39 2 16.77 5.24 3.38 15.15-2.08 15.3-10.27.15-8.19-7.18-9.09-7.18-9.09z"
+                fill="#E02F6A"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M79.58 25.12s-6.93 3.41-3.88 11.42 10.54 7.56 14.21 5.22c3.67-2.34 5.17-7.43 2.75-12.56-2.42-5.13-9.17-7.2-13.08-4.08z"
+                fill="#E02F6A"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_33_17294">
+                <Path fill="#fff" d="M0 0H108.2V113.85H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const Image4 = () => {
+    return <Svg
+        width={109}
+        height={114}
+        viewBox="0 0 109 114"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_33_17237)" strokeWidth={0.48}>
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M104.13.24A4.258 4.258 0 01108 3.73v109.9H.24V.24h103.89z"
+                fill="#99E2FF"
+                stroke="#000"
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M70.51 26.7S51.7 51.11 45.34 64.42c-6.36 13.31-8 23.1-8 23.1l-2.64-.43s1-9 9.17-24 19.32-34.21 19.32-34.21 4.19-5.25 7.32-2.18z"
+                fill="#817F27"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M54.19 59.84c4.37-7.2 9-6.83 9-6.83s.88 1.84 1.76 1.63A34.35 34.35 0 0179 54.16c7 1.32 7.24 3 7.24 3s-1 3.05-2.06 3.63c-1.06.58.46 2.55 2.13 2.32 1.67-.23 9.18 6.79 9.18 6.79s-3.26 4.37-4.74 4.72c-1.48.35-1.08 3.23 1.64 3.85 2.72.62 5.81 3.53 7.08 10.26.771 3.967.544 8.063-.66 11.92 0 0-5.52 0-7.06-.85s-1.73.56-1.55 2.71c.18 2.15-1.42 11.48-3 11.06-1.58-.42-3.91-3.48-6.44-2.42a5.207 5.207 0 00-2.7 2.48H.24V21.08c.45-.11.92-.2 1.4-.29 6.77-1.18 10.55.71 12.08 3 1.53 2.29 4.38 1.7 4.18.2-.2-1.5 2.77-6.09 2.77-6.09s9.2 4.59 9.57 6.24c.37 1.65 2.77 2.4 2.92 1.18.15-1.22 2.67-3.2 2.67-3.2s1.64-.41 5.35 5.74a34.209 34.209 0 014.47 13.37c.12.9 2.14 1.08 2.14 1.08s1.76 4.54-3.41 10.14c-5.91 6.43 5.45 14.55 9.81 7.39z"
+                fill="#668E00"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 21.08c.45-.11.92-.2 1.4-.29 6.77-1.18 10.55.71 12.08 3 1.53 2.29 4.38 1.7 4.18.2-.2-1.5 2.77-6.09 2.77-6.09s9.2 4.59 9.57 6.24c.37 1.65 2.77 2.4 2.92 1.18.15-1.22 2.67-3.2 2.67-3.2s1.64-.41 5.35 5.74a34.209 34.209 0 014.47 13.37c.12.9 2.14 1.08 2.14 1.08s1.76 4.54-3.41 10.14c-2.93 3.17-1.61 6.77 1 8.72L9.2 113.63h-9l.04-92.55z"
+                fill="#74A10F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M.24 68.23c2.814-.36 5.77-.75 8.87-1.17a90 90 0 0127.57.46c1 .17 3.42.68 4 .81 0 0 8 10.78 12.15 29.12 1.36 6 2.61 11.41 3.79 16.18M12 109.8a28.49 28.49 0 011.38 3.83m8.14-18a45.21 45.21 0 013.28 18m6.85-32.23s3.86 11.83 3.24 32.23m19.54-9.17s9 2.22 13.33 7.59M49.54 85.83s14.71-2.65 29.46 12M43.6 73s32.95-3.66 47.75 15.69m-79.54 21A35.906 35.906 0 00.24 111m21.48-15.2s-11-.63-20.56 4.42m30.4-18.88s-12.43.51-31.32 8.21M2 68s-.64-.89-1.76-2.2m20.92.32S18.56 51.73.24 43m35.05 24.2S27.2 35 3.9 27.93"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M9 30c.39-6.62-3.09-12.85-8.76-17v31.2A17.93 17.93 0 009 30z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M20.38 42.93A19.11 19.11 0 00.24 31v37.72a20.45 20.45 0 008.38-1.25c10.17-3.79 15.44-14.78 11.76-24.54z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M35.45 76.47c.63-10.38-7.15-18.71-17.37-18.61A20.18 20.18 0 00.24 69.7V86a17 17 0 0015.56 9.45c10.2-.11 19.02-8.61 19.65-18.98z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M43.87 94.71c-3.2-8.14-11.59-11.93-18.73-8.47C18 89.7 14.8 99.12 18 107.26a16.267 16.267 0 004.44 6.37h17.42c4.88-4.36 6.7-12.08 4.01-18.92z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M44.07 107.85c-7.22-9.22-22.07-9.66-33.16-1a30.129 30.129 0 00-6.34 6.76h42.52a17.873 17.873 0 00-3.02-5.76z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M73.8 32.64s-14.87 5.57-26.89 11.6A173.439 173.439 0 0024.42 58s-1.94 4.16-2.88 12-.65 9.67-.65 9.67l-2.42.73s.05-8.47.16-14.23.3-7.41-.55-7.21c-.85.2-13.76 7.16-13.76 7.16l-1.26-3.66s13.43-7.58 13.7-8.12c.27-.54-1.76-2.66-6.31-6.27-2.27-1.8-6.52-4.52-10.21-6.79v-2c5.15 3.24 12.77 8 15.41 9.57 4.12 2.43 6.84 2 8.63 1.29a116.217 116.217 0 0016.81-9.41c6.41-4.37 15.74-9.45 21.6-12.73 5.86-3.28 6.78-3.51 6.78-3.51s4.41.87 4.33 8.15z"
+                fill="#817F27"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M6.64 52.19a20.41 20.41 0 00-6.4-8.26V78.2c7.22-7.3 10.07-17.35 6.4-26.01z"
+                fill="#EBEB88"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M23.49 81.22C18.14 74.26 9 71.9.24 74.38v39.25h18.2c9.95-8.79 12.26-23.05 5.05-32.41z"
+                fill="#EBEB88"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M32.64 113.63c-4.72-1.24-11-2-16.9 0h16.9z"
+                fill="#E53624"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M25.38 113.63a22.328 22.328 0 01-.22-3.2c1.38 1.94 4.34 2.06 6.59 2.44-2.61-3.61-4.09-7.13-1.92-11.4 1 6.8 8.36 6.89 14.53 12.16H25.38zm26.8 0c4.17-5.21 6.57-10.87 7.71-11.44l6.54 8a58.112 58.112 0 00-4.9 3.41l-9.35.03z"
+                fill="#487101"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M25.38 113.63a22.157 22.157 0 01-.22-3.08 19.346 19.346 0 001.84 3.08h-1.62z"
+                fill="#203E02"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_33_17237">
+                <Path fill="#fff" d="M0 0H108.2V113.87H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const Image5 = () => {
+    return <Svg
+        width={109}
+        height={114}
+        viewBox="0 0 109 114"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_33_17207)" strokeWidth={0.48}>
+            <Path
+                d="M107.96.24H.24v113.39h107.72V.24z"
+                fill="#99E2FF"
+                stroke="#000"
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M92.62 113.63a7.436 7.436 0 01.63-2c1.1-2.19 2.14-6.19.55-7.77a5.25 5.25 0 00-3.72-1.43s2.1-5.29-.45-7.11c-2.55-1.82-6.45-1.11-6.45-1.11s3.91-5.56 3-7.78c-.91-2.22-.54-.57-7.41-3.79s-14.14-9.43-14.14-9.43 7.49-2.9 9.36-7.57c1.87-4.67 7.71-7.15 11.07-7.36 3.36-.21 7.93-.64 8.42-2.8.49-2.16-1-5.4-1-5.4a4.94 4.94 0 002-3.91c.11-2.74-3.58-3.88-4.51-5.18-.93-1.3 7.23-6.07 9.32-6.65 2.09-.58 3.37-1.27 2-2.4S98 25.57 98 25.57A24.22 24.22 0 01108 21v92.64l-15.38-.01z"
+                fill="#668E00"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M92.62 113.63a7.436 7.436 0 01.63-2c1.1-2.19 2.14-6.19.55-7.77a5.25 5.25 0 00-3.72-1.43s2.1-5.29-.45-7.11c-2.55-1.82-6.45-1.11-6.45-1.11s3.91-5.56 3-7.78c-.91-2.22-.54-.57-7.41-3.79s-14.14-9.43-14.14-9.43 7.49-2.9 9.36-7.57c1.87-4.67 7.71-7.15 11.07-7.36 3.36-.21 7.93-.64 8.42-2.8.49-2.16-1-5.4-1-5.4a4.94 4.94 0 002-3.91c.11-2.74-3.58-3.88-4.51-5.18-.93-1.3 7.23-6.07 9.32-6.65 2.09-.58 3.37-1.27 2-2.4S98 25.57 98 25.57A24.22 24.22 0 01108 21v92.64l-15.38-.01z"
+                fill="#74A10F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M79.56 70.07C83.42 71 93.7 70 108 68.18m0 42.7c-.94.25-1.9.54-2.89.88M108 89.39c-.91.37-1.83.75-2.76 1.15M108 66.26c-2-2.39-5.86-6.51-10.41-8.05m10.41-15l-1-.47"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 13.28a27 27 0 00-13.9-5.35C81.2 6.7 70.24 14.61 69.62 25.58 69 36.55 79 46.44 91.86 47.66A25 25 0 00108 43.93V13.28z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 30.92a20.271 20.271 0 00-5.32 1.21C92.47 35.92 87.2 46.91 90.87 56.67A19 19 0 00108 68.74V30.92zM108 68.9a19.896 19.896 0 00-2.2 7.94 18.005 18.005 0 002.2 9.91V68.9z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M1.7 113.63a11.322 11.322 0 00-1.46-1.76v1.76H1.7z"
+                fill="#3E008F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M27 113.63c-5.33-5.34-14.89-6.36-23.36-2a24.48 24.48 0 00-3.17 2H27z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M20.5 93C16.71 85.67 8.35 82.17.24 83.84v29.79h17.24A18.28 18.28 0 0020.5 93z"
+                fill="#BFBF3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M37.51 70c-3.93-7.57-14.46-9.9-23.5-5.2S.81 79.49 4.74 87.06c3.93 7.57 14.46 9.94 23.51 5.2 9.05-4.74 13.2-14.65 9.26-22.26z"
+                fill="#BFBF3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M60 111.79c-4.72-9.09-17.16-12-27.78-6.46a24.289 24.289 0 00-9.23 8.3h37.78a15.743 15.743 0 00-.77-1.84z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M50.38 84.9c-5.12-9.85-18.06-13.28-28.9-7.65C10.64 82.88 6 95.44 11.11 105.3a18.843 18.843 0 008.74 8.33h18.74c.48-.22.95-.44 1.43-.69 10.84-5.63 15.48-18.19 10.36-28.04z"
+                fill="#BFBF3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M103.1 113.63a19.997 19.997 0 00-19.86-.49c-.29.16-.59.32-.87.49h20.73z"
+                fill="#B3B324"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M61.74 48c4.68 9 .15 20.63-10.11 26-10.26 5.37-22.38 2.35-27.06-6.66s-.15-20.64 10.11-26C44.94 35.98 57.06 39 61.74 48z"
+                fill="#D4D45D"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M81.42 69.83C86.14 78.92 81 90.94 70 96.67s-23.81 3-28.53-6.07c-4.72-9.07.4-21.11 11.44-26.84s23.79-3.01 28.51 6.07z"
+                fill="#D4D45D"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M92 92.78c-5.06-9.74-18.15-13-29.23-7.22-11.08 5.78-16 18.33-10.9 28.07h37.72c4.63-6.22 5.82-14.2 2.41-20.85z"
+                fill="#D4D45D"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 41.52c-3.9-2.41-7.29-4.39-7.29-4.39l1.87-1 5.42 3.41v1.98z"
+                fill="#817F27"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M105.56 26C103.8 13.36 89.45 5.44 73.5 8.31c-15.95 2.87-27.44 15.47-25.68 28.11C49.58 49.06 63.94 57 79.88 54.11c15.94-2.89 27.44-15.47 25.68-28.11z"
+                fill="#EBEB88"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 44.24c-7.39-6-19-7.48-29.84-2.9-14.68 6.19-22.38 21.08-17.23 33.27 5.15 12.19 21.2 17 35.84 10.85A33.493 33.493 0 00108 77.8V44.24z"
+                fill="#EBEB88"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 74.27a27.446 27.446 0 00-10.13 5.18c-10.77 8.7-13.48 23.58-6 33.25.24.32.5.63.76.93H108V74.27z"
+                fill="#EBEB88"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M38.18 95.65A80.264 80.264 0 0124 98.74c-5.87.53-14.34 4.76-17.9 14.89h64.14c-2.6-9.78-8.33-15.24-14.66-17.64-8.78-3.31-14.23-1.35-17.4-.34z"
+                fill="#B10B17"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M45.09 100.06c1.17.49 8 3-1.59 6.73-9.59 3.73-18.85.88-20.73-1.91-1.88-2.79 2.64-5.58 6.81-6.09 3.49-.275 7-.036 10.42.71 2.09.35 3.6-.07 5.09.56z"
+                fill="#520700"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M18.08 106.21c-1.85 1.33 2 5.3 13.41 5.3s16.87-2.37 18.72-3.14c1.85-.77 8.59-4.76 6.49-8.52-2.1-3.76-9.52-4.06-19.1-2.85"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M.24 43.65A129.996 129.996 0 0112.5 58c8.56 12.54 16.28 24.49 18.83 31.6 2.55 7.11 5.19 10.34 7.34 11.17a38.709 38.709 0 014.25 2s.33 2.65-4.74 3c-5.07.35-7.5.24-7.61-.32a72.513 72.513 0 00-4.93-17.7c-4-9.6-16.28-30-25.4-38.68v-5.42z"
+                fill="#817F27"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M67.56 113.63v-.4c0-9.35.6-15.82.6-15.82a2.69 2.69 0 012.41-.63c1.41.36 1.28 1.41 1.28 1.41a94.286 94.286 0 00-1 15.44h-3.29z"
+                fill="#203E02"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M79.61 113.63a8.272 8.272 0 00-4.49-3.14c4.66 0 8.53 1.1 11.15 3.14h-6.66zm14.84 0a28.744 28.744 0 00-2.22-7.83 30.837 30.837 0 016.38 7.83h-4.16z"
+                fill="#487101"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_33_17207">
+                <Path fill="#fff" d="M0 0H108.2V113.87H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
+
+export const Image6 = () => {
+    return <Svg
+        width={109}
+        height={114}
+        viewBox="0 0 109 114"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <G clipPath="url(#clip0_33_17189)" strokeWidth={0.48}>
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M4.47.24H108v113.39H.24V4.47A4.24 4.24 0 014.47.24z"
+                fill="#99E2FF"
+                stroke="#000"
+                strokeMiterlimit={22.93}
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 111.57c-4.9-4.45-13.84-4.95-22-.73a26.28 26.28 0 00-4.3 2.79H108v-2.06z"
+                fill="#3E008F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M108 83.92a20.244 20.244 0 00-5 1.83c-9.5 4.93-13.43 16.17-8.79 25.1.51.982 1.113 1.913 1.8 2.78h12L108 83.92z"
+                fill="#BFBF3F"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M76 18.21S70.69 19 67.17 22c-3.52 3-5.69 4.57-8.17 5.54-2.48.97-13.37 1.78-21.14 4.75-7.77 2.97-14.12 8.17-23.14 21.35C6 66.41 7.43 96.71 11.2 113.63h3.93c14.8-17.79 43.08-20.35 46.93-50.08.7-5.35.49-29.78-.6-33.73-.14-.53 4.78-5 5.94-5.95a16.299 16.299 0 015.6-2.79 6.798 6.798 0 012.61-.29s1.67-1.72.39-2.58z"
+                fill="#789662"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M42.12 113.63c.354-.746.751-1.471 1.19-2.17 6.15-9.93 23.43-20.25 41.58-14.46 11.47 3.66 15.66 10.62 17.34 16.63H42.12z"
+                fill="#73150D"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M81.08 96c11.67 3.11 10.71 7.3 4.16 11.55-6.11 4-10.82 4.23-20 6.06m-23.11 0c.354-.746.751-1.471 1.19-2.17"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M57.11 103.3c-3.34 2.85-3.81 5.63.43 6.17s15.19-3 18.95-6-2.19-1.36-3.56-1.32c-1.37.04-.69-1.21-.52-1.79.17-.58-3.12-1.34-7.58-.16-4.46 1.18-5.35 1.61-7.72 3.1z"
+                fill="#520700"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M73.76 105.11a35.186 35.186 0 01-5.7 2.47 55.442 55.442 0 01-5.85 1.55s-1-.42-.13-1.49 1.55-2.25 1.75-7.93c.2-5.68-1.25-33.12 4.27-53 5.52-19.88 8-21.37 8-21.37l5.79-2.95s1.25 1.86-1.52 6.56C77.6 33.65 70 53 69.19 71.34c-.81 18.34.35 27.15 1 29.66a6.239 6.239 0 001.81 3.45s2.16-.09 1.76.66z"
+                fill="#817F27"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M84.36 20.42S97.1 32 108 43.33v5.43c-9-8.47-16.09-14-19.58-16-3.49-2-7.42-6.47-7.42-6.47s-.79-4.96 3.36-5.87z"
+                fill="#817F27"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M74.09 29.16a81.073 81.073 0 001.31-8.57c.14-2.84-.77-4.48-.34-5.31.43-.83 2.24-1.68 3-2.13.76-.45 1.18-.48 2.11 1.4.93 1.88 3.45 4.62 4.86 6.55 1.41 1.93 5.46 4.42 5.09 5-.37.58-3 4.72-4.82 4.19-1.82-.53-2.78-1.68-4.9-.82-2.12.86-7 1.53-6.31-.31z"
+                fill="#8E5630"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M59.49 27.32l-.54.22c-2.52 1-13.37 1.78-21.14 4.75-7.77 2.97-14.07 8.17-23.09 21.35C6 66.42 7.43 96.71 11.2 113.63h1.43c5.9-41.85 40.8-79.96 46.86-86.31z"
+                fill="#618548"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                d="M24.94 49s7.66-4.28 15.18-8C47.64 37.28 51 36.47 51 36.47a82.291 82.291 0 012.65 25.35M19 60.94a64.244 64.244 0 0112.11-7.5C38.78 49.67 41.84 49 41.84 49s7.31 17.29 5.33 34.83M13 71.84s7.85-4 13.53-6.9c5.68-2.9 6.19-3 6.19-3a126 126 0 014 27.5M11 86.45s13.53-9.66 13.58-8.8c.05.86 1.09 19.76 1.09 19.76"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M68.1 27.88c5.49 8.82 20.23 33 24.49 45.36 5.27 15.25 9.83 29.66 10.46 37.67.08 1 .17 1.86.28 2.72h-5c-.1-1.94-.28-4-.57-6.26-1.42-11-8.3-35.39-15.23-46.79-6.93-11.4-12.8-19.16-15.84-22.23A32.32 32.32 0 0162 31.72 12.53 12.53 0 0163.36 30a6.37 6.37 0 014.74-2.12z"
+                fill="#817F27"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M67.91 27.88c1.28 1.91 2.82 3.78 2.44 4.13-.54.5-4.4 4-6.11 3-1.15-.71-1.82-1.59-2.87-2a10.57 10.57 0 012-2.91 6.42 6.42 0 014.54-2.22z"
+                fill="#8E5630"
+                stroke="#2B2A29"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <Path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M60 113.63a14.04 14.04 0 01-.22-2.68 4.85 4.85 0 00-1.47 2.68H60z"
+                fill="#487101"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </G>
+        <Defs>
+            <ClipPath id="clip0_33_17189">
+                <Path fill="#fff" d="M0 0H108.2V113.87H0z" />
+            </ClipPath>
+        </Defs>
+    </Svg>
+}
