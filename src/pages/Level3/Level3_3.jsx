@@ -61,7 +61,8 @@ export const Level3_3 = ({ navigation }) => {
         setLength(arr.length)
         let arr1 = GetRandomItemsFromArray(subjects, 8 - arr.length)
         let combainArray = arr.concat(arr1)
-        setActiveGame(combainArray)
+        let newArr = GetRandomItemsFromArray(combainArray, combainArray.length)
+        setActiveGame(newArr)
     }, [])
 
 

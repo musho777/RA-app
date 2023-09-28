@@ -18,9 +18,9 @@ export const Selection2 = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
             <View style={{ transform: [{ rotate: '90deg' }], marginTop: 100, marginLeft: -102 }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Level2_8')}>
+                {/* <TouchableOpacity onPress={() => navigation.navigate('Level2_8')}>
                     <Image style={styles.img} source={require('../../assets/img/8_1.png')} />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <TouchableOpacity onPress={() => navigation.navigate('Level2_7')}>
                     <Image style={styles.img} source={require('../../assets/img/7_1.png')} />
                 </TouchableOpacity>

@@ -7,20 +7,20 @@ import Sound from 'react-native-sound'
 
 export const Level3_7 = ({ navigation }) => {
     let subjects = [
-        { icon: <Image source={require('../../assets/img/blueberry.png')} style={{ width: 50, height: 50 }} />, id: 1 },
-        { icon: <Image source={require('../../assets/img/apple.png')} style={{ width: 50, height: 50 }} />, id: 2 },
-        { icon: <Image source={require('../../assets/img/strawberry.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/redGlass1.png')} style={{ width: 50, height: 50 }} />, id: 4 },
-        { icon: <Image source={require('../../assets/img/BlueGlass.png')} style={{ width: 50, height: 50 }} />, id: 5 },
+        { icon: <Image source={require('../../assets/img/blueberry.png')} style={{ width: 70, height: 70 }} />, id: 1 },
+        { icon: <Image source={require('../../assets/img/apple.png')} style={{ width: 70, height: 70 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/strawberry.png')} style={{ width: 70, height: 70 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/redGlass1.png')} style={{ width: 70, height: 70 }} />, id: 4 },
+        { icon: <Image source={require('../../assets/img/BlueGlass.png')} style={{ width: 70, height: 70 }} />, id: 5 },
     ]
     let [game1, setGame1] = useState([
-        { icon: <Image source={require('../../assets/img/blueberry.png')} style={{ width: 40, height: 50 }} />, id: 1 },
-        { icon: <Image source={require('../../assets/img/apple.png')} style={{ width: 40, height: 50 }} />, id: 2 },
-        { icon: <Image source={require('../../assets/img/strawberry.png')} style={{ width: 40, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/blueberry.png')} style={{ width: 53, height: 65 }} />, id: 1 },
+        { icon: <Image source={require('../../assets/img/apple.png')} style={{ width: 53, height: 65 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/strawberry.png')} style={{ width: 60, height: 60 }} />, id: 3 },
     ])
     let [game2, setGame2] = useState([
-        { icon: <Image source={require('../../assets/img/redGlass1.png')} style={{ width: 40, height: 50 }} />, id: 1 },
-        { icon: <Image source={require('../../assets/img/BlueGlass.png')} style={{ width: 40, height: 50 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/redGlass1.png')} style={{ width: 60, height: 50 }} />, id: 1 },
+        { icon: <Image source={require('../../assets/img/BlueGlass.png')} style={{ width: 60, height: 50 }} />, id: 2 },
     ])
 
     const [sub, setSub] = useState({})
@@ -41,12 +41,13 @@ export const Level3_7 = ({ navigation }) => {
             }
         });
 
+    const [game3, setGame3] = useState(0)
 
     const [activeGame, setActiveGame] = useState([])
     useEffect(() => {
-        const randomNum = Math.floor(Math.random() * 2)
+        // const randomNum = Math.floor(Math.random() * 2)
         let item = []
-        if (randomNum) {
+        if (game3 == 0) {
             let arr1 = GetRandomItemsFromArray(game1, 3)
             setRandomSubject(arr1)
             item = [...game1]
@@ -58,7 +59,7 @@ export const Level3_7 = ({ navigation }) => {
         }
         let arr1 = GetRandomItemsFromArray(item, 2)
         setActiveGame(arr1)
-    }, [])
+    }, [game3])
     const Game = (elm) => {
         setSub(elm)
         if (elm.id === activeGame[0]?.id) {
@@ -67,7 +68,11 @@ export const Level3_7 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                navigation.navigate('Level3_8')
+                setGame3(game3 + 1)
+                setSub({})
+                if (game3 == 1) {
+                    navigation.navigate('Level3_8')
+                }
                 setDisable(false)
                 musicSuccess.stop()
             }, 2000);

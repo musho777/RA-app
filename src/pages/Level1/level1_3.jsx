@@ -23,20 +23,21 @@ export const Level1_3 = ({ navigation }) => {
         ],
         [
             [
-                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/BlueGlass.png')} />, id: 1, active: false },
-                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/RedGlass.png')} />, id: 2, active: false },
-                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/GreenGlass.png')} />, id: 3, active: false }
+                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level1/game3/BlueGlass.png')} />, id: 1, active: false },
+                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level1/game3/RedGlass.png')} />, id: 2, active: false },
+                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level1/game3/GreenGlass.png')} />, id: 3, active: false }
             ],
             [
-                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/BlueGlass1.png')} />, id: 4, active: false },
-                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/BlueGlass1.png')} />, id: 5, active: false },
-                { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level1/game3/GreenGlass1.png')} />, id: 6, active: false }
+                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level1/game3/BlueGlass1.png')} />, id: 4, active: false },
+                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level1/game3/RedGlass1.png')} />, id: 5, active: false },
+                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level1/game3/GreenGlass1.png')} />, id: 6, active: false }
             ]
         ],
 
     ])
 
 
+    const [game1, setGame1] = useState(0)
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;
 
@@ -140,19 +141,26 @@ export const Level1_3 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                navigation.navigate('Level1_4')
+                setGame1(game1 + 1)
+                if (game1 == 1) {
+                    navigation.navigate('Level1_4')
+                }
             }, 2000);
         }
     }, [answer])
 
     useEffect(() => {
-        const randomZeroOrOne = Math.floor(Math.random() * 2);
         if (!activeGame.length) {
-            let arr1 = shuffle(side1[randomZeroOrOne][0])
-            let arr2 = shuffle(side1[randomZeroOrOne][1])
+            let arr1 = shuffle(side1[0][0])
+            let arr2 = shuffle(side1[0][1])
             setActiveGame([arr1, arr2])
         }
-    }, [])
+        if (game1 == 1) {
+            let arr1 = shuffle(side1[1][0])
+            let arr2 = shuffle(side1[1][1])
+            setActiveGame([arr1, arr2])
+        }
+    }, [game1])
     return (
         <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')}>
             <View style={{ flexDirection: 'row', justifyContent: "space-around", paddingHorizontal: 100 }}>

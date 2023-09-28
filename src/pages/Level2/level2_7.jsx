@@ -29,10 +29,11 @@ export const Level2_7 = ({ navigation }) => {
         }, 3000);
     }, [])
     const [game, setGame] = useState(true)
+    const [game1, setGame1] = useState(0)
     const [tedy, setTedy] = useState([
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/yellowTedy.png')} />, id: 1 },
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/greenTedy.png')} />, id: 2 },
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/purpleTedy.png')} />, id: 3 },
+        { icone: <Image style={{ width: 60, height: 75 }} source={require('../../assets/img/level2/game7/yellowTedy.png')} />, id: 1 },
+        { icone: <Image style={{ width: 60, height: 75 }} source={require('../../assets/img/level2/game7/greenTedy.png')} />, id: 2 },
+        { icone: <Image style={{ width: 60, height: 75 }} source={require('../../assets/img/level2/game7/purpleTedy.png')} />, id: 3 },
     ])
     const bigTedy = [
         { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/yellowTedy.png')} />, id: 1 },
@@ -40,9 +41,9 @@ export const Level2_7 = ({ navigation }) => {
         { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/purpleTedy.png')} />, id: 3 },
     ]
     const doll = [
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/blueDoll.png')} />, id: 1 },
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/pinkDoll.png')} />, id: 2 },
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game7/yellowDoll.png')} />, id: 3 },
+        { icone: <Image style={{ width: 55, height: 75 }} source={require('../../assets/img/level2/game7/blueDoll.png')} />, id: 1 },
+        { icone: <Image style={{ width: 55, height: 75 }} source={require('../../assets/img/level2/game7/pinkDoll.png')} />, id: 2 },
+        { icone: <Image style={{ width: 55, height: 75 }} source={require('../../assets/img/level2/game7/yellowDoll.png')} />, id: 3 },
     ]
     const bigDoll = [
         { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/blueDoll.png')} />, id: 1 },
@@ -68,9 +69,9 @@ export const Level2_7 = ({ navigation }) => {
 
     useEffect(() => {
         let arr = []
-        randomNum = Math.floor(Math.random() * 2);
+        // randomNum = Math.floor(Math.random() * 2);
         let type = ''
-        if (randomNum == 1) {
+        if (game1 == 0) {
             arr = shuffle(tedy)
             type = 'tedy'
         }
@@ -90,7 +91,7 @@ export const Level2_7 = ({ navigation }) => {
             setActiveGame(result)
         }
         setAcgtiveArr(arr)
-    }, [])
+    }, [game1])
 
     const Play = (number) => {
         if (number == activeGame.id) {
@@ -99,8 +100,15 @@ export const Level2_7 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                navigation.navigate('Level2_8')
+                setGame1(game1 + 1)
+                setGame(true)
+                if (game1 == 1) {
+                    navigation.navigate('Level2_8')
+                }
             }, 2000);
+            setTimeout(() => {
+                setGame(false)
+            }, 5000);
         }
         else {
             setTimeout(() => {

@@ -20,11 +20,11 @@ export const Level2_5 = ({ navigation }) => {
             }
         });
     const [arr, setArr] = useState([
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game5/cendy4.png')} />, id: 4, active: false },
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game5/cendy3.png')} />, id: 3, active: false },
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game5/cendy1.png')} />, id: 1, active: false },
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game5/cendy5.png')} />, id: 5, active: false },
-        { icone: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level2/game5/cendy2.png')} />, id: 2, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level2/game5/cendy4.png')} />, id: 4, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level2/game5/cendy3.png')} />, id: 3, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level2/game5/cendy1.png')} />, id: 1, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level2/game5/cendy5.png')} />, id: 5, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level2/game5/cendy2.png')} />, id: 2, active: false },
     ])
     const [answer, setAnswer] = useState([
         { icone: '', id: '' },

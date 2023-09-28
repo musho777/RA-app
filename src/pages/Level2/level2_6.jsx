@@ -20,6 +20,7 @@ export const Level2_6 = ({ navigation }) => {
                 return
             }
         });
+    const [disable, setDisable] = useState(false)
     const [game, setGame] = useState([
         {
             icon: [{ icon: <Image key={1} style={{ width: 50, height: 50 }} source={require('../../assets/img/redGlass1.png')} />, id: 1 }, { icon: <Image key={2} style={{ width: 55, height: 40 }} source={require('../../assets/img/Pot.png')} />, id: 2 }, { icon: <Saucer key={3} />, id: 3 }],
@@ -27,7 +28,7 @@ export const Level2_6 = ({ navigation }) => {
         },
         {
             icon: [{ icon: <Chickens key={1} />, id: 1 }, { icon: <Duck key={2} />, id: 2 }, { icon: <Goose key={3} />, id: 3 }],
-            icon2: [{ icon: <Image key={4} source={require('../../assets/img/Chicken2.png')} style={{ width: 45, height: 60 }} />, id: 2 }, { icon: <Image source={require('../../assets/img/wolf.png')} style={{ width: 60, height: 40 }} key={5} />, id: 1 }]
+            icon2: [{ icon: <Image key={4} source={require('../../assets/img/Chicken2.png')} style={{ width: 45, height: 60 }} />, id: 1 }, { icon: <Image source={require('../../assets/img/wolf.png')} style={{ width: 60, height: 40 }} key={5} />, id: 2 }]
         },
         {
             icon: [{ icon: <Apple key={1} />, id: 1 }, { icon: <Pear key={2} />, id: 2 }, { icon: <Image source={require('../../assets/img/banana.png')} style={{ width: 60, height: 40 }} key={3} />, id: 3 }],
@@ -36,10 +37,11 @@ export const Level2_6 = ({ navigation }) => {
 
     ])
     const [active, setActive] = useState()
+    const [game1, setGame1] = useState(0)
     useEffect(() => {
-        const randomZeroOrOne = Math.floor(Math.random() * 3);
-        setActive(game[randomZeroOrOne])
-    }, [])
+        console.log(game1, '22')
+        setActive(game[game1])
+    }, [game1])
 
     const Play = (id) => {
         if (id != 1) {
@@ -53,10 +55,15 @@ export const Level2_6 = ({ navigation }) => {
         else {
             setTimeout(() => {
                 musicSuccess.play();
+                setDisable(true)
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                navigation.navigate('Level2_7')
+                setDisable(false)
+                setGame1(game1 + 1)
+                if (game1 == 2) {
+                    navigation.navigate('Level2_7')
+                }
             }, 2000);
         }
     }
@@ -74,7 +81,7 @@ export const Level2_6 = ({ navigation }) => {
             <View style={{ flexDirection: 'row', justifyContent: 'center', paddingHorizontal: 50 }}>
                 {active?.icon2?.map((elm, i) => {
                     return <View key={i} style={{ marginHorizontal: 10 }}>
-                        <ImgButton onPress={() => Play(elm.id)} svg={elm?.icon} border='rgba(178, 176, 213, 0.40)' />
+                        <ImgButton disable={disable} onPress={() => Play(elm.id)} svg={elm?.icon} border='rgba(178, 176, 213, 0.40)' />
                     </View>
                 })
 

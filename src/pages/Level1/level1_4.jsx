@@ -31,9 +31,9 @@ export const Level1_4 = ({ navigation }) => {
     }, [])
     const [game, setGame] = useState(true)
     const [bucket, setBucket] = useState([
-        { icone: <Image source={require('../../assets/img/level1/game4/greenbuket.png')} style={{ width: 40, height: 50 }} />, id: 1 },
-        { icone: <Image source={require('../../assets/img/level1/game4/pinkbuket.png')} style={{ width: 40, height: 50 }} />, id: 3 },
-        { icone: <Image source={require('../../assets/img/level1/game4/orangebuket.png')} style={{ width: 40, height: 50 }} />, id: 2 },
+        { icone: <Image source={require('../../assets/img/level1/game4/greenbuket.png')} style={{ width: 52, height: 65 }} />, id: 1 },
+        { icone: <Image source={require('../../assets/img/level1/game4/pinkbuket.png')} style={{ width: 52, height: 65 }} />, id: 3 },
+        { icone: <Image source={require('../../assets/img/level1/game4/orangebuket.png')} style={{ width: 52, height: 65 }} />, id: 2 },
     ])
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;

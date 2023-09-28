@@ -23,16 +23,16 @@ export const Level4_7 = () => {
     const [arr, setArr] = useState([
         [
             [
-                { icon: <Image source={require('../../assets/img/level4/game7/cup.png')} style={{ width: 50, height: 50 }} />, id: 1, active: false, i: 0 },
-                { icon: <Image source={require('../../assets/img/level4/game7/pillow.png')} style={{ width: 50, height: 50 }} />, id: 3, active: false, i: 1 },
-                { icon: <Image source={require('../../assets/img/level4/game7/closet.png')} style={{ width: 50, height: 50 }} />, id: 5, active: false, i: 2 },
-                { icon: <Image source={require('../../assets/img/level4/game7/tassel.png')} style={{ width: 50, height: 50 }} />, id: 7, active: false, i: 3 },
+                { icon: <Image source={require('../../assets/img/level4/game7/cup.png')} style={{ width: 70, height: 70 }} />, id: 1, active: false, i: 0 },
+                { icon: <Image source={require('../../assets/img/level4/game7/pillow.png')} style={{ width: 70, height: 70 }} />, id: 3, active: false, i: 1 },
+                { icon: <Image source={require('../../assets/img/level4/game7/closet.png')} style={{ width: 70, height: 70 }} />, id: 5, active: false, i: 2 },
+                { icon: <Image source={require('../../assets/img/level4/game7/tassel.png')} style={{ width: 70, height: 70 }} />, id: 7, active: false, i: 3 },
             ],
             [
-                { icon: <Image source={require('../../assets/img/level4/game7/kettle.png')} style={{ width: 50, height: 50 }} />, id: 2, active: false, i: 0 },
-                { icon: <Image source={require('../../assets/img/level4/game7/bed.png')} style={{ width: 50, height: 50 }} />, id: 4, active: false, i: 1 },
-                { icon: <Image source={require('../../assets/img/level4/game7/table.png')} style={{ width: 50, height: 50 }} />, id: 6, active: false, i: 2 },
-                { icon: <Image source={require('../../assets/img/level4/game7/paints.png')} style={{ width: 50, height: 50 }} />, id: 8, active: false, i: 3 },
+                { icon: <Image source={require('../../assets/img/level4/game7/kettle.png')} style={{ width: 70, height: 70 }} />, id: 2, active: false, i: 0 },
+                { icon: <Image source={require('../../assets/img/level4/game7/bed.png')} style={{ width: 70, height: 70 }} />, id: 4, active: false, i: 1 },
+                { icon: <Image source={require('../../assets/img/level4/game7/table.png')} style={{ width: 70, height: 70 }} />, id: 6, active: false, i: 2 },
+                { icon: <Image source={require('../../assets/img/level4/game7/paints.png')} style={{ width: 70, height: 70 }} />, id: 8, active: false, i: 3 },
             ]
         ]
     ])

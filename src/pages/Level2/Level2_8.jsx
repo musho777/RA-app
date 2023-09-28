@@ -1,7 +1,7 @@
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton';
-import { Ballon1, Ballon2, Ballon3, Blue1, Green, Red, Red1, Yellow, Yellow1 } from '../../assets/svg';
+import { Ballon1, Ballon2, Ballon3, Blue1, Green, Orange, Red, Red1, Yellow, Yellow1 } from '../../assets/svg';
 import { useEffect, useState } from 'react';
 import Sound from 'react-native-sound';
 
@@ -16,7 +16,7 @@ export const Level2_8 = ({ navigation }) => {
         [
             { icone: <Red />, id: 4, active: false },
             { icone: <Green />, id: 6, active: false },
-            { icone: <Yellow />, id: 5, active: false },
+            { icone: <Orange />, id: 5, active: false },
         ]
     ])
     const [activeNumber, setActiveNumber] = useState({ number1: '', number2: '' })

@@ -13,24 +13,26 @@ export const Level3_1 = ({ navigation }) => {
     const [disable, setDisable] = useState(false)
     const buuton = ['0', '1', '2', '3', '4', '5']
     const [christmastrees, setChristmastrees] = useState([
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/Christmastrees1.png')} />, id: 1 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/Christmastrees2.png')} />, id: 2 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/Christmastrees3.png')} />, id: 3 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/Christmastrees4.png')} />, id: 4 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/Christmastrees5.png')} />, id: 5 },
+        { icon: <Image style={{ width: 170, height: 130, }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
+        { icon: <Image style={{ width: 170, height: 130, }} source={require('../../assets/img/Christmastrees1.png')} />, id: 1 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees2.png')} />, id: 2 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees3.png')} />, id: 3 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees4.png')} />, id: 4 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees5.png')} />, id: 5 },
     ])
 
     const [hedgehogs, setHedgehogs] = useState([
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/hedgehogs1.png')} />, id: 1 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/hedgehogs2.png')} />, id: 2 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/hedgehogs3.png')} />, id: 3 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/hedgehogs4.png')} />, id: 4 },
-        { icon: <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/hedgehogs5.png')} />, id: 5 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs1.png')} />, id: 1 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs2.png')} />, id: 2 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs3.png')} />, id: 3 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs4.png')} />, id: 4 },
+        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs5.png')} />, id: 5 },
 
 
     ])
+
+    const [game1, setGame1] = useState(0)
 
     const [activeGame, setActiveGame] = useState([])
 
@@ -45,8 +47,8 @@ export const Level3_1 = ({ navigation }) => {
 
     useEffect(() => {
         let arr = []
-        const randomNum = Math.floor(Math.random() * 2)
-        if (randomNum == 0) {
+        // const randomNum = Math.floor(Math.random() * 2)
+        if (game1 == 0) {
             arr = GetRandomItemsFromArray(christmastrees, 2)
         }
         else {
@@ -55,7 +57,7 @@ export const Level3_1 = ({ navigation }) => {
         }
 
         setActiveGame(arr)
-    }, [])
+    }, [game1])
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -96,20 +98,25 @@ export const Level3_1 = ({ navigation }) => {
                     musicSuccess.play();
                 }, 100);
                 setTimeout(() => {
-                    navigation.navigate('Level3_2')
+                    setGame1(game1 + 1)
+
+                    if (game1 === 1) {
+                        navigation.navigate('Level3_2')
+                    }
+                    setValue1('')
+                    setValue2('')
                     musicSuccess.stop()
                 }, 2000);
             }
         }
     }, [value1, value2])
     return <LevelWrapper
-        paddingTop={20}
         img={require('../../assets/img/bglv1.png')}
         img2={require('../../assets/img/33.png')}
     >
         <View style={{ flexDirection: 'row' }}>
             <View style={{ justifyContent: 'center', alignItems: 'center', width: '50%' }}>
-                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '80%' }}>
+                <View style={{ flexDirection: 'row', marginBottom: 10, justifyContent: 'space-around', width: '80%' }}>
                     {
                         activeGame[0]?.icon
                     }
@@ -120,7 +127,7 @@ export const Level3_1 = ({ navigation }) => {
                 }
             </View>
             <View style={{ justifyContent: 'center', alignItems: 'center', width: '50%' }}>
-                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '80%' }}>
+                <View style={{ flexDirection: 'row', marginBottom: 10, justifyContent: 'space-around', width: '80%' }}>
                     {
                         activeGame[1]?.icon
                     }

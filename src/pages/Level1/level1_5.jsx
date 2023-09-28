@@ -10,9 +10,9 @@ const windowWidth = Dimensions.get('window').width;
 export const Level1_5 = ({ navigation }) => {
     const [arr, setArr] = useState([
         [
-            { icone: <Image source={require('../../assets/img/level1/game4/whiteTrain.png')} style={{ width: 50, height: 40 }} />, id: 1, active: false },
-            { icone: <Image source={require('../../assets/img/level1/game4/planeWhite.png')} style={{ width: 50, height: 40 }} />, id: 2, active: false },
-            { icone: <Image source={require('../../assets/img/level1/game4/whiteCar.png')} style={{ width: 50, height: 40 }} />, id: 3, active: false },
+            { icone: <Image source={require('../../assets/img/level1/game4/whiteTrain.png')} style={{ width: 60, height: 40 }} />, id: 1, active: false },
+            { icone: <Image source={require('../../assets/img/level1/game4/planeWhite.png')} style={{ width: 60, height: 40 }} />, id: 2, active: false },
+            { icone: <Image source={require('../../assets/img/level1/game4/whiteCar.png')} style={{ width: 60, height: 40 }} />, id: 3, active: false },
         ],
         [
             { icone: <Red />, id: 4, active: false },
@@ -137,9 +137,9 @@ export const Level1_5 = ({ navigation }) => {
     if (game) {
         return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
             <View style={styles.block}>
-                <ImgButton svg={<Image style={{ width: 50, height: 40 }} source={require('../../assets/img/level1/game4/redTrain.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
-                <ImgButton svg={<Image style={{ width: 50, height: 40 }} source={require('../../assets/img/level1/game4/yellowPlane.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
-                <ImgButton svg={<Image style={{ width: 50, height: 40 }} source={require('../../assets/img/level1/game4/greenCar.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 60, height: 42 }} source={require('../../assets/img/level1/game4/redTrain.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 60, height: 42 }} source={require('../../assets/img/level1/game4/yellowPlane.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 60, height: 42 }} source={require('../../assets/img/level1/game4/greenCar.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
             </View>
         </LevelWrapper>
     }

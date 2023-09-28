@@ -9,22 +9,26 @@ export const Level4_6 = ({ navigation }) => {
 
     const [svg, setSvg] = useState({
         icone: [
-            { icone: <Image source={require('../../assets/img/level4/game6/checkbox.png')} style={{ width: 50, height: 50 }} />, id: 1 },
-            { icone: <Image source={require('../../assets/img/level4/game6/hairdryer.png')} style={{ width: 50, height: 50 }} />, id: 2 },
-            { icone: <Image source={require('../../assets/img/level4/game6/net.png')} style={{ width: 50, height: 50 }} />, id: 3 },
+            { icone: <Image source={require('../../assets/img/level4/game6/checkbox.png')} style={{ width: 60, height: 60 }} />, id: 1 },
+            { icone: <Image source={require('../../assets/img/level4/game6/hairdryer.png')} style={{ width: 60, height: 60 }} />, id: 2 },
+            { icone: <Image source={require('../../assets/img/level4/game6/net.png')} style={{ width: 60, height: 60 }} />, id: 3 },
         ],
-        answer: <Image source={require('../../assets/img/level4/game6/hairdryershadow.png')} style={{ width: 50, height: 50 }} />,
+        answer: <Image source={require('../../assets/img/level4/game6/hairdryershadow.png')} style={{ width: 60, height: 60 }} />,
 
     })
     const [svg1, setSvg1] = useState({
         icone: [
-            { icone: <Image source={require('../../assets/img/level4/game6/carrot.png')} style={{ width: 30, height: 40 }} />, id: 1 },
-            { icone: <Image source={require('../../assets/img/level4/game6/cucumber.png')} style={{ width: 50, height: 30 }} />, id: 2 },
-            { icone: <Image source={require('../../assets/img/level4/game6/corn.png')} style={{ width: 50, height: 30 }} />, id: 3 },
+            { icone: <Image source={require('../../assets/img/level4/game6/carrot.png')} style={{ width: 40, height: 60 }} />, id: 1 },
+            { icone: <Image source={require('../../assets/img/level4/game6/cucumber.png')} style={{ width: 60, height: 40 }} />, id: 2 },
+            { icone: <Image source={require('../../assets/img/level4/game6/corn.png')} style={{ width: 60, height: 40 }} />, id: 3 },
         ],
-        answer: <Image source={require('../../assets/img/level4/game6/cucumbershadow.png')} style={{ width: 50, height: 30 }} />,
+        answer: <Image source={require('../../assets/img/level4/game6/cucumbershadow.png')} style={{ width: 60, height: 40 }} />,
 
     })
+
+    const [disable, setDisable] = useState(false)
+
+    const [game1, setGame1] = useState(0)
 
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -46,8 +50,7 @@ export const Level4_6 = ({ navigation }) => {
 
     useEffect(() => {
         let item = {}
-        const randomNum = Math.floor(Math.random() * 2)
-        if (randomNum) {
+        if (game1 == 0) {
             item = { ...svg }
         }
         else {
@@ -56,15 +59,20 @@ export const Level4_6 = ({ navigation }) => {
         item.icone = GetRandomItemsFromArray(item.icone, 3)
         setActive(item)
 
-    }, [])
+    }, [game1])
 
     const Game = (id) => {
         if (id == 2) {
             setTimeout(() => {
                 musicSuccess.play();
+                setDisable(true)
             }, 100);
             setTimeout(() => {
-                navigation.navigate('Level4_7')
+                setGame1(game1 + 1)
+                setDisable(false)
+                if (game1 == 1) {
+                    navigation.navigate('Level4_7')
+                }
                 musicSuccess.stop();
             }, 2000);
         }
@@ -81,12 +89,12 @@ export const Level4_6 = ({ navigation }) => {
 
     return <LevelWrapper img2={require('../../assets/img/bg5.png')} img={require('../../assets/img/5bg.png')} jC='center'>
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-            <ImgButton svg={active?.answer} border={'rgba(204, 102, 204, 0.50)'} />
+            <ImgButton disable={true} svg={active?.answer} border={'rgba(204, 102, 204, 0.50)'} />
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 30 }}>
             {active?.icone?.map((elm, i) => {
                 return <View key={i} style={i == 1 && { marginHorizontal: 80 }}>
-                    <ImgButton onPress={() => Game(elm.id)} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
+                    <ImgButton disable={disable} onPress={() => Game(elm.id)} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
                 </View>
             })}
         </View>

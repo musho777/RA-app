@@ -8,19 +8,19 @@ import Sound from 'react-native-sound'
 export const Level5_6 = () => {
     const [arr, setArr] = useState([
         [
-            { icon: <Image source={require('../../assets/img/level5/game6/ballburst.png')} style={{ width: 50, height: 50 }} />, id: 2, active: false },
-            { icon: <Image source={require('../../assets/img/level5/game6/wholeball.png')} style={{ width: 40, height: 55 }} />, id: 0, active: false },
-            { icon: <Image source={require('../../assets/img/level5/game6/nail.png')} style={{ width: 30, height: 50 }} />, id: 1, active: false },
+            { icon: <Image source={require('../../assets/img/level5/game6/ballburst.png')} style={{ width: 70, height: 70 }} />, id: 2, active: false },
+            { icon: <Image source={require('../../assets/img/level5/game6/wholeball.png')} style={{ width: 65, height: 70 }} />, id: 0, active: false },
+            { icon: <Image source={require('../../assets/img/level5/game6/nail.png')} style={{ width: 50, height: 70 }} />, id: 1, active: false },
         ],
         [
-            { icon: <Image source={require('../../assets/img/level5/game6/rainbow.png')} style={{ width: 50, height: 50 }} />, id: 2, active: false },
+            { icon: <Image source={require('../../assets/img/level5/game6/rainbow.png')} style={{ width: 70, height: 70 }} />, id: 2, active: false },
             { icon: <Image source={require('../../assets/img/level5/game6/cloud.png')} style={{ width: 60, height: 40 }} />, id: 0, active: false },
             { icon: <Image source={require('../../assets/img/level5/game6/sun.png')} style={{ width: 50, height: 50 }} />, id: 1, active: false },
         ],
         [
-            { icon: <Image source={require('../../assets/img/level5/game6/meltingsnowman.png')} style={{ width: 50, height: 50 }} />, id: 2, active: false },
-            { icon: <Image source={require('../../assets/img/level5/game6/snowman.png')} style={{ width: 45, height: 60 }} />, id: 0, active: false },
-            { icon: <Image source={require('../../assets/img/level5/game6/sun.png')} style={{ width: 50, height: 50 }} />, id: 1, active: false },
+            { icon: <Image source={require('../../assets/img/level5/game6/meltingsnowman.png')} style={{ width: 70, height: 70 }} />, id: 2, active: false },
+            { icon: <Image source={require('../../assets/img/level5/game6/snowman.png')} style={{ width: 50, height: 70 }} />, id: 0, active: false },
+            { icon: <Image source={require('../../assets/img/level5/game6/sun.png')} style={{ width: 70, height: 70 }} />, id: 1, active: false },
         ]
     ])
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
