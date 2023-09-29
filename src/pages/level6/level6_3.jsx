@@ -68,7 +68,7 @@ export const Level6_3 = ({ navigation }) => {
                 }, 100);
                 setTimeout(() => {
                     music.stop()
-                }, 2000);
+                }, 1000);
             }
         })
         setAnswer(temp)
