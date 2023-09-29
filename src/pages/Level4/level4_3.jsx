@@ -178,7 +178,7 @@ export const Level4_3 = ({ navigation }) => {
 
                     }
                 </View>
-                <View style={{ justifyContent: 'space-around', }}>
+                <View style={{ justifyContent: 'space-between', borderLeftWidth: 3, paddingLeft: 10, borderColor: "#FF7575", height: '95%' }}>
                     {value1 == '' ?
                         <View style={styles.block}>
                             {activeArr?.answer?.length > 0 && activeArr?.answer[0].icon}
@@ -236,8 +236,8 @@ export const Level4_3 = ({ navigation }) => {
 const styles = StyleSheet.create({
     block: {
         flexDirection: 'row',
-        width: 130,
+        width: 110,
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     }
 })

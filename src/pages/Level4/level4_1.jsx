@@ -23,6 +23,8 @@ export const Level4_1 = ({ navigation }) => {
         });
     const [disable, setDisable] = useState(false)
 
+    const [game1, setGame1] = useState(0)
+
     const [arr, setArr] = useState([
         {
             box: { icon: <Image source={require('../../assets/img/level4/game1/yellowbox4.png')} style={{ width: 200, height: 200 }} />, count: 4 },
@@ -95,12 +97,12 @@ export const Level4_1 = ({ navigation }) => {
     const [activeGame, setActiveGame] = useState({})
 
     useEffect(() => {
-        const randomNum = Math.floor(Math.random() * 3)
-        let item = arr[randomNum]
+        // const randomNum = Math.floor(Math.random() * 3)
+        let item = arr[game1]
         temp = GetRandomItemsFromArray(position, position.length)
         setPosition(temp)
         setActiveGame(item)
-    }, [])
+    }, [game1])
 
     const Game = (id, i) => {
         let item = { ...activeGame }
@@ -130,8 +132,11 @@ export const Level4_1 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                setDisable(true)
-                navigation.navigate('Level4_2')
+                setDisable(false)
+                setGame1(game1 + 1)
+                if (game1 === 2) {
+                    navigation.navigate('Level4_2')
+                }
                 musicSuccess.stop()
             }, 2000);
         }

@@ -9,6 +9,8 @@ import Sound from 'react-native-sound';
 const windowHeight = Dimensions.get('window').height;
 export const Level5_7 = ({ navigation }) => {
 
+    const [game1, setGame1] = useState(0)
+
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -26,14 +28,20 @@ export const Level5_7 = ({ navigation }) => {
 
     useEffect(() => {
         setTimeout(function () {
-            setGame(false)
+            // setGame(false)
+            setGame1(1)
         }, 3000);
+
+        setTimeout(function () {
+            // setGame(false)
+            setGame1(2)
+        }, 6000);
     }, [])
     const [game, setGame] = useState(true)
     const [bucket, setBucket] = useState([
-        { icone: <Image source={require('../../assets/img/level1/game4/greenbuket.png')} style={{ width: 40, height: 50 }} />, id: 1 },
-        { icone: <Image source={require('../../assets/img/level1/game4/pinkbuket.png')} style={{ width: 40, height: 50 }} />, id: 3 },
-        { icone: <Image source={require('../../assets/img/level1/game4/orangebuket.png')} style={{ width: 40, height: 50 }} />, id: 2 },
+        { icone: <Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/machine.png')} />, id: 2 },
+        { icone: <Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/scooter.png')} />, id: 3 },
+        { icone: <Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/bucket.png')} />, id: 1 },
     ])
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;
@@ -62,7 +70,7 @@ export const Level5_7 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                navigation.navigate('Level1_5')
+                // navigation.navigate('Level1_5')
             }, 2000);
         }
         else {
@@ -74,7 +82,7 @@ export const Level5_7 = ({ navigation }) => {
             }, 1000);
         }
     }
-    if (!game) {
+    if (game1 == '2') {
         return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')}>
             <View style={styles.block}>
                 {bucket.map((elm, i) => {
@@ -85,9 +93,17 @@ export const Level5_7 = ({ navigation }) => {
     }
     else {
         return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')}>
-            <View style={styles.block2}>
-                <ImgButton big svg={<BigBucket />} border={'rgba(255, 111, 23, 0.50)'} />
-            </View>
+            {game1 == 0 && <View style={styles.block2}>
+                <ImgButton svg={<Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/ball.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/cube.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/machine.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/pyramid.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+            </View>}
+            {game1 == 1 && <View style={styles.block2}>
+                <ImgButton svg={<Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/ball.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/cube.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level5/game7/pyramid.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+            </View>}
         </LevelWrapper>
     }
 }
@@ -103,6 +119,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         height: windowHeight - 80,
-        paddingHorizontal: 100
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 100,
     }
 })
