@@ -7,25 +7,23 @@ import { GetRandomItemsFromArray } from "../../components/Funtion/getRandomItems
 
 const windowHeight = Dimensions.get('window').height;
 
-export const Level6_6 = ({ navigation }) => {
+export const Level8_6 = ({ navigation }) => {
 
 
     const [activeGame, setActiveGame] = useState([
         [
-            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 20, height: 20 }} />, id: 1, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 30, height: 30 }} />, id: 2, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 40, height: 40 }} />, id: 3, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 30, height: 20 }} />, id: 4, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 40, height: 30 }} />, id: 5, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 50, height: 40 }} />, id: 6, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/beanbag.png')} style={{ width: 50, height: 60 }} />, id: 1, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/butterfly.png')} style={{ width: 55, height: 50 }} />, id: 2, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/chicken.png')} style={{ width: 50, height: 60 }} />, id: 3, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/fish.png')} style={{ width: 55, height: 60 }} />, id: 4, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/hare.png')} style={{ width: 50, height: 60 }} />, id: 5, active: false },
         ],
         [
-            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 20, height: 25 }} />, id: 7, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 30, height: 40 }} />, id: 8, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 40, height: 50 }} />, id: 9, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 20, height: 20 }} />, id: 10, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 30, height: 30 }} />, id: 11, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 40, height: 40 }} />, id: 12, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/doll.png')} style={{ width: 50, height: 70 }} />, id: 6, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/ladybug.png')} style={{ width: 60, height: 60 }} />, id: 7, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/duck.png')} style={{ width: 60, height: 60 }} />, id: 8, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/Starfish.png')} style={{ width: 60, height: 60 }} />, id: 9, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/squirrel.png')} style={{ width: 60, height: 60 }} />, id: 10, active: false },
         ]
     ])
 
@@ -37,8 +35,6 @@ export const Level6_6 = ({ navigation }) => {
     }, [])
 
     const [active, setActive] = useState([
-        { value1: '', value2: '' },
-        { value1: '', value2: '' },
         { value1: '', value2: '' },
         { value1: '', value2: '' },
         { value1: '', value2: '' },
@@ -60,28 +56,28 @@ export const Level6_6 = ({ navigation }) => {
             }
         });
     const [activeNumber, setActiveNumber] = useState({ number1: '', number2: '' })
-    const [answer, setAnswer] = useState([false, false, false, false, false, false, false])
+    const [answer, setAnswer] = useState([false, false, false, false, false,])
     const Game = (number) => {
         let item = [...active]
         let tepm = [...answer]
         let item2 = { ...activeNumber }
         let item3 = [...activeGame]
         for (let i = 0; i < item.length; i++) {
-            if (number <= 6) {
+            if (number <= 5) {
                 item[i].value1 = number
                 item2.number1 = number
                 break
             }
-            else if (number > 6) {
+            else if (number > 5) {
                 item[i].value2 = number
                 item2.number2 = number
                 break
             }
         }
-
-        if (item2.number1 + 6 == item2.number2) {
+        if (item2.number1 + 5 == item2.number2) {
             const isLargeNumber = (element) => element.id == item2.number1;
             const isLargeNumber1 = (element) => element.id == item2.number2;
+            console.log(isLargeNumber, isLargeNumber1)
             let i1 = item3[0].findIndex(isLargeNumber)
             let i2 = item3[1].findIndex(isLargeNumber1)
             item3[0][i1].active = true
@@ -109,6 +105,7 @@ export const Level6_6 = ({ navigation }) => {
                 setActiveNumber(item2)
             }, 1000);
         }
+        console.log(item2)
         setActiveNumber(item2)
         setActive(item)
         setAnswer(tepm)
@@ -126,7 +123,7 @@ export const Level6_6 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                navigation.navigate('Level6_7')
+                // navigation.navigate('Level6_7')
             }, 2000);
         }
     }, [answer])
