@@ -29,7 +29,6 @@ export const Level7_5 = ({ navigation }) => {
     const [activeGame, setActiveGame] = useState([])
     const [game, setGame] = useState(0)
     const Game = (elm) => {
-        console.log(elm)
         let item = [...activeGame]
         let index = ''
         let win = true
@@ -54,7 +53,6 @@ export const Level7_5 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                navigation.navigate('Level7_5_1')
                 musicSuccess.stop()
             }, 2000);
         }
@@ -65,7 +63,6 @@ export const Level7_5 = ({ navigation }) => {
                 win = false
             }
         })
-        console.log(win)
         if (win) {
             setGame(game + 1)
 
@@ -74,7 +71,7 @@ export const Level7_5 = ({ navigation }) => {
 
     useEffect(() => {
         if (game == 3) {
-            console.log('111112')
+            navigation.navigate('Level7_5_1')
         } else {
             setActiveGame(arr[game])
         }

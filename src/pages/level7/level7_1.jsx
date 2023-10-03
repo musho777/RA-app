@@ -91,7 +91,7 @@ export const Level7_1 = ({ navigation }) => {
             setTimeout(() => {
                 setGame1(game1 + 1)
                 if (game1 === 1) {
-                    // navigation.navigate('Level3_6')
+                    navigation.navigate('Level7_2')
                 }
                 musicSuccess.stop()
             }, 2000);
@@ -102,7 +102,6 @@ export const Level7_1 = ({ navigation }) => {
         if (game1 == 1) {
             setArr(lollipop)
             setAnswer([
-                { icone: '', id: '' },
                 { icone: '', id: '' },
                 { icone: '', id: '' },
                 { icone: '', id: '' },

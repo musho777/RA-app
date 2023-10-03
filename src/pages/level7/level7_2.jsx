@@ -121,7 +121,7 @@ export const Level7_2 = ({ navigation }) => {
                 }, 100);
                 setTimeout(() => {
                     musicSuccess.stop()
-                    navigation.navigate('Level4_4')
+                    navigation.navigate('Level7_3')
                 }, 2000);
             }
         }
@@ -141,7 +141,7 @@ export const Level7_2 = ({ navigation }) => {
                     musicSuccess.play();
                 }, 100);
                 setTimeout(() => {
-                    navigation.navigate('Level4_4')
+                    navigation.navigate('Level7_3')
                     musicSuccess.stop()
                 }, 2000);
             }

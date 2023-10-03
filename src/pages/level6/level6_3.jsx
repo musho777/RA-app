@@ -82,22 +82,33 @@ export const Level6_3 = ({ navigation }) => {
                 win = false
             }
         })
-        if (win) {
+        if (win && game1 == 0) {
             setTimeout(() => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                setGame1(game1 + 1)
+                setAnswer([{ icone: '', id: '' },
+                { icone: '', id: '' },
+                { icone: '', id: '' },
+                { icone: '', id: '' },
+                { icone: '', id: '' }])
                 musicSuccess.stop()
             }, 2000);
         }
+        else if (win && game1 == 1) {
+            console.log('111')
+            // navigation.navigate('')
+        }
     }, [arr])
 
+    const [game1, setGame1] = useState(0)
+
     useEffect(() => {
-        const randomNum = Math.floor(Math.random() * 2)
-        if (randomNum) {
+        if (game1 == 1) {
             setArr(lollipop)
         }
-    }, [])
+    }, [game1])
 
     return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>

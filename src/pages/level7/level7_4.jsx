@@ -3,7 +3,7 @@ import { LevelWrapper } from '../../components/LevelWrapper'
 import { useState } from 'react'
 import Sound from 'react-native-sound'
 
-export const Level7_4 = () => {
+export const Level7_4 = ({ navigation }) => {
     const position = [
         { x: 350, y: 120 },
         { x: 85, y: 120 },
@@ -53,7 +53,7 @@ export const Level7_4 = () => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                // navigation.navigate('Level3_6')
+                navigation.navigate('Level7_5')
                 musicSuccess.stop()
             }, 2000);
         }
@@ -65,7 +65,6 @@ export const Level7_4 = () => {
                 music.stop()
             }, 2000);
         }
-        console.log(item)
         setImg(item)
     }
 

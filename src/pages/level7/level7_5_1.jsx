@@ -48,7 +48,6 @@ export const Level7_5_1 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                // navigation.navigate('Level3_6')
                 musicSuccess.stop()
             }, 2000);
         }
@@ -62,8 +61,11 @@ export const Level7_5_1 = ({ navigation }) => {
         }
         setArr(item)
     }
-
-    console.log(arr)
+    useEffect(() => {
+        if (arr.length == 9) {
+            navigation.navigate('Level7_6')
+        }
+    }, [arr])
     return <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')} >
         <View style={{ justifyContent: 'center', height: '100%', flexDirection: 'column' }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 250 }}>

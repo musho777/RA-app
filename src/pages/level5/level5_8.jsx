@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Image1, Image2, Image3, Image4, Image5, Image6 } from '../../assets/svg'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 
-export const Level5_8 = () => {
+export const Level5_8 = ({ navigation }) => {
     const [image, setImage] = useState([
         { icon: <Image6 />, id: 0 },
         { icon: <Image5 />, id: 1 },
@@ -36,10 +36,19 @@ export const Level5_8 = () => {
         item[i] = elm
         setArr(item)
     }
-    console.log(arr)
-    if (game) {
 
-    }
+    useEffect(() => {
+        let win = true
+        arr.map((elm, i) => {
+            if (!elm) {
+                win = false
+            }
+        })
+        if (win) {
+            navigation.navigate('LevelScreen')
+        }
+    }, [arr])
+
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} >
         {game ?
             <View style={{ justifyContent: 'center', alignItems: 'center', height: '100%' }}>
@@ -47,7 +56,6 @@ export const Level5_8 = () => {
             </View> :
             <View style={{ justifyContent: 'center', alignContent: 'center', height: '100%' }}>
                 {position.map((elm, i) => {
-                    console.log(image[4].icon == arr[2])
                     if (!arr.includes(image[i].icon)) {
                         return <TouchableOpacity onPress={() => Game(image[i].id, image[i].icon)} key={i} style={{ position: 'absolute', left: elm.x, top: elm.y }}>
                             {image[i].icon}

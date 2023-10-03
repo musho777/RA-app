@@ -144,7 +144,7 @@ export const Level7_6 = ({ navigation }) => {
                 musicSuccess.stop()
                 setGame1(game1 + 1)
                 if (game1 == 1) {
-                    // navigation.navigate('Level1_4')
+                    navigation.navigate('Level7_7')
                 }
             }, 2000);
         }

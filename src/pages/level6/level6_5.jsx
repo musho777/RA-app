@@ -1,4 +1,4 @@
-import { Image, View } from 'react-native'
+import { Image, Touchable, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
@@ -55,7 +55,7 @@ export const Level6_5 = ({ navigation }) => {
 
     useEffect(() => {
         if (game == 3) {
-            console.log('111112')
+            navigation.navigate('Level6_6')
         } else {
             setActiveGame(arr[game])
         }
@@ -71,6 +71,7 @@ export const Level6_5 = ({ navigation }) => {
                         return <NumberButton disabled={true} bg={'#A0CDD4'} bc='rgba(160, 205, 212, 0.4)' key={i} number={elm} />
                     }
                 })}
+
             </View>
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#A0CDD4', borderRadius: 10 }}></View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>

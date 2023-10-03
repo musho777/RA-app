@@ -64,7 +64,7 @@ export const Level6_7 = () => {
                 musicSuccess.stop()
             }, 2000);
             if (game === 2) {
-                console.log('win')
+                navigation.navigate('LevelScreen')
             }
             else {
                 setTimeout(() => {
@@ -86,7 +86,6 @@ export const Level6_7 = () => {
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
             {activeGame.map((elm, i) => {
                 return <ImgButton key={i} svg={elm.icon} onPress={() => Game(elm.id)} />
-
             })}
         </View>
     </LevelWrapper>

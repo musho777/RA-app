@@ -5,7 +5,7 @@ import { Input } from '../../components/Input'
 import { NumberButton } from '../../components/NumberBuuton'
 import Sound from 'react-native-sound'
 
-export const Level5_1 = () => {
+export const Level5_1 = ({ navigation }) => {
     const [arr, setArr] = useState([
         { icon: <Image style={{ width: 350, height: 200 }} source={require('../../assets/img/level5/game1/apeapod.png')} />, count: 6 },
         { icon: <Image style={{ width: 300, height: 220 }} source={require('../../assets/img/level5/game1/eggsinapackage.png')} />, count: 8 },

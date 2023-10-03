@@ -98,7 +98,6 @@ export const Level7_3 = ({ navigation }) => {
         if (game == 2) {
             navigation.navigate('Level7_4')
         } else {
-            console.log(answer[game], '22')
             let item = GetRandomItemsFromArray(answer[game], answer[game].length)
             setActiveAnswer(item)
             setActiveGame(arr[game])
