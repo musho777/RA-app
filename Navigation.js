@@ -52,12 +52,13 @@ import { Level7_8 } from './src/pages/level7/level7_8';
 import { Level7_4 } from './src/pages/level7/level7_4';
 import { Level7_5 } from './src/pages/level7/level7_5';
 import { Level7_5_1 } from './src/pages/level7/level7_5_1';
+import { Level7_7 } from './src/pages/level7/level7_7';
 
 export default Navigation = () => {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer >
-      <Stack.Navigator initialRouteName={'Level7_5_1'} >
+      <Stack.Navigator initialRouteName={'Level7_7'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}
@@ -422,6 +423,13 @@ export default Navigation = () => {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name="Level7_7"
+          component={Level7_7}
+          options={{
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>
@@ -433,3 +441,4 @@ export default Navigation = () => {
 // Level7_4
 // Level7_5
 // Level7_5_1
+// Level7_7
