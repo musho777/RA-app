@@ -64,7 +64,7 @@ export const Level6_7 = () => {
                 musicSuccess.stop()
             }, 2000);
             if (game === 2) {
-                navigation.navigate('LevelScreen')
+                navigation.navigate('Level6_7')
             }
             else {
                 setTimeout(() => {
