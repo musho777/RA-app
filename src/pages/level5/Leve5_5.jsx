@@ -101,15 +101,6 @@ export const Level5_5 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 setGame1(game1 + 1)
-                // setAnswer([{ icone: '', id: '' },
-                // { icone: '', id: '' },
-                // { icone: '', id: '' },
-                // { icone: '', id: '' },
-                // { icone: '', id: '' },
-                // { icone: '', id: '' },
-                // { icone: '', id: '' },
-                // { icone: '', id: '' },
-                // { icone: '', id: '' }])
                 if (game1 == 0) {
                     navigation.navigate('Level5_6')
                 }
@@ -119,7 +110,6 @@ export const Level5_5 = ({ navigation }) => {
     }, [arr])
 
     useEffect(() => {
-        // const randomNum = Math.floor(Math.random() * 2)
         if (game1 == 1) {
             setArr(lollipop)
         }

@@ -2,7 +2,7 @@ import { Image, TouchableOpacity, View } from "react-native"
 import { LevelWrapper } from "../../components/LevelWrapper"
 import { useEffect, useState } from "react"
 import Sound from "react-native-sound"
-import { Blue1, Blue2, Blue3, Brown, Green2, Purple, Red2, Yellow2 } from "../../assets/svg"
+import { Blue3, Brown, Green2, Purple } from "../../assets/svg"
 export const Level6_8 = ({ navigation }) => {
 
     const [disable, setDisable] = useState(false)

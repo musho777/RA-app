@@ -33,17 +33,17 @@ export const Level7_2 = ({ navigation }) => {
     const [arr, setArr] = useState([
         {
             array: [
-                { icon: <Image source={require('../../assets/img/level7/game2/composition1.png')} style={{ width: 50, height: 50 }} />, id: 1 },
-                { icon: <Image source={require('../../assets/img/level7/game2/composition1.png')} style={{ width: 50, height: 50 }} />, id: 1 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition1.png')} style={{ width: 70, height: 70 }} />, id: 1 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition1.png')} style={{ width: 70, height: 70 }} />, id: 1 },
 
-                { icon: <Image source={require('../../assets/img/level7/game2/composition2.png')} style={{ width: 50, height: 50 }} />, id: 2 },
-                { icon: <Image source={require('../../assets/img/level7/game2/composition2.png')} style={{ width: 50, height: 50 }} />, id: 2 },
-                { icon: <Image source={require('../../assets/img/level7/game2/composition2.png')} style={{ width: 50, height: 50 }} />, id: 2 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition2.png')} style={{ width: 100, height: 60 }} />, id: 2 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition2.png')} style={{ width: 100, height: 60 }} />, id: 2 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition2.png')} style={{ width: 100, height: 60 }} />, id: 2 },
 
-                { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-                { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-                { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-                { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 50, height: 50 }} />, id: 3 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 70, height: 70 }} />, id: 3 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 70, height: 70 }} />, id: 3 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 70, height: 70 }} />, id: 3 },
+                { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 70, height: 70 }} />, id: 3 },
 
 
             ],
@@ -55,17 +55,25 @@ export const Level7_2 = ({ navigation }) => {
         },
     ])
 
+
+    const [ansewer, setAnswer] = useState([
+        { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/circleyellow.png')} />, id: 2 },
+        { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/triangleblue.png')} />, id: 6 },
+        { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/ovallilac.png')} />, id: 3 },
+
+
+    ])
+
     const [position, setPosition] = useState([
-        { x: 46, y: 33 },
-        { x: 47, y: 117 },
-        { x: 93, y: 196 },
+        { x: 0, y: 3 },
+        { x: 20, y: 90 },
+        { x: 0, y: 176 },
         { x: 190, y: 144 },
-        { x: 178, y: 24 },
-        { x: 308, y: 5 },
-        { x: 220, y: 196 },
+        { x: 178, y: 0 },
+        { x: 368, y: 5 },
+        { x: 320, y: 176 },
         { x: 467, y: 59 },
         { x: 467, y: 129 },
-        { x: 307, y: 59 },
     ])
 
     const [activeArr, setActiveArr] = useState({
@@ -82,7 +90,7 @@ export const Level7_2 = ({ navigation }) => {
     const Answer = (e) => {
         if (value1 == '') {
             setValue1(e)
-            if (e != activeArr?.answer[0].count) {
+            if (e != ansewer[0].id) {
                 setTimeout(() => {
                     music.play();
                 }, 100);
@@ -94,7 +102,7 @@ export const Level7_2 = ({ navigation }) => {
         }
         else if (value2 == '') {
             setValue2(e)
-            if (e != activeArr?.answer[1].count) {
+            if (e != ansewer[1].id) {
                 setTimeout(() => {
                     music.play();
                 }, 100);
@@ -106,7 +114,7 @@ export const Level7_2 = ({ navigation }) => {
         }
         else if (value3 == '') {
             setValue3(e)
-            if (e != activeArr?.answer[2].count) {
+            if (e != ansewer[2].id) {
                 setTimeout(() => {
                     music.play();
                 }, 100);
@@ -117,9 +125,11 @@ export const Level7_2 = ({ navigation }) => {
             }
             else if (activeArr.answer.length == 3) {
                 setTimeout(() => {
+                    setDisable(true)
                     musicSuccess.play();
                 }, 100);
                 setTimeout(() => {
+                    setDisable(false)
                     musicSuccess.stop()
                     navigation.navigate('Level7_3')
                 }, 2000);
@@ -166,32 +176,32 @@ export const Level7_2 = ({ navigation }) => {
                 <View style={{ justifyContent: 'space-between', borderLeftWidth: 3, paddingLeft: 10, borderColor: "#FF7575", height: '95%' }}>
                     {value1 == '' ?
                         <View style={styles.block}>
-                            {activeArr?.answer?.length > 0 && activeArr?.answer[0].icon}
+                            {ansewer[0].icon}
                             <Input width={56} height={56} value={value1} setValue={(e) => setValue1(e)} />
                         </View> :
                         <View style={styles.block}>
-                            {activeArr?.answer[0].icon}
+                            {ansewer[0].icon}
                             <NumberButton disabled={true} number={value1} />
                         </View>
                     }
                     {value2 == '' ?
                         <View style={styles.block}>
-                            {activeArr?.answer?.length > 0 && activeArr?.answer[1].icon}
+                            {ansewer[1].icon}
 
                             <Input width={56} height={56} value={value2} setValue={(e) => setValue2(e)} />
                         </View> :
                         <View style={styles.block}>
-                            {activeArr?.answer[1].icon}
+                            {ansewer[1].icon}
                             <NumberButton disabled={true} number={value2} />
                         </View>
                     }
                     {value3 == '' ?
                         <View style={styles.block}>
-                            {activeArr?.answer?.length > 0 && activeArr?.answer[2].icon}
+                            {ansewer[2].icon}
                             <Input width={56} height={56} value={value3} setValue={(e) => setValue2(e)} />
                         </View> :
                         <View style={styles.block}>
-                            {activeArr?.answer[2].icon}
+                            {ansewer[2].icon}
                             <NumberButton disabled={true} number={value3} />
                         </View>
                     }
