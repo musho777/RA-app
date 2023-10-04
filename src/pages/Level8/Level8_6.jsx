@@ -77,7 +77,6 @@ export const Level8_6 = ({ navigation }) => {
         if (item2.number1 + 5 == item2.number2) {
             const isLargeNumber = (element) => element.id == item2.number1;
             const isLargeNumber1 = (element) => element.id == item2.number2;
-            console.log(isLargeNumber, isLargeNumber1)
             let i1 = item3[0].findIndex(isLargeNumber)
             let i2 = item3[1].findIndex(isLargeNumber1)
             item3[0][i1].active = true

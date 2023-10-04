@@ -1636,6 +1636,28 @@ export const Red = () => {
         />
     </Svg>
 }
+export const Red2 = () => {
+    return <Svg
+        width={78}
+        height={78}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill="red" />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="#FF6F17"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
 
 export const Yellow = () => {
     return <Svg
@@ -1681,6 +1703,28 @@ export const Orange = () => {
         />
     </Svg>
 }
+export const Orange2 = () => {
+    return <Svg
+        width={78}
+        height={78}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill="#FFA500" />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="rgba(153, 204, 51, 0.5)"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
 
 export const Green = () => {
     return <Svg
@@ -1704,6 +1748,28 @@ export const Green = () => {
         />
     </Svg>
 }
+export const Green2 = () => {
+    return <Svg
+        width={78}
+        height={78}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill="green" />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="rgba(153, 204, 51, 0.5)"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
 
 export const Blue = () => {
     return <Svg
@@ -1722,6 +1788,50 @@ export const Blue = () => {
             height={94}
             rx={17}
             stroke="#FF6F17"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const Blue2 = () => {
+    return <Svg
+        width={78}
+        height={78}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill="rgb(65,47,145)" />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="rgba(153, 204, 51, 0.5)"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const Yellow2 = () => {
+    return <Svg
+        width={78}
+        height={78}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill="rgb(255, 231, 25)" />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="rgba(153, 204, 51, 0.5)"
             strokeOpacity={0.5}
             strokeWidth={4}
         />

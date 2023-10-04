@@ -97,8 +97,7 @@ export const Level6_3 = ({ navigation }) => {
             }, 2000);
         }
         else if (win && game1 == 1) {
-            console.log('111')
-            // navigation.navigate('')
+            navigation.navigate('6_4')
         }
     }, [arr])
 
