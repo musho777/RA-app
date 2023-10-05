@@ -122,7 +122,7 @@ export const Level8_6 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                // navigation.navigate('Level6_7')
+                navigation.navigate('Level8_7')
             }, 2000);
         }
     }, [answer])
