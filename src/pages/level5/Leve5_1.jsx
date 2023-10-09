@@ -17,10 +17,10 @@ export const Level5_1 = ({ navigation }) => {
     const [value1, setValue1] = useState('')
     const [activeArr, setActiveArr] = useState({})
     const [disable, setDisable] = useState(false)
+    const [game1, setGame1] = useState(0)
     useEffect(() => {
-        const randomNum = Math.floor(Math.random() * 5)
-        setActiveArr(arr[randomNum])
-    }, [])
+        setActiveArr(arr[game1])
+    }, [game1])
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -43,6 +43,13 @@ export const Level5_1 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                if (game1 < 4) {
+                    setValue1('')
+                    setGame1(game1 + 1)
+                }
+                else {
+                    navigation.navigate('Level5_2')
+                }
                 musicSuccess.stop()
             }, 2000);
         }

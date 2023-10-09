@@ -108,6 +108,12 @@ export const Level4_1 = ({ navigation }) => {
         let item = { ...activeGame }
         let count = 0
         if (id === 1) {
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+            }, 2000);
             item.item[i].active = true
             item.item.map((elm, i) => {
                 if (elm.active) {

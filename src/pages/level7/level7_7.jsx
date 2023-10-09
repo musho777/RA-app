@@ -1,11 +1,15 @@
-import { Image, TouchableOpacity } from 'react-native'
+import { Dimensions, Image, TouchableOpacity } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import Sound from 'react-native-sound';
 import { useEffect, useState } from 'react';
 
-
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 export const Level7_7 = ({ navigation }) => {
-
+    console.log(windowWidth)
+    let w = windowWidth - 80
+    let h = windowHeight - 80
+    console.log(h)
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -24,10 +28,10 @@ export const Level7_7 = ({ navigation }) => {
     const [position, setPosition] = useState(() => [
         { x: 48, y: 15 },
         { x: 292, y: 43 },
-        { x: 505, y: 200 },
+        { x: 505, y: h - 100 },
         { x: 434, y: 75 },
         { x: 44, y: 152 },
-        { x: 304, y: 212 },
+        { x: 304, y: h - 120 },
 
     ])
 

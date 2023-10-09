@@ -85,6 +85,24 @@ export const Level5_4 = ({ navigation }) => {
         setActiveGame(item)
     }
 
+    useEffect(() => {
+        let win = true
+
+        activeGame[0]?.map((elm, i) => {
+            if (!elm.active) {
+                win = false
+            }
+        })
+        if (activeGame?.length === 0) {
+            win = false
+        }
+        if (win) {
+            setTimeout(() => {
+                navigation.navigate('Level5_6')
+            }, 1000);
+        }
+    }, [activeGame])
+
     return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')} jC='center'>
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
             {activeGame[0]?.map((elm, i) => {

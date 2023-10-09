@@ -101,7 +101,7 @@ export const Level3_1 = ({ navigation }) => {
                     setGame1(game1 + 1)
 
                     if (game1 === 1) {
-                        navigation.navigate('Level3_2')
+                        // navigation.navigate('Level3_2')
                     }
                     setValue1('')
                     setValue2('')

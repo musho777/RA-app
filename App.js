@@ -3,8 +3,27 @@ import Navigation from "./Navigation"
 import { useEffect, useState } from "react";
 import { AppState } from 'react-native';
 
+import { BackHandler } from 'react-native';
 
 export default App = () => {
+
+
+
+  const handleBackButton = () => {
+    // Prevent going back
+    return true;
+  };
+
+  useEffect(() => {
+    // Add the event listener when the component mounts
+    BackHandler.addEventListener('hardwareBackPress', handleBackButton);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', handleBackButton);
+    };
+  }, []); // Empty dependency array ensures the effect is only run once
+
   const [appState, setAppState] = useState(AppState.currentState);
   const [isLocked, setIsLocked] = useState(false);
   const sound1 = new Sound('a.mp3', Sound.MAIN_BUNDLE, (error) => {

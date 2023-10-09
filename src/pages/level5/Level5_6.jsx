@@ -4,6 +4,7 @@ import { ImgButton } from '../../components/ImgButton'
 import { NumberButton } from '../../components/NumberBuuton'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
+import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 
 export const Level5_6 = ({ navigation }) => {
     const [arr, setArr] = useState([
@@ -45,7 +46,8 @@ export const Level5_6 = ({ navigation }) => {
             navigation.navigate('Level5_7')
         }
         else {
-            setActiveArr(arr[game1])
+            let item = GetRandomItemsFromArray(arr[game1], arr[game1].length)
+            setActiveArr(item)
         }
     }, [game1])
 
@@ -81,8 +83,6 @@ export const Level5_6 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 setGameArr(['', '', ''])
-                console.log(game1, 'ww')
-
                 setGame1(game1 + 1)
                 musicSuccess.stop()
             }, 2000);

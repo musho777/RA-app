@@ -98,7 +98,7 @@ export const Level8_3 = ({ navigation }) => {
             setTimeout(() => {
                 setGame1(game1 + 1)
                 if (game1 === 1) {
-                    // navigation.navigate('Level7_2')
+                    // navigation.navigate('Level8_4')
                 }
                 musicSuccess.stop()
             }, 2000);

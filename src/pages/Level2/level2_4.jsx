@@ -1,8 +1,12 @@
-import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export const Level2_4 = ({ navigation }) => {
     const item = [
         { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/redGlass1.png')} />, id: 1 },
@@ -14,6 +18,9 @@ export const Level2_4 = ({ navigation }) => {
     ]
     const [selected, setSeletded] = useState([])
     const [selected1, setSeletded1] = useState([])
+
+    let w = (windowWidth - 80) * 0.4
+    let h = windowHeight - 80
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -108,7 +115,7 @@ export const Level2_4 = ({ navigation }) => {
                 {!selected.some((elm) => elm.id === item[1].id) && <TouchableOpacity style={{ position: 'absolute', left: 13, top: 53 }} onPress={() => Play(item[1])} >
                     {item[1].icon}
                 </TouchableOpacity>}
-                {!selected1.some((elm) => elm.id === item[2].id) && <TouchableOpacity style={{ position: 'absolute', left: 209, top: 30 }} onPress={() => Play(item[2])} >
+                {!selected1.some((elm) => elm.id === item[2].id) && <TouchableOpacity style={{ position: 'absolute', left: w - 80, top: 30 }} onPress={() => Play(item[2])} >
                     {item[2].icon}
                 </TouchableOpacity>}
                 {!selected.some((elm) => elm.id === item[3].id) && <TouchableOpacity style={{ position: 'absolute', left: 59, top: 0 }} onPress={() => Play(item[3])} >
@@ -117,7 +124,7 @@ export const Level2_4 = ({ navigation }) => {
                 {!selected1.some((elm) => elm.id === item[4].id) && <TouchableOpacity style={{ position: 'absolute', left: 2, top: 160 }} onPress={() => Play(item[4])} >
                     {item[4].icon}
                 </TouchableOpacity>}
-                {!selected1.some((elm) => elm.id === item[5].id) && <TouchableOpacity style={{ position: 'absolute', left: 220, top: 150 }} onPress={() => Play(item[5])} >
+                {!selected1.some((elm) => elm.id === item[5].id) && <TouchableOpacity style={{ position: 'absolute', left: w - 120, top: 180 }} onPress={() => Play(item[5])} >
                     {item[5].icon}
                 </TouchableOpacity>}
             </View>

@@ -1,9 +1,19 @@
-import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
+
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export const Level2_4_2 = ({ navigation }) => {
+
+    let w = (windowWidth - 80) * 0.4
+    let h = windowHeight - 150
+    console.log(h)
+
     const item = [
         { icon: <Image style={{ width: 55, height: 40 }} source={require('../../assets/img/butterfly.png')} />, id: 1 },
         { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/kite.png')} />, id: 2 },
@@ -112,16 +122,16 @@ export const Level2_4_2 = ({ navigation }) => {
                 </View>
             </View>
             <View style={styles.block2}>
-                {!selected.some((elm) => elm.id === item[0].id) && <TouchableOpacity style={{ position: 'absolute', left: 250, top: 0 }} onPress={() => Play(item[0])} >
+                {!selected.some((elm) => elm.id === item[0].id) && <TouchableOpacity style={{ position: 'absolute', left: w - 50, top: 0 }} onPress={() => Play(item[0])} >
                     {item[0].icon}
                 </TouchableOpacity>}
                 {!selected.some((elm) => elm.id === item[1].id) && <TouchableOpacity style={{ position: 'absolute', left: 13, top: 53 }} onPress={() => Play(item[1])} >
                     {item[1].icon}
                 </TouchableOpacity>}
-                {!selected.some((elm) => elm.id === item[2].id) && <TouchableOpacity style={{ position: 'absolute', left: 30, top: 200 }} onPress={() => Play(item[2])} >
+                {!selected.some((elm) => elm.id === item[2].id) && <TouchableOpacity style={{ position: 'absolute', left: 30, top: h - 20 }} onPress={() => Play(item[2])} >
                     {item[2].icon}
                 </TouchableOpacity>}
-                {!selected.some((elm) => elm.id === item[3].id) && <TouchableOpacity style={{ position: 'absolute', left: 200, top: 80 }} onPress={() => Play(item[3])} >
+                {!selected.some((elm) => elm.id === item[3].id) && <TouchableOpacity style={{ position: 'absolute', left: h, top: 80 }} onPress={() => Play(item[3])} >
                     {item[3].icon}
                 </TouchableOpacity>}
                 {!selected1.some((elm) => elm.id === item[4].id) && <TouchableOpacity style={{ position: 'absolute', left: 100, top: 30 }} onPress={() => Play(item[4])} >
@@ -133,7 +143,7 @@ export const Level2_4_2 = ({ navigation }) => {
                 {!selected1.some((elm) => elm.id === item[6].id) && <TouchableOpacity style={{ position: 'absolute', left: 150, top: 150 }} onPress={() => Play(item[6])} >
                     {item[6].icon}
                 </TouchableOpacity>}
-                {!selected1.some((elm) => elm.id === item[7].id) && <TouchableOpacity style={{ position: 'absolute', left: 220, top: 200 }} onPress={() => Play(item[7])} >
+                {!selected1.some((elm) => elm.id === item[7].id) && <TouchableOpacity style={{ position: 'absolute', left: w - 100, top: h - 10 }} onPress={() => Play(item[7])} >
                     {item[7].icon}
                 </TouchableOpacity>}
 

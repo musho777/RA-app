@@ -3,7 +3,7 @@ import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound';
 
-export const Level5_2 = () => {
+export const Level5_2 = ({ navigation }) => {
 
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -92,9 +92,9 @@ export const Level5_2 = () => {
     }
 
     useEffect(() => {
-        console.log(solution2)
         if (solution2 === 6) {
             setTimeout(() => {
+                navigation.navigate('Level5_3')
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {

@@ -1,9 +1,13 @@
-import { Image, StyleSheet, TouchableOpacity } from "react-native"
+import { Dimensions, Image, StyleSheet, TouchableOpacity } from "react-native"
 import { LevelWrapper } from "../../components/LevelWrapper"
 import { useEffect, useState } from "react"
 import { GetRandomItemsFromArray } from "../../components/Funtion/getRandomItemsFromArray"
 import Sound from "react-native-sound"
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 export const Level2_1 = ({ navigation }) => {
+    let w = windowWidth - 100
+    let h = windowHeight - 100
     const glass = [
         { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glassyellow2.png')} />, id: 2, type: 'yellow' },
         { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/glasspink3.png')} />, id: 3, type: 'pink' },
@@ -18,15 +22,15 @@ export const Level2_1 = ({ navigation }) => {
     ]
 
     const position = [
-        { x: 14, y: 124 },
-        { x: 26, y: 249 },
-        { x: 84, y: 242 },
-        { x: 232, y: 228 },
+        { x: 0, y: 104 },
+        { x: 26, y: h - 40 },
+        { x: 84, y: h - 79 },
+        { x: 232, y: h - 20 },
         { x: 368, y: 187 },
         { x: 458, y: 96 },
         { x: 578, y: 66 },
-        { x: 686, y: 11 },
-        { x: 656, y: 23 },
+        { x: w - 50, y: 51 },
+        { x: w - 70, y: 23 },
         { x: 356, y: 53 },
         { x: 256, y: 53 },
         { x: 296, y: 83 },
@@ -72,19 +76,18 @@ export const Level2_1 = ({ navigation }) => {
     const Game = (e, i) => {
         let temp = [...firts]
         let item = [...completid]
-        if (activeGlass?.type == e.type) {
-            if (activeGlass.id - 1 != temp.length) {
-                if (!firts.includes(i)) {
+        if (activeGlass?.type == e?.type) {
+            if (!firts.includes(i)) {
+                if (activeGlass.id != temp.length) {
+                    console.log(firts.includes(i))
                     temp.push(i)
                 }
-            }
-            else {
-
-                item.push(e.type)
-                setCompletid(item)
-                temp = []
-                setActiveGlass('')
-
+                if (activeGlass.id == temp.length) {
+                    item.push(e.type)
+                    setCompletid(item)
+                    temp = []
+                    setActiveGlass('')
+                }
             }
         }
         else {
@@ -98,6 +101,7 @@ export const Level2_1 = ({ navigation }) => {
         }
         setFirst(temp)
     }
+
 
     useEffect(() => {
         let item = GetRandomItemsFromArray(glass, 2)
@@ -163,8 +167,14 @@ export const Level2_1 = ({ navigation }) => {
         }
     }, [completid])
 
+    const handleLayout = (event) => {
+        const { x, y, width, height } = event.nativeEvent.layout;
+        //x 70-210
+        //y 19,89
+    }
+
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
-        {!completid.includes(selectedGlass[0]?.type) && <TouchableOpacity onPress={() => SelectGlass(0)} style={[styles.button, { position: 'absolute', left: 70, top: 19 }, selectedGlass[0]?.id == activeGlass?.id && { borderColor: 'green' }]}>
+        {!completid.includes(selectedGlass[0]?.type) && <TouchableOpacity onLayout={(event) => handleLayout(event)} onPress={() => SelectGlass(0)} style={[styles.button, { position: 'absolute', left: 70, top: 19 }, selectedGlass[0]?.id == activeGlass?.id && { borderColor: 'green' }]}>
             {selectedGlass[0]?.icon}
         </TouchableOpacity>}
         {!completid.includes(selectedGlass[1]?.type) && <TouchableOpacity onPress={() => SelectGlass(1)} style={[styles.button, { position: 'absolute', right: 100, bottom: 19 }, selectedGlass[1]?.id == activeGlass?.id && { borderColor: 'green' }]}>

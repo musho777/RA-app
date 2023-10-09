@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { Image, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { Button1, Button2, Button3, ButtonSvg, Shirt } from '../../assets/svg'
 import { ImgButton } from '../../components/ImgButton'
@@ -28,7 +28,7 @@ export const Level2_2 = ({ navigation }) => {
                 return
             }
         });
-
+    const [selected, setSelected] = useState([])
     useEffect(() => {
         let item = GetRandomItemsFromArray(button, 4)
         setButton(item)
@@ -36,12 +36,15 @@ export const Level2_2 = ({ navigation }) => {
 
     const Game = (i, id) => {
         let item = [...button]
+        let temp = [...selected]
         if (id == 1 || id == 2) {
             item[i].active = true
+            temp.push(id)
         }
         else {
             button.map((elm, i) => {
                 elm.active = false
+                temp = []
                 setTimeout(() => {
                     music.play();
                 }, 100);
@@ -51,6 +54,7 @@ export const Level2_2 = ({ navigation }) => {
             })
         }
         setButton(item)
+        setSelected(temp)
     }
 
     useEffect(() => {
@@ -73,8 +77,14 @@ export const Level2_2 = ({ navigation }) => {
 
     return <LevelWrapper img2={require('../../assets/img/bg5.png')} img={require('../../assets/img/5bg.png')} >
         <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
-            <View>
-                <Shirt />
+            <View style={{ position: "relative", width: 220, height: 300, }}>
+                <Image style={{ width: 220, height: 300 }} source={require('../../assets/img/shirt.png')} />
+                {selected?.includes(1) &&
+                    <Image style={{ width: 35, height: 25, position: 'absolute', top: 87, left: 93 }} source={require('../../assets/img/level2/game2/button2.png')} />
+                }
+                {selected?.includes(2) &&
+                    <Image style={{ width: 35, height: 25, position: 'absolute', top: 120, left: 92 }} source={require('../../assets/img/level2/game2/button4.png')} />
+                }
             </View>
             <View style={{ alignItems: 'center', height: 200, justifyContent: 'space-between' }}>
                 <View style={{ flexDirection: 'row', width: 200, justifyContent: 'space-between' }}>

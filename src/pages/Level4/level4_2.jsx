@@ -80,6 +80,12 @@ export const Level4_2 = ({ navigation }) => {
         if (selectedVas == 1 && elm.id != 5) {
             setCount(count + 1)
             item[i].active = true
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+            }, 1000);
         }
         else if (selectedVas == 1 && elm.id == 5) {
             setTimeout(() => {
@@ -91,11 +97,24 @@ export const Level4_2 = ({ navigation }) => {
             item.map((elm, i) => {
                 setCount(0)
                 elm.active = false
+                setTimeout(() => {
+                    musicSuccess.play();
+                }, 100);
+                setTimeout(() => {
+                    musicSuccess.stop()
+                }, 1000);
             })
         }
         if (selectedVas == 2 && elm.id == 5) {
             setCount(count + 1)
             item[i].active = true
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+            }, 1000);
+
         }
         else if (selectedVas == 2 && elm.id != 5) {
             setTimeout(() => {

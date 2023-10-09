@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level6_7 = () => {
+export const Level6_7 = ({ navigation }) => {
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -64,7 +64,7 @@ export const Level6_7 = () => {
                 musicSuccess.stop()
             }, 2000);
             if (game === 2) {
-                navigation.navigate('Level6_7')
+                navigation.navigate('Level6_8')
             }
             else {
                 setTimeout(() => {

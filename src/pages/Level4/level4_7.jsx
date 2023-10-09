@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level4_7 = () => {
+export const Level4_7 = ({ navigation }) => {
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -50,7 +50,6 @@ export const Level4_7 = () => {
         { value1: '', value2: '' },
     ])
     useEffect(() => {
-        let item = []
         let arr1 = GetRandomItemsFromArray(arr[0][0], 4)
         let arr2 = GetRandomItemsFromArray(arr[0][1], 4)
         setActiveGame([arr1, arr2])
@@ -80,6 +79,12 @@ export const Level4_7 = () => {
                 let i2 = item[1].findIndex(isLargeNumber1)
                 item1[i1] = true
                 item2[i2] = true
+                setTimeout(() => {
+                    musicSuccess.play();
+                }, 100);
+                setTimeout(() => {
+                    musicSuccess.stop();
+                }, 2000);
             }
             else {
                 setTimeout(() => {
@@ -105,6 +110,25 @@ export const Level4_7 = () => {
         setShow(item1)
         setShow1(item2)
     }
+
+    useEffect(() => {
+        let win = true
+        show1?.map((elm, i) => {
+            if (!elm) {
+                win = false
+            }
+        })
+        show?.map((elm, i) => {
+            if (!elm) {
+                win = false
+            }
+        })
+        if (win) {
+            setTimeout(() => {
+                navigation.navigate('LevelScreen')
+            }, 1000);
+        }
+    }, [show1, show])
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')}>
         <View style={{ height: '100%', justifyContent: "center" }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 150, marginVertical: 10 }}>

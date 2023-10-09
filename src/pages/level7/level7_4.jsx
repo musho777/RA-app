@@ -1,14 +1,16 @@
-import { Image, TouchableOpacity } from 'react-native'
+import { Dimensions, Image, TouchableOpacity } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useState } from 'react'
 import Sound from 'react-native-sound'
-
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 export const Level7_4 = ({ navigation }) => {
+    let w = windowWidth - 80
     const position = [
         { x: 350, y: 120 },
         { x: 85, y: 120 },
         { x: 600, y: 120 },
-        { x: 620, y: 180 },
+        { x: w - 120, y: 180 },
         { x: 110, y: 230 },
         { x: 20, y: 150 },
     ]

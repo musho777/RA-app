@@ -1,10 +1,16 @@
-import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import { Image1, Image2, Image3, Image4, Image5, Image6 } from '../../assets/svg'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export const Level5_8 = ({ navigation }) => {
+    let w = windowWidth - 100
+    let h = windowHeight - 180
     const [image, setImage] = useState([
         { icon: <Image6 />, id: 0 },
         { icon: <Image5 />, id: 1 },
@@ -15,11 +21,11 @@ export const Level5_8 = ({ navigation }) => {
     ])
     const [position, setPosition] = useState([
         { x: 0, y: 0 },
-        { x: 18, y: 202 },
-        { x: 101, y: 151 },
-        { x: 525, y: 29 },
-        { x: 625, y: 0 },
-        { x: 655, y: 192 },
+        { x: 0, y: h },
+        { x: 91, y: 121 },
+        { x: w - 150, y: 79 },
+        { x: w - 100, y: 0 },
+        { x: w - 80, y: h },
     ])
     useEffect(() => {
         let item = [...position]
