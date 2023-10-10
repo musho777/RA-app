@@ -1,18 +1,7 @@
-import { useEffect } from "react";
 import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native"
-import { BackHandler } from 'react-native';
 
 export const Selection = ({ navigation }) => {
-    // const handleBackButton = () => {
-    //     return false;
-    // };
 
-    // useEffect(() => {
-    //     BackHandler.addEventListener('hardwareBackPress', handleBackButton);
-    //     return () => {
-    //         BackHandler.removeEventListener('hardwareBackPress', handleBackButton);
-    //     };
-    // }, []);
     return <View >
         <ImageBackground source={require('../../assets/img/2.png')} resizeMode="cover" style={styles.image}>
             <View style={{ transform: [{ rotate: '90deg' }], marginTop: -100, }}>

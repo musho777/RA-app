@@ -74,6 +74,15 @@ import { Level8_2 } from './src/pages/Level8/Level8_2';
 import { Level8_1 } from './src/pages/Level8/Level8_1';
 import { useEffect, useRef } from 'react';
 import { BackHandler } from 'react-native';
+import { Level9_5 } from './src/pages/Level9/Level9_5';
+import { Level9_6 } from './src/pages/Level9/Level9_6';
+import { Level9_7 } from './src/pages/Level9/Level9_7';
+import { Level9_1 } from './src/pages/Level9/Level9_1';
+import { Level9_2 } from './src/pages/Level9/Level9_2';
+import { Level9_2_1 } from './src/pages/Level9/Level9_2_1';
+import { Level9_4 } from './src/pages/Level9/Level9_4';
+import { Level9_8 } from './src/pages/Level9/Level9_8';
+import { Level10_3 } from './src/pages/Level10/Level10_3';
 
 export default Navigation = () => {
 
@@ -105,7 +114,7 @@ export default Navigation = () => {
   const navigationRef = useRef(null);
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={'LevelScreen'} >
+      <Stack.Navigator initialRouteName={'Level10_3'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}
@@ -612,12 +621,71 @@ export default Navigation = () => {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name="Level9_5"
+          component={Level9_5}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level9_6"
+          component={Level9_6}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level9_7"
+          component={Level9_7}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level9_1"
+          component={Level9_1}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level9_2"
+          component={Level9_2}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level9_2_1"
+          component={Level9_2_1}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level9_4"
+          component={Level9_4}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level9_8"
+          component={Level9_8}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level10_3"
+          component={Level10_3}
+          options={{
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>
   );
 };
-// Level8_5
-// Level8_5_1
-// Level8_8
-// Level8_1
