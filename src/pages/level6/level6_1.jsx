@@ -74,7 +74,6 @@ export const Level6_1 = ({ navigation }) => {
         }
     }
 
-
     useEffect(() => {
         if (completid[0].length === arr[0].length && completid[1].length === arr[1].length) {
             setTimeout(() => {
@@ -120,8 +119,16 @@ export const Level6_1 = ({ navigation }) => {
                         </View>
                     })}
                 </View>
-                <TouchableOpacity onPress={() => SelectGlass(1)} style={[{ right: -20, position: 'absolute', justifyContent: 'center', alignItems: 'center', height: 200 }, selectedGlass == 1 && { borderColor: "green" }]}>
-                    <Image source={require('../../assets/img/level6/game1/saucer.png')} style={{ width: 80, height: 50 }} />
+                <TouchableOpacity onPress={() => SelectGlass(1)} style={[
+                    {
+                        width: 40,
+                        height: 40,
+                        right: -20, position: 'absolute', justifyContent: 'center', alignItems: 'center', height: 200,
+                    },
+                ]}>
+                    <View style={[selectedGlass == 1 && { borderWidth: 1, borderColor: "green" }]}>
+                        <Image source={require('../../assets/img/level6/game1/saucer.png')} style={{ width: 80, height: 50 }} />
+                    </View>
                 </TouchableOpacity>
             </View>
             <View style={[{ width: 200, height: '100%', justifyContent: 'flex-end' }]}>
@@ -133,7 +140,9 @@ export const Level6_1 = ({ navigation }) => {
                     })}
                 </View>
                 <TouchableOpacity onPress={() => SelectGlass(2)} style={[{ left: -40, position: 'absolute', justifyContent: 'center', alignItems: 'center', height: 120 },]}>
-                    <Image source={require('../../assets/img/level6/game1/saucer.png')} style={{ width: 80, height: 50 }} />
+                    <View style={[selectedGlass == 2 && { borderWidth: 1, borderColor: "green" }]}>
+                        <Image source={require('../../assets/img/level6/game1/saucer.png')} style={{ width: 80, height: 50 }} />
+                    </View>
                 </TouchableOpacity>
             </View>
         </View>

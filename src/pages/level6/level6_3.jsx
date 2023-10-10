@@ -97,6 +97,12 @@ export const Level6_3 = ({ navigation }) => {
             }, 2000);
         }
         else if (win && game1 == 1) {
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+            }, 2000);
             navigation.navigate('Level6_4')
         }
     }, [arr])

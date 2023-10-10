@@ -1,4 +1,4 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { LevelScreen } from './src/pages/Level';
 import { Selection } from './src/pages/Selection';
@@ -72,11 +72,39 @@ import { Level8_7 } from './src/pages/Level8/Level8_7';
 import { Level8_8 } from './src/pages/Level8/Level8_8';
 import { Level8_2 } from './src/pages/Level8/Level8_2';
 import { Level8_1 } from './src/pages/Level8/Level8_1';
+import { useEffect, useRef } from 'react';
+import { BackHandler } from 'react-native';
 
 export default Navigation = () => {
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        if (navigationRef.current &&
+          navigationRef.current.getCurrentRoute().name !== 'Selection' &&
+          navigationRef.current.getCurrentRoute().name !== 'Selection2' &&
+          navigationRef.current.getCurrentRoute().name !== 'Selection3' &&
+          navigationRef.current.getCurrentRoute().name !== 'Selection4' &&
+          navigationRef.current.getCurrentRoute().name !== 'Selection5' &&
+          navigationRef.current.getCurrentRoute().name !== 'Selection6' &&
+          navigationRef.current.getCurrentRoute().name !== 'Selection7'
+        ) {
+          return true;
+        }
+      }
+    );
+
+    return () => {
+      backHandler.remove();
+    };
+  }, []);
+
+
   const Stack = createStackNavigator();
+  const navigationRef = useRef(null);
   return (
-    <NavigationContainer >
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator initialRouteName={'LevelScreen'} >
         <Stack.Screen
           name="LevelScreen"
@@ -96,14 +124,16 @@ export default Navigation = () => {
           name="Level1_1"
           component={Level1_1}
           options={{
-            headerShown: false
+            headerShown: false,
+            headerLeft: () => null,
           }}
         />
         <Stack.Screen
           name="Level1_2"
           component={Level1_2}
           options={{
-            headerShown: false
+            headerShown: false,
+            headerLeft: () => null,
           }}
         />
         <Stack.Screen

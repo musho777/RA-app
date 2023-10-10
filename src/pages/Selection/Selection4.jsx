@@ -4,7 +4,7 @@ export const Selection4 = ({ navigation }) => {
     return <View >
         <ImageBackground source={require('../../assets/img/2.png')} resizeMode="cover" style={styles.image}>
             <View style={{ transform: [{ rotate: '90deg' }], marginTop: -100, }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Level4_4')}>
+                <TouchableOpacity >
                     <Image style={styles.img} source={require('../../assets/img/4_1.png')} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Level4_3')}>

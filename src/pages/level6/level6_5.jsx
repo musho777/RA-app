@@ -36,6 +36,21 @@ export const Level6_5 = ({ navigation }) => {
             if (item[i] == '') {
                 if (item[i - 1] + 1 == elm && item[i + 1] - 1 == elm) {
                     index = i
+                    setTimeout(() => {
+                        musicSuccess.play();
+                    }, 100);
+                    setTimeout(() => {
+                        musicSuccess.stop()
+                    }, 1000);
+                    break
+                }
+                else {
+                    setTimeout(() => {
+                        music.play();
+                    }, 100);
+                    setTimeout(() => {
+                        music.stop()
+                    }, 1000);
                     break
                 }
             }
@@ -47,19 +62,32 @@ export const Level6_5 = ({ navigation }) => {
                 win = false
             }
         })
-        console.log(win)
         if (win) {
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+            }, 2000);
             setGame(game + 1)
         }
     }
 
     useEffect(() => {
         if (game == 3) {
-            navigation.navigate('Level6_6')
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+                navigation.navigate('Level6_6')
+            }, 2000);
         } else {
             setActiveGame(arr[game])
         }
     }, [game])
+
+
     return <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 120 }}>

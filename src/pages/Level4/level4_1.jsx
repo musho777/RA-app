@@ -97,7 +97,6 @@ export const Level4_1 = ({ navigation }) => {
     const [activeGame, setActiveGame] = useState({})
 
     useEffect(() => {
-        // const randomNum = Math.floor(Math.random() * 3)
         let item = arr[game1]
         temp = GetRandomItemsFromArray(position, position.length)
         setPosition(temp)

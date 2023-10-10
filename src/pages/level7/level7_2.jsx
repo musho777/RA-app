@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { NumberButton } from '../../components/NumberBuuton'
-import { Image, StyleSheet, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, View } from 'react-native'
 import { Input } from '../../components/Input'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 export const Level7_2 = ({ navigation }) => {
+    let w = (windowWidth - 200) * 0.7
+    let h = windowHeight - 100
     const buuton = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     const [disable, setDisable] = useState(false)
     const [value1, setValue1] = useState('')
@@ -44,13 +49,11 @@ export const Level7_2 = ({ navigation }) => {
                 { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 70, height: 70 }} />, id: 3 },
                 { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 70, height: 70 }} />, id: 3 },
                 { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 70, height: 70 }} />, id: 3 },
-
-
             ],
-            answer: [
-                { count: 3, icon: <Image source={require('../../assets/img/level4/game3/ladybug.png')} style={{ width: 40, height: 40 }} /> },
-                { count: 4, icon: <Image source={require('../../assets/img/level4/game3/caterpillar.png')} style={{ width: 50, height: 30 }} /> },
-                { count: 5, icon: <Image source={require('../../assets/img/level4/game3/dragonfly.png')} style={{ width: 30, height: 30 }} /> },
+            ansewer: [
+                { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/circleyellow.png')} />, id: 5 },
+                { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/triangleblue.png')} />, id: 6 },
+                { icon: <Image style={{ width: 50, height: 30 }} source={require('../../assets/img/level7/game2/ovallilac.png')} />, id: 3 },
             ]
         },
     ])
@@ -59,9 +62,7 @@ export const Level7_2 = ({ navigation }) => {
     const [ansewer, setAnswer] = useState([
         { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/circleyellow.png')} />, id: 2 },
         { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/triangleblue.png')} />, id: 6 },
-        { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/ovallilac.png')} />, id: 3 },
-
-
+        { icon: <Image style={{ width: 50, height: 30 }} source={require('../../assets/img/level7/game2/ovallilac.png')} />, id: 3 },
     ])
 
     const [position, setPosition] = useState([
@@ -70,10 +71,10 @@ export const Level7_2 = ({ navigation }) => {
         { x: 0, y: 176 },
         { x: 190, y: 144 },
         { x: 178, y: 0 },
-        { x: 368, y: 5 },
-        { x: 320, y: 176 },
-        { x: 467, y: 59 },
-        { x: 467, y: 129 },
+        { x: w - 130, y: 5 },
+        { x: w - 100, y: 176 },
+        { x: w, y: 59 },
+        { x: w, y: 129 },
     ])
 
     const [activeArr, setActiveArr] = useState({
@@ -123,7 +124,7 @@ export const Level7_2 = ({ navigation }) => {
                     setValue3('')
                 }, 1000);
             }
-            else if (activeArr.answer.length == 3) {
+            else if (activeArr.answer?.length == 3) {
                 setTimeout(() => {
                     setDisable(true)
                     musicSuccess.play();
@@ -135,7 +136,7 @@ export const Level7_2 = ({ navigation }) => {
                 }, 2000);
             }
         }
-        else if (activeArr.answer.length > 3 && value4 == '') {
+        else if (activeArr.answer?.length > 3 && value4 == '') {
             setValue4(e)
             if (e != activeArr?.answer[3].count) {
                 setTimeout(() => {
