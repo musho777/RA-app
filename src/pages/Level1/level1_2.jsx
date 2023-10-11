@@ -1,7 +1,7 @@
 import { View } from "react-native"
 import { LevelWrapper } from "../../components/LevelWrapper";
 import { ImgButton } from "../../components/ImgButton";
-import { Airplane, Car, Caterpillar, Hare, Horse, Snail, Turtle } from "../../assets/svg";
+import { Airplane, Car, Hare, Horse, Turtle } from "../../assets/svg";
 
 export const Level1_2 = () => {
 

@@ -1,7 +1,6 @@
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
-import { Image1, Image2, Image3, Image4, Image5, Image6 } from '../../assets/svg'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 
 export const Level8_8 = ({ navigation }) => {

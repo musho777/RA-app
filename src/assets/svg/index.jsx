@@ -1815,6 +1815,28 @@ export const Blue2 = () => {
         />
     </Svg>
 }
+// export const Green2 = () => {
+//     return <Svg
+//         width={78}
+//         height={78}
+//         viewBox="0 0 98 98"
+//         fill="none"
+//         xmlns="http://www.w3.org/2000/svg"
+//     >
+//         <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+//         <Circle cx={49} cy={49} r={26} fill="rgb(65,47,145)" />
+//         <Rect
+//             x={2}
+//             y={2}
+//             width={94}
+//             height={94}
+//             rx={17}
+//             stroke="rgba(153, 204, 51, 0.5)"
+//             strokeOpacity={0.5}
+//             strokeWidth={4}
+//         />
+//     </Svg>
+// }
 export const Blue3 = () => {
     return <Svg
         width={78}
@@ -9229,3 +9251,174 @@ export const Image6 = () => {
         </Defs>
     </Svg>
 }
+
+export const C1 = () => {
+    return <Svg
+        width={63}
+        height={63}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#B3005F" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C2 = () => {
+    return <Svg
+        width={63}
+        height={63}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#D26517" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+
+export const C3 = () => {
+    return <Svg
+        width={63}
+        height={63}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#F3E03A" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C4 = () => {
+    return <Svg
+        width={63}
+        height={63}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#7EBD2E" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C5 = () => {
+    return <Svg
+        width={63}
+        height={63}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#A1D7E3" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C6 = () => {
+    return <Svg
+        width={63}
+        height={63}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#404EA4" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C7 = () => {
+    return <Svg
+        width={63}
+        height={63}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#6529A6" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C8 = () => {
+    return <Svg
+        width={63}
+        height={63}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="red" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+

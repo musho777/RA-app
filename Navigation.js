@@ -83,6 +83,12 @@ import { Level9_2_1 } from './src/pages/Level9/Level9_2_1';
 import { Level9_4 } from './src/pages/Level9/Level9_4';
 import { Level9_8 } from './src/pages/Level9/Level9_8';
 import { Level10_3 } from './src/pages/Level10/Level10_3';
+import { Level10_5 } from './src/pages/Level10/Level10_5';
+import { Level10_7 } from './src/pages/Level10/Level10_7';
+import { Level9_3 } from './src/pages/Level9/Level9_3';
+import { Level10_4 } from './src/pages/Level10/Level10_4';
+import { Level10_2 } from './src/pages/Level10/Level10_2';
+import { Level10_1 } from './src/pages/Level10/Level10_1';
 
 export default Navigation = () => {
 
@@ -114,7 +120,7 @@ export default Navigation = () => {
   const navigationRef = useRef(null);
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={'Level10_3'} >
+      <Stack.Navigator initialRouteName={'Level10_1'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}
@@ -680,6 +686,48 @@ export default Navigation = () => {
         <Stack.Screen
           name="Level10_3"
           component={Level10_3}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level10_5"
+          component={Level10_5}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level10_7"
+          component={Level10_7}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level9_3"
+          component={Level9_3}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level10_4"
+          component={Level10_4}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level10_2"
+          component={Level10_2}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level10_1"
+          component={Level10_1}
           options={{
             headerShown: false
           }}
