@@ -71,7 +71,7 @@ export const Level9_7 = ({ navigation }) => {
                 setGame1(game1 + 1)
                 setDisable(false)
                 if (game1 == 1) {
-                    navigation.navigate('Level4_7')
+                    navigation.navigate('Level9_8')
                 }
                 musicSuccess.stop();
             }, 2000);

@@ -80,7 +80,6 @@ import { Level9_7 } from './src/pages/Level9/Level9_7';
 import { Level9_1 } from './src/pages/Level9/Level9_1';
 import { Level9_2 } from './src/pages/Level9/Level9_2';
 import { Level9_2_1 } from './src/pages/Level9/Level9_2_1';
-import { Level9_4 } from './src/pages/Level9/Level9_4';
 import { Level9_8 } from './src/pages/Level9/Level9_8';
 import { Level10_3 } from './src/pages/Level10/Level10_3';
 import { Level10_5 } from './src/pages/Level10/Level10_5';
@@ -89,6 +88,11 @@ import { Level9_3 } from './src/pages/Level9/Level9_3';
 import { Level10_4 } from './src/pages/Level10/Level10_4';
 import { Level10_2 } from './src/pages/Level10/Level10_2';
 import { Level10_1 } from './src/pages/Level10/Level10_1';
+import { Level10_6 } from './src/pages/Level10/Level10_6';
+import { Level9_4 } from './src/pages/Level9/Level9_4';
+import { Selection8 } from './src/pages/Selection/Section8';
+import { Selection9 } from './src/pages/Selection/Section9';
+import { Selection10 } from './src/pages/Selection/Section10';
 
 export default Navigation = () => {
 
@@ -120,7 +124,7 @@ export default Navigation = () => {
   const navigationRef = useRef(null);
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={'Level10_1'} >
+      <Stack.Navigator initialRouteName={'LevelScreen'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}
@@ -728,6 +732,34 @@ export default Navigation = () => {
         <Stack.Screen
           name="Level10_1"
           component={Level10_1}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level10_6"
+          component={Level10_6}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Selection8"
+          component={Selection8}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Selection9"
+          component={Selection9}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Selection10"
+          component={Selection10}
           options={{
             headerShown: false
           }}

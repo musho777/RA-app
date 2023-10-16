@@ -75,7 +75,7 @@ export const Level8_5_1 = ({ navigation }) => {
     }
     useEffect(() => {
         if (arr.length == 9) {
-            // navigation.navigate('Level7_6')
+            navigation.navigate('Level8_6')
         }
     }, [arr])
     return <LevelWrapper img2={require('../../assets/img/3y.png')} img={require('../../assets/img/3yy.png')}>

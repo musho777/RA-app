@@ -38,7 +38,7 @@ export const Level9_6 = ({ navigation }) => {
     const [game1, setGame1] = useState(0)
     useEffect(() => {
         if (game1 == 2) {
-            navigation.navigate('Level5_7')
+            navigation.navigate('Level9_7')
         }
         else {
             let item = GetRandomItemsFromArray(arr[game1], arr[game1].length)

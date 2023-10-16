@@ -70,7 +70,7 @@ export const Level9_2_1 = ({ navigation }) => {
             }
         })
         if (count == 4) {
-            console.log('ww')
+            navigation.navigate('Level(9_3')
         }
     }, [arr])
 

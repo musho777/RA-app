@@ -1,12 +1,11 @@
-import { Image, TouchableOpacity, View } from 'react-native'
-import { LevelWrapper } from '../../components/LevelWrapper'
-import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
-import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
+import { LevelWrapper } from '../../components/LevelWrapper'
+import { Image, TouchableOpacity, View } from 'react-native'
+import { ImgButton } from '../../components/ImgButton'
+import { Blue, Red, Red1 } from '../../assets/svg'
 import Sound from 'react-native-sound'
 
 export const Level9_4 = ({ navigation }) => {
-
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -21,41 +20,121 @@ export const Level9_4 = ({ navigation }) => {
                 return
             }
         });
-
     const [data, setData] = useState([
+        [
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/k.png')} style={{ width: 70, height: 90 }} />,
+                id: 1,
+                icon1: <Image source={require('../../assets/img/level9/game4/k1r.png')} style={{ width: 70, height: 90 }} />,
+                active: false,
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/t.png')} style={{ width: 40, height: 80 }} />,
+                id: 1,
+                icon1: <Image source={require('../../assets/img/level9/game4/t1r.png')} style={{ width: 40, height: 80 }} />,
+                active: false
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/k1.png')} style={{ width: 70, height: 90 }} />,
+                id: 2,
+                icon1: <Image source={require('../../assets/img/level9/game4/k1b.png')} style={{ width: 70, height: 90 }} />,
+                active: false
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/t2.png')} style={{ width: 40, height: 80 }} />,
+                id: 2,
+                icon1: <Image source={require('../../assets/img/level9/game4/t1b.png')} style={{ width: 40, height: 80 }} />,
+                active: false
+            },
+        ],
 
-        {
-            icon: <Image source={require('../../assets/img/level9/game8/2.3.png')} style={{ width: 70, height: 90 }} />,
-            id: 1,
-            icon1: <Image source={require('../../assets/img/level9/game8/2.4.png')} style={{ width: 70, height: 90 }} />,
-            active: false,
-        },
-        {
-            icon: <Image source={require('../../assets/img/level9/game8/3.3.png')} style={{ width: 70, height: 90 }} />,
-            id: 2,
-            icon1: <Image source={require('../../assets/img/level9/game8/3.4.png')} style={{ width: 70, height: 90 }} />,
-            active: false
-        },
-        {
-            icon: <Image source={require('../../assets/img/level9/game8/1.3.png')} style={{ width: 70, height: 90 }} />,
-            id: 3,
-            icon1: <Image source={require('../../assets/img/level9/game8/1.4.png')} style={{ width: 70, height: 90 }} />,
-            active: false
-        },
+
+        [
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/obruch1.png')} style={{ width: 50, height: 80 }} />,
+                id: 2,
+                icon1: <Image source={require('../../assets/img/level9/game4/obruchb.png')} style={{ width: 50, height: 80 }} />,
+                active: false,
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/obruch2.png')} style={{ width: 50, height: 80 }} />,
+                id: 1,
+                icon1: <Image source={require('../../assets/img/level9/game4/obruchr.png')} style={{ width: 50, height: 80 }} />,
+                active: false
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/tyubik1.png')} style={{ width: 70, height: 90 }} />,
+                id: 2,
+                icon1: <Image source={require('../../assets/img/level9/game4/tybuikb.png')} style={{ width: 70, height: 90 }} />,
+                active: false
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/tyubik2.png')} style={{ width: 70, height: 90 }} />,
+                id: 1,
+                icon1: <Image source={require('../../assets/img/level9/game4/tyubikr.png')} style={{ width: 70, height: 90 }} />,
+                active: false
+            },
+        ],
+
+
+        [
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/grib1.png')} style={{ width: 70, height: 90 }} />,
+                id: 2,
+                icon1: <Image source={require('../../assets/img/level9/game4/gribb.png')} style={{ width: 70, height: 90 }} />,
+                active: false,
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/grib2.png')} style={{ width: 70, height: 80 }} />,
+                id: 1,
+                icon1: <Image source={require('../../assets/img/level9/game4/gribr.png')} style={{ width: 70, height: 80 }} />,
+                active: false
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/kost1.png')} style={{ width: 80, height: 50 }} />,
+                id: 2,
+                icon1: <Image source={require('../../assets/img/level9/game4/kostB.png')} style={{ width: 80, height: 50 }} />,
+                active: false
+            },
+            {
+                icon: <Image source={require('../../assets/img/level9/game4/kost2.png')} style={{ width: 80, height: 50 }} />,
+                id: 1,
+                icon1: <Image source={require('../../assets/img/level9/game4/kostR.png')} style={{ width: 80, height: 50 }} />,
+                active: false
+            },
+        ]
     ])
+    const [game, setGame] = useState(0)
+    const [activeData, setActiveData] = useState([])
+    const [activeColor, setActiveColor] = useState()
 
-    const [selectedColor, setSelectedColor] = useState('')
+    useEffect(() => {
+        setActiveData(data[game])
+    }, [game])
 
 
     useEffect(() => {
-        item = GetRandomItemsFromArray(data, data.length)
-        setData(item)
-    }, [])
+        let win = true
+        // activeData.map((elm, i) => {
+        //     if (elm.active) {
+        //         win = false
+        //     }
+        // })
+        // if (win) {
+        //     if (game > 2) {
+        //         setGame(game + 1)
+        //     }
+        //     else {
+        //         navigation.navigate('Level9_5')
+        //     }
+        // }
+    }, [activeData])
+
 
     const Game = (id, i) => {
-        console.log(i)
-        let item = [...data]
-        if (id == selectedColor) {
+        let item = [...activeData]
+        let win = true
+        if (id == activeColor) {
             item[i].active = true
             setTimeout(() => {
                 musicSuccess.play();
@@ -70,57 +149,44 @@ export const Level9_4 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 music.stop()
-            }, 2000);
+            }, 1000);
         }
-        setData(item)
-    }
-
-    useEffect(() => {
-        let win = true
-        data.map((elm, i) => {
+        item.map((elm, i) => {
             if (!elm.active) {
                 win = false
             }
         })
         if (win) {
-            setTimeout(() => {
-                navigation.navigate('Level9_5')
-            }, 2000);
+            if (game < 2) {
+                setTimeout(() => {
+                    setGame(game + 1)
+                }, 1000);
+            }
+            else {
+                setTimeout(() => {
+                    navigation.navigate('Level9_5')
+                }, 1000);
+            }
         }
-    }, [data])
-
+        setActiveData(item)
+    }
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
-        <View style={{ flexDirection: 'row', justifyContent: "space-between", height: '100%' }}>
-            <View style={{ flexDirection: "row", width: '70%', justifyContent: "space-around", alignItems: "center" }}>
-                {data?.map((elm, i) => {
-                    console.log(elm.active)
+        <View style={{ flexDirection: 'row', justifyContent: "space-around" }}>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', width: 250, gap: 20 }}>
+                {activeData?.map((elm, i) => {
                     if (!elm.active) {
-                        return <ImgButton border='rgba(255, 117, 117, 0.4)' onPress={() => Game(elm.id, i)} height={120} width={120} key={i} svg={elm.icon} />
+                        return <ImgButton border='#F0814366' key={i} onPress={() => Game(elm.id, i)} width={100} height={100} svg={elm.icon} />
                     }
-                    else {
-                        return <ImgButton border='rgba(255, 117, 117, 0.4)' height={120} width={120} key={i} svg={elm.icon1} />
-                    }
+                    return <ImgButton border='#F0814366' key={i} onPress={() => Game(elm.id, i)} width={100} height={100} svg={elm.icon1} />
                 })}
             </View>
-            <View style={{ height: '100%', justifyContent: 'center', gap: 20 }}>
-                <View style={{ flexDirection: 'row', width: 80, justifyContent: 'space-between' }}>
-                    <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game8/1.1.png')} />
-                    <TouchableOpacity onPress={() => setSelectedColor(3)}>
-                        <Image style={{ width: 20, height: 50 }} source={require('../../assets/img/level9/game8/1.2.png')} />
-                    </TouchableOpacity>
-                </View>
-                <View style={{ flexDirection: 'row', width: 80, justifyContent: 'space-between' }}>
-                    <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game8/2.1.png')} />
-                    <TouchableOpacity onPress={() => setSelectedColor(1)}>
-                        <Image style={{ width: 20, height: 50 }} source={require('../../assets/img/level9/game8/2.2.png')} />
-                    </TouchableOpacity>
-                </View>
-                <View style={{ flexDirection: 'row', width: 80, justifyContent: 'space-between', justifyContent: 'space-between' }}>
-                    <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game8/3.1.png')} />
-                    <TouchableOpacity onPress={() => setSelectedColor(2)}>
-                        <Image style={{ width: 20, height: 50 }} source={require('../../assets/img/level9/game8/3.2.png')} />
-                    </TouchableOpacity>
-                </View>
+            <View style={{ gap: 20 }}>
+                <TouchableOpacity onPress={() => setActiveColor(2)}>
+                    <Blue />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => setActiveColor(1)}>
+                    <Red />
+                </TouchableOpacity>
             </View>
         </View>
     </LevelWrapper>

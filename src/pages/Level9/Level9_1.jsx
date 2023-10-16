@@ -136,7 +136,7 @@ export const Level9_1 = ({ navigation }) => {
                 }, 100);
                 setTimeout(() => {
                     if (game == 1) {
-                        navigation.navigate('Level7_3')
+                        navigation.navigate('Level9_2')
                     }
                     setValue1('')
                     setValue2('')

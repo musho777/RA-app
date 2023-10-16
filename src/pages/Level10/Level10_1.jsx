@@ -23,87 +23,87 @@ export const Level10_1 = ({ navigation }) => {
         });
     const [arr, setArr] = useState([
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/4.png')} />,
+            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/4.png')} />,
             id: 1,
             active: false,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/4.1.png')} />,
+            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/4.1.png')} />,
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/7.1.png')} />,
+            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/7.1.png')} />,
             id: 2,
             active: false,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/7.png')} />,
+            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/7.png')} />,
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/9.png')} />,
             active: true,
             id: 3,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/9.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/k1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
-
-
-        },
-        {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
-            id: 3,
-            active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
 
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
+
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/t1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/tr1.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/k1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/k1.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/t1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/t1.png')} />,
+
+        },
+        {
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
+            id: 3,
+            active: true,
+            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
 
         },
     ])

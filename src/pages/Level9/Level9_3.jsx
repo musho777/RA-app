@@ -194,7 +194,7 @@ export const Level9_3 = ({ navigation }) => {
         if (win) {
             if (game1 == 1) {
                 setTimeout(() => {
-                    // navigation.navigate('Level6_4_1')
+                    navigation.navigate('Level9_4')
                 }, 1000);
             }
             else {
