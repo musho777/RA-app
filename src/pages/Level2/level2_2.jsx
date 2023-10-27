@@ -76,9 +76,9 @@ export const Level2_2 = ({ navigation }) => {
     }, [button])
 
     return <LevelWrapper img2={require('../../assets/img/bg5.png')} img={require('../../assets/img/5bg.png')} >
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
-            <View style={{ position: "relative", width: 220, height: 300, }}>
-                <Image style={{ width: 220, height: 300 }} source={require('../../assets/img/shirt.png')} />
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', }}>
+            <View style={{ position: "relative", width: 220, height: 300, justifyContent: 'center' }}>
+                <Image style={{ width: 270, height: 370 }} source={require('../../assets/img/shirt.png')} />
                 {selected?.includes(1) &&
                     <Image style={{ width: 35, height: 25, position: 'absolute', top: 87, left: 93 }} source={require('../../assets/img/level2/game2/button2.png')} />
                 }

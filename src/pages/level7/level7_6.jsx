@@ -1,6 +1,5 @@
 import { Dimensions, Image, StyleSheet, View } from "react-native"
 import { LevelWrapper } from "../../components/LevelWrapper"
-import { BlueButterFly, BlueButterFly1, BlueGlass, BlueGlass1, Butterfly1, Butterfly2, Butterfly3, GreenGlass, GreenGlass1, RedButterFly1, RedButterfily, RedGlass, RedGlass1, YellowButterFly, YellowButterfly1 } from "../../assets/svg"
 import { ImgButton } from "../../components/ImgButton";
 import { useEffect, useState } from "react";
 import Sound from "react-native-sound";
@@ -11,26 +10,26 @@ export const Level7_6 = ({ navigation }) => {
     const [side1, setSide1] = useState([
         [
             [
-                { icone: <Image source={require('../../assets/img/level7/game6/bageft1.png')} style={{ width: 60, height: 60 }} />, id: 1, active: false },
-                { icone: <Image source={require('../../assets/img/level7/game6/bagleft2.png')} style={{ width: 60, height: 60 }} />, id: 2, active: false },
-                { icone: <Image source={require('../../assets/img/level7/game6/bagleft3.png')} style={{ width: 60, height: 60 }} />, id: 3, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/bageft1.png')} style={{ width: 70, height: 70 }} />, id: 1, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/bagleft2.png')} style={{ width: 70, height: 70 }} />, id: 2, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/bagleft3.png')} style={{ width: 70, height: 70 }} />, id: 3, active: false },
             ],
             [
-                { icone: <Image source={require('../../assets/img/level7/game6/bagright1.png')} style={{ width: 60, height: 60 }} />, id: 4, active: false },
-                { icone: <Image source={require('../../assets/img/level7/game6/bagright2.png')} style={{ width: 60, height: 60 }} />, id: 5, active: false },
-                { icone: <Image source={require('../../assets/img/level7/game6/bagright3.png')} style={{ width: 60, height: 60 }} />, id: 6, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/bagright1.png')} style={{ width: 70, height: 70 }} />, id: 4, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/bagright2.png')} style={{ width: 70, height: 70 }} />, id: 5, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/bagright3.png')} style={{ width: 70, height: 70 }} />, id: 6, active: false },
             ]
         ],
         [
             [
-                { icone: <Image source={require('../../assets/img/level7/game6/dressleft1.png')} style={{ width: 60, height: 60 }} />, id: 1, active: false },
-                { icone: <Image source={require('../../assets/img/level7/game6/dressleft2.png')} style={{ width: 60, height: 60 }} />, id: 2, active: false },
-                { icone: <Image source={require('../../assets/img/level7/game6/dressleft3.png')} style={{ width: 60, height: 60 }} />, id: 3, active: false }
+                { icone: <Image source={require('../../assets/img/level7/game6/dressleft1.png')} style={{ width: 50, height: 80 }} />, id: 1, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/dressleft2.png')} style={{ width: 50, height: 80 }} />, id: 2, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/dressleft3.png')} style={{ width: 50, height: 80 }} />, id: 3, active: false }
             ],
             [
-                { icone: <Image source={require('../../assets/img/level7/game6/dressright1.png')} style={{ width: 60, height: 60 }} />, id: 4, active: false },
-                { icone: <Image source={require('../../assets/img/level7/game6/dressright2.png')} style={{ width: 60, height: 60 }} />, id: 5, active: false },
-                { icone: <Image source={require('../../assets/img/level7/game6/dressright3.png')} style={{ width: 60, height: 60 }} />, id: 6, active: false }
+                { icone: <Image source={require('../../assets/img/level7/game6/dressright1.png')} style={{ width: 50, height: 80 }} />, id: 4, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/dressright2.png')} style={{ width: 50, height: 80 }} />, id: 5, active: false },
+                { icone: <Image source={require('../../assets/img/level7/game6/dressright3.png')} style={{ width: 50, height: 80 }} />, id: 6, active: false }
             ]
         ],
 

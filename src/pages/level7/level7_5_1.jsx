@@ -22,9 +22,22 @@ export const Level7_5_1 = ({ navigation }) => {
             }
         });
     const [button, setButton] = useState([
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
+        [
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка1.png')} />, key: 1 },
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка2.png')} />, key: 2 },
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка3.png')} />, key: 3 },
+        ],
+        [
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка4.png')} />, key: 4 },
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка5.png')} />, key: 5 },
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка6.png')} />, key: 6 },
+
+        ],
+        [
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка7.png')} />, key: 7 },
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка8.png')} />, key: 8 },
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка9.png')} />, key: 9 },
+        ]
     ])
 
 
@@ -42,7 +55,7 @@ export const Level7_5_1 = ({ navigation }) => {
 
     const Game = (elm) => {
         let item = [...arr]
-        if (elm === item.length + 1) {
+        if (elm.key === item.length + 1) {
             item.push(elm)
             setTimeout(() => {
                 musicSuccess.play();
@@ -68,29 +81,29 @@ export const Level7_5_1 = ({ navigation }) => {
     }, [arr])
     return <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')} >
         <View style={{ justifyContent: 'center', height: '100%', flexDirection: 'column' }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 250 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 238 }}>
                 {button[0].map((elm, i) => {
                     if (!arr.includes(elm)) {
-                        return <NumberButton bg={'#A0CDD4'} bc='rgba(160, 205, 212, 0.4)' key={i} onPress={() => Game(elm)} number={elm} />
+                        return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
                     }
-                    return <View key={i} style={{ width: 55, height: 55 }}></View>
+                    return <View key={i} style={{ width: 90, height: 90 }}></View>
                 })}
             </View>
-            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 250, paddingVertical: 10 }}>
+            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 238, paddingVertical: 1 }}>
                 {button[1].map((elm, i) => {
                     if (!arr.includes(elm)) {
-                        return <NumberButton bg={'#A0CDD4'} bc='rgba(160, 205, 212, 0.4)' key={i} onPress={() => Game(elm)} number={elm} />
+                        return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
+
                     }
-                    return <View key={i} style={{ width: 55, height: 55 }}></View>
+                    return <View key={i} style={{ width: 90, height: 90 }}></View>
                 })}
             </View>
-            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 250 }}>
-
+            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 238 }}>
                 {button[2].map((elm, i) => {
                     if (!arr.includes(elm)) {
-                        return <NumberButton bg={'#A0CDD4'} bc='rgba(160, 205, 212, 0.4)' key={i} onPress={() => Game(elm)} number={elm} />
+                        return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
                     }
-                    return <View key={i} style={{ width: 55, height: 55 }}></View>
+                    return <View key={i} style={{ width: 90, height: 90 }}></View>
                 })}
             </View>
         </View>

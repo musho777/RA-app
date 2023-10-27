@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet, View } from "react-native"
+import { View } from "react-native"
 import { Input } from "../../components/Input"
 import { LevelWrapper } from "../../components/LevelWrapper";
 import { Butterfly, Chickens, MushRoom } from "../../assets/svg";
@@ -6,7 +6,6 @@ import { NumberButton } from "../../components/NumberBuuton";
 import { useEffect, useState } from "react";
 import Sound from 'react-native-sound';
 Sound.setCategory('Playback');
-const windowWidth = Dimensions.get('window').width;
 
 export const Level1_1 = ({ navigation }) => {
     const [value1, setValue1] = useState('')
@@ -36,6 +35,7 @@ export const Level1_1 = ({ navigation }) => {
         ]
 
     ])
+    const [game1, setGame1] = useState(0)
     const [activeGame, setActiveGame] = useState([])
 
     const Answer = (e) => {
@@ -48,11 +48,13 @@ export const Level1_1 = ({ navigation }) => {
     }
 
     useEffect(() => {
-        const randomZeroOrOne = Math.floor(Math.random() * 2);
-        if (!activeGame.length) {
-            setActiveGame(game[randomZeroOrOne])
+        if (game1 <= 1) {
+            setActiveGame(game[game1])
         }
-    }, [])
+        else {
+            navigation.navigate('Level1_2')
+        }
+    }, [game1])
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -77,15 +79,16 @@ export const Level1_1 = ({ navigation }) => {
                 }, 100);
                 setTimeout(() => {
                     music.stop()
-                }, 5000);
+
+                }, 2000);
                 setTimeout(() => {
                     setValue1('')
                     setValue2("")
                     setDisable(false)
-                    setActiveGame([
-                        activeGame[1],
-                        activeGame[0]
-                    ])
+                    // setActiveGame([
+                    //     activeGame[1],
+                    //     activeGame[0]
+                    // ])
                 }, 500);
             }
             else {
@@ -93,7 +96,9 @@ export const Level1_1 = ({ navigation }) => {
                     musicSuccess.play();
                 }, 100);
                 setTimeout(() => {
-                    navigation.navigate('Level1_3')
+                    setValue1('')
+                    setValue2('')
+                    setGame1(game1 + 1)
                     musicSuccess.stop()
                 }, 2000);
             }

@@ -30,12 +30,12 @@ export const Level7_4 = ({ navigation }) => {
         });
 
     const [img, setImg] = useState([
-        { icon: <Image source={require('../../assets/img/level7/game4/cov.png')} style={{ width: 80, height: 50 }} />, id: 6, activ: false },
-        { icon: <Image source={require('../../assets/img/level7/game4/gate.png')} style={{ width: 80, height: 50 }} />, id: 2, activ: false },
-        { icon: <Image source={require('../../assets/img/level7/game4/goat.png')} style={{ width: 80, height: 50 }} />, id: 5, activ: false },
-        { icon: <Image source={require('../../assets/img/level7/game4/horse.png')} style={{ width: 80, height: 50 }} />, id: 4, activ: false },
-        { icon: <Image source={require('../../assets/img/level7/game4/pig.png')} style={{ width: 80, height: 50 }} />, id: 3, activ: false },
-        { icon: <Image source={require('../../assets/img/level7/game4/rooster.png')} style={{ width: 50, height: 80 }} />, id: 1, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/cov.png')} style={{ width: 100, height: 60 }} />, id: 6, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/gate.png')} style={{ width: 100, height: 50 }} />, id: 2, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/goat.png')} style={{ width: 100, height: 60 }} />, id: 5, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/horse.png')} style={{ width: 100, height: 70 }} />, id: 4, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/pig.png')} style={{ width: 100, height: 70 }} />, id: 3, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/rooster.png')} style={{ width: 70, height: 100 }} />, id: 1, activ: false },
     ])
 
     const Game = (id, i) => {

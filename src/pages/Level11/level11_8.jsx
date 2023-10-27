@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level7_8 = ({ navigation }) => {
+export const Level11_1 = ({ navigation }) => {
     const [win, setWin] = useState(false)
     const [image, setImage] = useState({
         proble: <Image source={require('../../assets/img/level7/game8/popcorn.png')} style={{ width: 150, height: 150 }} />,
@@ -92,7 +92,7 @@ export const Level7_8 = ({ navigation }) => {
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     {arr?.proble}
                 </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 25, paddingHorizontal: 50 }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 25, paddingHorizontal: 120 }}>
                     {arr?.icon?.map((elm, i) => {
                         return <TouchableOpacity onPress={() => Game(elm.id)} key={i}>
                             {elm?.icon}

@@ -3,7 +3,6 @@ import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
-import { NumberButton } from '../../components/NumberBuuton'
 
 export const Level7_5 = ({ navigation }) => {
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -20,11 +19,43 @@ export const Level7_5 = ({ navigation }) => {
                 return
             }
         });
-    const button = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const button = [
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива0.png')} />, key: 0 },
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива1.png')} />, key: 1 },
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива2.png')} />, key: 2 },
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива3.png')} />, key: 3 },
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива4.png')} />, key: 4 },
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива5.png')} />, key: 5 },
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива6.png')} />, key: 6 },
+    ]
     const [arr, setArr] = useState([
-        ['0', 1, '', 3, 4, 5, 6],
-        ['0', '', 2, 3, '', 5, 6],
-        ['0', '', 2, 3, '', 5, '']
+        [
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива0.png')} />, key: 0 },
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива1.png')} />, key: 1 },
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива2.png')} />, key: 2 },
+            '',
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива4.png')} />, key: 4 },
+            '',
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива6.png')} />, key: 6 },
+        ],
+        [
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива0.png')} />, key: 0 },
+            '',
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива2.png')} />, key: 2 },
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива3.png')} />, key: 3 },
+            '',
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива5.png')} />, key: 5 },
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива6.png')} />, key: 6 },
+        ],
+        [
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива0.png')} />, key: 0 },
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива1.png')} />, key: 1 },
+            '',
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива3.png')} />, key: 3 },
+            '',
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива5.png')} />, key: 5 },
+            { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива6.png')} />, key: 6 },
+        ],
     ])
     const [activeGame, setActiveGame] = useState([])
     const [game, setGame] = useState(0)
@@ -34,7 +65,7 @@ export const Level7_5 = ({ navigation }) => {
         let win = true
         for (let i = 0; i < activeGame.length; i++) {
             if (item[i] == '') {
-                if (item[i - 1] + 1 == elm) {
+                if (item[i - 1].key + 1 == elm.key) {
                     index = i
                     break
                 }
@@ -64,7 +95,9 @@ export const Level7_5 = ({ navigation }) => {
             }
         })
         if (win) {
-            setGame(game + 1)
+            setTimeout(() => {
+                setGame(game + 1)
+            }, 2000);
 
         }
     }
@@ -78,20 +111,20 @@ export const Level7_5 = ({ navigation }) => {
     }, [game])
     return <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 120 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 10 }}>
                 {activeGame.map((elm, i) => {
                     if (elm == '') {
-                        return <ImgButton border='rgba(160, 205, 212, 0.4)' width={55} height={55} disable={true} key={i} svg={elm.icone} />
+                        return <ImgButton border='rgba(160, 205, 212, 0.4)' disable={true} key={i} svg={elm.icon} />
                     }
                     else {
-                        return <NumberButton disabled={true} bg={'#A0CDD4'} bc='rgba(160, 205, 212, 0.4)' key={i} number={elm} />
+                        return <ImgButton border='rgba(160, 205, 212, 0.4)' disable={true} key={i} svg={elm.icon} />
                     }
                 })}
             </View>
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#A0CDD4', borderRadius: 10 }}></View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
                 {button.map((elm, i) => {
-                    return <NumberButton bg={'#A0CDD4'} bc='rgba(160, 205, 212, 0.4)' key={i} onPress={() => Game(elm)} number={elm} />
+                    return <ImgButton bg={'#A0CDD4'} border='rgba(160, 205, 212, 0.4)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
                 })}
             </View>
         </View>

@@ -9,12 +9,12 @@ const windowHeight = Dimensions.get('window').height;
 
 export const Level2_4 = ({ navigation }) => {
     const item = [
-        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/redGlass1.png')} />, id: 1 },
-        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/BlueGlass.png')} />, id: 2 },
+        { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/redGlass1.png')} />, id: 1 },
+        { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/BlueGlass.png')} />, id: 2 },
         { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/Pot.png')} />, id: 4 },
-        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/redGlass1.png')} />, id: 3 },
-        { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/Pot.png')} />, id: 5 },
-        { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/Pot.png')} />, id: 6 },
+        { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/redGlass1.png')} />, id: 3 },
+        { icon: <Image style={{ width: 80, height: 50 }} source={require('../../assets/img/Pot.png')} />, id: 5 },
+        { icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/Pot.png')} />, id: 6 },
     ]
     const [selected, setSeletded] = useState([])
     const [selected1, setSeletded1] = useState([])

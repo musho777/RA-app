@@ -31,9 +31,9 @@ export const Level2_7 = ({ navigation }) => {
     const [game, setGame] = useState(true)
     const [game1, setGame1] = useState(0)
     const [tedy, setTedy] = useState([
-        { icone: <Image style={{ width: 60, height: 75 }} source={require('../../assets/img/level2/game7/yellowTedy.png')} />, id: 1 },
-        { icone: <Image style={{ width: 60, height: 75 }} source={require('../../assets/img/level2/game7/greenTedy.png')} />, id: 2 },
-        { icone: <Image style={{ width: 60, height: 75 }} source={require('../../assets/img/level2/game7/purpleTedy.png')} />, id: 3 },
+        { icone: <Image style={{ width: 65, height: 95 }} source={require('../../assets/img/level2/game7/yellowTedy.png')} />, id: 1 },
+        { icone: <Image style={{ width: 65, height: 95 }} source={require('../../assets/img/level2/game7/greenTedy.png')} />, id: 2 },
+        { icone: <Image style={{ width: 65, height: 95 }} source={require('../../assets/img/level2/game7/purpleTedy.png')} />, id: 3 },
     ])
     const bigTedy = [
         { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/yellowTedy.png')} />, id: 1 },
@@ -41,9 +41,9 @@ export const Level2_7 = ({ navigation }) => {
         { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/purpleTedy.png')} />, id: 3 },
     ]
     const doll = [
-        { icone: <Image style={{ width: 55, height: 75 }} source={require('../../assets/img/level2/game7/blueDoll.png')} />, id: 1 },
-        { icone: <Image style={{ width: 55, height: 75 }} source={require('../../assets/img/level2/game7/pinkDoll.png')} />, id: 2 },
-        { icone: <Image style={{ width: 55, height: 75 }} source={require('../../assets/img/level2/game7/yellowDoll.png')} />, id: 3 },
+        { icone: <Image style={{ width: 55, height: 95 }} source={require('../../assets/img/level2/game7/blueDoll.png')} />, id: 1 },
+        { icone: <Image style={{ width: 55, height: 95 }} source={require('../../assets/img/level2/game7/pinkDoll.png')} />, id: 2 },
+        { icone: <Image style={{ width: 55, height: 95 }} source={require('../../assets/img/level2/game7/yellowDoll.png')} />, id: 3 },
     ]
     const bigDoll = [
         { icone: <Image style={{ width: 150, height: 220 }} source={require('../../assets/img/level2/game7/blueDoll.png')} />, id: 1 },
@@ -97,14 +97,15 @@ export const Level2_7 = ({ navigation }) => {
         if (number == activeGame.id) {
             setTimeout(() => {
                 musicSuccess.play();
+                if (game1 == 1) {
+                    navigation.navigate('Level2_8')
+                }
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
                 setGame1(game1 + 1)
                 setGame(true)
-                if (game1 == 1) {
-                    navigation.navigate('Level2_8')
-                }
+
             }, 2000);
             setTimeout(() => {
                 setGame(false)
@@ -123,7 +124,7 @@ export const Level2_7 = ({ navigation }) => {
         return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')}>
             <View style={styles.block}>
                 {activeArr?.map((elm, i) => {
-                    return <ImgButton onPress={() => Play(elm.id)} key={i} svg={elm.icone} border={'rgba(255, 111, 23, 0.50)'} />
+                    return <ImgButton width={110} height={110} onPress={() => Play(elm.id)} key={i} svg={elm.icone} border={'rgba(255, 111, 23, 0.50)'} />
                 })}
             </View>
         </LevelWrapper>

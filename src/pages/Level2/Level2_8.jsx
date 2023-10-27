@@ -1,7 +1,7 @@
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton';
-import { Ballon1, Ballon2, Ballon3, Blue, Blue1, Green, Orange, Red, Red1, Yellow, Yellow1 } from '../../assets/svg';
+import { Ballon2, Ballon3, Blue, Blue1, Orange, Red, Yellow1 } from '../../assets/svg';
 import { useEffect, useState } from 'react';
 import Sound from 'react-native-sound';
 
@@ -9,9 +9,9 @@ import Sound from 'react-native-sound';
 export const Level2_8 = ({ navigation }) => {
     const [arr, setArr] = useState([
         [
-            { icone: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level2/game7/whiteHeart.png')} />, id: 1, active: false },
-            { icone: <Ballon2 />, id: 3, active: false },
-            { icone: <Ballon3 />, id: 2, active: false },
+            { icone: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level2/game7/whiteHeart.png')} />, id: 1, active: false },
+            { icone: <Image style={{ width: 80, height: 50 }} source={require('../../assets/img/level2/game7/whiteBallon1.png')} />, id: 3, active: false },
+            { icone: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level2/game7/whiteBallon.png')} />, id: 2, active: false },
         ],
         [
             { icone: <Red />, id: 4, active: false },
@@ -108,7 +108,6 @@ export const Level2_8 = ({ navigation }) => {
     }, [])
 
     useEffect(() => {
-        // navigation
         let win = true
         arr[0].map((elm, i) => {
             if (!elm.active) {
@@ -126,7 +125,7 @@ export const Level2_8 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                navigation.navigate('Level1_6')
+                navigation.navigate('LevelScreen')
             }, 2000);
         }
     }, [arr])

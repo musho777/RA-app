@@ -1,12 +1,10 @@
-import { Dimensions, Image, StyleSheet, Touchable, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton';
-import { Air, Bucket, Butterfly1, CarSvg, Green, Red, Train, WhiteAir, WhiteCar, WhiteTrain, Yellow } from '../../assets/svg';
+import { Green, Red, Yellow } from '../../assets/svg';
 import { useEffect, useState } from 'react';
 import Sound from 'react-native-sound';
 
-
-const windowWidth = Dimensions.get('window').width;
 export const Level1_5 = ({ navigation }) => {
     const [arr, setArr] = useState([
         [
@@ -45,7 +43,6 @@ export const Level1_5 = ({ navigation }) => {
     const Game = (number) => {
         let item = [...arr]
         let item2 = { ...activeNumber }
-        // let temp = [...active]
         for (let i = 0; i < item.length; i++) {
             if (number <= 3) {
                 item2.number1 = number
@@ -137,9 +134,9 @@ export const Level1_5 = ({ navigation }) => {
     if (game) {
         return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
             <View style={styles.block}>
-                <ImgButton svg={<Image style={{ width: 60, height: 42 }} source={require('../../assets/img/level1/game4/redTrain.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
-                <ImgButton svg={<Image style={{ width: 60, height: 42 }} source={require('../../assets/img/level1/game4/yellowPlane.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
-                <ImgButton svg={<Image style={{ width: 60, height: 42 }} source={require('../../assets/img/level1/game4/greenCar.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 75, height: 50 }} source={require('../../assets/img/level1/game4/redTrain.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 75, height: 50 }} source={require('../../assets/img/level1/game4/yellowPlane.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
+                <ImgButton svg={<Image style={{ width: 75, height: 50 }} source={require('../../assets/img/level1/game4/greenCar.png')} />} border={'rgba(255, 111, 23, 0.50)'} />
             </View>
         </LevelWrapper>
     }

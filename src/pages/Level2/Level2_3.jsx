@@ -58,10 +58,11 @@ export const Level2_3 = ({ navigation }) => {
             }
         });
 
+    const [game1, setGame1] = useState(0)
+
     useEffect(() => {
-        const randomNum = Math.floor(Math.random() * 3)
-        setActiveGame(game[randomNum])
-    }, [])
+        setActiveGame(game[game1])
+    }, [game1])
 
     const Answer = (i) => {
         setValue1(i)
@@ -70,16 +71,22 @@ export const Level2_3 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                navigation.navigate('Level2_4')
+                if (game1 < 2) {
+                    setGame1(game1 + 1)
+                    setValue1('')
+                }
+                else {
+                    navigation.navigate('Level2_4')
+                }
                 musicSuccess.stop()
             }, 2000);
         }
         else {
             setTimeout(() => {
-                setValue1('')
                 music.play();
             }, 100);
             setTimeout(() => {
+                setValue1('')
                 music.stop()
             }, 2000);
         }
@@ -93,7 +100,7 @@ export const Level2_3 = ({ navigation }) => {
     >
         <View style={{ flexDirection: 'row' }}>
             <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '60%' }}>
+                <View style={{ flexDirection: 'row', marginBottom: 30, justifyContent: 'space-around', width: '80%' }}>
                     {
                         activeGame.map((elm, i) => {
                             return elm

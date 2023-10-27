@@ -93,6 +93,7 @@ import { Level9_4 } from './src/pages/Level9/Level9_4';
 import { Selection8 } from './src/pages/Selection/Section8';
 import { Selection9 } from './src/pages/Selection/Section9';
 import { Selection10 } from './src/pages/Selection/Section10';
+import { Level11_1 } from './src/pages/Level11/level11_8';
 
 export default Navigation = () => {
 
@@ -764,8 +765,16 @@ export default Navigation = () => {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name="Level11_1"
+          component={Level11_1}
+          options={{
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>
   );
 };
+// Level11_1
