@@ -9,20 +9,20 @@ export const Level9_7 = ({ navigation }) => {
 
     const [svg, setSvg] = useState({
         icone: [
-            { icone: <Image source={require('../../assets/img/level9/game7/car3.png')} style={{ width: 60, height: 60 }} />, id: 1 },
-            { icone: <Image source={require('../../assets/img/level9/game7/car2.png')} style={{ width: 60, height: 60 }} />, id: 3 },
-            { icone: <Image source={require('../../assets/img/level9/game7/car1.png')} style={{ width: 60, height: 60 }} />, id: 2 },
+            { icone: <Image source={require('../../assets/img/level9/game7/car3.png')} style={{ width: 80, height: 80 }} />, id: 1 },
+            { icone: <Image source={require('../../assets/img/level9/game7/car2.png')} style={{ width: 80, height: 80 }} />, id: 3 },
+            { icone: <Image source={require('../../assets/img/level9/game7/car1.png')} style={{ width: 80, height: 80 }} />, id: 2 },
         ],
-        answer: <Image source={require('../../assets/img/level9/game7/car.png')} style={{ width: 60, height: 60 }} />,
+        answer: <Image source={require('../../assets/img/level9/game7/car.png')} style={{ width: 80, height: 80 }} />,
 
     })
     const [svg1, setSvg1] = useState({
         icone: [
-            { icone: <Image source={require('../../assets/img/level9/game7/heart.png')} style={{ width: 40, height: 60 }} />, id: 1 },
-            { icone: <Image source={require('../../assets/img/level9/game7/strawberry1.png')} style={{ width: 40, height: 60 }} />, id: 2 },
-            { icone: <Image source={require('../../assets/img/level9/game7/raspberries.png')} style={{ width: 40, height: 60 }} />, id: 3 },
+            { icone: <Image source={require('../../assets/img/level9/game7/heart.png')} style={{ width: 60, height: 80 }} />, id: 1 },
+            { icone: <Image source={require('../../assets/img/level9/game7/strawberry1.png')} style={{ width: 60, height: 80 }} />, id: 2 },
+            { icone: <Image source={require('../../assets/img/level9/game7/raspberries.png')} style={{ width: 60, height: 80 }} />, id: 3 },
         ],
-        answer: <Image source={require('../../assets/img/level9/game7/strawberry.png')} style={{ width: 40, height: 60 }} />,
+        answer: <Image source={require('../../assets/img/level9/game7/strawberry.png')} style={{ width: 60, height: 80 }} />,
 
     })
 
@@ -90,12 +90,12 @@ export const Level9_7 = ({ navigation }) => {
     return <LevelWrapper img={require('../../assets/img/bglv1.png')}
         img2={require('../../assets/img/33.png')} jC='center'>
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-            <ImgButton disable={true} svg={active?.answer} border={'rgba(204, 102, 204, 0.50)'} />
+            <ImgButton width={110} height={110} disable={true} svg={active?.answer} border={'rgba(204, 102, 204, 0.50)'} />
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 30 }}>
             {active?.icone?.map((elm, i) => {
                 return <View key={i} style={i == 1 && { marginHorizontal: 80 }}>
-                    <ImgButton disable={disable} onPress={() => Game(elm.id)} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
+                    <ImgButton width={110} height={110} disable={disable} onPress={() => Game(elm.id)} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
                 </View>
             })}
         </View>

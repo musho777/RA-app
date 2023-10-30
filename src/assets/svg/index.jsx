@@ -1636,6 +1636,54 @@ export const Red = () => {
         />
     </Svg>
 }
+
+
+export const PurpleColor = () => {
+    return <Svg
+        width={98}
+        height={98}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill='rgb(183,187,221)' />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="#FF6F17"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const PinkColor = () => {
+    return <Svg
+        width={98}
+        height={98}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill='rgb(237,146,188)' />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="#FF6F17"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+
+
 export const Red2 = () => {
     return <Svg
         width={78}
@@ -1803,6 +1851,28 @@ export const Blue2 = () => {
     >
         <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
         <Circle cx={49} cy={49} r={26} fill="rgb(65,47,145)" />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="rgba(153, 204, 51, 0.5)"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const Blue4 = () => {
+    return <Svg
+        width={78}
+        height={78}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill="rgb(131,135,193)" />
         <Rect
             x={2}
             y={2}

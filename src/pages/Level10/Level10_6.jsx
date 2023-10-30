@@ -7,20 +7,23 @@ import Sound from 'react-native-sound'
 
 export const Level10_6 = ({ navigation }) => {
     let subjects = [
-        { icon: <Image source={require('../../assets/img/blueberry.png')} style={{ width: 70, height: 70 }} />, id: 1 },
-        { icon: <Image source={require('../../assets/img/apple.png')} style={{ width: 70, height: 70 }} />, id: 2 },
-        { icon: <Image source={require('../../assets/img/strawberry.png')} style={{ width: 70, height: 70 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/redGlass1.png')} style={{ width: 70, height: 70 }} />, id: 4 },
-        { icon: <Image source={require('../../assets/img/BlueGlass.png')} style={{ width: 70, height: 70 }} />, id: 5 },
+        { icon: <Image source={require('../../assets/img/level10/game6/листик.png')} style={{ width: 70, height: 70 }} />, id: 1 },
+        { icon: <Image source={require('../../assets/img/level10/game6/ромашка.png')} style={{ width: 70, height: 70 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/level10/game6/зонтик.png')} style={{ width: 50, height: 70 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/level10/game6/прямоугольникрозовый.png')} style={{ width: 70, height: 70 }} />, id: 4 },
+        { icon: <Image source={require('../../assets/img/level10/game6/квадратсиний.png')} style={{ width: 70, height: 70 }} />, id: 5 },
+        { icon: <Image source={require('../../assets/img/level10/game6/ромбжелтый.png')} style={{ width: 60, height: 70 }} />, id: 6 },
+
     ]
     let [game1, setGame1] = useState([
-        { icon: <Image source={require('../../assets/img/blueberry.png')} style={{ width: 53, height: 65 }} />, id: 1 },
-        { icon: <Image source={require('../../assets/img/apple.png')} style={{ width: 53, height: 65 }} />, id: 2 },
-        { icon: <Image source={require('../../assets/img/strawberry.png')} style={{ width: 60, height: 60 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/level10/game6/листик.png')} style={{ width: 53, height: 65 }} />, id: 1 },
+        { icon: <Image source={require('../../assets/img/level10/game6/ромашка.png')} style={{ width: 53, height: 65 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/level10/game6/зонтик.png')} style={{ width: 50, height: 70 }} />, id: 3 },
     ])
     let [game2, setGame2] = useState([
-        { icon: <Image source={require('../../assets/img/redGlass1.png')} style={{ width: 60, height: 50 }} />, id: 1 },
-        { icon: <Image source={require('../../assets/img/BlueGlass.png')} style={{ width: 60, height: 50 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/level10/game6/прямоугольникрозовый.png')} style={{ width: 60, height: 50 }} />, id: 4 },
+        { icon: <Image source={require('../../assets/img/level10/game6/квадратсиний.png')} style={{ width: 60, height: 50 }} />, id: 5 },
+        { icon: <Image source={require('../../assets/img/level10/game6/ромбжелтый.png')} style={{ width: 60, height: 70 }} />, id: 6 },
     ])
 
     const [sub, setSub] = useState({})
@@ -45,7 +48,6 @@ export const Level10_6 = ({ navigation }) => {
 
     const [activeGame, setActiveGame] = useState([])
     useEffect(() => {
-        // const randomNum = Math.floor(Math.random() * 2)
         let item = []
         if (game3 == 0) {
             let arr1 = GetRandomItemsFromArray(game1, 3)
@@ -53,11 +55,11 @@ export const Level10_6 = ({ navigation }) => {
             item = [...game1]
         }
         else {
-            let arr1 = GetRandomItemsFromArray(game2, 2)
+            let arr1 = GetRandomItemsFromArray(game2, 3)
             setRandomSubject(arr1)
             item = [...game2]
         }
-        let arr1 = GetRandomItemsFromArray(item, 2)
+        let arr1 = GetRandomItemsFromArray(item, 3)
         setActiveGame(arr1)
     }, [game3])
     const Game = (elm) => {

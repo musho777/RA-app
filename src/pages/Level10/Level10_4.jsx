@@ -21,12 +21,12 @@ export const Level10_4 = ({ navigation }) => {
             }
         });
     const [arr, setArr] = useState([
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level10/game4/1.png')} />, id: 1, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level10/game4/2.png')} />, id: 2, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level10/game4/3.png')} />, id: 3, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level10/game4/4.png')} />, id: 4, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level10/game4/5.png')} />, id: 5, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level10/game4/6.png')} />, id: 6, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/1.png')} />, id: 1, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/2.png')} />, id: 2, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/3.png')} />, id: 3, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/4.png')} />, id: 4, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/5.png')} />, id: 5, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/6.png')} />, id: 6, active: false },
     ])
     const [answer, setAnswer] = useState([
         { icone: '', id: '' },
@@ -96,16 +96,16 @@ export const Level10_4 = ({ navigation }) => {
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 0 }}>
                 {answer.map((elm, i) => {
-                    return <ImgButton width={80} height={80} disable={true} key={i} svg={elm.icone} />
+                    return <ImgButton width={100} height={100} disable={true} key={i} svg={elm.icone} />
                 })}
             </View>
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#9C3', borderRadius: 10 }}></View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 0 }}>
                 {arr.map((elm, i) => {
                     if (elm.active) {
-                        return <View key={i} style={{ width: 80, height: 80 }}></View>
+                        return <View key={i} style={{ width: 100, height: 100 }}></View>
                     }
-                    return <ImgButton width={80} height={80} onPress={() => Game(elm.id, elm.icone, i,)} key={i} svg={elm.icone} />
+                    return <ImgButton width={100} height={100} onPress={() => Game(elm.id, elm.icone, i,)} key={i} svg={elm.icone} />
                 })}
             </View>
         </View>

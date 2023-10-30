@@ -94,7 +94,7 @@ export const Level5_2 = ({ navigation }) => {
     useEffect(() => {
         if (solution2 === 6) {
             setTimeout(() => {
-                navigation.navigate('Level5_4')
+                navigation.navigate('Level5_3')
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {

@@ -110,7 +110,7 @@ export const Level9_5 = ({ navigation }) => {
 
     useEffect(() => {
         if (game == 3) {
-            // navigation.navigate('Level8_5_1')
+            navigation.navigate('Level9_6')
         } else {
             setActiveGame(arr[game])
         }

@@ -58,7 +58,6 @@ export default App = () => {
         sound1.setCurrentTime(0);
       })
       sound2.stop()
-      console.log('Приложение свернуто');
     }
   };
 

@@ -8,18 +8,18 @@ import { GetRandomItemsFromArray } from "../../components/Funtion/getRandomItems
 export const Level10_7 = ({ navigation }) => {
     const [data, setData] = useState([
         [
-            { icon: <Image style={{ width: 20, height: 60 }} source={require('../../assets/img/level10/game7/umbrella.png')} />, id: 1 },
-            { icon: <Image style={{ width: 60, height: 40 }} source={require('../../assets/img/level10/game7/binoculars.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game7/chair.png')} />, id: 3 },
-            { icon: <Image style={{ width: 60, height: 40 }} source={require('../../assets/img/level10/game7/pot.png')} />, id: 4 },
-            { icon: <Image style={{ width: 60, height: 40 }} source={require('../../assets/img/level10/game7/inflatablecircle.png')} />, id: 5 },
+            { icon: <Image style={{ width: 20, height: 90 }} source={require('../../assets/img/level10/game7/umbrella.png')} />, id: 1 },
+            { icon: <Image style={{ width: 80, height: 55 }} source={require('../../assets/img/level10/game7/binoculars.png')} />, id: 2 },
+            { icon: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game7/chair.png')} />, id: 3 },
+            { icon: <Image style={{ width: 80, height: 60 }} source={require('../../assets/img/level10/game7/pot.png')} />, id: 4 },
+            { icon: <Image style={{ width: 80, height: 55 }} source={require('../../assets/img/level10/game7/inflatablecircle.png')} />, id: 5 },
         ],
         [
-            { icon: <Image style={{ width: 60, height: 50 }} source={require('../../assets/img/level10/game7/iron.png')} />, id: 1 },
-            { icon: <Image style={{ width: 55, height: 65 }} source={require('../../assets/img/level10/game7/helmet.png')} />, id: 2 },
-            { icon: <Image style={{ width: 50, height: 60 }} source={require('../../assets/img/level10/game7/lock.png')} />, id: 3 },
-            { icon: <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level10/game7/scooter.png')} />, id: 4 },
-            { icon: <Image style={{ width: 50, height: 60 }} source={require('../../assets/img/level10/game7/smartphone.png')} />, id: 5 },
+            { icon: <Image style={{ width: 80, height: 60 }} source={require('../../assets/img/level10/game7/iron.png')} />, id: 1 },
+            { icon: <Image style={{ width: 65, height: 75 }} source={require('../../assets/img/level10/game7/helmet.png')} />, id: 2 },
+            { icon: <Image style={{ width: 55, height: 70 }} source={require('../../assets/img/level10/game7/lock.png')} />, id: 3 },
+            { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level10/game7/scooter.png')} />, id: 4 },
+            { icon: <Image style={{ width: 60, height: 70 }} source={require('../../assets/img/level10/game7/smartphone.png')} />, id: 5 },
         ]
     ])
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -76,7 +76,7 @@ export const Level10_7 = ({ navigation }) => {
         <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')} jC="center">
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 {activeArr.map((elm, i) => {
-                    return <ImgButton key={i} svg={elm.icon} onPress={() => Game(elm)} />
+                    return <ImgButton width={100} height={100} key={i} svg={elm.icon} onPress={() => Game(elm)} />
                 })}
             </View>
         </LevelWrapper>

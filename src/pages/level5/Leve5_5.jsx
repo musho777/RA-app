@@ -101,7 +101,18 @@ export const Level5_5 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 setGame1(game1 + 1)
-                if (game1 == 0) {
+                setAnswer([
+                    { icone: '', id: '' },
+                    { icone: '', id: '' },
+                    { icone: '', id: '' },
+                    { icone: '', id: '' },
+                    { icone: '', id: '' },
+                    { icone: '', id: '' },
+                    { icone: '', id: '' },
+                    { icone: '', id: '' },
+                    { icone: '', id: '' },
+                ])
+                if (game1 == 1) {
                     navigation.navigate('Level5_6')
                 }
                 musicSuccess.stop()

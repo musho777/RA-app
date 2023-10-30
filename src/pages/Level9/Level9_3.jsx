@@ -3,11 +3,9 @@ import { ImgButton } from '../../components/ImgButton'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
-import { Blue2, Brown, Green2, Yellow2 } from '../../assets/svg'
+import { Blue2, Blue4, Brown, Green2, Yellow2 } from '../../assets/svg'
 
 export const Level9_3 = ({ navigation }) => {
-
-    const [disable, setDisable] = useState(false)
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -55,93 +53,93 @@ export const Level9_3 = ({ navigation }) => {
                 icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
             },
             {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
+                icon: <Image style={{ width: 50, height: 55 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
                 id: 2,
                 active: false,
                 icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
             },
             {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus1.png')} />,
+                icon: <Image style={{ width: 55, height: 50 }} source={require('../../assets/img/level9/game3/rhombus1.png')} />,
                 id: 1,
                 active: false,
                 icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
             },
             {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
+                icon: <Image style={{ width: 50, height: 55 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
                 id: 2,
                 active: false,
                 icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
             },
             {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus1.png')} />,
+                icon: <Image style={{ width: 55, height: 50 }} source={require('../../assets/img/level9/game3/rhombus1.png')} />,
                 id: 1,
                 active: false,
                 icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
             },
             {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
+                icon: <Image style={{ width: 50, height: 55 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
                 id: 2,
                 active: false,
                 icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
             },
         ],
-        [
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
-                id: 1,
-                active: true,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
+        // [
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
+        //         id: 1,
+        //         active: true,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
 
-            },
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
-                id: 2,
-                active: true,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
-            },
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
-                id: 1,
-                active: true,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
-            },
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
-                id: 2,
-                active: true,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
-            },
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
-                id: 2,
-                active: false,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
-            },
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus1.png')} />,
-                id: 1,
-                active: false,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
-            },
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
-                id: 2,
-                active: false,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
-            },
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus1.png')} />,
-                id: 1,
-                active: false,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
-            },
-            {
-                icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
-                id: 2,
-                active: false,
-                icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
-            },
-        ]
+        //     },
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
+        //         id: 2,
+        //         active: true,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
+        //     },
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
+        //         id: 1,
+        //         active: true,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
+        //     },
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
+        //         id: 2,
+        //         active: true,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
+        //     },
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
+        //         id: 2,
+        //         active: false,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
+        //     },
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus1.png')} />,
+        //         id: 1,
+        //         active: false,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
+        //     },
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
+        //         id: 2,
+        //         active: false,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
+        //     },
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus1.png')} />,
+        //         id: 1,
+        //         active: false,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/rhombus.png')} />,
+        //     },
+        //     {
+        //         icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle1.png')} />,
+        //         id: 2,
+        //         active: false,
+        //         icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game3/circle.png')} />,
+        //     },
+        // ]
     ])
 
 
@@ -158,9 +156,7 @@ export const Level9_3 = ({ navigation }) => {
     }
 
     const Game = (elm, i) => {
-        console.log(i)
         let item = [...activeGame]
-        console.log(item)
         if (elm.id === selecetedColor) {
             item[i].active = true
             setTimeout(() => {
@@ -192,7 +188,7 @@ export const Level9_3 = ({ navigation }) => {
             }
         })
         if (win) {
-            if (game1 == 1) {
+            if (game1 == 0) {
                 setTimeout(() => {
                     navigation.navigate('Level9_4')
                 }, 1000);
@@ -220,7 +216,7 @@ export const Level9_3 = ({ navigation }) => {
                     <Yellow2 />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => SelectColor(2)}>
-                    <Blue2 />
+                    <Blue4 />
                 </TouchableOpacity>
                 <TouchableOpacity style={{ marginHorizontal: 20, }} onPress={() => SelectColor(1)}>
                     <Green2 />
