@@ -21,25 +21,25 @@ export const Level8_3 = ({ navigation }) => {
         });
     const [game1, setGame1] = useState(0)
     const lollipop = [
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn4.png')} />, id: 5, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn3.png')} />, id: 4, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn1.png')} />, id: 2, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn5.png')} />, id: 6, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn2.png')} />, id: 3, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn6.png')} />, id: 7, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn0.png')} />, id: 1, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn7.png')} />, id: 8, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn4.png')} />, id: 4, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn3.png')} />, id: 5, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn1.png')} />, id: 7, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn5.png')} />, id: 3, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn2.png')} />, id: 6, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn6.png')} />, id: 2, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn0.png')} />, id: 8, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/acorn7.png')} />, id: 1, active: false },
 
     ]
     const [arr, setArr] = useState([
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric4.png')} />, id: 5, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric3.png')} />, id: 4, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric1.png')} />, id: 2, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric5.png')} />, id: 6, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric2.png')} />, id: 3, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric6.png')} />, id: 7, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric0.png')} />, id: 1, active: false },
-        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric7.png')} />, id: 8, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric4.png')} />, id: 4, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric3.png')} />, id: 5, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric1.png')} />, id: 7, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric5.png')} />, id: 3, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric2.png')} />, id: 6, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric6.png')} />, id: 2, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric0.png')} />, id: 8, active: false },
+        { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level8/game3/flyagaric7.png')} />, id: 1, active: false },
     ])
     const [answer, setAnswer] = useState([
         { icone: '', id: '' },
@@ -98,7 +98,7 @@ export const Level8_3 = ({ navigation }) => {
             setTimeout(() => {
                 setGame1(game1 + 1)
                 if (game1 === 1) {
-                    navigation.navigate('Level8_5')
+                    navigation.navigate('Level8_4')
                 }
                 musicSuccess.stop()
             }, 2000);

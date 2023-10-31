@@ -30,7 +30,6 @@ export const Level5_8 = ({ navigation }) => {
         { x: w - 80, y: h, show: true },
     ])
 
-    const [selectdBlock, setSelectedBlock] = useState('')
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {

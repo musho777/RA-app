@@ -23,16 +23,16 @@ export const Level4_7 = ({ navigation }) => {
     const [arr, setArr] = useState([
         [
             [
-                { icon: <Image source={require('../../assets/img/level4/game7/cup.png')} style={{ width: 70, height: 70 }} />, id: 1, active: false, i: 0 },
-                { icon: <Image source={require('../../assets/img/level4/game7/pillow.png')} style={{ width: 70, height: 70 }} />, id: 3, active: false, i: 1 },
-                { icon: <Image source={require('../../assets/img/level4/game7/closet.png')} style={{ width: 70, height: 70 }} />, id: 5, active: false, i: 2 },
-                { icon: <Image source={require('../../assets/img/level4/game7/tassel.png')} style={{ width: 70, height: 70 }} />, id: 7, active: false, i: 3 },
+                { icon: <Image source={require('../../assets/img/level4/game7/cup.png')} style={{ width: 90, height: 90 }} />, id: 1, active: false, i: 0 },
+                { icon: <Image source={require('../../assets/img/level4/game7/pillow.png')} style={{ width: 90, height: 90 }} />, id: 3, active: false, i: 1 },
+                { icon: <Image source={require('../../assets/img/level4/game7/closet.png')} style={{ width: 80, height: 80 }} />, id: 5, active: false, i: 2 },
+                { icon: <Image source={require('../../assets/img/level4/game7/tassel.png')} style={{ width: 90, height: 90 }} />, id: 7, active: false, i: 3 },
             ],
             [
-                { icon: <Image source={require('../../assets/img/level4/game7/kettle.png')} style={{ width: 70, height: 70 }} />, id: 2, active: false, i: 0 },
-                { icon: <Image source={require('../../assets/img/level4/game7/bed.png')} style={{ width: 70, height: 70 }} />, id: 4, active: false, i: 1 },
-                { icon: <Image source={require('../../assets/img/level4/game7/table.png')} style={{ width: 70, height: 70 }} />, id: 6, active: false, i: 2 },
-                { icon: <Image source={require('../../assets/img/level4/game7/paints.png')} style={{ width: 70, height: 70 }} />, id: 8, active: false, i: 3 },
+                { icon: <Image source={require('../../assets/img/level4/game7/kettle.png')} style={{ width: 90, height: 90 }} />, id: 2, active: false, i: 0 },
+                { icon: <Image source={require('../../assets/img/level4/game7/bed.png')} style={{ width: 90, height: 60 }} />, id: 4, active: false, i: 1 },
+                { icon: <Image source={require('../../assets/img/level4/game7/table.png')} style={{ width: 90, height: 90 }} />, id: 6, active: false, i: 2 },
+                { icon: <Image source={require('../../assets/img/level4/game7/paints.png')} style={{ width: 90, height: 90 }} />, id: 8, active: false, i: 3 },
             ]
         ]
     ])
@@ -131,10 +131,10 @@ export const Level4_7 = ({ navigation }) => {
     }, [show1, show])
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')}>
         <View style={{ height: '100%', justifyContent: "center" }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 150, marginVertical: 10 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 100, marginVertical: 10 }}>
                 {activeGame[0]?.map((elm, i) => {
                     if (!show[i]) {
-                        return <ImgButton onPress={() => Game(i, 0, elm.id, elm.i)} key={i} svg={elm.icon} />
+                        return <ImgButton width={100} height={100} onPress={() => Game(i, 0, elm.id, elm.i)} key={i} svg={elm.icon} />
                     }
                     else {
                         return <View key={i} style={{
@@ -144,10 +144,10 @@ export const Level4_7 = ({ navigation }) => {
                     }
                 })}
             </View>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 150, marginVertical: 10 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 100, marginVertical: 10 }}>
                 {activeGame[1]?.map((elm, i) => {
                     if (!show1[i]) {
-                        return <ImgButton onPress={() => Game(i, 1, elm.id, elm.i)} key={i} svg={elm.icon} />
+                        return <ImgButton width={100} height={100} onPress={() => Game(i, 1, elm.id, elm.i)} key={i} svg={elm.icon} />
                     }
                     else {
                         return <View key={i} style={{

@@ -12,18 +12,18 @@ export const Level8_6 = ({ navigation }) => {
 
     const [activeGame, setActiveGame] = useState([
         [
-            { icone: <Image source={require('../../assets/img/level8/game6/beanbag.png')} style={{ width: 50, height: 60 }} />, id: 1, active: false },
-            { icone: <Image source={require('../../assets/img/level8/game6/butterfly.png')} style={{ width: 55, height: 50 }} />, id: 2, active: false },
-            { icone: <Image source={require('../../assets/img/level8/game6/chicken.png')} style={{ width: 50, height: 60 }} />, id: 3, active: false },
-            { icone: <Image source={require('../../assets/img/level8/game6/fish.png')} style={{ width: 55, height: 60 }} />, id: 4, active: false },
-            { icone: <Image source={require('../../assets/img/level8/game6/hare.png')} style={{ width: 50, height: 60 }} />, id: 5, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/beanbag.png')} style={{ width: 70, height: 80 }} />, id: 1, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/butterfly.png')} style={{ width: 80, height: 60 }} />, id: 2, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/chicken.png')} style={{ width: 70, height: 85 }} />, id: 3, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/fish.png')} style={{ width: 70, height: 90 }} />, id: 4, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/hare.png')} style={{ width: 65, height: 90 }} />, id: 5, active: false },
         ],
         [
-            { icone: <Image source={require('../../assets/img/level8/game6/doll.png')} style={{ width: 50, height: 70 }} />, id: 6, active: false },
-            { icone: <Image source={require('../../assets/img/level8/game6/ladybug.png')} style={{ width: 60, height: 60 }} />, id: 7, active: false },
-            { icone: <Image source={require('../../assets/img/level8/game6/duck.png')} style={{ width: 60, height: 60 }} />, id: 8, active: false },
-            { icone: <Image source={require('../../assets/img/level8/game6/Starfish.png')} style={{ width: 60, height: 60 }} />, id: 9, active: false },
-            { icone: <Image source={require('../../assets/img/level8/game6/squirrel.png')} style={{ width: 60, height: 60 }} />, id: 10, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/doll.png')} style={{ width: 65, height: 90 }} />, id: 6, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/ladybug.png')} style={{ width: 80, height: 80 }} />, id: 7, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/duck.png')} style={{ width: 80, height: 80 }} />, id: 8, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/Starfish.png')} style={{ width: 80, height: 80 }} />, id: 9, active: false },
+            { icone: <Image source={require('../../assets/img/level8/game6/squirrel.png')} style={{ width: 80, height: 80 }} />, id: 10, active: false },
         ]
     ])
 
@@ -135,7 +135,7 @@ export const Level8_6 = ({ navigation }) => {
                         if (elm.active) {
                             return <View key={i} style={{ width: 90, height: 90 }} />
                         }
-                        return <ImgButton key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number1 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
+                        return <ImgButton width={110} height={110} key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number1 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
                     })}
                 </View>
                 <View style={styles.block}>
@@ -143,7 +143,7 @@ export const Level8_6 = ({ navigation }) => {
                         if (elm.active) {
                             return <View key={i} style={{ width: 90, height: 90 }} />
                         }
-                        return <ImgButton key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number2 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
+                        return <ImgButton width={110} height={110} key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number2 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
                     })}
                 </View>
             </View>

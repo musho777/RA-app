@@ -32,10 +32,10 @@ export const Level8_7 = ({ navigation }) => {
                 { icon: <Image style={{ width: 120, height: 80 }} source={require('../../assets/img/level8/game7/frog.png')} />, id: 2 },
             ],
             arr: [
-                { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level8/game7/caterpillar.png')} />, id: 2 },
-                { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level8/game7/frog.png')} />, id: 1 },
-                { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level8/game7/dragonfly.png')} />, id: 3 },
-                { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level8/game7/butterfly.png')} />, id: 4 },
+                { icon: <Image style={{ width: 90, height: 70 }} source={require('../../assets/img/level8/game7/caterpillar.png')} />, id: 2 },
+                { icon: <Image style={{ width: 95, height: 65 }} source={require('../../assets/img/level8/game7/frog.png')} />, id: 1 },
+                { icon: <Image style={{ width: 90, height: 70 }} source={require('../../assets/img/level8/game7/dragonfly.png')} />, id: 3 },
+                { icon: <Image style={{ width: 90, height: 70 }} source={require('../../assets/img/level8/game7/butterfly.png')} />, id: 4 },
             ]
 
         },
@@ -47,15 +47,15 @@ export const Level8_7 = ({ navigation }) => {
                 { icon: <Image style={{ width: 120, height: 80 }} source={require('../../assets/img/level8/game7/dog.png')} />, id: 4 },
             ],
             arr: [
-                { icon: <Image style={{ width: 60, height: 30 }} source={require('../../assets/img/level8/game7/dog2.png')} />, id: 2 },
-                { icon: <Image style={{ width: 60, height: 30 }} source={require('../../assets/img/level8/game7/dog3.png')} />, id: 3 },
-                { icon: <Image style={{ width: 60, height: 30 }} source={require('../../assets/img/level8/game7/dog.png')} />, id: 4 },
+                { icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/level8/game7/dog2.png')} />, id: 2 },
+                { icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/level8/game7/dog3.png')} />, id: 3 },
+                { icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/level8/game7/dog.png')} />, id: 4 },
             ],
             arr2: [
-                { icon: <Image style={{ width: 60, height: 30 }} source={require('../../assets/img/level8/game7/dog1.png')} />, id: 1 },
-                { icon: <Image style={{ width: 60, height: 30 }} source={require('../../assets/img/level8/game7/dog2.png')} />, id: 2 },
-                { icon: <Image style={{ width: 60, height: 30 }} source={require('../../assets/img/level8/game7/dog3.png')} />, id: 3 },
-                { icon: <Image style={{ width: 60, height: 30 }} source={require('../../assets/img/level8/game7/dog.png')} />, id: 4 },
+                { icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/level8/game7/dog1.png')} />, id: 1 },
+                { icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/level8/game7/dog2.png')} />, id: 2 },
+                { icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/level8/game7/dog3.png')} />, id: 3 },
+                { icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/level8/game7/dog.png')} />, id: 4 },
             ]
         }
     ])
@@ -114,7 +114,7 @@ export const Level8_7 = ({ navigation }) => {
         return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')}>
             <View style={styles.block2}>
                 {activeArr?.arr.map((elm, i) => {
-                    return <ImgButton onPress={() => Play(elm.id)} key={i} svg={elm.icon} border={'rgba(153, 204, 51, 0.4)'} />
+                    return <ImgButton width={110} height={110} onPress={() => Play(elm.id)} key={i} svg={elm.icon} border={'rgba(153, 204, 51, 0.4)'} />
                 })}
             </View>
         </LevelWrapper>
@@ -123,7 +123,7 @@ export const Level8_7 = ({ navigation }) => {
         return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')}>
             <View style={styles.block2}>
                 {activeArr?.arr2.map((elm, i) => {
-                    return <ImgButton onPress={() => Play(elm.id)} key={i} svg={elm.icon} border={'rgba(153, 204, 51, 0.4)'} />
+                    return <ImgButton width={110} height={110} onPress={() => Play(elm.id)} key={i} svg={elm.icon} border={'rgba(153, 204, 51, 0.4)'} />
                 })}
             </View>
         </LevelWrapper>

@@ -11,7 +11,7 @@ import Sound from 'react-native-sound'
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-export const Level4_2 = ({ navigation }) => {
+export const Level8_4 = ({ navigation }) => {
     let w = windowWidth - 150
     let h = windowHeight - 150
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -65,9 +65,7 @@ export const Level4_2 = ({ navigation }) => {
     ])
 
     useEffect(() => {
-        // const randomNum = Math.floor(Math.random() * 4) + 3
         let arr1 = GetRandomItemsFromArray(subject, 6)
-        // const randomNum1 = Math.floor(Math.random() * 3) + 2
         let arr2 = GetRandomItemsFromArray(answer, 4)
         let item = GetRandomItemsFromArray(position, position.length)
         setPosition(item)
@@ -142,7 +140,7 @@ export const Level4_2 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                navigation.navigate('Level4_3')
+                navigation.navigate('Level8_5')
                 musicSuccess.stop()
             }, 2000);
         }

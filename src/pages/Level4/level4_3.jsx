@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { NumberButton } from '../../components/NumberBuuton'
-import { Image, StyleSheet, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, View } from 'react-native'
 import { Input } from '../../components/Input'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 export const Level4_3 = ({ navigation }) => {
+    let w = windowWidth - 300
+    let h = windowHeight - 200
     const buuton = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     const [disable, setDisable] = useState(false)
     const [value1, setValue1] = useState('')
@@ -71,29 +75,27 @@ export const Level4_3 = ({ navigation }) => {
     ])
 
     const [position, setPosition] = useState([
-        { x: 46, y: 33 },
-        { x: 47, y: 117 },
-        { x: 93, y: 196 },
+        { x: 0, y: 3 },
+        { x: 20, y: 90 },
+        { x: 0, y: h - 10 },
         { x: 190, y: 144 },
-        { x: 178, y: 24 },
-        { x: 308, y: 5 },
-        { x: 220, y: 196 },
-        { x: 467, y: 59 },
-        { x: 467, y: 129 },
-        { x: 307, y: 59 },
+        { x: 178, y: 0 },
+        { x: w - 130, y: 5 },
+        { x: w - 100, y: h - 80 },
+        { x: w, y: 59 },
+        { x: w, y: 129 },
     ])
 
     const [activeArr, setActiveArr] = useState({
         array: [],
         answer: []
     })
-
+    const [game1, setGame1] = useState(0)
     useEffect(() => {
         let item = GetRandomItemsFromArray(position, 9)
-        const randomNum = Math.floor(Math.random() * 2)
         setPosition(item)
-        setActiveArr(arr[randomNum])
-    }, [])
+        setActiveArr(arr[game1])
+    }, [game1])
 
     const Answer = (e) => {
         if (value1 == '') {
@@ -137,7 +139,16 @@ export const Level4_3 = ({ navigation }) => {
                 }, 100);
                 setTimeout(() => {
                     musicSuccess.stop()
-                    navigation.navigate('Level4_4')
+                    if (game1 < 1) {
+                        setGame1(game1 + 1)
+                        setValue1('')
+                        setValue2('')
+                        setValue3('')
+                        setValue4('')
+                    }
+                    else {
+                        navigation.navigate('Level4_4')
+                    }
                 }, 2000);
             }
         }
