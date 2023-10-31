@@ -1,9 +1,8 @@
-import { Image, Touchable, TouchableOpacity, View } from 'react-native'
+import { Image, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
-import { NumberButton } from '../../components/NumberBuuton'
 
 export const Level6_5 = ({ navigation }) => {
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -20,11 +19,41 @@ export const Level6_5 = ({ navigation }) => {
                 return
             }
         });
-    const button = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const button = [
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко0.png')} style={{ width: 65, height: 80 }} />, id: 0 },
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко1.png')} style={{ width: 65, height: 80 }} />, id: 1 },
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко2.png')} style={{ width: 65, height: 80 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко3.png')} style={{ width: 65, height: 80 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко4.png')} style={{ width: 65, height: 80 }} />, id: 4 },
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко5.png')} style={{ width: 65, height: 80 }} />, id: 5 },
+
+
+    ]
     const [arr, setArr] = useState([
-        ['0', 1, '', 3, 4, 5],
-        ['0', 1, 2, 3, '', 5],
-        ['0', '', 2, '', 4, 5]
+        [
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко0.png')} style={{ width: 65, height: 80 }} />, id: 0 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко1.png')} style={{ width: 65, height: 80 }} />, id: 1 },
+            { icon: '', id: 1 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко3.png')} style={{ width: 65, height: 80 }} />, id: 3 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко4.png')} style={{ width: 65, height: 80 }} />, id: 4 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко5.png')} style={{ width: 65, height: 80 }} />, id: 5 },
+        ],
+        [
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко0.png')} style={{ width: 65, height: 80 }} />, id: 0 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко1.png')} style={{ width: 65, height: 80 }} />, id: 1 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко2.png')} style={{ width: 65, height: 80 }} />, id: 2 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко3.png')} style={{ width: 65, height: 80 }} />, id: 3 },
+            { icon: '', id: 4 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко5.png')} style={{ width: 65, height: 80 }} />, id: 5 },
+        ],
+        [
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко0.png')} style={{ width: 65, height: 80 }} />, id: 0 },
+            { icon: '', id: 1 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко2.png')} style={{ width: 65, height: 80 }} />, id: 2 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко3.png')} style={{ width: 65, height: 80 }} />, id: 3 },
+            { icon: '', id: 4 },
+            { icon: <Image source={require('../../assets/img/level6/game5/яблоко5.png')} style={{ width: 65, height: 80 }} />, id: 5 },
+        ]
     ])
     const [activeGame, setActiveGame] = useState([])
     const [game, setGame] = useState(0)
@@ -33,8 +62,10 @@ export const Level6_5 = ({ navigation }) => {
         let index = ''
         let win = true
         for (let i = 0; i < activeGame.length; i++) {
-            if (item[i] == '') {
-                if (item[i - 1] + 1 == elm && item[i + 1] - 1 == elm) {
+            if (item[i].icon == '') {
+                console.log(item[i - 1].id, elm.id)
+                if (item[i - 1].id + 1 == elm.id && item[i + 1].id - 1 == elm.id) {
+                    console.log('jsdlgfdlsfj')
                     index = i
                     setTimeout(() => {
                         musicSuccess.play();
@@ -58,7 +89,7 @@ export const Level6_5 = ({ navigation }) => {
         item[index] = elm
         setActiveGame(item)
         item.map((elm, i) => {
-            if (elm == '') {
+            if (elm.icon == '') {
                 win = false
             }
         })
@@ -68,8 +99,8 @@ export const Level6_5 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
+                setGame(game + 1)
             }, 2000);
-            setGame(game + 1)
         }
     }
 
@@ -90,13 +121,13 @@ export const Level6_5 = ({ navigation }) => {
 
     return <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 120 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
                 {activeGame.map((elm, i) => {
-                    if (elm == '') {
-                        return <ImgButton border='rgba(160, 205, 212, 0.4)' width={55} height={55} disable={true} key={i} svg={elm.icone} />
+                    if (elm.icon == '') {
+                        return <ImgButton bg={'#A0CDD4'} border='rgba(160, 205, 212, 0.4)' width={100} height={100} disable={true} key={i} svg={elm.icon} />
                     }
                     else {
-                        return <NumberButton disabled={true} bg={'#A0CDD4'} bc='rgba(160, 205, 212, 0.4)' key={i} number={elm} />
+                        return <ImgButton width={100} height={100} disabled={true} bg={'#A0CDD4'} border='rgba(160, 205, 212, 0.4)' key={i} svg={elm.icon} />
                     }
                 })}
 
@@ -104,7 +135,7 @@ export const Level6_5 = ({ navigation }) => {
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#A0CDD4', borderRadius: 10 }}></View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
                 {button.map((elm, i) => {
-                    return <NumberButton bg={'#A0CDD4'} bc='rgba(160, 205, 212, 0.4)' key={i} onPress={() => Game(elm)} number={elm} />
+                    return <ImgButton width={100} height={100} bg={'#A0CDD4'} border='rgba(160, 205, 212, 0.4)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
                 })}
             </View>
         </View>

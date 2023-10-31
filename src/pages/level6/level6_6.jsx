@@ -12,20 +12,20 @@ export const Level6_6 = ({ navigation }) => {
 
     const [activeGame, setActiveGame] = useState([
         [
-            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 20, height: 20 }} />, id: 1, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 30, height: 30 }} />, id: 2, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 40, height: 40 }} />, id: 3, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 30, height: 20 }} />, id: 4, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 40, height: 30 }} />, id: 5, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 50, height: 40 }} />, id: 6, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 60, height: 60 }} />, id: 1, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 70, height: 70 }} />, id: 2, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/key.png')} style={{ width: 80, height: 80 }} />, id: 3, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 80, height: 50 }} />, id: 4, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 90, height: 50 }} />, id: 5, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/saucer.png')} style={{ width: 100, height: 50 }} />, id: 6, active: false },
         ],
         [
-            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 20, height: 25 }} />, id: 7, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 30, height: 40 }} />, id: 8, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 40, height: 50 }} />, id: 9, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 20, height: 20 }} />, id: 10, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 30, height: 30 }} />, id: 11, active: false },
-            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 40, height: 40 }} />, id: 12, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 50, height: 65 }} />, id: 7, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 60, height: 75 }} />, id: 8, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/lock.png')} style={{ width: 70, height: 85 }} />, id: 9, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 80, height: 60 }} />, id: 10, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 90, height: 70 }} />, id: 11, active: false },
+            { icone: <Image source={require('../../assets/img/level6/game6/spoon.png')} style={{ width: 100, height: 80 }} />, id: 12, active: false },
         ]
     ])
 
@@ -133,21 +133,21 @@ export const Level6_6 = ({ navigation }) => {
 
     return (
         <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')}>
-            <View style={{ flexDirection: 'column', justifyContent: "space-around", paddingHorizontal: 70, height: '100%' }}>
+            <View style={{ flexDirection: 'column', justifyContent: "space-around", height: '100%' }}>
                 <View style={styles.block}>
                     {activeGame.length > 0 && activeGame[0].map((elm, i) => {
                         if (elm.active) {
-                            return <View key={i} style={{ width: 90, height: 90 }} />
+                            return <View key={i} style={{ width: 110, height: 110 }} />
                         }
-                        return <ImgButton key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number1 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
+                        return <ImgButton width={110} height={110} key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number1 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
                     })}
                 </View>
                 <View style={styles.block}>
                     {activeGame.length > 0 && activeGame[1].map((elm, i) => {
                         if (elm.active) {
-                            return <View key={i} style={{ width: 90, height: 90 }} />
+                            return <View key={i} style={{ width: 110, height: 110 }} />
                         }
-                        return <ImgButton key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number2 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
+                        return <ImgButton width={110} height={110} key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number2 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
                     })}
                 </View>
             </View>

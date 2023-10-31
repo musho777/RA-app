@@ -3,7 +3,7 @@ import { ImgButton } from '../../components/ImgButton'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
-import { Blue2, Green2, Orange2, Yellow2 } from '../../assets/svg'
+import { Blue5, Yellow2 } from '../../assets/svg'
 
 export const Level6_4 = ({ navigation }) => {
 
@@ -130,7 +130,7 @@ export const Level6_4 = ({ navigation }) => {
                 <Yellow2 />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => SelectColor(2)}>
-                <Blue2 />
+                <Blue5 />
             </TouchableOpacity>
         </View>
     </LevelWrapper>

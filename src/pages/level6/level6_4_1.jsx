@@ -6,8 +6,6 @@ import Sound from 'react-native-sound'
 
 export const Level6_4_1 = ({ navigation }) => {
 
-    const [disable, setDisable] = useState(false)
-
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {

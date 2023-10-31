@@ -24,25 +24,25 @@ export const Level6_7 = ({ navigation }) => {
 
     const [arr, setArr] = useState([
         [
-            { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game7/bear.png')} />, id: 1 },
-            { icon: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level6/game7/hare.png')} />, id: 2 },
-            { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game7/fox.png')} />, id: 3 },
-            { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game7/wolf.png')} />, id: 4 },
-            { icon: <Image style={{ width: 70, height: 20 }} source={require('../../assets/img/level6/game7/caterpillar.png')} />, id: 5 },
+            { icon: <Image style={{ width: 100, height: 70 }} source={require('../../assets/img/level6/game7/bear.png')} />, id: 1 },
+            { icon: <Image style={{ width: 80, height: 110 }} source={require('../../assets/img/level6/game7/hare.png')} />, id: 2 },
+            { icon: <Image style={{ width: 120, height: 70 }} source={require('../../assets/img/level6/game7/fox.png')} />, id: 3 },
+            { icon: <Image style={{ width: 120, height: 70 }} source={require('../../assets/img/level6/game7/wolf.png')} />, id: 4 },
+            { icon: <Image style={{ width: 120, height: 30 }} source={require('../../assets/img/level6/game7/caterpillar.png')} />, id: 5 },
         ],
         [
-            { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game7/donut.png')} />, id: 1 },
-            { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level6/game7/popcorn.png')} />, id: 2 },
-            { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level6/game7/airofkites.png')} />, id: 3 },
-            { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level6/game7/checkbox.png')} />, id: 4 },
-            { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level6/game7/ball.png')} />, id: 5 },
+            { icon: <Image style={{ width: 100, height: 80 }} source={require('../../assets/img/level6/game7/donut.png')} />, id: 1 },
+            { icon: <Image style={{ width: 90, height: 110 }} source={require('../../assets/img/level6/game7/popcorn.png')} />, id: 2 },
+            { icon: <Image style={{ width: 110, height: 110 }} source={require('../../assets/img/level6/game7/airofkites.png')} />, id: 3 },
+            { icon: <Image style={{ width: 110, height: 110 }} source={require('../../assets/img/level6/game7/checkbox.png')} />, id: 4 },
+            { icon: <Image style={{ width: 110, height: 110 }} source={require('../../assets/img/level6/game7/ball.png')} />, id: 5 },
         ],
         [
-            { icon: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level6/game7/chamomile.png')} />, id: 1 },
-            { icon: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level6/game7/chamomile2.png')} />, id: 2 },
-            { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level6/game7/bells.png')} />, id: 3 },
-            { icon: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level6/game7/tulip.png')} />, id: 4 },
-            { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level6/game7/flyagaric.png')} />, id: 5 },
+            { icon: <Image style={{ width: 89, height: 100 }} source={require('../../assets/img/level6/game7/chamomile.png')} />, id: 1 },
+            { icon: <Image style={{ width: 70, height: 100 }} source={require('../../assets/img/level6/game7/chamomile2.png')} />, id: 2 },
+            { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level6/game7/bells.png')} />, id: 3 },
+            { icon: <Image style={{ width: 70, height: 100 }} source={require('../../assets/img/level6/game7/tulip.png')} />, id: 4 },
+            { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level6/game7/flyagaric.png')} />, id: 5 },
         ]
     ])
 
@@ -83,9 +83,9 @@ export const Level6_7 = ({ navigation }) => {
     }
 
     return <LevelWrapper img={require('../../assets/img/bglv1.png')} img2={require('../../assets/img/33.png')}>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
+        <View style={{ flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '100%', paddingHorizontal: 120, gap: 10 }}>
             {activeGame.map((elm, i) => {
-                return <ImgButton key={i} svg={elm.icon} onPress={() => Game(elm.id)} />
+                return <ImgButton width={130} height={130} key={i} svg={elm.icon} onPress={() => Game(elm.id)} />
             })}
         </View>
     </LevelWrapper>

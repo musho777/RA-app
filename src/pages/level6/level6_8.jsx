@@ -1,17 +1,22 @@
-import { Image, TouchableOpacity, View } from "react-native"
+import { Dimensions, Image, TouchableOpacity, View } from "react-native"
 import { LevelWrapper } from "../../components/LevelWrapper"
 import { useEffect, useState } from "react"
 import Sound from "react-native-sound"
 import { Blue3, Brown, Green2, Purple } from "../../assets/svg"
-export const Level6_8 = ({ navigation }) => {
 
-    const [disable, setDisable] = useState(false)
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+export const Level6_8 = ({ navigation }) => {
+    let w = windowWidth - 400
+    let h = windowHeight - 130
+
     const [position, setPosition] = useState([
         { icon: <Image style={{ width: 50, height: 80 }} source={require('../../assets/img/level6/game8/acorn1.png')} />, x: 54, y: 14, active: false, icon1: <Image style={{ width: 50, height: 80 }} source={require('../../assets/img/level6/game8/acorn.png')} />, id: 1 },
-        { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level6/game8/bug1.png')} />, x: 26, y: 249, active: false, icon1: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level6/game8/bug.png')} />, id: 2 },
+        { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level6/game8/bug1.png')} />, x: 26, y: h, active: false, icon1: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level6/game8/bug.png')} />, id: 2 },
         { icon: <Image style={{ width: 55, height: 80 }} source={require('../../assets/img/level6/game8/cone1.png')} />, x: 84, y: 142, active: false, icon1: <Image style={{ width: 55, height: 80 }} source={require('../../assets/img/level6/game8/cone.png')} />, id: 1 },
-        { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game8/butterfly1.png')} />, x: 202, y: 228, active: false, icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game8/butterfly.png')} />, id: 3 },
-        { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level6/game8/sheet.png')} />, x: 258, y: 17, active: false, icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level6/game8/sheet1.png')} />, id: 4 },
+        { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game8/butterfly1.png')} />, x: 202, y: h, active: false, icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game8/butterfly.png')} />, id: 3 },
+        { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level6/game8/sheet.png')} />, x: w, y: 17, active: false, icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level6/game8/sheet1.png')} />, id: 4 },
         { icon: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/level6/game8/tulip1.png')} />, x: 258, y: 96, active: false, icon1: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/level6/game8/tulip.png')} />, id: 4 },
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level6/game8/bluebellscolorless1.png')} />, x: 356, y: 53, active: false, icon1: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level6/game8/bluebellscolorless.png')} />, id: 2 },
     ])
