@@ -13,21 +13,21 @@ export const Level3_1 = ({ navigation }) => {
     const [disable, setDisable] = useState(false)
     const buuton = ['0', '1', '2', '3', '4', '5']
     const [christmastrees, setChristmastrees] = useState([
-        { icon: <Image style={{ width: 170, height: 130, }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
-        { icon: <Image style={{ width: 170, height: 130, }} source={require('../../assets/img/Christmastrees1.png')} />, id: 1 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees2.png')} />, id: 2 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees3.png')} />, id: 3 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees4.png')} />, id: 4 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees5.png')} />, id: 5 },
+        // { icon: <Image style={{ width: 170, height: 130, }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
+        { icon: <Image style={{ width: 200, height: 130, }} source={require('../../assets/img/Christmastrees1.png')} />, id: 1 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/Christmastrees2.png')} />, id: 2 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/Christmastrees3.png')} />, id: 3 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/Christmastrees4.png')} />, id: 4 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/Christmastrees5.png')} />, id: 5 },
     ])
 
     const [hedgehogs, setHedgehogs] = useState([
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs1.png')} />, id: 1 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs2.png')} />, id: 2 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs3.png')} />, id: 3 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs4.png')} />, id: 4 },
-        { icon: <Image style={{ width: 170, height: 130 }} source={require('../../assets/img/hedgehogs5.png')} />, id: 5 },
+        // { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs1.png')} />, id: 1 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs2.png')} />, id: 2 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs3.png')} />, id: 3 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs4.png')} />, id: 4 },
+        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs5.png')} />, id: 5 },
 
 
     ])
@@ -47,13 +47,24 @@ export const Level3_1 = ({ navigation }) => {
 
     useEffect(() => {
         let arr = []
-        // const randomNum = Math.floor(Math.random() * 2)
         if (game1 == 0) {
             arr = GetRandomItemsFromArray(christmastrees, 2)
         }
-        else {
+        else if (game1 == 1) {
+            arr = GetRandomItemsFromArray(christmastrees, 1)
+            arr.push(
+                { icon: <Image style={{ width: 200, height: 130, }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
+            )
+        }
+        else if (game1 == 2) {
             arr = GetRandomItemsFromArray(hedgehogs, 2)
 
+        }
+        else {
+            arr = GetRandomItemsFromArray(hedgehogs, 1)
+            arr.push(
+                { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
+            )
         }
 
         setActiveGame(arr)
@@ -100,8 +111,8 @@ export const Level3_1 = ({ navigation }) => {
                 setTimeout(() => {
                     setGame1(game1 + 1)
 
-                    if (game1 === 1) {
-                        navigation.navigate('Level3_3')
+                    if (game1 === 3) {
+                        navigation.navigate('Level3_2')
                     }
                     setValue1('')
                     setValue2('')

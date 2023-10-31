@@ -92,7 +92,7 @@ export const Level3_8 = ({ navigation }) => {
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     {arr?.proble}
                 </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 25, paddingHorizontal: 120 }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 25, paddingHorizontal: 10 }}>
                     {arr?.icon?.map((elm, i) => {
                         return <TouchableOpacity onPress={() => Game(elm.id)} key={i}>
                             {elm?.icon}

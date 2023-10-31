@@ -8,15 +8,8 @@ import Sound from 'react-native-sound'
 export const Level3_3 = ({ navigation }) => {
     const number = [
         { icon: <Image source={require('../../assets/img/0.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/1num.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/num2.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
         { icon: <Image source={require('../../assets/img/3.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/4.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/5.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/6.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
         { icon: <Image source={require('../../assets/img/7.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/8.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: < Image source={require('../../assets/img/9.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
     ]
     const [lengthh, setLength] = useState()
     const subjects = [
@@ -56,8 +49,7 @@ export const Level3_3 = ({ navigation }) => {
 
     const [activeGame, setActiveGame] = useState([])
     useEffect(() => {
-        const randomNum = Math.floor(Math.random() * 4) + 3
-        let arr = GetRandomItemsFromArray(number, randomNum)
+        let arr = GetRandomItemsFromArray(number, 3)
         setLength(arr.length)
         let arr1 = GetRandomItemsFromArray(subjects, 8 - arr.length)
         let combainArray = arr.concat(arr1)

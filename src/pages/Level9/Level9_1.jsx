@@ -11,7 +11,7 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 export const Level9_1 = ({ navigation }) => {
     let w = (windowWidth - 200) * 0.7
-    let h = windowHeight - 100
+    let h = windowHeight - 140
     const buuton = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     const [disable, setDisable] = useState(false)
     const [value1, setValue1] = useState('')
