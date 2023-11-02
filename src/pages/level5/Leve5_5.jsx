@@ -113,7 +113,7 @@ export const Level5_5 = ({ navigation }) => {
                     { icone: '', id: '' },
                 ])
                 if (game1 == 1) {
-                    navigation.navigate('Level5_6')
+                    navigation.navigate('Level5_5_1')
                 }
                 musicSuccess.stop()
             }, 2000);

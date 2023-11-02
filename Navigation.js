@@ -101,6 +101,8 @@ import { Level11_3 } from './src/pages/Level11/level11_3';
 import { Level11_7 } from './src/pages/Level11/level11_7';
 import { Level11_7_1 } from './src/pages/Level11/level11_7_1';
 import { Level11_2 } from './src/pages/Level11/level11_2';
+import { Level11_1 } from './src/pages/Level11/level11_1';
+import { Level5_5_1 } from './src/pages/level5/level5_5_1';
 
 export default Navigation = () => {
 
@@ -132,7 +134,7 @@ export default Navigation = () => {
   const navigationRef = useRef(null);
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={'Level3_3'} >
+      <Stack.Navigator initialRouteName={'Level5_5_1'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}
@@ -828,6 +830,20 @@ export default Navigation = () => {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name="Level11_1"
+          component={Level11_1}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level5_5_1"
+          component={Level5_5_1}
+          options={{
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>
@@ -836,3 +852,5 @@ export default Navigation = () => {
 
 // Level11_7_1
 // Level11_2
+// Level11_1
+// Level5_5_1

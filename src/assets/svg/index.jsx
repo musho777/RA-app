@@ -1840,6 +1840,17 @@ export const Green2 = () => {
         />
     </Svg>
 }
+export const Green3 = () => {
+    return <Svg
+        width={60}
+        height={60}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={30} cy={30} r={26} fill="green" />
+    </Svg>
+}
 
 export const Blue = () => {
     return <Svg
@@ -9536,3 +9547,87 @@ export const C8 = () => {
     </Svg>
 }
 
+export const C11 = () => {
+    return <Svg
+        width={53}
+        height={53}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="red" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C12 = () => {
+    return <Svg
+        width={53}
+        height={53}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#7EBD2E" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C13 = () => {
+    return <Svg
+        width={53}
+        height={53}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#F3E03A" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
+export const C14 = () => {
+    return <Svg
+        width={53}
+        height={53}
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Circle cx={32} cy={32} r={15} fill="#B3005F" />
+        <Rect
+            x={2}
+            y={2}
+            width={59}
+            height={59}
+            rx={17}
+            stroke="#9C3"
+            strokeOpacity={0.4}
+            strokeWidth={4}
+        />
+    </Svg>
+}
