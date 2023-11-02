@@ -19,6 +19,19 @@ export const Level6_3 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game42.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const lollipop = [
         { icone: <Image style={{ width: 25, height: 60 }} source={require('../../assets/img/level6/game3/club6.png')} />, id: 5, active: false },
         { icone: <Image style={{ width: 25, height: 60 }} source={require('../../assets/img/level6/game3/club5.png')} />, id: 4, active: false },
@@ -102,8 +115,9 @@ export const Level6_3 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
+                sound.stop()
+                navigation.navigate('Level6_4')
             }, 2000);
-            navigation.navigate('Level6_4')
         }
     }, [arr])
 

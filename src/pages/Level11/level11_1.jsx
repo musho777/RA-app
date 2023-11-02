@@ -34,6 +34,19 @@ export const Level11_1 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game111.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
 
     const [activeInput, setActiveInput] = useState('')
 
@@ -138,6 +151,7 @@ export const Level11_1 = ({ navigation }) => {
                     musicSuccess.play();
                 }, 100);
                 setTimeout(() => {
+                    sound.stop()
                     navigation.navigate('Level11_2')
                     musicSuccess.stop()
                 }, 2000);

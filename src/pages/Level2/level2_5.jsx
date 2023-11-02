@@ -19,6 +19,20 @@ export const Level2_5 = ({ navigation }) => {
                 return
             }
         });
+
+    const sound = new Sound('game25.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [arr, setArr] = useState([
         { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level2/game5/cendy4.png')} />, id: 4, active: false },
         { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level2/game5/cendy3.png')} />, id: 3, active: false },
@@ -79,6 +93,7 @@ export const Level2_5 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level2_6')
                 musicSuccess.stop()
             }, 2000);

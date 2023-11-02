@@ -19,6 +19,19 @@ export const Level7_5 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game68.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const button = [
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива0.png')} />, key: 0 },
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива1.png')} />, key: 1 },
@@ -104,6 +117,7 @@ export const Level7_5 = ({ navigation }) => {
 
     useEffect(() => {
         if (game == 3) {
+            sound.stop()
             navigation.navigate('Level7_5_1')
         } else {
             setActiveGame(arr[game])

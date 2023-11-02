@@ -53,6 +53,19 @@ export const Level2_1 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game21.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [completid, setCompletid] = useState([])
     const [selectedGlass, setSelectedGlass] = useState([])
     const [selectedPencil, setSelectedPencil] = useState([])
@@ -161,6 +174,7 @@ export const Level2_1 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level2_2')
                 musicSuccess.stop()
             }, 2000);

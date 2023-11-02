@@ -111,6 +111,19 @@ export const Level8_1 = ({ navigation }) => {
             }
         ],
     ])
+    const sound = new Sound('game81.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [activeGame, setActiveGame] = useState([])
 
     const Answer = (e) => {
@@ -170,6 +183,7 @@ export const Level8_1 = ({ navigation }) => {
                     setValue1('')
                     setValue2('')
                     if (game1 == 4) {
+                        sound.stop()
                         navigation.navigate('Level8_2')
                     }
                     else {

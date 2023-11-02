@@ -40,6 +40,22 @@ export const Level1_5 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game14.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
+
+
     const Game = (number) => {
         let item = [...arr]
         let item2 = { ...activeNumber }
@@ -127,6 +143,7 @@ export const Level1_5 = ({ navigation }) => {
             setTimeout(() => {
                 musicSuccess.stop()
                 navigation.navigate('Level1_6')
+                sound.stop()
             }, 2000);
         }
     }, [arr])

@@ -21,6 +21,19 @@ export const Level11_2 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game112.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [arr, setArr] = useState([
         [
             { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/звезда.png')} />, id: 2 },
@@ -116,6 +129,7 @@ export const Level11_2 = ({ navigation }) => {
     useEffect(() => {
         if (winArr[0].length == 3 && winArr[1].length == 4 && winArr[2].length == 2) {
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level11_3')
             }, 2000);
         }

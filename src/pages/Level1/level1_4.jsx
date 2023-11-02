@@ -23,12 +23,27 @@ export const Level1_4 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game14.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
 
     useEffect(() => {
         setTimeout(function () {
             setGame(false)
         }, 3000);
     }, [])
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
+
     const [game, setGame] = useState(true)
     const [bucket, setBucket] = useState([
         { icone: <Image source={require('../../assets/img/level1/game4/greenbuket.png')} style={{ width: 60, height: 75 }} />, id: 1 },
@@ -63,6 +78,7 @@ export const Level1_4 = ({ navigation }) => {
             setTimeout(() => {
                 musicSuccess.stop()
                 navigation.navigate('Level1_5')
+                sound.stop()
             }, 2000);
         }
         else {

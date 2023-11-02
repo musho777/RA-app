@@ -21,6 +21,19 @@ export const Level9_8 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game98.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
 
     const [data, setData] = useState([
 
@@ -84,6 +97,7 @@ export const Level9_8 = ({ navigation }) => {
         })
         if (win) {
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('LevelScreen')
             }, 2000);
         }

@@ -20,6 +20,19 @@ export const Level4_7 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game47.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [arr, setArr] = useState([
         [
             [
@@ -125,6 +138,7 @@ export const Level4_7 = ({ navigation }) => {
         })
         if (win) {
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('LevelScreen')
             }, 1000);
         }

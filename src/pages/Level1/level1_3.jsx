@@ -35,7 +35,19 @@ export const Level1_3 = ({ navigation }) => {
         ],
 
     ])
+    const sound = new Sound('game13.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
 
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
 
     const [game1, setGame1] = useState(0)
     function shuffle(array) {
@@ -144,6 +156,7 @@ export const Level1_3 = ({ navigation }) => {
                 setGame1(game1 + 1)
                 if (game1 == 1) {
                     navigation.navigate('Level1_4')
+                    sound.stop()
                 }
             }, 2000);
         }

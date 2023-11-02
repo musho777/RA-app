@@ -53,8 +53,16 @@ export const Level1_1 = ({ navigation }) => {
         }
         else {
             navigation.navigate('Level1_2')
+            sound.stop()
         }
     }, [game1])
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
+
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -63,6 +71,13 @@ export const Level1_1 = ({ navigation }) => {
             }
         });
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound = new Sound('game11.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
                 console.log('Error loading music:', error);
@@ -85,10 +100,6 @@ export const Level1_1 = ({ navigation }) => {
                     setValue1('')
                     setValue2("")
                     setDisable(false)
-                    // setActiveGame([
-                    //     activeGame[1],
-                    //     activeGame[0]
-                    // ])
                 }, 500);
             }
             else {

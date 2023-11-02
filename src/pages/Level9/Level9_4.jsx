@@ -20,6 +20,19 @@ export const Level9_4 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game94.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [data, setData] = useState([
         [
             {
@@ -113,22 +126,7 @@ export const Level9_4 = ({ navigation }) => {
     }, [game])
 
 
-    useEffect(() => {
-        let win = true
-        // activeData.map((elm, i) => {
-        //     if (elm.active) {
-        //         win = false
-        //     }
-        // })
-        // if (win) {
-        //     if (game > 2) {
-        //         setGame(game + 1)
-        //     }
-        //     else {
-        //         navigation.navigate('Level9_5')
-        //     }
-        // }
-    }, [activeData])
+
 
 
     const Game = (id, i) => {
@@ -164,6 +162,7 @@ export const Level9_4 = ({ navigation }) => {
             }
             else {
                 setTimeout(() => {
+                    sound.stop()
                     navigation.navigate('Level9_5')
                 }, 1000);
             }

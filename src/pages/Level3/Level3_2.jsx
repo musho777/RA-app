@@ -33,6 +33,20 @@ export const Level3_2 = ({ navigation }) => {
             }
         });
 
+    const sound = new Sound('game32.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
+
     const [arr, setArr] = useState([
         {
             array: [
@@ -116,6 +130,7 @@ export const Level3_2 = ({ navigation }) => {
                     musicSuccess.play();
                 }, 100);
                 setTimeout(() => {
+                    sound.stop()
                     navigation.navigate('Level3_3')
                     setValue1('')
                     setValue2('')

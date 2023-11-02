@@ -44,7 +44,19 @@ export const Level5_8 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game58.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
 
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [selectdItem, setSelectedItem] = useState('')
     useEffect(() => {
         let newArr = GetRandomItemsFromArray(position, position.length)
@@ -103,11 +115,12 @@ export const Level5_8 = ({ navigation }) => {
             setPosition(item)
         }
         if (win) {
+            sound.stop()
             navigation.navigate('LevelScreen')
         }
     }, [arr])
 
-    console.log(position, 'position')
+
 
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} >
         {game ?

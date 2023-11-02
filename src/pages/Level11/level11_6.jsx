@@ -54,7 +54,6 @@ export const Level11_6 = ({ navigation }) => {
     }
 
 
-
     const [activeGame, setActiveGame] = useState([])
     const [active, setActive] = useState([
         { value1: '', value2: '' },
@@ -75,6 +74,18 @@ export const Level11_6 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game116.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [activeNumber, setActiveNumber] = useState({ number1: '', number2: '' })
     const [answer, setAnswer] = useState([false, false, false, false, false, false, false])
     const Game = (number) => {
@@ -144,6 +155,7 @@ export const Level11_6 = ({ navigation }) => {
                 musicSuccess.stop()
                 setGame1(game1 + 1)
                 if (game1 == 1) {
+                    sound.stop()
                     navigation.navigate('Level11_7')
                 }
             }, 2000);

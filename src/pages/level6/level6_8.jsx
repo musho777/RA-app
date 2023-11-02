@@ -37,7 +37,19 @@ export const Level6_8 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game68.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
 
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const Game = (id, i) => {
         let item = [...position]
         if (id === selectCollor) {
@@ -54,6 +66,7 @@ export const Level6_8 = ({ navigation }) => {
             }
         })
         if (win) {
+            sound.stop()
             navigation.navigate('LevelScreen')
         }
     }, [position])

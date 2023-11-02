@@ -34,6 +34,19 @@ export const Level7_2 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game72.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
 
     const [arr, setArr] = useState([
         {
@@ -115,8 +128,6 @@ export const Level7_2 = ({ navigation }) => {
     }, [game1])
 
     const Answer = (e) => {
-        console.log(e)
-        console.log(activeArr.ansewer?.length, '222')
         if (value1 == '') {
             setValue1(e)
             if (e != ansewer[0].id) {
@@ -169,6 +180,7 @@ export const Level7_2 = ({ navigation }) => {
                         setGame1(game1 + 1)
                     }
                     else {
+                        sound.stop()
                         navigation.navigate('Level7_3')
                     }
                 }, 2000);

@@ -20,6 +20,19 @@ export const Level4_4 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game44.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
 
     const [colors, setColors] = useState(['', '', ''])
     const Game = (i) => {
@@ -57,6 +70,7 @@ export const Level4_4 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level4_5')
                 musicSuccess.stop()
             }, 2000);

@@ -21,6 +21,19 @@ export const Level6_7 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game67.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
 
     const [arr, setArr] = useState([
         [
@@ -64,6 +77,7 @@ export const Level6_7 = ({ navigation }) => {
                 musicSuccess.stop()
             }, 2000);
             if (game === 2) {
+                sound.stop()
                 navigation.navigate('Level6_8')
             }
             else {

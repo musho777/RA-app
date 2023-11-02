@@ -46,10 +46,24 @@ export const Level5_6 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game56.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [activeArr, setActiveArr] = useState([])
     const [game1, setGame1] = useState(0)
     useEffect(() => {
         if (game1 == 2) {
+            sound.stop()
             navigation.navigate('Level5_7')
         }
         else {
@@ -76,7 +90,7 @@ export const Level5_6 = ({ navigation }) => {
             }, 2000);
         }
     }
-    console.log(activeArr)
+
     return <LevelWrapper img2={require('../../assets/img/bg5.png')} img={require('../../assets/img/5bg.png')}>
         <View style={{ height: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
             <View style={styles.boxWrapper}>

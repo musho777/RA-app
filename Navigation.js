@@ -134,7 +134,7 @@ export default Navigation = () => {
   const navigationRef = useRef(null);
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={'Level5_5_1'} >
+      <Stack.Navigator initialRouteName={'Level1_1'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}

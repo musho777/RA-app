@@ -20,6 +20,19 @@ export const Level7_3 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game68.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [disable, setDisable] = useState(false)
     const [arr, setArr] = useState([
         [
@@ -96,6 +109,7 @@ export const Level7_3 = ({ navigation }) => {
 
     useEffect(() => {
         if (game == 2) {
+            sound.stop()
             navigation.navigate('Level7_4')
         } else {
             let item = GetRandomItemsFromArray(answer[game], answer[game].length)

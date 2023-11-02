@@ -28,6 +28,19 @@ export const Level4_2 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game42.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const subject = [
         { icon: <Round />, id: 1, active: false },
         { icon: <Round />, id: 1, active: false },
@@ -142,6 +155,7 @@ export const Level4_2 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level4_3')
                 musicSuccess.stop()
             }, 2000);

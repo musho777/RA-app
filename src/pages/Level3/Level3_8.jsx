@@ -24,7 +24,19 @@ export const Level3_8 = ({ navigation }) => {
         ],
         solution: <Image source={require('../../assets/img/poloptentsebeachFull.png')} style={{ width: 200, height: 250 }} />
     })
+    const sound = new Sound('game38.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
 
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [game1, setGame1] = useState(0)
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -67,6 +79,7 @@ export const Level3_8 = ({ navigation }) => {
             setTimeout(() => {
                 setGame1(game1 + 1)
                 if (game1 == 1) {
+                    sound.stop()
                     navigation.navigate('LevelScreen')
                 }
                 setWin(false)

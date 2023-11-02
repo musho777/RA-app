@@ -23,6 +23,19 @@ export const Level4_1 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game41.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [disable, setDisable] = useState(false)
 
     const [game1, setGame1] = useState(0)
@@ -151,6 +164,7 @@ export const Level4_1 = ({ navigation }) => {
                 setDisable(false)
                 setGame1(game1 + 1)
                 if (game1 === 2) {
+                    sound.stop()
                     navigation.navigate('Level4_2')
                 }
                 musicSuccess.stop()

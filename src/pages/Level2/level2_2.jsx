@@ -34,6 +34,20 @@ export const Level2_2 = ({ navigation }) => {
         setButton(item)
     }, [])
 
+    const sound = new Sound('game22.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
+
     const Game = (i, id) => {
         let item = [...button]
         let temp = [...selected]
@@ -69,6 +83,7 @@ export const Level2_2 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level2_3')
                 musicSuccess.stop()
             }, 2000);

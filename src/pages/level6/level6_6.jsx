@@ -59,6 +59,19 @@ export const Level6_6 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game66.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [activeNumber, setActiveNumber] = useState({ number1: '', number2: '' })
     const [answer, setAnswer] = useState([false, false, false, false, false, false, false])
     const Game = (number) => {
@@ -126,6 +139,7 @@ export const Level6_6 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
+                sound.stop()
                 navigation.navigate('Level6_7')
             }, 2000);
         }

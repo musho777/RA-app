@@ -21,6 +21,19 @@ export const Level11_3 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game113.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [arr, setArr] = useState([
         {
             icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/4.png')} />,
@@ -139,6 +152,7 @@ export const Level11_3 = ({ navigation }) => {
             }
         })
         if (win) {
+            sound.stop()
             navigation.navigate('Level11_4')
         }
     }, [arr])

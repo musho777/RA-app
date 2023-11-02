@@ -20,7 +20,19 @@ export const Level6_2 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game62.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
 
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [arr, setArr] = useState([
         { icon: <Image style={{ width: 65, height: 65 }} source={require('../../assets/img/level6/game2/circlepurple.png')} />, id: 1, active: false },
         { icon: <Image style={{ width: 65, height: 65 }} source={require('../../assets/img/level6/game2/diamondgreen.png')} />, id: 2, active: false },
@@ -58,6 +70,7 @@ export const Level6_2 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level6_3')
                 musicSuccess.stop()
             }, 2000);

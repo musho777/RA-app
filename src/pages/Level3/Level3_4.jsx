@@ -23,7 +23,19 @@ export const Level3_4 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game34.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
 
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const Answer = (i) => {
         if (i != 2) {
             setTimeout(() => {
@@ -43,6 +55,7 @@ export const Level3_4 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level3_5')
                 musicSuccess.stop()
             }, 2000);

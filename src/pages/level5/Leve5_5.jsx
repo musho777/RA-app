@@ -19,6 +19,19 @@ export const Level5_5 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game55.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
 
     const [game1, setGame1] = useState(0)
     const lollipop = [
@@ -80,6 +93,7 @@ export const Level5_5 = ({ navigation }) => {
                     music.play();
                 }, 100);
                 setTimeout(() => {
+
                     music.stop()
                 }, 2000);
             }
@@ -113,6 +127,7 @@ export const Level5_5 = ({ navigation }) => {
                     { icone: '', id: '' },
                 ])
                 if (game1 == 1) {
+                    sound.stop()
                     navigation.navigate('Level5_5_1')
                 }
                 musicSuccess.stop()

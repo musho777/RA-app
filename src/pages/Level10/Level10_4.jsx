@@ -20,6 +20,19 @@ export const Level10_4 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game104.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [arr, setArr] = useState([
         { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/1.png')} />, id: 1, active: false },
         { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/2.png')} />, id: 2, active: false },
@@ -86,6 +99,7 @@ export const Level10_4 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
+                sound.stop()
                 navigation.navigate('Level10_5')
                 musicSuccess.stop()
             }, 2000);
