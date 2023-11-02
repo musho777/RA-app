@@ -2,32 +2,19 @@ import { Image, View } from 'react-native'
 import { ImgButton } from '../../components/ImgButton'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
-import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
 export const Level3_3 = ({ navigation }) => {
-    const number = [
-        { icon: <Image source={require('../../assets/img/0.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/3.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/7.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-    ]
-    const [lengthh, setLength] = useState()
+
     const subjects = [
+        { icon: <Image source={require('../../assets/img/0.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
         { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
         { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/7.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
         { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
         { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/3.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
         { icon: <Image source={require('../../assets/img/heart.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/heart.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/heart.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/heart.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/heart.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/rhombus.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/rhombus.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/rhombus.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/rhombus.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/rhombus.png')} style={{ width: 50, height: 50 }} />, id: 3 },
     ]
 
     const [disable, setDisable] = useState(false)
@@ -49,12 +36,7 @@ export const Level3_3 = ({ navigation }) => {
 
     const [activeGame, setActiveGame] = useState([])
     useEffect(() => {
-        let arr = GetRandomItemsFromArray(number, 3)
-        setLength(arr.length)
-        let arr1 = GetRandomItemsFromArray(subjects, 8 - arr.length)
-        let combainArray = arr.concat(arr1)
-        let newArr = GetRandomItemsFromArray(combainArray, combainArray.length)
-        setActiveGame(newArr)
+        setActiveGame(subjects)
     }, [])
 
 
@@ -65,7 +47,8 @@ export const Level3_3 = ({ navigation }) => {
                 count = count + 1
             }
         })
-        if (count == lengthh) {
+        console.log(count)
+        if (count == 3) {
             setTimeout(() => {
                 setDisable(true)
                 musicSuccess.play();

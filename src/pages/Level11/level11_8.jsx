@@ -4,25 +4,25 @@ import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
-export const Level11_1 = ({ navigation }) => {
+export const Level11_8 = ({ navigation }) => {
     const [win, setWin] = useState(false)
     const [image, setImage] = useState({
-        proble: <Image source={require('../../assets/img/level7/game8/popcorn.png')} style={{ width: 150, height: 150 }} />,
+        proble: <Image source={require('../../assets/img/level11/game8/доскаверхняячасть.png')} style={{ width: 150, height: 150 }} />,
         icon: [
-            { icon: <Image source={require('../../assets/img/level7/game8/popcorn1.png')} style={{ width: 150, height: 150 }} />, id: 1 },
-            { icon: <Image source={require('../../assets/img/level7/game8/popcorn2.png')} style={{ width: 150, height: 150 }} />, id: 2 },
-            { icon: <Image source={require('../../assets/img/level7/game8/popcorn3.png')} style={{ width: 150, height: 150 }} />, id: 3 },
+            { icon: <Image source={require('../../assets/img/level11/game8/досканижняячсть1.png')} style={{ width: 150, height: 150 }} />, id: 1 },
+            { icon: <Image source={require('../../assets/img/level11/game8/досканижняячасть2.png')} style={{ width: 150, height: 150 }} />, id: 2 },
+            { icon: <Image source={require('../../assets/img/level11/game8/досканижняячасть.png')} style={{ width: 150, height: 150 }} />, id: 3 },
         ],
-        solution: <Image source={require('../../assets/img/level7/game8/popcornFull.png')} style={{ width: 200, height: 250 }} />
+        solution: <Image source={require('../../assets/img/level11/game8/доскацелая.png')} style={{ width: 200, height: 250 }} />
     })
     const [image1, setImage1] = useState({
-        proble: <Image source={require('../../assets/img/level7/game8/ball1.png')} style={{ width: 150, height: 150 }} />,
+        proble: <Image source={require('../../assets/img/level11/game8/капуставерхняячасть.png')} style={{ width: 150, height: 150 }} />,
         icon: [
-            { icon: <Image source={require('../../assets/img/level7/game8/ball2.png')} style={{ width: 150, height: 150 }} />, id: 1 },
-            { icon: <Image source={require('../../assets/img/level7/game8/ball3.png')} style={{ width: 150, height: 150 }} />, id: 2 },
-            { icon: <Image source={require('../../assets/img/level7/game8/ball4.png')} style={{ width: 150, height: 150 }} />, id: 3 },
+            { icon: <Image source={require('../../assets/img/level11/game8/капустанижняячасть.png')} style={{ width: 150, height: 150 }} />, id: 3 },
+            { icon: <Image source={require('../../assets/img/level11/game8/капустанижняячасть1.png')} style={{ width: 150, height: 150 }} />, id: 1 },
+            { icon: <Image source={require('../../assets/img/level11/game8/капустанижняячасть2.png')} style={{ width: 150, height: 150 }} />, id: 2 },
         ],
-        solution: <Image source={require('../../assets/img/level7/game8/fullball.png')} style={{ width: 200, height: 250 }} />
+        solution: <Image source={require('../../assets/img/level11/game8/капустацелая.png')} style={{ width: 200, height: 250 }} />
     })
 
     const [game1, setGame1] = useState(0)

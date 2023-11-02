@@ -1,4 +1,4 @@
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { LevelScreen } from './src/pages/Level';
 import { Selection } from './src/pages/Selection';
@@ -93,8 +93,14 @@ import { Level9_4 } from './src/pages/Level9/Level9_4';
 import { Selection8 } from './src/pages/Selection/Section8';
 import { Selection9 } from './src/pages/Selection/Section9';
 import { Selection10 } from './src/pages/Selection/Section10';
-import { Level11_1 } from './src/pages/Level11/level11_8';
+import { Level11_8 } from './src/pages/Level11/level11_8';
 import { Level8_4 } from './src/pages/Level8/Level8_4';
+import { Level11_6 } from './src/pages/Level11/level11_6';
+import { Level11_4 } from './src/pages/Level11/level11_4';
+import { Level11_3 } from './src/pages/Level11/level11_3';
+import { Level11_7 } from './src/pages/Level11/level11_7';
+import { Level11_7_1 } from './src/pages/Level11/level11_7_1';
+import { Level11_2 } from './src/pages/Level11/level11_2';
 
 export default Navigation = () => {
 
@@ -126,7 +132,7 @@ export default Navigation = () => {
   const navigationRef = useRef(null);
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={'Level3_2'} >
+      <Stack.Navigator initialRouteName={'Level3_3'} >
         <Stack.Screen
           name="LevelScreen"
           component={LevelScreen}
@@ -767,8 +773,15 @@ export default Navigation = () => {
           }}
         />
         <Stack.Screen
-          name="Level11_1"
-          component={Level11_1}
+          name="Level11_8"
+          component={Level11_8}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level11_6"
+          component={Level11_6}
           options={{
             headerShown: false
           }}
@@ -780,10 +793,46 @@ export default Navigation = () => {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name="Level11_4"
+          component={Level11_4}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level11_3"
+          component={Level11_3}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level11_7"
+          component={Level11_7}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level11_7_1"
+          component={Level11_7_1}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level11_2"
+          component={Level11_2}
+          options={{
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>
   );
 };
-// Level11_1
-// Level8_4
+
+// Level11_7_1
+// Level11_2

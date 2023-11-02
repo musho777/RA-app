@@ -1636,6 +1636,28 @@ export const Red = () => {
         />
     </Svg>
 }
+export const Blue6 = () => {
+    return <Svg
+        width={98}
+        height={98}
+        viewBox="0 0 98 98"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <Rect x={4} y={4} width={90} height={90} rx={15} fill="#fff" />
+        <Circle cx={49} cy={49} r={26} fill="rgb(181,219,220)" />
+        <Rect
+            x={2}
+            y={2}
+            width={94}
+            height={94}
+            rx={17}
+            stroke="#FF6F17"
+            strokeOpacity={0.5}
+            strokeWidth={4}
+        />
+    </Svg>
+}
 
 
 export const PurpleColor = () => {

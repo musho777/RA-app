@@ -156,9 +156,9 @@ export const Level10_1 = ({ navigation }) => {
             <View style={{ width: '54%', height: '100%', flexDirection: 'row', gap: 10, flexWrap: 'wrap' }}>
                 {arr.map((elm, i) => {
                     if (!elm.active) {
-                        return <ImgButton onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
+                        return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
                     }
-                    return <ImgButton onPress={() => Game(elm, i)} key={i} svg={elm.icon1} />
+                    return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon1} />
 
                 })}
             </View>

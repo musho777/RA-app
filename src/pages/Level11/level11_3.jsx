@@ -3,10 +3,10 @@ import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import { ImgButton } from '../../components/ImgButton'
-import { PinkColor, PurpleColor, } from '../../assets/svg'
+import { Blue6 } from '../../assets/svg'
 import Sound from 'react-native-sound'
 
-export const Level5_3 = ({ navigation }) => {
+export const Level11_3 = ({ navigation }) => {
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -23,66 +23,60 @@ export const Level5_3 = ({ navigation }) => {
         });
     const [arr, setArr] = useState([
         {
-            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level5/game3/8.png')} />,
-            id: 1,
-            active: false,
-            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level5/game3/8сиреневая.png')} />,
-        },
-        {
-            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/7.1.png')} />,
+            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/4.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/7.1.png')} />,
+            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/4.1.png')} />,
         },
         {
-            icon: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level5/game3/2.png')} />,
-            active: false,
+            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/7.1.png')} />,
             id: 2,
-            icon1: <Image style={{ width: 40, height: 55 }} source={require('../../assets/img/level5/game3/2розовая.png')} />,
-
+            active: true,
+            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/7.png')} />,
+        },
+        {
+            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            active: false,
+            id: 1,
+            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/9голубая.png')} />,
         },
         {
             icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/k1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 60, height: 35 }} source={require('../../assets/img/level10/game1/o2.png')} />,
-
+            icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
+        },
+        {
+            icon: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
+            id: 3,
+            active: true,
+            icon1: <Image style={{ width: 60, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
+        },
+        {
+            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            active: false,
+            id: 1,
+            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/9голубая.png')} />,
+        },
+        {
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
+            id: 3,
+            active: true,
+            icon1: <Image style={{ width: 60, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
+            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 55, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
-
-
-        },
-        {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/t1.png')} />,
-            id: 3,
-            active: true,
-            icon1: <Image style={{ width: 60, height: 50 }} source={require('../../assets/img/level10/game1/tr1.png')} />,
+            icon1: <Image style={{ width: 60, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
 
         },
         {
             icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 55, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
-
-        },
-        {
-            icon: <Image style={{ width: 55, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
-            id: 3,
-            active: true,
-            icon1: <Image style={{ width: 55, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
-
-        },
-        {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
-            id: 3,
-            active: true,
-            icon1: <Image style={{ width: 60, height: 35 }} source={require('../../assets/img/level10/game1/o2.png')} />,
+            icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
 
         },
         {
@@ -93,17 +87,16 @@ export const Level5_3 = ({ navigation }) => {
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/t1.png')} />,
-            id: 3,
-            active: true,
-            icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level10/game1/t1.png')} />,
-
+            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            active: false,
+            id: 1,
+            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/9голубая.png')} />,
         },
         {
             icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 65, height: 40 }} source={require('../../assets/img/level10/game1/p1.png')} />,
+            icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
 
         },
     ])
@@ -116,6 +109,7 @@ export const Level5_3 = ({ navigation }) => {
     const [selctedColor, setSelectedColor] = useState()
 
     const Game = (elm, i) => {
+        console.log(elm.id)
         let item = [...arr]
         if (elm.id == selctedColor) {
             item[i].active = true
@@ -123,7 +117,6 @@ export const Level5_3 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-
                 musicSuccess.stop()
             }, 2000);
         }
@@ -146,7 +139,7 @@ export const Level5_3 = ({ navigation }) => {
             }
         })
         if (win) {
-            navigation.navigate('Level5_4')
+            navigation.navigate('Level11_4')
         }
     }, [arr])
 
@@ -164,10 +157,7 @@ export const Level5_3 = ({ navigation }) => {
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 20 }}>
                 <TouchableOpacity onPress={() => setSelectedColor(1)}>
-                    <PurpleColor />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => setSelectedColor(2)}>
-                    <PinkColor />
+                    <Blue6 />
                 </TouchableOpacity>
             </View>
         </View>
