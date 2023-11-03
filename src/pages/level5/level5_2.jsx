@@ -51,6 +51,20 @@ export const Level5_2 = ({ navigation }) => {
         { x: 454, y: 16 },
         { x: 190, y: 225 },
     ])
+    const sound1 = new Sound('game522.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound2 = new Sound('game521.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
     const Game = (elm, i) => {
         let item = [...image]
         let temp = [...greenRectangel]
@@ -71,7 +85,19 @@ export const Level5_2 = ({ navigation }) => {
     }
 
     useEffect(() => {
+        setTimeout(() => {
+            sound2.play();
+        }, 100);
+    }, [])
+
+    useEffect(() => {
         if (greenRectangel.length == 6) {
+            useEffect(() => {
+                setTimeout(() => {
+                    sound2.stop();
+                    sound1.play()
+                }, 100);
+            }, [])
             setGame2(true)
         }
     }, [greenRectangel])

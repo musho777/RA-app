@@ -23,6 +23,19 @@ export const Level5_5_1 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game55.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
 
 
     const [arr, setArr] = useState([

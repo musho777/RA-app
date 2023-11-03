@@ -25,6 +25,30 @@ export const Level7_7 = ({ navigation }) => {
             }
         });
 
+    const sound = new Sound('game771.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound2 = new Sound('game772.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    const sound3 = new Sound('game773.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+
     const [position, setPosition] = useState(() => [
         { x: 48, y: 15 },
         { x: 292, y: 43 },
@@ -67,7 +91,39 @@ export const Level7_7 = ({ navigation }) => {
 
     useEffect(() => {
         setGame(arr[game1])
+
+
+        setTimeout(() => {
+            sound.stop();
+            sound2.stop();
+            sound3.stop();
+
+        }, 100);
+
+        // if (game1 == 0) {
+        //     setTimeout(() => {
+        //         sound3.play();
+        //     }, 100);
+        // }
+        // else if (game1 == 1) {
+        //     setTimeout(() => {
+        //         sound2.play();
+        //     }, 100);
+        // }
+        // else if (game1 == 2) {
+        //     setTimeout(() => {
+        //         sound3.play();
+        //     }, 100);
+        // }
     }, [game])
+
+    useEffect(() => {
+        if (game1 == 0) {
+            setTimeout(() => {
+                sound3.play();
+            }, 100);
+        }
+    }, [])
 
     const Game = (i) => {
         let item = [...game]
@@ -97,6 +153,16 @@ export const Level7_7 = ({ navigation }) => {
                 }
             })
             if (win) {
+                if (game1 == 0) {
+                    setTimeout(() => {
+                        sound.play();
+                    }, 100);
+                }
+                else if (game1 == 1) {
+                    setTimeout(() => {
+                        sound2.play();
+                    }, 100);
+                }
                 setGame1(game1 + 1)
             }
         }

@@ -23,6 +23,24 @@ export const Level8_2 = ({ navigation }) => {
                 return
             }
         });
+
+
+    const sound1 = new Sound('game821.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound = new Sound('game822.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+
     const [arr, setArr] = useState([
         [
             {
@@ -123,6 +141,18 @@ export const Level8_2 = ({ navigation }) => {
             }
         })
         setCount(item)
+        sound.stop()
+        sound1.stop()
+        if (game1 == 0) {
+            setTimeout(() => {
+                sound.play()
+            }, 100)
+        }
+        else {
+            setTimeout(() => {
+                sound1.play()
+            }, 100)
+        }
     }, [game1])
 
     const [winArr, setWinArr] = useState([])

@@ -1,0 +1,155 @@
+import { Image, TouchableOpacity, View } from 'react-native'
+import { ImgButton } from '../../components/ImgButton'
+import { LevelWrapper } from '../../components/LevelWrapper'
+import { useEffect, useState } from 'react'
+import Sound from 'react-native-sound'
+import { Green2, Orange2, Pink } from '../../assets/svg'
+
+export const Level5_4_1 = ({ navigation }) => {
+
+    const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    const sound1 = new Sound('game542.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+
+
+    const [activeGame, setActiveGame] = useState([])
+
+
+    const [arr, setArr] = useState([
+        [
+            [
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/2.png')} style={{ width: 70, height: 50 }} />, id: 2, active: false, icon1: <Image source={require('../../assets/img/level5/game4/pinkarrow.png')} style={{ width: 70, height: 50, transform: [{ rotate: '180deg' }], }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/3.png')} style={{ width: 50, height: 70 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/2.png')} style={{ width: 70, height: 50 }} />, id: 2, active: false, icon1: <Image source={require('../../assets/img/level5/game4/pinkarrow.png')} style={{ width: 70, height: 50, transform: [{ rotate: '180deg' }], }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/4.png')} style={{ width: 70, height: 50 }} />, id: 1, active: false, icon1: <Image source={require('../../assets/img/level5/game4/greenarrow.png')} style={{ width: 70, height: 50 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} /> },
+            ],
+            [
+                { icon: <Image source={require('../../assets/img/level5/game4/2.png')} style={{ width: 70, height: 50 }} />, id: 2, active: false, icon1: <Image source={require('../../assets/img/level5/game4/pinkarrow.png')} style={{ width: 70, height: 50, transform: [{ rotate: '180deg' }], }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/2.png')} style={{ width: 70, height: 50 }} />, id: 2, active: false, icon1: <Image source={require('../../assets/img/level5/game4/pinkarrow.png')} style={{ width: 70, height: 50, transform: [{ rotate: '180deg' }], }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/3.png')} style={{ width: 50, height: 70 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/4.png')} style={{ width: 70, height: 50 }} />, id: 1, active: false, icon1: <Image source={require('../../assets/img/level5/game4/greenarrow.png')} style={{ width: 70, height: 50 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 70, height: 50 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/4.png')} style={{ width: 70, height: 50 }} />, id: 1, active: false, icon1: <Image source={require('../../assets/img/level5/game4/greenarrow.png')} style={{ width: 70, height: 50 }} /> },
+                { icon: <Image source={require('../../assets/img/level5/game4/1.png')} style={{ width: 50, height: 70 }} />, id: 3, active: true, icon1: <Image source={require('../../assets/img/level5/game4/3.png')} style={{ width: 50, height: 70 }} /> },
+            ],
+        ]
+    ])
+
+    const [game1, setGame1] = useState(0)
+
+    useEffect(() => {
+        setActiveGame(arr[0])
+        setTimeout(() => {
+            sound1.play();
+        }, 100);
+    }, [])
+
+    const [selecetedColor, setSelectedColor] = useState()
+
+    const SelectColor = (i) => {
+        setSelectedColor(i)
+    }
+
+    const Game = (elm, j, i) => {
+        let item = [...activeGame]
+        console.log(selecetedColor, elm.id)
+        if (elm.id === selecetedColor) {
+            item[j][i].active = true
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+            }, 2000);
+        }
+        else {
+            setTimeout(() => {
+                music.play();
+            }, 100);
+            setTimeout(() => {
+                music.stop()
+            }, 1000);
+        }
+        setActiveGame(item)
+    }
+
+    useEffect(() => {
+        let win = true
+
+        activeGame[0]?.map((elm, i) => {
+            if (!elm.active) {
+                win = false
+            }
+        })
+        activeGame[1]?.map((elm, i) => {
+            if (!elm.active) {
+                win = false
+            }
+        })
+        if (activeGame?.length === 0) {
+            win = false
+        }
+        if (win) {
+            setTimeout(() => {
+                sound1.stop()
+                navigation.navigate('Level5_5')
+            }, 1000);
+        }
+    }, [activeGame])
+
+    return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')} jC='center'>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            {activeGame[0]?.map((elm, i) => {
+                if (elm.active) {
+                    return <ImgButton disable={true} width={80} height={80} border={'rgba(153, 204, 51, 0.5)'} key={i} svg={elm.icon1} />
+                }
+                else {
+                    return <ImgButton onPress={() => Game(elm, 0, i)} width={80} height={80} border={'rgba(153, 204, 51, 0.5)'} key={i} svg={elm.icon} />
+                }
+            })}
+        </View>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 30 }}>
+            {activeGame[1]?.map((elm, i) => {
+                if (elm.active) {
+                    return <ImgButton disable={true} width={80} height={80} border={'rgba(153, 204, 51, 0.5)'} key={i} svg={elm.icon1} />
+                }
+                else {
+                    return <ImgButton onPress={() => Game(elm, 1, i)} width={80} height={80} border={'rgba(153, 204, 51, 0.5)'} key={i} svg={elm.icon} />
+                }
+            })}
+        </View>
+        <View style={{ flexDirection: "row", justifyContent: 'center', marginTop: 10 }}>
+            <TouchableOpacity style={{ marginHorizontal: 20, }} onPress={() => SelectColor(1)}>
+                <Green2 />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => SelectColor(2)}>
+                <Pink />
+            </TouchableOpacity>
+        </View>
+    </LevelWrapper>
+}

@@ -24,7 +24,41 @@ export const Level8_7 = ({ navigation }) => {
                 return
             }
         });
-
+    const sound = new Sound('game871.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound1 = new Sound('game873.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound2 = new Sound('game872.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound3 = new Sound('game874.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound4 = new Sound('game875.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
     const [arr, setArr] = useState([
         {
             answer: [
@@ -69,10 +103,25 @@ export const Level8_7 = ({ navigation }) => {
         setActiveArr(arr[game1])
         setAnswr(false)
         setTimeout(() => {
+            if (game1 == 0) {
+                sound1.play()
+            }
+            else {
+                sound3.play()
+            }
+        }, 100)
+        setTimeout(() => {
             setAnswr(true)
+            if (game1 == 0) {
+                sound2.play()
+            }
+            else {
+                sound.play()
+            }
         }, 3000);
         if (game1 == 1) {
             setTimeout(() => {
+                sound4.play()
                 setAnswer1(true)
             }, 6000);
         }

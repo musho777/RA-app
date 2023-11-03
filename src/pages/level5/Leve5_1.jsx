@@ -20,6 +20,26 @@ export const Level5_1 = ({ navigation }) => {
     const [game1, setGame1] = useState(0)
     useEffect(() => {
         setActiveArr(arr[game1])
+        setTimeout(() => {
+            if (game1 === 0) {
+                sound1.play()
+            }
+            else if (game1 === 1) {
+                sound5.play()
+            }
+            else if (game1 === 2) {
+                sound2.play()
+            }
+            else if (game1 === 3) {
+                sound4.play()
+            }
+            else if (game1 === 4) {
+                sound3.play()
+            }
+            else if (game1 === 5) {
+                sound5.play()
+            }
+        }, 100);
     }, [game1])
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -36,10 +56,69 @@ export const Level5_1 = ({ navigation }) => {
                 return
             }
         });
+    const sound1 = new Sound('game511.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound2 = new Sound('game512.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound3 = new Sound('game513.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound4 = new Sound('game514.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound5 = new Sound('game515.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         sound1.play();
+    //     }, 100);
+    // }, [])
     const Game = (number) => {
         if (number === activeArr?.count) {
             setValue1(number)
             setTimeout(() => {
+                if (game1 === 0) {
+                    sound1.stop()
+                }
+                if (game1 === 1) {
+                    sound2.stop()
+                }
+                if (game1 === 2) {
+                    sound2.stop()
+                }
+                if (game1 === 3) {
+                    sound3.stop()
+                }
+                if (game1 === 4) {
+                    sound4.stop()
+                }
+                if (game1 === 5) {
+                    sound5.stop()
+                }
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {

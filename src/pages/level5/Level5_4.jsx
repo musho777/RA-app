@@ -7,8 +7,6 @@ import { Green2, Orange2 } from '../../assets/svg'
 
 export const Level5_4 = ({ navigation }) => {
 
-    const [disable, setDisable] = useState(false)
-
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -23,6 +21,16 @@ export const Level5_4 = ({ navigation }) => {
                 return
             }
         });
+
+    const sound1 = new Sound('game541.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+
 
     const [activeGame, setActiveGame] = useState([])
 
@@ -52,8 +60,13 @@ export const Level5_4 = ({ navigation }) => {
         ],
     ])
 
+    const [game1, setGame1] = useState(0)
+
     useEffect(() => {
         setActiveGame(arr[0])
+        setTimeout(() => {
+            sound1.play();
+        }, 100);
     }, [])
 
     const [selecetedColor, setSelectedColor] = useState()
@@ -93,12 +106,18 @@ export const Level5_4 = ({ navigation }) => {
                 win = false
             }
         })
+        activeGame[1]?.map((elm, i) => {
+            if (!elm.active) {
+                win = false
+            }
+        })
         if (activeGame?.length === 0) {
             win = false
         }
         if (win) {
             setTimeout(() => {
-                navigation.navigate('Level5_6')
+                sound1.stop()
+                navigation.navigate('Level5_4_1')
             }, 1000);
         }
     }, [activeGame])

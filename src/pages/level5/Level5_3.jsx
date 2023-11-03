@@ -21,6 +21,29 @@ export const Level5_3 = ({ navigation }) => {
                 return
             }
         });
+    const sound1 = new Sound('game531.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound2 = new Sound('game532.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    useEffect(() => {
+        setTimeout(() => {
+            sound1.play()
+        }, 100);
+        setTimeout(() => {
+            sound1.stop()
+            sound2.play()
+        }, 6000);
+    }, [])
     const [arr, setArr] = useState([
         {
             icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level5/game3/8.png')} />,
@@ -146,6 +169,7 @@ export const Level5_3 = ({ navigation }) => {
             }
         })
         if (win) {
+            sound2.stop()
             navigation.navigate('Level5_4')
         }
     }, [arr])

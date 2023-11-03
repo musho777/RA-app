@@ -20,6 +20,15 @@ export const Level9_2 = ({ navigation }) => {
                 return
             }
         });
+
+    const sound = new Sound('game991.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
     const [arr, setArr] = useState([
         { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game2/c1.png')} />, id: 1, active: false },
         { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level9/game2/c2.png')} />, id: 1, active: false },
@@ -59,6 +68,9 @@ export const Level9_2 = ({ navigation }) => {
 
 
     useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100)
         let item = GetRandomItemsFromArray(arr, arr.length)
         setArr(item)
     }, [])
@@ -71,6 +83,7 @@ export const Level9_2 = ({ navigation }) => {
             }
         })
         if (count == 2) {
+            sound.stop()
             navigation.navigate('Level9_2_1')
         }
     }, [arr])

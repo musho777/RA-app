@@ -24,16 +24,52 @@ export const Level5_7 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game571.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    const sound1 = new Sound('game572.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+
 
     useEffect(() => {
+        setTimeout(function () {
+            sound1.play()
+        }, 100);
         setTimeout(function () {
             setGame1(1)
         }, 3000);
 
         setTimeout(function () {
+            sound1.stop()
+            sound.play()
             setGame1(2)
         }, 6000);
     }, [])
+
+    console.log(game1)
+
+    // useEffect(() => {
+    //     setTimeout(function () {
+    //         sound1.stop()
+    //         sound.stop()
+    //     }, 100);
+    //     setTimeout(function () {
+    //         if (game1 == 1) {
+    //             sound.play()
+    //         }
+    //     }, 100);
+    // }, [game1])
     const [bucket, setBucket] = useState([
         { icone: <Image style={{ width: 80, height: 50 }} source={require('../../assets/img/level5/game7/machine.png')} />, id: 2 },
         { icone: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level5/game7/scooter.png')} />, id: 3 },
@@ -66,6 +102,7 @@ export const Level5_7 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
+                sound.stop()
                 navigation.navigate('Level5_8')
             }, 2000);
         }

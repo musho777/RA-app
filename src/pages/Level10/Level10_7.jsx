@@ -37,24 +37,49 @@ export const Level10_7 = ({ navigation }) => {
             }
         });
 
+    const sound = new Sound('game1071.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound1 = new Sound('game1072.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
     const [activeArr, setActiveArr] = useState([])
     const [game1, setGame1] = useState(0)
 
     useEffect(() => {
+        if (game1 == 0) {
+            setTimeout(() => {
+                sound.play()
+            }, 100)
+        }
+        else {
+            sound.stop()
+            setTimeout(() => {
+                sound1.play()
+            }, 100)
+        }
         let item = GetRandomItemsFromArray(data[game1], data[game1].length)
         setActiveArr(item)
     }, [game1])
 
 
     const Game = (elm) => {
-        console.log(elm)
         if (elm.id == 1) {
             setTimeout(() => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
                 if (game1 === 1) {
-                    // navigation.navigate('Level7_2')
+                    navigation.navigate('LevelScreen')
                 }
                 else {
                     setGame1(game1 + 1)

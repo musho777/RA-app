@@ -41,6 +41,19 @@ export const Level2_4_2 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game242.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play();
+        }, 100);
+    }, [])
 
 
     const Play = (e) => {
@@ -72,6 +85,7 @@ export const Level2_4_2 = ({ navigation }) => {
         if (selected.length == 4 && selected1.length == 4) {
             setTimeout(() => {
                 musicSuccess.play();
+                sound.stop()
             }, 100);
             setTimeout(() => {
                 navigation.navigate('Level2_5')

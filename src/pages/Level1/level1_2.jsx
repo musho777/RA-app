@@ -20,6 +20,48 @@ export const Level1_2 = ({ navigation }) => {
                 return
             }
         });
+    const sound1 = new Sound('game121.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound2 = new Sound('game122.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound3 = new Sound('game123.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound4 = new Sound('game124.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound5 = new Sound('game125.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    const sound6 = new Sound('game126.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
     const [game, setGame] = useState([
         {
             item: [
@@ -91,6 +133,45 @@ export const Level1_2 = ({ navigation }) => {
     const [game1, setGame1] = useState(0)
     const [activeGame, setActiveGame] = useState([])
     useEffect(() => {
+        setTimeout(() => {
+            sound1.stop()
+        }, 100);
+        sound2.stop()
+        sound3.stop()
+        sound4.stop()
+        sound5.stop()
+        sound6.stop()
+
+        if (game1 == 0) {
+            setTimeout(() => {
+                sound4.play()
+            }, 100);
+        }
+        else if (game1 == 1) {
+            setTimeout(() => {
+                sound3.play()
+            }, 100);
+        }
+        else if (game1 == 2) {
+            setTimeout(() => {
+                sound1.play()
+            }, 100);
+        }
+        else if (game1 == 3) {
+            setTimeout(() => {
+                sound2.play()
+            }, 100);
+        }
+        else if (game1 == 4) {
+            setTimeout(() => {
+                sound5.play()
+            }, 100);
+        }
+        else if (game1 == 5) {
+            setTimeout(() => {
+                sound6.play()
+            }, 100);
+        }
         setActiveGame(game[game1])
     }, [game1])
 
@@ -116,8 +197,6 @@ export const Level1_2 = ({ navigation }) => {
             setTimeout(() => {
                 music.stop()
             }, 2000);
-            setTimeout(() => {
-            }, 500);
         }
     }
     return (

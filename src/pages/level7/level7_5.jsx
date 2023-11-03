@@ -19,7 +19,7 @@ export const Level7_5 = ({ navigation }) => {
                 return
             }
         });
-    const sound = new Sound('game68.mp3', Sound.MAIN_BUNDLE,
+    const sound = new Sound('game75.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
                 console.log('Error loading music:', error);
