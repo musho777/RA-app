@@ -95,10 +95,10 @@ export const Level2_2 = ({ navigation }) => {
             <View style={{ position: "relative", width: 220, height: 300, justifyContent: 'center' }}>
                 <Image style={{ width: 270, height: 370 }} source={require('../../assets/img/shirt.png')} />
                 {selected?.includes(1) &&
-                    <Image style={{ width: 35, height: 25, position: 'absolute', top: 87, left: 93 }} source={require('../../assets/img/level2/game2/button2.png')} />
+                    <Image style={{ width: 50, height: 25, position: 'absolute', top: 75, left: 110 }} source={require('../../assets/img/level2/game2/button2.png')} />
                 }
                 {selected?.includes(2) &&
-                    <Image style={{ width: 35, height: 25, position: 'absolute', top: 120, left: 92 }} source={require('../../assets/img/level2/game2/button4.png')} />
+                    <Image style={{ width: 40, height: 40, position: 'absolute', top: 105, left: 113 }} source={require('../../assets/img/level2/game2/button4.png')} />
                 }
             </View>
             <View style={{ alignItems: 'center', height: 200, justifyContent: 'space-between' }}>

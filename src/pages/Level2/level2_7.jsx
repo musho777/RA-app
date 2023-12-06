@@ -83,7 +83,6 @@ export const Level2_7 = ({ navigation }) => {
 
     useEffect(() => {
         let arr = []
-        // randomNum = Math.floor(Math.random() * 2);
         let type = ''
         if (game1 == 0) {
             arr = shuffle(tedy)
@@ -113,14 +112,14 @@ export const Level2_7 = ({ navigation }) => {
                 musicSuccess.play();
                 if (game1 == 1) {
                     sound.stop()
-                    navigation.navigate('Level2_8')
+                    // navigation.navigate('Level2_8')
                 }
             }, 100);
             setTimeout(() => {
                 musicSuccess.stop()
-                setGame1(game1 + 1)
+                // setGame1(game1 + 1)
                 setGame(true)
-
+                navigation.navigate('Level2_8')
             }, 2000);
             setTimeout(() => {
                 setGame(false)

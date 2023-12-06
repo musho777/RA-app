@@ -23,11 +23,11 @@ export const Level3_1 = ({ navigation }) => {
 
     const [hedgehogs, setHedgehogs] = useState([
         // { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/Christmastrees0.png')} />, id: 0 },
-        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs1.png')} />, id: 1 },
-        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs2.png')} />, id: 2 },
-        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs3.png')} />, id: 3 },
-        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs4.png')} />, id: 4 },
-        { icon: <Image style={{ width: 200, height: 130 }} source={require('../../assets/img/hedgehogs5.png')} />, id: 5 },
+        { icon: <Image style={{ width: 230, height: 160 }} source={require('../../assets/img/hedgehogs1.png')} />, id: 1 },
+        { icon: <Image style={{ width: 230, height: 160 }} source={require('../../assets/img/hedgehogs2.png')} />, id: 2 },
+        { icon: <Image style={{ width: 230, height: 160 }} source={require('../../assets/img/hedgehogs3.png')} />, id: 3 },
+        { icon: <Image style={{ width: 230, height: 160 }} source={require('../../assets/img/hedgehogs4.png')} />, id: 4 },
+        { icon: <Image style={{ width: 230, height: 160 }} source={require('../../assets/img/hedgehogs5.png')} />, id: 5 },
 
 
     ])
@@ -151,8 +151,8 @@ export const Level3_1 = ({ navigation }) => {
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 100 }}>
             {buuton.map((elm, i) => {
-                if (elm != value1 && elm != value2)
-                    return <NumberButton disabled={disable} key={i} onPress={() => Answer(elm)} number={elm} />
+                // if (elm != value1 && elm != value2)
+                return <NumberButton disabled={disable} key={i} onPress={() => Answer(elm)} number={elm} />
             })}
         </View>
     </LevelWrapper>

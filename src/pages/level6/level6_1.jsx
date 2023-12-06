@@ -26,10 +26,10 @@ export const Level6_1 = ({ navigation }) => {
 
     const [disable, setDisable] = useState(false)
     const position = [
-        { x: 254, y: 14 },
-        { x: 26, y: 249 },
-        { x: 84, y: 242 },
-        { x: 232, y: 228 },
+        { x: 274, y: 14 },
+        { x: 26, y: 229 },
+        { x: 84, y: 222 },
+        { x: 232, y: 218 },
         { x: 368, y: 187 },
         { x: 458, y: 96 },
         { x: 578, y: 66 },

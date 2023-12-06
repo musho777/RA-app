@@ -20,6 +20,17 @@ export const Level5_2 = ({ navigation }) => {
             }
         });
 
+
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            sound2.play();
+        }, 100);
+    }, [])
+
+
+
     const [image, setImage] = useState([
         { icon: <Image source={require('../../assets/img/level5/game2/rectangelGreen.png')} style={{ width: 70, height: 70 }} />, id: 1, active: false, },
         { icon: <Image source={require('../../assets/img/level5/game2/rectangelGreen.png')} style={{ width: 60, height: 60 }} />, id: 2, active: false },
@@ -84,27 +95,22 @@ export const Level5_2 = ({ navigation }) => {
         setGrennRectangel(temp)
     }
 
-    useEffect(() => {
-        setTimeout(() => {
-            sound2.play();
-        }, 100);
-    }, [])
-
-    useEffect(() => {
-        if (greenRectangel.length == 6) {
-            useEffect(() => {
-                setTimeout(() => {
-                    sound2.stop();
-                    sound1.play()
-                }, 100);
-            }, [])
-            setGame2(true)
-        }
-    }, [greenRectangel])
+    // console.log(greenRectangel)
 
     const Game2 = (elm, i) => {
         if (solution2 + 1 == elm.id) {
             setSolutuin2(elm.id)
+            if (elm.id === 6) {
+                setTimeout(() => {
+
+                    navigation.navigate('Level5_3')
+                    musicSuccess.play();
+                    sound1.stop()
+                }, 100);
+                setTimeout(() => {
+                    musicSuccess.stop()
+                }, 2000);
+            }
         }
         else {
             setTimeout(() => {
@@ -118,22 +124,20 @@ export const Level5_2 = ({ navigation }) => {
     }
 
     useEffect(() => {
-        if (solution2 === 6) {
+        if (greenRectangel.length == 6) {
             setTimeout(() => {
-                navigation.navigate('Level5_3')
-                musicSuccess.play();
+                sound2.stop();
+                sound1.play()
             }, 100);
-            setTimeout(() => {
-                musicSuccess.stop()
-            }, 2000);
+            setGame2(true)
         }
-    }, [solution2])
+    }, [greenRectangel])
+
 
     if (game2) {
         return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')} >
             <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '100%', }}>
                 {greenRectangel.map((elm, i) => {
-                    console.log(elm.id)
                     if (elm.id > solution2) {
                         return <TouchableOpacity onPress={() => Game2(elm, i)} style={{ marginHorizontal: 10 }} key={i}>
                             {elm.icon}

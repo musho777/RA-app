@@ -9,6 +9,16 @@ export const Level3_4 = ({ navigation }) => {
     const [value1, setValue1] = useState('')
     const [disable, setDisable] = useState(false)
     const [game, setGame] = useState(false)
+    const [win, setWin] = useState([
+        {
+            id: '',
+            id: ''
+        },
+        {
+            id: '',
+            id: ''
+        }
+    ])
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -31,79 +41,155 @@ export const Level3_4 = ({ navigation }) => {
             }
         });
 
+    const [game1, setGame1] = useState(1)
+    const [count, setCount] = useState(1)
+
     useEffect(() => {
         setTimeout(() => {
             sound.play()
         }, 100);
     }, [])
     const Answer = (i) => {
-        if (i != 2) {
+        let item = [...win]
+        if (count == 1) {
+            if (i == 5) {
+                item[0][0] = 5
+                setCount(count + 1)
+                setTimeout(() => {
+                    musicSuccess.play();
+                }, 100);
+                setTimeout(() => {
+                    sound.stop()
+                    musicSuccess.stop()
+                }, 1000);
+            }
+        }
+        else if (count == 2) {
+            if (i == 2) {
+                item[0][1] = 2
+                setCount(count + 1)
+                setTimeout(() => {
+                    musicSuccess.play();
+                }, 100);
+                setTimeout(() => {
+                    sound.stop()
+                    setGame1(game1 + 1)
+                    musicSuccess.stop()
+                }, 1000);
+            }
+        }
+        else if (count == 3) {
+            console.log(i == 4)
+            if (i == 4) {
+                item[1][0] = 4
+                setCount(count + 1)
+                setTimeout(() => {
+                    musicSuccess.play();
+                }, 100);
+                setTimeout(() => {
+                    sound.stop()
+                    musicSuccess.stop()
+                }, 1000);
+            }
+        }
+        else if (count == 4) {
+            if (i == 2) {
+                item[1][1] = 2
+                setCount(count + 1)
+                setTimeout(() => {
+                    musicSuccess.play();
+                }, 100);
+                setTimeout(() => {
+                    sound.stop()
+                    musicSuccess.stop()
+                    navigation.navigate('Level3_5')
+                }, 1000);
+            }
+        }
+        else {
             setTimeout(() => {
-                setDisable(true)
                 music.play();
             }, 100);
             setTimeout(() => {
                 music.stop()
             }, 2000);
-            setTimeout(() => {
-                setValue1('')
-                setDisable(false)
-            }, 500);
         }
-        else {
-            setTimeout(() => {
-                musicSuccess.play();
-            }, 100);
-            setTimeout(() => {
-                sound.stop()
-                navigation.navigate('Level3_5')
-                musicSuccess.stop()
-            }, 2000);
-        }
+        setWin(item)
+
+
+        console.log(count, '222')
+
+
+        // if (count == 3) {
+        //     setGame1(game1 + 1)
+        // }
+        //         else if (count == 5) {
+        //     setGame1(game1 + 1)
+        // }
     }
     useEffect(() => {
-        const randomNum = Math.floor(Math.random() * 2)
-        setGame(randomNum)
-    }, [])
+        setGame(game1)
+    }, [game1])
     return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')} >
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
             <View style={[{ justifyContent: 'space-between', alignItems: 'fspace-between', width: '30%' }]}>
-                {game ? <View >
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
-                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                {game == 1 ? <View style={{ flexDirection: "row" }}>
+                    <View style={{ width: '100%' }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                        </View>
+                        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                        </View>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                        </View>
                     </View>
                     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
-                    </View>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
-                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
-                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                        <NumberButton bg='#99CC33' bc='rgba(153, 204, 51, 0.4)' disabled={disable} number={win[0][0]} />
                     </View>
                 </View> :
                     <View style={{ width: '60%', marginLeft: 70, justifyContent: 'space-between' }}>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
-                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
-
-                        </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
-                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
+                        <View>
+                            <View style={{ height: 140 }}>
+                                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                    <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
+                                    <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
+                                </View>
+                                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                    <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
+                                    <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
+                                </View>
+                            </View>
+                            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                <NumberButton bg='#99CC33' bc='rgba(153, 204, 51, 0.4)' disabled={disable} number={win[1][0]} />
+                            </View>
                         </View>
                     </View>
                 }
             </View>
             <View style={styles.line}></View>
             <View style={{ width: '30%', alignItems: 'cener', justifyContent: 'center' }}>
-                {game ? <View style={{ flexDirection: 'row', justifyContent: 'space-around' }} >
-                    <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
-                    <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                {game == 1 ? <View style={{ flexDirection: "row", justifyContent: 'center', alignItems: 'center' }} >
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
+                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/raspberries.png')} />
+                    </View>
+                    <View style={{ alignItems: 'center', justifyContent: 'center' }} >
+                        <NumberButton bg='#99CC33' bc='rgba(153, 204, 51, 0.4)' disabled={disable} number={win[0][1]} />
+                    </View>
                     <View />
                 </View> :
-                    <View style={{ flexDirection: 'row' }}>
-                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
-                        <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
+                    <View>
+                        <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: 120 }}>
+                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
+                            <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/carrot.png')} />
+                        </View>
+                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
+                            <NumberButton bg='#99CC33' bc='rgba(153, 204, 51, 0.4)' disabled={disable} number={win[1][1]} />
+                        </View>
                     </View>
                 }
             </View>

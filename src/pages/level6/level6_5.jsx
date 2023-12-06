@@ -33,12 +33,12 @@ export const Level6_5 = ({ navigation }) => {
         }, 100);
     }, [])
     const button = [
-        { icon: <Image source={require('../../assets/img/level6/game5/яблоко0.png')} style={{ width: 65, height: 80 }} />, id: 0 },
         { icon: <Image source={require('../../assets/img/level6/game5/яблоко1.png')} style={{ width: 65, height: 80 }} />, id: 1 },
-        { icon: <Image source={require('../../assets/img/level6/game5/яблоко2.png')} style={{ width: 65, height: 80 }} />, id: 2 },
         { icon: <Image source={require('../../assets/img/level6/game5/яблоко3.png')} style={{ width: 65, height: 80 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/level6/game5/яблоко4.png')} style={{ width: 65, height: 80 }} />, id: 4 },
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко2.png')} style={{ width: 65, height: 80 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко0.png')} style={{ width: 65, height: 80 }} />, id: 0 },
         { icon: <Image source={require('../../assets/img/level6/game5/яблоко5.png')} style={{ width: 65, height: 80 }} />, id: 5 },
+        { icon: <Image source={require('../../assets/img/level6/game5/яблоко4.png')} style={{ width: 65, height: 80 }} />, id: 4 },
 
 
     ]

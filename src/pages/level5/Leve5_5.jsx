@@ -114,10 +114,10 @@ export const Level5_5 = ({ navigation }) => {
                     { icone: '', id: '' },
                     { icone: '', id: '' },
                 ])
-                if (game1 == 1) {
-                    sound.stop()
-                    navigation.navigate('Level5_5_1')
-                }
+                // if (game1 == 0) {
+                //     musicSuccess.stop()
+                //     navigation.navigate('Level5_5_1')
+                // }
                 musicSuccess.stop()
             }, 2000);
         }
@@ -125,7 +125,8 @@ export const Level5_5 = ({ navigation }) => {
 
     useEffect(() => {
         if (game1 == 1) {
-            setArr(lollipop)
+            navigation.navigate('Level5_5_1')
+            // setArr(lollipop)
         }
     }, [game1])
 

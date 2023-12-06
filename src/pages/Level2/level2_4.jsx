@@ -18,6 +18,7 @@ export const Level2_4 = ({ navigation }) => {
     ]
     const [selected, setSeletded] = useState([])
     const [selected1, setSeletded1] = useState([])
+    const [selectedSquar, setSelecetedSquar] = useState(0)
 
     let w = (windowWidth - 80) * 0.4
     let h = windowHeight - 80
@@ -54,22 +55,17 @@ export const Level2_4 = ({ navigation }) => {
     const Play = (e) => {
         let item = [...selected]
         let item2 = [...selected1]
-        if (item.length < 3) {
-            if (e.id <= 3) {
-                item.push(e)
-            }
-            else {
-                setTimeout(() => {
-                    music.play();
-                }, 100);
-                setTimeout(() => {
-                    music.stop()
-                }, 2000);
+        if (selectedSquar == 1 || selectedSquar == 2 || selectedSquar == 3) {
+            if (e.id == 1 || e.id == 2 || e.id == 3) {
+                // item.push(e)
+                item[selectedSquar - 1] = e
+                setSelecetedSquar(0)
             }
         }
-        if (item.length >= 3) {
-            if (e.id > 3) {
-                item2.push(e)
+        else {
+            if (e.id == 4 || e.id == 5 || e.id == 6) {
+                item2[selectedSquar - 4] = e
+                setSelecetedSquar(0)
             }
         }
         setSeletded(item)
@@ -77,7 +73,7 @@ export const Level2_4 = ({ navigation }) => {
     }
 
     useEffect(() => {
-        if (selected.length == 3 && selected1.length == 3) {
+        if (selected[0]?.id && selected[1]?.id && selected[2]?.id && selected1[0]?.id && selected1[1]?.id && selected1[2]?.id) {
             setTimeout(() => {
                 musicSuccess.play();
                 sound.stop()
@@ -93,53 +89,53 @@ export const Level2_4 = ({ navigation }) => {
         <View style={styles.wrapper}>
             <View style={styles.blockWrapper1}>
                 <View style={styles.block1}>
-                    {selected.length >= 1 ?
-                        < ImgButton svg={selected[0].icon} border='rgba(240, 129, 67, 0.4)' /> :
-                        < ImgButton border='rgba(240, 129, 67, 0.4)' />
+                    {selected[0]?.id ?
+                        < ImgButton svg={selected[0]?.icon} border='rgba(240, 129, 67, 0.4)' /> :
+                        < ImgButton onPress={() => setSelecetedSquar(1)} border={selectedSquar == 1 ? 'green' : 'rgba(240, 129, 67, 0.4)'} />
                     }
-                    {selected.length >= 2 ?
-                        < ImgButton svg={selected[1].icon} border='rgba(240, 129, 67, 0.4)' /> :
-                        < ImgButton border='rgba(240, 129, 67, 0.4)' />
+                    {selected[1]?.id ?
+                        < ImgButton svg={selected[1]?.icon} border='rgba(240, 129, 67, 0.4)' /> :
+                        < ImgButton onPress={() => setSelecetedSquar(2)} border={selectedSquar == 2 ? 'green' : 'rgba(240, 129, 67, 0.4)'} />
                     }
-                    {selected.length >= 3 ?
-                        < ImgButton svg={selected[2].icon} border='rgba(240, 129, 67, 0.4)' /> :
-                        < ImgButton border='rgba(240, 129, 67, 0.4)' />
+                    {selected[2]?.id ?
+                        < ImgButton svg={selected[2]?.icon} border='rgba(240, 129, 67, 0.4)' /> :
+                        < ImgButton onPress={() => setSelecetedSquar(3)} border={selectedSquar == 3 ? 'green' : 'rgba(240, 129, 67, 0.4)'} />
                     }
                 </View>
                 <View style={styles.line}></View>
                 <View style={styles.block1}>
-                    {selected1.length >= 1 ?
-                        < ImgButton svg={selected1[0].icon} border='rgba(240, 129, 67, 0.4)' /> :
-                        < ImgButton border='rgba(240, 129, 67, 0.4)' />
+                    {selected1[0]?.id ?
+                        < ImgButton svg={selected1[0]?.icon} border='rgba(240, 129, 67, 0.4)' /> :
+                        < ImgButton onPress={() => setSelecetedSquar(4)} border={selectedSquar == 4 ? 'green' : 'rgba(240, 129, 67, 0.4)'} />
                     }
-                    {selected1.length >= 2 ?
-                        < ImgButton svg={selected1[1].icon} border='rgba(240, 129, 67, 0.4)' /> :
-                        < ImgButton border='rgba(240, 129, 67, 0.4)' />
+                    {selected1[1]?.id ?
+                        < ImgButton svg={selected1[1]?.icon} border='rgba(240, 129, 67, 0.4)' /> :
+                        < ImgButton onPress={() => setSelecetedSquar(5)} border={selectedSquar == 5 ? 'green' : 'rgba(240, 129, 67, 0.4)'} />
                     }
-                    {selected1.length >= 3 ?
-                        < ImgButton svg={selected1[2].icon} border='rgba(240, 129, 67, 0.4)' /> :
-                        < ImgButton border='rgba(240, 129, 67, 0.4)' />
+                    {selected1[2]?.id ?
+                        < ImgButton svg={selected1[2]?.icon} border='rgba(240, 129, 67, 0.4)' /> :
+                        < ImgButton onPress={() => setSelecetedSquar(6)} border={selectedSquar == 6 ? 'green' : 'rgba(240, 129, 67, 0.4)'} />
                     }
                 </View>
             </View>
             <View style={styles.block2}>
-                {!selected.some((elm) => elm.id === item[0].id) && <TouchableOpacity style={{ position: 'absolute', left: 150, top: 100 }} onPress={() => Play(item[0])} >
-                    {item[0].icon}
+                {!selected.some((elm) => elm?.id === item[0]?.id) && <TouchableOpacity style={{ position: 'absolute', left: 150, top: 100 }} onPress={() => Play(item[0])} >
+                    {item[0]?.icon}
                 </TouchableOpacity>}
-                {!selected.some((elm) => elm.id === item[1].id) && <TouchableOpacity style={{ position: 'absolute', left: 13, top: 53 }} onPress={() => Play(item[1])} >
-                    {item[1].icon}
+                {!selected.some((elm) => elm?.id === item[1]?.id) && <TouchableOpacity style={{ position: 'absolute', left: 13, top: 53 }} onPress={() => Play(item[1])} >
+                    {item[1]?.icon}
                 </TouchableOpacity>}
-                {!selected1.some((elm) => elm.id === item[2].id) && <TouchableOpacity style={{ position: 'absolute', left: w - 80, top: 30 }} onPress={() => Play(item[2])} >
-                    {item[2].icon}
+                {!selected1.some((elm) => elm?.id === item[2]?.id) && <TouchableOpacity style={{ position: 'absolute', left: w - 80, top: 30 }} onPress={() => Play(item[2])} >
+                    {item[2]?.icon}
                 </TouchableOpacity>}
-                {!selected.some((elm) => elm.id === item[3].id) && <TouchableOpacity style={{ position: 'absolute', left: 59, top: 0 }} onPress={() => Play(item[3])} >
-                    {item[3].icon}
+                {!selected.some((elm) => elm?.id === item[3]?.id) && <TouchableOpacity style={{ position: 'absolute', left: 59, top: 0 }} onPress={() => Play(item[3])} >
+                    {item[3]?.icon}
                 </TouchableOpacity>}
-                {!selected1.some((elm) => elm.id === item[4].id) && <TouchableOpacity style={{ position: 'absolute', left: 2, top: 160 }} onPress={() => Play(item[4])} >
-                    {item[4].icon}
+                {!selected1.some((elm) => elm?.id === item[4]?.id) && <TouchableOpacity style={{ position: 'absolute', left: 2, top: 160 }} onPress={() => Play(item[4])} >
+                    {item[4]?.icon}
                 </TouchableOpacity>}
-                {!selected1.some((elm) => elm.id === item[5].id) && <TouchableOpacity style={{ position: 'absolute', left: w - 120, top: 180 }} onPress={() => Play(item[5])} >
-                    {item[5].icon}
+                {!selected1.some((elm) => elm?.id === item[5]?.id) && <TouchableOpacity style={{ position: 'absolute', left: w - 120, top: 180 }} onPress={() => Play(item[5])} >
+                    {item[5]?.icon}
                 </TouchableOpacity>}
             </View>
         </View>

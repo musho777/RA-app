@@ -65,11 +65,11 @@ export const Level4_2 = ({ navigation }) => {
     const [arr, setArr] = useState([])
 
     const [position, setPosition] = useState([
-        { x: 30, y: 80 },
+        { x: 30, y: 60 },
         { x: 175, y: 38 },
         { x: 256, y: 38 },
         { x: w - 100, y: h },
-        { x: w - 300, y: h - 30 },
+        { x: w - 300, y: h - 60 },
         { x: w - 120, y: 60 },
         { x: w - 60, y: 141 },
         { x: w - 30, y: 215 },

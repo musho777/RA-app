@@ -1,19 +1,19 @@
-import { View } from 'react-native'
+import { Image, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
-import { Chicken, Hedgehog, Lisa, Rooster, Rooster1, Wolf, Wolf1 } from '../../assets/svg'
+import { Rooster1, Wolf, Wolf1 } from '../../assets/svg'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
 
 export const Level1_6 = ({ navigation }) => {
     const [shdaow, setShadow] = useState([
-        <Rooster />,
+        <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/теньпетуха.png')} />,
         <Wolf />
     ])
     const [svg, setSvg] = useState([
-        { icone: <Lisa />, id: 1 },
-        { icone: < Hedgehog />, id: 2 },
-        { icone: <Chicken />, id: 3 },
+        { icone: <Image style={{ width: 100, height: 70 }} source={require('../../assets/img/лиса.png')} />, id: 1 },
+        // { icone: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/петух.png')} />, id: 2 },
+        { icone: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/курица.png')} />, id: 3 },
     ])
 
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
@@ -40,7 +40,6 @@ export const Level1_6 = ({ navigation }) => {
             const randomIndex = Math.floor(Math.random() * copyArray.length);
             randomItems.push(copyArray.splice(randomIndex, 1)[0]);
         }
-
         return randomItems;
     }
 
@@ -59,22 +58,21 @@ export const Level1_6 = ({ navigation }) => {
     }
 
     const [activeShadow, setActiveShadow] = useState()
+    const [game, setGame] = useState(0)
 
     useEffect(() => {
-        const randomZeroOrOne = Math.floor(Math.random() * 2);
-        setActiveShadow(shdaow[randomZeroOrOne])
+        setActiveShadow(shdaow[game])
         let newArr = getRandomItems(svg, 2)
-        if (randomZeroOrOne == 0) {
-            newArr.push({ icone: <Rooster1 />, id: 4 })
+        if (game == 0) {
+            newArr.push({ icone: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/петух.png')} />, id: 4 })
         }
-        else[
-            newArr.push({ icone: <Wolf1 />, id: 4 })
-
-        ]
+        else {
+            newArr.push({ icone: <Image style={{ width: 100, height: 70 }} source={require('../../assets/img/волк.png')} />, id: 4 })
+        }
         let activeArr = shuffle(newArr)
         setActive(activeArr)
 
-    }, [])
+    }, [game])
 
     const Game = (id) => {
         if (id == 4) {
@@ -82,7 +80,11 @@ export const Level1_6 = ({ navigation }) => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                navigation.navigate('LevelScreen')
+                setGame(game + 1)
+                if (game == 1) {
+                    navigation.navigate('LevelScreen')
+                }
+
                 musicSuccess.stop();
             }, 2000);
         }
@@ -99,12 +101,12 @@ export const Level1_6 = ({ navigation }) => {
 
     return <LevelWrapper img2={require('../../assets/img/bg5.png')} img={require('../../assets/img/5bg.png')} jC='center'>
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-            <ImgButton svg={activeShadow} border={'rgba(204, 102, 204, 0.50)'} />
+            <ImgButton width={120} height={120} svg={activeShadow} border={'rgba(204, 102, 204, 0.50)'} />
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 30 }}>
             {active?.map((elm, i) => {
                 return <View key={i} style={i == 1 && { marginHorizontal: 80 }}>
-                    <ImgButton onPress={() => Game(elm.id)} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
+                    <ImgButton width={120} height={120} onPress={() => Game(elm.id)} svg={elm.icone} border={'rgba(204, 102, 204, 0.50)'} />
                 </View>
             })}
         </View>

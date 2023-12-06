@@ -151,8 +151,8 @@ export const Level1_1 = ({ navigation }) => {
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             {buuton.map((elm, i) => {
-                if (elm != value1 && elm != value2)
-                    return <NumberButton disabled={disable} key={i} onPress={() => Answer(elm)} number={elm} />
+                // if (elm != value1 && elm != value2)
+                return <NumberButton disabled={disable} key={i} onPress={() => Answer(elm)} number={elm} />
             })}
         </View>
     </LevelWrapper>

@@ -151,17 +151,17 @@ export const Level6_6 = ({ navigation }) => {
                 <View style={styles.block}>
                     {activeGame.length > 0 && activeGame[0].map((elm, i) => {
                         if (elm.active) {
-                            return <View key={i} style={{ width: 110, height: 110 }} />
+                            return <View key={i} style={{ width: 100, height: 100 }} />
                         }
-                        return <ImgButton width={110} height={110} key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number1 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
+                        return <ImgButton width={100} height={100} key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number1 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
                     })}
                 </View>
                 <View style={styles.block}>
                     {activeGame.length > 0 && activeGame[1].map((elm, i) => {
                         if (elm.active) {
-                            return <View key={i} style={{ width: 110, height: 110 }} />
+                            return <View key={i} style={{ width: 100, height: 100 }} />
                         }
-                        return <ImgButton width={110} height={110} key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number2 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
+                        return <ImgButton width={100} height={100} key={i} onPress={() => Game(elm.id)} svg={elm.icone} border={activeNumber.number2 == elm.id ? 'green' : 'rgba(153, 204, 51, 0.4)'} />
                     })}
                 </View>
             </View>

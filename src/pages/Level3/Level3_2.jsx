@@ -147,7 +147,7 @@ export const Level3_2 = ({ navigation }) => {
     >
         <View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', height: '83%' }}>
-                <View style={{ width: '90%' }}>
+                <View style={{ width: '85%' }}>
                     {activeArr?.array?.length > 0 && activeArr.array.map((elm, i) => {
                         return <View key={i} style={{ position: 'absolute', left: position[i].x, top: position[i].y }}>
                             {elm.icon}
@@ -159,6 +159,7 @@ export const Level3_2 = ({ navigation }) => {
                 <View style={{ justifyContent: 'space-between', paddingLeft: 10, borderColor: "#FF7575", height: '50%' }}>
                     {value1 == '' ?
                         <View style={styles.block}>
+                            <Image source={require('../../assets/img/кругбирюза.png')} style={{ width: 30, height: 30 }} />
                             {ansewer[0].icon}
                             <Input width={56} height={56} value={value1} setValue={(e) => setValue1(e)} />
                         </View> :
@@ -169,6 +170,7 @@ export const Level3_2 = ({ navigation }) => {
                     }
                     {value2 == '' ?
                         <View style={styles.block}>
+                            <Image source={require('../../assets/img/овалсиреневый.png')} style={{ width: 50, height: 30 }} />
                             {ansewer[1].icon}
                             <Input width={56} height={56} value={value2} setValue={(e) => setValue2(e)} />
                         </View> :

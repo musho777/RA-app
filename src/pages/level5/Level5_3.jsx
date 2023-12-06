@@ -3,7 +3,7 @@ import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import { ImgButton } from '../../components/ImgButton'
-import { PinkColor, PurpleColor, } from '../../assets/svg'
+import { PinkColor, PinkColor1, PurpleColor, PurpleColor1, } from '../../assets/svg'
 import Sound from 'react-native-sound'
 
 export const Level5_3 = ({ navigation }) => {
@@ -176,22 +176,35 @@ export const Level5_3 = ({ navigation }) => {
 
 
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-            <View style={{ width: '54%', height: '100%', flexDirection: 'row', gap: 10, flexWrap: 'wrap' }}>
+        <View style={{ justifyContent: 'space-around', gap: 20 }}>
+            <View style={{ width: '100%', flexDirection: 'row', gap: 10, justifyContent: 'space-around' }}>
                 {arr.map((elm, i) => {
-                    if (!elm.active) {
-                        return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
+                    if (i <= 5) {
+                        if (!elm.active) {
+                            return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
+                        }
+                        return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon1} />
                     }
-                    return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon1} />
 
                 })}
             </View>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+            <View style={{ width: '100%', flexDirection: 'row', gap: 10, justifyContent: 'space-around' }}>
+                {arr.map((elm, i) => {
+                    if (i > 5) {
+                        if (!elm.active) {
+                            return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
+                        }
+                        return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon1} />
+                    }
+
+                })}
+            </View>
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 20 }}>
                 <TouchableOpacity onPress={() => setSelectedColor(1)}>
-                    <PurpleColor />
+                    <PurpleColor1 />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => setSelectedColor(2)}>
-                    <PinkColor />
+                    <PinkColor1 />
                 </TouchableOpacity>
             </View>
         </View>

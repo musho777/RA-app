@@ -97,7 +97,7 @@ export const Level6_7 = ({ navigation }) => {
     }
 
     return <LevelWrapper img={require('../../assets/img/bglv1.png')} img2={require('../../assets/img/33.png')}>
-        <View style={{ flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '100%', paddingHorizontal: 120, gap: 10 }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '100%', paddingHorizontal: 10, gap: 10 }}>
             {activeGame.map((elm, i) => {
                 return <ImgButton width={130} height={130} key={i} svg={elm.icon} onPress={() => Game(elm.id)} />
             })}

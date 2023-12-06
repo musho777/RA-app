@@ -10,7 +10,7 @@ export const Selection3 = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.navigate('Level3_3')}>
                     <Image style={styles.img} source={require('../../assets/img/3_1.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity >
+                <TouchableOpacity onPress={() => navigation.navigate('Level3_2')}>
                     <Image style={styles.img} source={require('../../assets/img/2_1.png')} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Level3_1')}>

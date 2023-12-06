@@ -10,10 +10,10 @@ export const Level3_3 = ({ navigation }) => {
         { icon: <Image source={require('../../assets/img/0.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
         { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
         { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/7.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
+        { icon: <Image source={require('../../assets/img/7.png')} style={{ width: 35, height: 50 }} />, id: 3, active: false },
         { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
         { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/3.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
+        { icon: <Image source={require('../../assets/img/3.png')} style={{ width: 35, height: 50 }} />, id: 3, active: false },
         { icon: <Image source={require('../../assets/img/heart.png')} style={{ width: 50, height: 50 }} />, id: 3 },
     ]
 
@@ -61,7 +61,7 @@ export const Level3_3 = ({ navigation }) => {
             }
         })
         console.log(count)
-        if (count == 3) {
+        if (count == 1) {
             setTimeout(() => {
                 setDisable(true)
                 musicSuccess.play();

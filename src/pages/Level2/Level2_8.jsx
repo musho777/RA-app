@@ -15,8 +15,8 @@ export const Level2_8 = ({ navigation }) => {
         ],
         [
             { icone: <Red />, id: 4, active: false },
-            { icone: <Blue />, id: 6, active: false },
-            { icone: <Orange />, id: 5, active: false },
+            { icone: <Blue />, id: 5, active: false },
+            { icone: <Orange />, id: 6, active: false },
         ]
     ])
     const [activeNumber, setActiveNumber] = useState({ number1: '', number2: '' })
