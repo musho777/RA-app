@@ -33,13 +33,13 @@ export const Level7_5 = ({ navigation }) => {
         }, 100);
     }, [])
     const button = [
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива6.png')} />, key: 6 },
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива0.png')} />, key: 0 },
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива1.png')} />, key: 1 },
-        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива2.png')} />, key: 2 },
-        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива3.png')} />, key: 3 },
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива4.png')} />, key: 4 },
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива3.png')} />, key: 3 },
+        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива2.png')} />, key: 2 },
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива5.png')} />, key: 5 },
-        { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива6.png')} />, key: 6 },
     ]
     const [arr, setArr] = useState([
         [

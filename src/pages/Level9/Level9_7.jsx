@@ -13,7 +13,7 @@ export const Level9_7 = ({ navigation }) => {
             { icone: <Image source={require('../../assets/img/level9/game7/car2.png')} style={{ width: 80, height: 80 }} />, id: 3 },
             { icone: <Image source={require('../../assets/img/level9/game7/car1.png')} style={{ width: 80, height: 80 }} />, id: 2 },
         ],
-        answer: <Image source={require('../../assets/img/level9/game7/car.png')} style={{ width: 80, height: 80 }} />,
+        answer: <Image source={require('../../assets/img/level9/game7/car.png')} style={{ width: 100, height: 80 }} />,
 
     })
     const [svg1, setSvg1] = useState({

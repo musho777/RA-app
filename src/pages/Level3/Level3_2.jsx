@@ -91,8 +91,6 @@ export const Level3_2 = ({ navigation }) => {
     const [activeArr, setActiveArr] = useState({})
 
     useEffect(() => {
-        let item = GetRandomItemsFromArray(position, 9)
-        setPosition(item)
         setActiveArr(arr[game])
     }, [game])
 

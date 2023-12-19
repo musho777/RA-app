@@ -12,11 +12,11 @@ export const Level6_8 = ({ navigation }) => {
     let h = windowHeight - 130
 
     const [position, setPosition] = useState([
-        { icon: <Image style={{ width: 50, height: 80 }} source={require('../../assets/img/level6/game8/acorn1.png')} />, x: 54, y: 14, active: false, icon1: <Image style={{ width: 50, height: 80 }} source={require('../../assets/img/level6/game8/acorn.png')} />, id: 1 },
-        { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level6/game8/bug1.png')} />, x: 26, y: h, active: false, icon1: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level6/game8/bug.png')} />, id: 2 },
-        { icon: <Image style={{ width: 55, height: 80 }} source={require('../../assets/img/level6/game8/cone1.png')} />, x: 84, y: 142, active: false, icon1: <Image style={{ width: 55, height: 80 }} source={require('../../assets/img/level6/game8/cone.png')} />, id: 1 },
-        { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game8/butterfly1.png')} />, x: 202, y: h, active: false, icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game8/butterfly.png')} />, id: 3 },
-        { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level6/game8/sheet.png')} />, x: w, y: 17, active: false, icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level6/game8/sheet1.png')} />, id: 4 },
+        { icon: <Image style={{ width: 50, height: 80 }} source={require('../../assets/img/level6/game8/acorn1.png')} />, x: 54, y: 14, active: true, icon1: <Image style={{ width: 50, height: 80 }} source={require('../../assets/img/level6/game8/acorn1.png')} />, id: 100 },
+        { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level6/game8/bug1.png')} />, x: 26, y: h, active: true, icon1: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level6/game8/bug1.png')} />, id: 100 },
+        { icon: <Image style={{ width: 55, height: 80 }} source={require('../../assets/img/level6/game8/cone1.png')} />, x: 84, y: 142, active: true, icon1: <Image style={{ width: 55, height: 80 }} source={require('../../assets/img/level6/game8/cone1.png')} />, id: 100 },
+        { icon: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game8/butterfly1.png')} />, x: 202, y: h, active: true, icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level6/game8/butterfly1.png')} />, id: 100 },
+        { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level6/game8/sheet.png')} />, x: w, y: 17, active: true, icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level6/game8/sheet.png')} />, id: 100 },
         { icon: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/level6/game8/tulip1.png')} />, x: 258, y: 96, active: false, icon1: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/level6/game8/tulip.png')} />, id: 4 },
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level6/game8/bluebellscolorless1.png')} />, x: 356, y: 53, active: false, icon1: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level6/game8/bluebellscolorless.png')} />, id: 2 },
     ])
@@ -54,6 +54,20 @@ export const Level6_8 = ({ navigation }) => {
         let item = [...position]
         if (id === selectCollor) {
             item[i].active = true
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+            }, 2000);
+        }
+        else {
+            setTimeout(() => {
+                music.play();
+            }, 100);
+            setTimeout(() => {
+                music.stop()
+            }, 1000);
         }
         setPosition(item)
     }
@@ -67,7 +81,12 @@ export const Level6_8 = ({ navigation }) => {
         })
         if (win) {
             sound.stop()
-            navigation.navigate('LevelScreen')
+
+            setTimeout(() => {
+                navigation.navigate('LevelScreen')
+            }, 1000);
+
+
         }
     }, [position])
 

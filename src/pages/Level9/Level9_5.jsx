@@ -20,15 +20,15 @@ export const Level9_5 = ({ navigation }) => {
             }
         });
     const button = [
-        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool0.png')} style={{ width: 35, height: 60 }} />, id: 0 },
-        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool1.png')} style={{ width: 35, height: 60 }} />, id: 1 },
         { icon: <Image source={require('../../assets/img/level9/game5/cottonwool2.png')} style={{ width: 35, height: 60 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool1.png')} style={{ width: 35, height: 60 }} />, id: 1 },
         { icon: <Image source={require('../../assets/img/level9/game5/cottonwool3.png')} style={{ width: 35, height: 60 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool4.png')} style={{ width: 35, height: 60 }} />, id: 4 },
-        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool5.png')} style={{ width: 35, height: 60 }} />, id: 5 },
         { icon: <Image source={require('../../assets/img/level9/game5/cottonwool6.png')} style={{ width: 35, height: 60 }} />, id: 6 },
-        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool7.png')} style={{ width: 35, height: 60 }} />, id: 7 },
         { icon: <Image source={require('../../assets/img/level9/game5/cottonwool8.png')} style={{ width: 35, height: 60 }} />, id: 8 },
+        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool4.png')} style={{ width: 35, height: 60 }} />, id: 4 },
+        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool0.png')} style={{ width: 35, height: 60 }} />, id: 0 },
+        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool5.png')} style={{ width: 35, height: 60 }} />, id: 5 },
+        { icon: <Image source={require('../../assets/img/level9/game5/cottonwool7.png')} style={{ width: 35, height: 60 }} />, id: 7 },
     ]
     const [arr, setArr] = useState([
         [

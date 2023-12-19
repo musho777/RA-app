@@ -1,8 +1,7 @@
-import { Dimensions, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { HedgehogSvg, RombSvg, Round, Trapezium, Tringle, VaseBig, VaseSmoll } from '../../assets/svg'
 import { useEffect, useState } from 'react'
-import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
 
@@ -42,47 +41,40 @@ export const Level8_4 = ({ navigation }) => {
         }, 100);
     }, [])
     const subject = [
-        { icon: <Round />, id: 1, active: false },
-        { icon: <Round />, id: 1, active: false },
-        { icon: <Round />, id: 1, active: false },
-        { icon: <Tringle />, id: 2, active: false },
-        { icon: <Tringle />, id: 2, active: false },
-        { icon: <Tringle />, id: 2, active: false },
-        { icon: <HedgehogSvg />, id: 3, active: false },
-        { icon: <HedgehogSvg />, id: 3, active: false },
-        { icon: <HedgehogSvg />, id: 3, active: false },
-        { icon: <Trapezium />, id: 4, active: false },
-        { icon: <Trapezium />, id: 4, active: false },
-        { icon: <Trapezium />, id: 4, active: false }
+        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level8/game4/ангар.png')} />, id: 5, active: false },
+        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level8/game4/будка.png')} />, id: 5, active: false },
+        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level8/game4/тумба.png')} />, id: 5, active: false },
+        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level8/game4/будка.png')} />, id: 5, active: false },
+        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level8/game4/ангар.png')} />, id: 5, active: false },
     ]
     const answer = [
-        { icon: <RombSvg />, id: 5, active: false },
-        { icon: <RombSvg />, id: 5, active: false },
-        { icon: <RombSvg />, id: 5, active: false },
-        { icon: <RombSvg />, id: 5, active: false },
-        { icon: <RombSvg />, id: 5, active: false },
+        { icon: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/level8/game4/дерево.png')} />, id: 1, active: false },
+        { icon: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/level8/game4/елка.png')} />, id: 2, active: false },
+        { icon: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/level8/game4/елкавысокая.png')} />, id: 3, active: false },
+        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level8/game4/мухомор.png')} />, id: 4, active: false },
+        { icon: <Image style={{ width: 70, height: 90 }} source={require('../../assets/img/level8/game4/низкийдомик.png')} />, id: 6, active: false },
+        { icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level8/game4/тумбавысокая.png')} />, id: 7, active: false },
+
+
     ]
     const [arr, setArr] = useState([])
 
     const [position, setPosition] = useState([
-        { x: 30, y: 80 },
-        { x: 175, y: 38 },
-        { x: 256, y: 38 },
-        { x: w - 100, y: h },
-        { x: w - 300, y: h - 30 },
-        { x: w - 120, y: 60 },
-        { x: w - 60, y: 141 },
-        { x: w - 30, y: 215 },
-        { x: w, y: 56 },
-        { x: 5, y: 22 },
+        { x: 30, y: 0 },
+        { x: 205, y: 0 },
+        { x: 356, y: 0 },
+        { x: w - 130, y: h },
+        { x: w - 300, y: h - 0 },
+        { x: w - 170, y: 60 },
+        { x: w - 60, y: 101 },
+        { x: w, y: 215 },
+        { x: w, y: 10 },
+        { x: 185, y: 70 },
+        { x: 385, y: 102 },
     ])
 
     useEffect(() => {
-        let arr1 = GetRandomItemsFromArray(subject, 6)
-        let arr2 = GetRandomItemsFromArray(answer, 4)
-        let item = GetRandomItemsFromArray(position, position.length)
-        setPosition(item)
-        let combain = arr1.concat(arr2)
+        let combain = subject.concat(answer)
         setArr(combain)
     }, [])
 
@@ -154,7 +146,7 @@ export const Level8_4 = ({ navigation }) => {
             }, 100);
             setTimeout(() => {
                 sound.stop()
-                navigation.navigate('Level8_5')
+                navigation.navigate('Level4_3')
                 musicSuccess.stop()
             }, 2000);
         }

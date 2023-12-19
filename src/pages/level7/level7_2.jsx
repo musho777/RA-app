@@ -104,12 +104,12 @@ export const Level7_2 = ({ navigation }) => {
     const [game1, setGame1] = useState(0)
 
     const [position, setPosition] = useState([
-        { x: 0, y: 3 },
-        { x: 20, y: 90 },
+        { x: 0, y: 0 },
+        { x: 20, y: 120 },
         { x: 0, y: 166 },
         { x: 190, y: 144 },
-        { x: 178, y: 0 },
-        { x: w - 130, y: 5 },
+        { x: 170, y: 0 },
+        { x: w - 140, y: 5 },
         { x: w - 100, y: 156 },
         { x: w, y: 59 },
         { x: w, y: 129 },

@@ -8,13 +8,17 @@ export const Level3_3 = ({ navigation }) => {
 
     const subjects = [
         { icon: <Image source={require('../../assets/img/0.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
-        { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/7.png')} style={{ width: 35, height: 50 }} />, id: 3, active: false },
-        { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/star.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/3.png')} style={{ width: 35, height: 50 }} />, id: 3, active: false },
-        { icon: <Image source={require('../../assets/img/heart.png')} style={{ width: 50, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/rhombus.png')} style={{ width: 50, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/9i.png')} style={{ width: 35, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/2i.png')} style={{ width: 35, height: 50 }} />, id: 3, active: false },
+        { icon: <Image source={require('../../assets/img/heart.png')} style={{ width: 35, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/8i.png')} style={{ width: 35, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/0.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
+        { icon: <Image source={require('../../assets/img/8i.png')} style={{ width: 35, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/6i.png')} style={{ width: 35, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/3.png')} style={{ width: 35, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/8i.png')} style={{ width: 35, height: 50 }} />, id: 3 },
+        { icon: <Image source={require('../../assets/img/0.png')} style={{ width: 35, height: 50 }} />, id: 2, active: false },
     ]
 
     const [disable, setDisable] = useState(false)
@@ -60,8 +64,7 @@ export const Level3_3 = ({ navigation }) => {
                 count = count + 1
             }
         })
-        console.log(count)
-        if (count == 1) {
+        if (count == 3) {
             setTimeout(() => {
                 setDisable(true)
                 musicSuccess.play();
@@ -101,9 +104,16 @@ export const Level3_3 = ({ navigation }) => {
                 }
             })}
         </View>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 120, marginTop: 30 }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 120, marginTop: 10 }}>
             {activeGame.map((elm, i) => {
-                if (i >= 4) {
+                if (i >= 4 && i < 8) {
+                    return <ImgButton disable={disable} border={elm.active ? 'green' : 'rgba(255, 111, 23, 0.5)'} onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
+                }
+            })}
+        </View>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 120, marginTop: 10 }}>
+            {activeGame.map((elm, i) => {
+                if (i >= 8) {
                     return <ImgButton disable={disable} border={elm.active ? 'green' : 'rgba(255, 111, 23, 0.5)'} onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
                 }
             })}

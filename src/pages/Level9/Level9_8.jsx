@@ -104,7 +104,7 @@ export const Level9_8 = ({ navigation }) => {
     }, [data])
 
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
-        <View style={{ flexDirection: 'row', justifyContent: "space-between", height: '100%' }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', height: '100%' }}>
             <View style={{ flexDirection: "row", width: '70%', justifyContent: "space-around", alignItems: "center" }}>
                 {data?.map((elm, i) => {
                     console.log(elm.active)
@@ -118,21 +118,21 @@ export const Level9_8 = ({ navigation }) => {
             </View>
             <View style={{ height: '100%', justifyContent: 'center', gap: 20 }}>
                 <View style={{ flexDirection: 'row', width: 80, justifyContent: 'space-between' }}>
-                    <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game8/1.1.png')} />
+                    <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level9/game8/1.1.png')} />
                     <TouchableOpacity onPress={() => setSelectedColor(3)}>
-                        <Image style={{ width: 20, height: 50 }} source={require('../../assets/img/level9/game8/1.2.png')} />
+                        <Image style={{ width: 40, height: 70 }} source={require('../../assets/img/level9/game8/1.2.png')} />
                     </TouchableOpacity>
                 </View>
                 <View style={{ flexDirection: 'row', width: 80, justifyContent: 'space-between' }}>
-                    <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game8/2.1.png')} />
+                    <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level9/game8/2.1.png')} />
                     <TouchableOpacity onPress={() => setSelectedColor(1)}>
-                        <Image style={{ width: 20, height: 50 }} source={require('../../assets/img/level9/game8/2.2.png')} />
+                        <Image style={{ width: 40, height: 70 }} source={require('../../assets/img/level9/game8/2.2.png')} />
                     </TouchableOpacity>
                 </View>
                 <View style={{ flexDirection: 'row', width: 80, justifyContent: 'space-between', justifyContent: 'space-between' }}>
-                    <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level9/game8/3.1.png')} />
+                    <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level9/game8/3.1.png')} />
                     <TouchableOpacity onPress={() => setSelectedColor(2)}>
-                        <Image style={{ width: 20, height: 50 }} source={require('../../assets/img/level9/game8/3.2.png')} />
+                        <Image style={{ width: 40, height: 70 }} source={require('../../assets/img/level9/game8/3.2.png')} />
                     </TouchableOpacity>
                 </View>
             </View>

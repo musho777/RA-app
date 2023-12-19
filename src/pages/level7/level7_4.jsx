@@ -6,12 +6,12 @@ const windowWidth = Dimensions.get('window').width;
 export const Level7_4 = ({ navigation }) => {
     let w = windowWidth - 80
     const position = [
-        { x: 350, y: 120 },
-        { x: 85, y: 120 },
-        { x: 600, y: 120 },
-        { x: w - 120, y: 180 },
+        { x: 400, y: 110 },
+        { x: 400, y: 250 },
+        { x: 500, y: 150 },
+        { x: w - 90, y: 170 },
         { x: 110, y: 230 },
-        { x: 20, y: 150 },
+        { x: 430, y: 170 },
     ]
     const [win, setWin] = useState(true)
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -46,12 +46,12 @@ export const Level7_4 = ({ navigation }) => {
         });
 
     const [img, setImg] = useState([
-        { icon: <Image source={require('../../assets/img/level7/game4/cov.png')} style={{ width: 100, height: 60 }} />, id: 6, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/cov.png')} style={{ width: 70, height: 50 }} />, id: 6, activ: false },
         { icon: <Image source={require('../../assets/img/level7/game4/gate.png')} style={{ width: 100, height: 50 }} />, id: 2, activ: false },
-        { icon: <Image source={require('../../assets/img/level7/game4/goat.png')} style={{ width: 100, height: 60 }} />, id: 5, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/goat.png')} style={{ width: 70, height: 60 }} />, id: 5, activ: false },
         { icon: <Image source={require('../../assets/img/level7/game4/horse.png')} style={{ width: 100, height: 70 }} />, id: 4, activ: false },
-        { icon: <Image source={require('../../assets/img/level7/game4/pig.png')} style={{ width: 100, height: 70 }} />, id: 3, activ: false },
-        { icon: <Image source={require('../../assets/img/level7/game4/rooster.png')} style={{ width: 70, height: 100 }} />, id: 1, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/pig.png')} style={{ width: 120, height: 70 }} />, id: 3, activ: false },
+        { icon: <Image source={require('../../assets/img/level7/game4/rooster.png')} style={{ width: 50, height: 80 }} />, id: 1, activ: false },
     ])
 
 
@@ -134,7 +134,7 @@ export const Level7_4 = ({ navigation }) => {
         setImg(item)
     }
 
-    return <LevelWrapper img2={require('../../assets/img/farm.png')} >
+    return <LevelWrapper img2={require('../../assets/img/farm.jpg')} >
         {img.map((elm, i) => {
             if (!elm.activ) {
                 return <TouchableOpacity style={{ left: position[i].x, top: position[i].y, position: 'absolute' }} key={i} onPress={() => Game(elm.id, i)}>

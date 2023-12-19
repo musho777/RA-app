@@ -19,10 +19,10 @@ export const Selection = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
             <View style={{ transform: [{ rotate: '90deg' }], marginTop: 100, marginLeft: -102 }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Level1_6')}>
+                {/* <TouchableOpacity onPress={() => navigation.navigate('Level1_6')}>
                     <Image style={styles.img} source={require('../../assets/img/6_1.png')} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Level1_5')}>
+                </TouchableOpacity> */}
+                <TouchableOpacity onPress={() => navigation.navigate('Level1_6')}>
                     <Image style={styles.img} source={require('../../assets/img/5_1.png')} />
                 </TouchableOpacity>
             </View>

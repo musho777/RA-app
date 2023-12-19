@@ -13,7 +13,7 @@ export const Level11_6 = ({ navigation }) => {
             [
                 { icone: <Image style={{ width: 80, height: 70 }} source={require('../../assets/img/level11/game6/воздзмей1лево.png')} />, id: 1, active: false },
                 { icone: <Image style={{ width: 80, height: 70 }} source={require('../../assets/img/level11/game6/воздзмей2лево.png')} />, id: 2, active: false },
-                { icone: <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level11/game6/воздзмей3лево.png')} />, id: 3, active: false }
+                { icone: <Image style={{ width: 50, height: 80 }} source={require('../../assets/img/level11/game6/воздзмей3лево.png')} />, id: 3, active: false }
                 // { icone: <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level11/game6/воздзмей3лево.png')} />, id: 4, active: false }
             ],
             [
@@ -24,14 +24,14 @@ export const Level11_6 = ({ navigation }) => {
         ],
         [
             [
-                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level11/game6/шоколадка1лево.png')} />, id: 1, active: false },
-                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level11/game6/шоколадка2лево.png')} />, id: 2, active: false },
-                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level11/game6/шоколадка3лево.png')} />, id: 3, active: false }
+                { icone: <Image style={{ width: 55, height: 70 }} source={require('../../assets/img/level11/game6/шоколадка1лево.png')} />, id: 1, active: false },
+                { icone: <Image style={{ width: 55, height: 70 }} source={require('../../assets/img/level11/game6/шоколадка2лево.png')} />, id: 2, active: false },
+                { icone: <Image style={{ width: 55, height: 70 }} source={require('../../assets/img/level11/game6/шоколадка3лево.png')} />, id: 3, active: false }
             ],
             [
-                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level11/game6/шоколадка1право.png')} />, id: 4, active: false },
-                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level11/game6/шоколадка2право.png')} />, id: 5, active: false },
-                { icone: <Image style={{ width: 55, height: 60 }} source={require('../../assets/img/level11/game6/шоколадка3право.png')} />, id: 6, active: false }
+                { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level11/game6/шоколадка1право.png')} />, id: 4, active: false },
+                { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level11/game6/шоколадка2право.png')} />, id: 5, active: false },
+                { icone: <Image style={{ width: 50, height: 70 }} source={require('../../assets/img/level11/game6/шоколадка3право.png')} />, id: 6, active: false }
             ]
         ],
 

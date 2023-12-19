@@ -21,12 +21,12 @@ export const Level11_4 = ({ navigation }) => {
             }
         });
     const [arr, setArr] = useState([
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/1.png')} />, id: 1, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/2.png')} />, id: 2, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/3.png')} />, id: 3, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/4.png')} />, id: 4, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/5.png')} />, id: 5, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/6.png')} />, id: 6, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, id: 1, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцзеленый.png')} />, id: 2, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцжелтый.png')} />, id: 3, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердечкооранж.png')} />, id: 4, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, id: 5, active: false },
+        // { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/6.png')} />, id: 6, active: false },
     ])
     const [answer, setAnswer] = useState([
         { icone: '', id: '' },

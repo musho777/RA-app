@@ -38,18 +38,19 @@ export const Level10_2 = ({ navigation }) => {
 
     const [arr, setArr] = useState([
         [
-            {
-                icon: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/o2.png')} />,
-                id: 3,
-                activ: false,
-                icon1: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/01.png')} />,
-            },
+
             {
                 icon: <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level10/game2/c1.png')} />,
                 id: 2,
                 activ: true,
                 icon1: <Image style={{ width: 60, height: 65 }} source={require('../../assets/img/level10/game2/c1.png')} />,
 
+            },
+            {
+                icon: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/o2.png')} />,
+                id: 3,
+                activ: false,
+                icon1: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/01.png')} />,
             },
             {
                 icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level10/game2/c1.png')} />,
@@ -68,7 +69,7 @@ export const Level10_2 = ({ navigation }) => {
         ],
         [
             {
-                icon: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/p1.png')} />,
+                icon: <Image style={{ width: 90, height: 60 }} source={require('../../assets/img/level10/game2/p1.png')} />,
                 id: 4,
                 activ: false,
                 icon1: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/p2.png')} />,
@@ -95,12 +96,7 @@ export const Level10_2 = ({ navigation }) => {
             }
         ],
         [
-            {
-                icon: <Image style={{ width: 110, height: 100 }} source={require('../../assets/img/level10/game2/r1.png')} />,
-                id: 4,
-                activ: false,
-                icon1: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level10/game2/r2.png')} />,
-            },
+
             {
                 icon: <Image style={{ width: 100, height: 65 }} source={require('../../assets/img/level10/game2/t1.png')} />,
                 id: 2,
@@ -113,6 +109,12 @@ export const Level10_2 = ({ navigation }) => {
                 activ: true,
                 icon1: <Image style={{ width: 110, height: 80 }} source={require('../../assets/img/level10/game2/t1.png')} />,
 
+            },
+            {
+                icon: <Image style={{ width: 110, height: 100 }} source={require('../../assets/img/level10/game2/r1.png')} />,
+                id: 4,
+                activ: false,
+                icon1: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level10/game2/r2.png')} />,
             },
             {
                 icon: <Image style={{ width: 110, height: 90 }} source={require('../../assets/img/level10/game2/t1.png')} />,
@@ -224,9 +226,9 @@ export const Level10_2 = ({ navigation }) => {
                 })}
             </View>
             <View style={{ flexDirection: "row", justifyContent: 'space-around', marginTop: 50 }}>
-                <TouchableOpacity onPress={() => Game1(1)}>
+                {/* <TouchableOpacity onPress={() => Game1(1)}>
                     <C1 />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <TouchableOpacity onPress={() => Game1(2)}>
                     <C2 />
                 </TouchableOpacity>
@@ -242,9 +244,9 @@ export const Level10_2 = ({ navigation }) => {
                 <TouchableOpacity onPress={() => Game1(6)}>
                     <C6 />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => Game1(7)}>
+                {/* <TouchableOpacity onPress={() => Game1(7)}>
                     <C7 />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         </View>
     </LevelWrapper>

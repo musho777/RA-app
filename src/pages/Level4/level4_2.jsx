@@ -43,48 +43,42 @@ export const Level4_2 = ({ navigation }) => {
     }, [])
     const subject = [
         { icon: <Round />, id: 1, active: false },
+        // { icon: <Round />, id: 1, active: false },
         { icon: <Round />, id: 1, active: false },
-        { icon: <Round />, id: 1, active: false },
         { icon: <Tringle />, id: 2, active: false },
+        // { icon: <Tringle />, id: 2, active: false },
         { icon: <Tringle />, id: 2, active: false },
-        { icon: <Tringle />, id: 2, active: false },
-        { icon: <HedgehogSvg />, id: 3, active: false },
-        { icon: <HedgehogSvg />, id: 3, active: false },
+        // { icon: <HedgehogSvg />, id: 3, active: false },
+        // { icon: <HedgehogSvg />, id: 3, active: false },
         { icon: <HedgehogSvg />, id: 3, active: false },
         { icon: <Trapezium />, id: 4, active: false },
-        { icon: <Trapezium />, id: 4, active: false },
-        { icon: <Trapezium />, id: 4, active: false }
+        // { icon: <Trapezium />, id: 4, active: false },
+        // { icon: <Trapezium />, id: 4, active: false }
     ]
     const answer = [
         { icon: <RombSvg />, id: 5, active: false },
         { icon: <RombSvg />, id: 5, active: false },
         { icon: <RombSvg />, id: 5, active: false },
         { icon: <RombSvg />, id: 5, active: false },
-        { icon: <RombSvg />, id: 5, active: false },
+        // { icon: <RombSvg />, id: 5, active: false },
     ]
     const [arr, setArr] = useState([])
 
     const [position, setPosition] = useState([
-        { x: 30, y: 60 },
+        { x: 30, y: 0 },
         { x: 175, y: 38 },
-        { x: 256, y: 38 },
-        { x: w - 100, y: h },
+        { x: 356, y: 38 },
+        { x: w - 180, y: h },
         { x: w - 300, y: h - 60 },
-        { x: w - 120, y: 60 },
-        { x: w - 60, y: 141 },
-        { x: w - 30, y: 215 },
-        { x: w, y: 56 },
-        { x: 5, y: 22 },
+        { x: w - 150, y: 60 },
+        { x: w - 100, y: 141 },
+        { x: w, y: 215 },
+        { x: w, y: 10 },
+        { x: 85, y: 72 },
     ])
 
     useEffect(() => {
-        // const randomNum = Math.floor(Math.random() * 4) + 3
-        let arr1 = GetRandomItemsFromArray(subject, 6)
-        // const randomNum1 = Math.floor(Math.random() * 3) + 2
-        let arr2 = GetRandomItemsFromArray(answer, 4)
-        let item = GetRandomItemsFromArray(position, position.length)
-        setPosition(item)
-        let combain = arr1.concat(arr2)
+        let combain = subject.concat(answer)
         setArr(combain)
     }, [])
 

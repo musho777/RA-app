@@ -21,13 +21,13 @@ export const Level8_5 = ({ navigation }) => {
         });
     const button = [
         { icon: <Image source={require('../../assets/img/level8/game5/shell0.png')} style={{ width: 50, height: 50 }} />, id: 0 },
-        { icon: <Image source={require('../../assets/img/level8/game5/shell1.png')} style={{ width: 50, height: 50 }} />, id: 1 },
-        { icon: <Image source={require('../../assets/img/level8/game5/shell2.png')} style={{ width: 50, height: 50 }} />, id: 2 },
         { icon: <Image source={require('../../assets/img/level8/game5/shell3.png')} style={{ width: 50, height: 50 }} />, id: 3 },
-        { icon: <Image source={require('../../assets/img/level8/game5/shell4.png')} style={{ width: 50, height: 50 }} />, id: 4 },
         { icon: <Image source={require('../../assets/img/level8/game5/shell5.png')} style={{ width: 50, height: 50 }} />, id: 5 },
-        { icon: <Image source={require('../../assets/img/level8/game5/shell6.png')} style={{ width: 50, height: 50 }} />, id: 6 },
+        { icon: <Image source={require('../../assets/img/level8/game5/shell4.png')} style={{ width: 50, height: 50 }} />, id: 4 },
         { icon: <Image source={require('../../assets/img/level8/game5/shell7.png')} style={{ width: 50, height: 50 }} />, id: 7 },
+        { icon: <Image source={require('../../assets/img/level8/game5/shell2.png')} style={{ width: 50, height: 50 }} />, id: 2 },
+        { icon: <Image source={require('../../assets/img/level8/game5/shell1.png')} style={{ width: 50, height: 50 }} />, id: 1 },
+        { icon: <Image source={require('../../assets/img/level8/game5/shell6.png')} style={{ width: 50, height: 50 }} />, id: 6 },
     ]
     const [arr, setArr] = useState([
         [

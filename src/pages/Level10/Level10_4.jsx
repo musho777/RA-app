@@ -1,4 +1,4 @@
-import { Image, View } from 'react-native'
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
@@ -34,12 +34,12 @@ export const Level10_4 = ({ navigation }) => {
         }, 100);
     }, [])
     const [arr, setArr] = useState([
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/1.png')} />, id: 1, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/2.png')} />, id: 2, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/3.png')} />, id: 3, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/4.png')} />, id: 4, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/5.png')} />, id: 5, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level10/game4/6.png')} />, id: 6, active: false },
+        { icone: <Image style={{ width: 60, height: 65, }} source={require('../../assets/img/level10/game4/1.png')} />, id: 1, active: false },
+        { icone: <Image style={{ width: 60, height: 75 }} source={require('../../assets/img/level10/game4/2.png')} />, id: 2, active: false },
+        { icone: <Image style={{ width: 60, height: 82 }} source={require('../../assets/img/level10/game4/3.png')} />, id: 3, active: false },
+        { icone: <Image style={{ width: 60, height: 83 }} source={require('../../assets/img/level10/game4/4.png')} />, id: 4, active: false },
+        { icone: <Image style={{ width: 60, height: 85 }} source={require('../../assets/img/level10/game4/5.png')} />, id: 5, active: false },
+        { icone: <Image style={{ width: 60, height: 90 }} source={require('../../assets/img/level10/game4/6.png')} />, id: 6, active: false },
     ])
     const [answer, setAnswer] = useState([
         { icone: '', id: '' },
@@ -114,12 +114,15 @@ export const Level10_4 = ({ navigation }) => {
                 })}
             </View>
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#9C3', borderRadius: 10 }}></View>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 0 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 0, alignItems: "flex-start" }}>
                 {arr.map((elm, i) => {
                     if (elm.active) {
                         return <View key={i} style={{ width: 100, height: 100 }}></View>
                     }
-                    return <ImgButton width={100} height={100} onPress={() => Game(elm.id, elm.icone, i,)} key={i} svg={elm.icone} />
+                    return <TouchableOpacity onPress={() => Game(elm.id, elm.icone, i,)} style={{ alignItems: "center", justifyContent: "flex-start", height: 100, width: 100 }} key={i}>
+                        {elm.icone}
+                    </TouchableOpacity>
+                    // <ImgButton width={100} height={100} onPress={() => Game(elm.id, elm.icone, i,)} key={i} svg={elm.icone} />
                 })}
             </View>
         </View>

@@ -81,7 +81,7 @@ export const Level7_5_1 = ({ navigation }) => {
     }, [arr])
     return <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')} >
         <View style={{ justifyContent: 'center', height: '100%', flexDirection: 'column' }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 238 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 200 }}>
                 {button[0].map((elm, i) => {
                     if (!arr.includes(elm)) {
                         return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
@@ -89,7 +89,7 @@ export const Level7_5_1 = ({ navigation }) => {
                     return <View key={i} style={{ width: 90, height: 90 }}></View>
                 })}
             </View>
-            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 238, paddingVertical: 1 }}>
+            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 200, paddingVertical: 10 }}>
                 {button[1].map((elm, i) => {
                     if (!arr.includes(elm)) {
                         return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
@@ -98,7 +98,7 @@ export const Level7_5_1 = ({ navigation }) => {
                     return <View key={i} style={{ width: 90, height: 90 }}></View>
                 })}
             </View>
-            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 238 }}>
+            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 200 }}>
                 {button[2].map((elm, i) => {
                     if (!arr.includes(elm)) {
                         return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />

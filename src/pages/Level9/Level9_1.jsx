@@ -5,6 +5,7 @@ import { Dimensions, Image, StyleSheet, View } from 'react-native'
 import { Input } from '../../components/Input'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
+import { MushRoom, MushRoom1 } from '../../assets/svg'
 
 
 const windowWidth = Dimensions.get('window').width;
@@ -54,19 +55,19 @@ export const Level9_1 = ({ navigation }) => {
         },
         {
             array: [
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 60, height: 80 }} />, id: 1 },
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 60, height: 80 }} />, id: 1 },
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 40, height: 50 }} />, id: 1 },
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 40, height: 50 }} />, id: 1 },
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 40, height: 50 }} />, id: 1 },
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 40, height: 50 }} />, id: 2 },
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 40, height: 50 }} />, id: 2 },
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 40, height: 50 }} />, id: 2 },
-                { icon: <Image source={require('../../assets/img/level9/game1/mushroom.png')} style={{ width: 40, height: 50 }} />, id: 2 },
+                { icon: <MushRoom1 />, id: 1 },
+                { icon: <MushRoom1 />, id: 1 },
+                { icon: <MushRoom1 />, id: 1 },
+                { icon: <MushRoom1 />, id: 1 },
+                { icon: <MushRoom1 />, id: 1 },
+                { icon: <MushRoom />, id: 2 },
+                { icon: <MushRoom />, id: 2 },
+                { icon: <MushRoom />, id: 2 },
+                { icon: <MushRoom />, id: 2 },
             ],
             ansewer: [
-                { icon: '', id: 2 },
-                { icon: '', id: 7 },
+                { icon: '', id: 5 },
+                { icon: '', id: 5 },
             ]
         },
 
@@ -83,14 +84,14 @@ export const Level9_1 = ({ navigation }) => {
 
     const [position, setPosition] = useState([
         { x: 0, y: 3 },
-        { x: 20, y: 90 },
-        { x: 0, y: h - 120 },
+        { x: 80, y: 80 },
+        { x: 0, y: h - 80 },
         { x: 190, y: 144 },
         { x: 178, y: 0 },
         { x: w - 130, y: 5 },
         { x: w - 100, y: h - 80 },
         { x: w, y: 59 },
-        { x: w, y: 129 },
+        { x: w + 100, y: 140 },
     ])
 
     const [activeArr, setActiveArr] = useState({})
