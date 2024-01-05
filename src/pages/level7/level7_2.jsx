@@ -3,7 +3,6 @@ import { LevelWrapper } from '../../components/LevelWrapper'
 import { NumberButton } from '../../components/NumberBuuton'
 import { Dimensions, Image, StyleSheet, View } from 'react-native'
 import { Input } from '../../components/Input'
-import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
 
 
@@ -105,12 +104,12 @@ export const Level7_2 = ({ navigation }) => {
 
     const [position, setPosition] = useState([
         { x: 0, y: 0 },
-        { x: 20, y: 120 },
-        { x: 0, y: 166 },
-        { x: 190, y: 144 },
-        { x: 170, y: 0 },
-        { x: w - 140, y: 5 },
-        { x: w - 100, y: 156 },
+        { x: 90, y: 50 },
+        { x: w, y: 106 },
+        { x: 0, y: 144 },
+        { x: 250, y: 0 },
+        { x: w - 10, y: 50 },
+        { x: w - 200, y: 156 },
         { x: w, y: 59 },
         { x: w, y: 129 },
     ])
@@ -121,8 +120,6 @@ export const Level7_2 = ({ navigation }) => {
     })
 
     useEffect(() => {
-        let item = GetRandomItemsFromArray(position, 9)
-        setPosition(item)
         setActiveArr(arr[game1])
         setAnswer(arr[game1].ansewer)
     }, [game1])

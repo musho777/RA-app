@@ -1,5 +1,5 @@
 import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native"
-
+// Level11_5
 export const Selection11 = ({ navigation }) => {
     return <View >
         <ImageBackground source={require('../../assets/img/2.png')} resizeMode="cover" style={styles.image}>
@@ -27,7 +27,7 @@ export const Selection11 = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.navigate('Level11_6')}>
                     <Image style={styles.img} source={require('../../assets/img/6_1.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity >
+                <TouchableOpacity onPress={() => navigation.navigate('Level11_5')}>
                     <Image style={styles.img} source={require('../../assets/img/5_1.png')} />
                 </TouchableOpacity>
             </View>

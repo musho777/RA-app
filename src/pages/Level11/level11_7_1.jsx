@@ -60,7 +60,6 @@ export const Level11_7_1 = ({ navigation }) => {
 
     const Play = (number, i) => {
         let item = { ...activeArr }
-        console.log(activeArr)
         if (number == 1) {
             item.arr[i].active = false
             let win = true

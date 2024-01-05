@@ -2,11 +2,7 @@ import { Dimensions, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { HedgehogSvg, RombSvg, Round, Trapezium, Tringle, VaseBig, VaseSmoll } from '../../assets/svg'
 import { useEffect, useState } from 'react'
-import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound'
-
-
-
 
 
 const windowWidth = Dimensions.get('window').width;
@@ -67,10 +63,10 @@ export const Level4_2 = ({ navigation }) => {
     const [position, setPosition] = useState([
         { x: 30, y: 0 },
         { x: 175, y: 38 },
-        { x: 356, y: 38 },
-        { x: w - 180, y: h },
-        { x: w - 300, y: h - 60 },
-        { x: w - 150, y: 60 },
+        { x: 390, y: 8 },
+        { x: w - 150, y: h },
+        { x: w, y: h - 90 },
+        { x: w - 200, y: 60 },
         { x: w - 100, y: 141 },
         { x: w, y: 215 },
         { x: w, y: 10 },

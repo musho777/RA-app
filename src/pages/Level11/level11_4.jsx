@@ -3,7 +3,6 @@ import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
-import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 
 export const Level11_4 = ({ navigation }) => {
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
@@ -21,82 +20,66 @@ export const Level11_4 = ({ navigation }) => {
             }
         });
     const [arr, setArr] = useState([
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, id: 1, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцзеленый.png')} />, id: 2, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцжелтый.png')} />, id: 3, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердечкооранж.png')} />, id: 4, active: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, id: 5, active: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцзеленый.png')} />, id: 2, },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, id: 5, },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцжелтый.png')} />, id: 3, },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердечкооранж.png')} />, id: 4, },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, id: 1, },
         // { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/6.png')} />, id: 6, active: false },
     ])
     const [answer, setAnswer] = useState([
-        { icone: '', id: '' },
-        { icone: '', id: '' },
-        { icone: '', id: '' },
-        { icone: '', id: '' },
-        { icone: '', id: '' },
-        { icone: '', id: '' },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: true },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: true },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: true },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: true },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: false },
+        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: false },
     ])
-    const Game = (id, icone, i) => {
-        let item = [...arr]
-        let temp = [...answer]
-        for (let i = 0; i < temp.length; i++) {
-            if (temp[i].id == '') {
-                temp[i].id = id
-                temp[i].icone = icone
-                break
-            }
-        }
-        item[i].active = true
+    const [count, setCount] = useState(1)
 
-        temp.map((elm, i) => {
-            if (temp[i].id != '' && temp[i].id != i + 1) {
-                temp.map((elm, i) => {
-                    elm.id = ''
-                    elm.icone = ''
-                })
-                item.map((elm, i) => {
-                    elm.active = false
-                })
-                setTimeout(() => {
-                    music.play();
-                }, 100);
-                setTimeout(() => {
-                    music.stop()
-                }, 2000);
-            }
-        })
-        setAnswer(temp)
-        setArr(item)
-    }
-
-    useEffect(() => {
-        let item = GetRandomItemsFromArray(arr, arr.length)
-        setArr(item)
-    }, [])
-
-    useEffect(() => {
-        let win = true
-        arr.map((elm, i) => {
-            if (!elm.active) {
-                win = false
-            }
-        })
-        if (win) {
+    const Game = (i) => {
+        let item = [...answer]
+        if (count == 1 && i == 4) {
+            item[i].show = true
+            setCount(count + 1)
             setTimeout(() => {
                 musicSuccess.play();
             }, 100);
             setTimeout(() => {
-                navigation.navigate('Level10_5')
                 musicSuccess.stop()
             }, 2000);
         }
-    }, [arr])
+        else if (count == 2 && i == 1) {
+            console.log('ssss2')
+            item[5].show = true
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                navigation.navigate('Level11_4_1')
+                musicSuccess.stop()
+            }, 2000);
+        }
+        else {
+            setTimeout(() => {
+                music.play();
+            }, 100);
+            setTimeout(() => {
+                music.stop()
+            }, 1000);
+        }
+        setAnswer(item)
+    }
+
 
     return <LevelWrapper img2={require('../../assets/img/10.png')} img={require('../../assets/img/10.1.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 0 }}>
                 {answer.map((elm, i) => {
-                    return <ImgButton width={100} height={100} disable={true} key={i} svg={elm.icone} />
+                    if (elm.show) {
+                        return <ImgButton width={100} height={100} disable={true} key={i} svg={elm.icone} />
+                    }
+                    return <ImgButton width={100} height={100} disable={true} key={i} svg={''} />
                 })}
             </View>
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#9C3', borderRadius: 10 }}></View>
@@ -105,7 +88,7 @@ export const Level11_4 = ({ navigation }) => {
                     if (elm.active) {
                         return <View key={i} style={{ width: 100, height: 100 }}></View>
                     }
-                    return <ImgButton width={100} height={100} onPress={() => Game(elm.id, elm.icone, i,)} key={i} svg={elm.icone} />
+                    return <ImgButton width={100} height={100} onPress={() => Game(i,)} key={i} svg={elm.icone} />
                 })}
             </View>
         </View>

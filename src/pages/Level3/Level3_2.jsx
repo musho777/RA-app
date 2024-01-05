@@ -145,14 +145,12 @@ export const Level3_2 = ({ navigation }) => {
     >
         <View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', height: '83%' }}>
-                <View style={{ width: '85%' }}>
+                <View style={{ width: '75%' }}>
                     {activeArr?.array?.length > 0 && activeArr.array.map((elm, i) => {
                         return <View key={i} style={{ position: 'absolute', left: position[i].x, top: position[i].y }}>
                             {elm.icon}
                         </View>
-                    })
-
-                    }
+                    })}
                 </View>
                 <View style={{ justifyContent: 'space-between', paddingLeft: 10, borderColor: "#FF7575", height: '50%' }}>
                     {value1 == '' ?

@@ -106,6 +106,8 @@ import { Level5_5_1 } from './src/pages/level5/level5_5_1';
 import { Level5_4_1 } from './src/pages/level5/level5_4_1';
 import { Selection11 } from './src/pages/Selection/Section11';
 import { Level4_8 } from './src/pages/Level4/level4_8';
+import { Level11_4_1 } from './src/pages/Level11/level11_4_1';
+import { Level11_5 } from './src/pages/Level11/level11_5';
 
 export default Navigation = () => {
 
@@ -868,12 +870,26 @@ export default Navigation = () => {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name="Level11_4_1"
+          component={Level11_4_1}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Level11_5"
+          component={Level11_5}
+          options={{
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>
   );
 };
-
+// Level11_4_1
 // Level11_7_1
 // Level11_2
 // Level11_1
@@ -881,3 +897,4 @@ export default Navigation = () => {
 // Level5_4_1
 // Selection11
 // Level4_8
+// Level11_5

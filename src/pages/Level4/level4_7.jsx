@@ -139,7 +139,7 @@ export const Level4_7 = ({ navigation }) => {
         if (win) {
             setTimeout(() => {
                 sound.stop()
-                navigation.navigate('LevelScreen')
+                navigation.navigate('Level4_8')
             }, 1000);
         }
     }, [show1, show])

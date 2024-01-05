@@ -21,6 +21,18 @@ export const Level7_5_1 = ({ navigation }) => {
                 return
             }
         });
+    const sound = new Sound('game75.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
+    useEffect(() => {
+        setTimeout(() => {
+            sound.play()
+        }, 100);
+    }, [])
     const [button, setButton] = useState([
         [
             { icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level7/game5/кувшинка1.png')} />, key: 1 },
@@ -76,12 +88,13 @@ export const Level7_5_1 = ({ navigation }) => {
     }
     useEffect(() => {
         if (arr.length == 9) {
+            sound.stop()
             navigation.navigate('Level7_6')
         }
     }, [arr])
     return <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')} >
         <View style={{ justifyContent: 'center', height: '100%', flexDirection: 'column' }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 200 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 130 }}>
                 {button[0].map((elm, i) => {
                     if (!arr.includes(elm)) {
                         return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
@@ -89,7 +102,7 @@ export const Level7_5_1 = ({ navigation }) => {
                     return <View key={i} style={{ width: 90, height: 90 }}></View>
                 })}
             </View>
-            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 200, paddingVertical: 10 }}>
+            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 130, paddingVertical: 10 }}>
                 {button[1].map((elm, i) => {
                     if (!arr.includes(elm)) {
                         return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />
@@ -98,7 +111,7 @@ export const Level7_5_1 = ({ navigation }) => {
                     return <View key={i} style={{ width: 90, height: 90 }}></View>
                 })}
             </View>
-            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 200 }}>
+            <View style={{ flexDirection: "row", justifyContent: 'space-around', paddingHorizontal: 130 }}>
                 {button[2].map((elm, i) => {
                     if (!arr.includes(elm)) {
                         return <ImgButton bg={'#A0CDD4'} border='rgb(54, 76, 156)' key={i} onPress={() => Game(elm)} svg={elm.icon} />

@@ -27,11 +27,11 @@ export const Level7_5 = ({ navigation }) => {
             }
         });
 
-    useEffect(() => {
-        setTimeout(() => {
-            sound.play()
-        }, 100);
-    }, [])
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         sound.play()
+    //     }, 100);
+    // }, [])
     const button = [
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива6.png')} />, key: 6 },
         { icon: <Image style={{ width: 70, height: 80 }} source={require('../../assets/img/level7/game5/слива0.png')} />, key: 0 },
@@ -125,7 +125,7 @@ export const Level7_5 = ({ navigation }) => {
     }, [game])
     return <LevelWrapper img2={require('../../assets/img/bg3.png')} img={require('../../assets/img/3bh.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 10 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
                 {activeGame.map((elm, i) => {
                     if (elm == '') {
                         return <ImgButton border='rgba(160, 205, 212, 0.4)' disable={true} key={i} svg={elm.icon} />

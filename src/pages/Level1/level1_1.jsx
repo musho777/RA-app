@@ -52,6 +52,7 @@ export const Level1_1 = ({ navigation }) => {
             setActiveGame(game[game1])
         }
         else {
+            console.log('2222')
             navigation.navigate('Level1_2')
             sound.stop()
         }
