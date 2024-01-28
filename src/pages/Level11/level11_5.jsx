@@ -1,7 +1,6 @@
-import { Image, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
-import { ImgButton } from '../../components/ImgButton'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Sound from 'react-native-sound'
 import { RR } from '../../assets/svg'
 import { NumberButton } from '../../components/NumberBuuton'
@@ -102,26 +101,39 @@ export const Level11_5 = ({ navigation }) => {
 
     return <LevelWrapper img2={require('../../assets/img/3y.png')} img={require('../../assets/img/3yy.png')} >
         <View style={{ justifyContent: 'space-around', height: '100%' }}>
-            <View style={{ justifyContent: "center", alignItems: 'center', width: '100%', position: 'relative' }}>
-                {answer[0] &&
-                    <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, position: 'absolute', top: 50, zIndex: 999, left: 400 }}>1</Text>
-                }
-                {answer[1] &&
-                    <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, position: 'absolute', top: 107, zIndex: 999, left: 425 }}>3</Text>
-                }
-                {answer[2] &&
-                    <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, position: 'absolute', top: 157, zIndex: 999, left: 387 }}>5</Text>
-                }
-                {answer[3] &&
-                    <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, position: 'absolute', top: 157, zIndex: 999, left: 355 }}>6</Text>
-                }
-                {answer[4] &&
-                    <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, position: 'absolute', top: 108, zIndex: 999, left: 305 }}>8</Text>
-                }
-                {answer[5] &&
-                    <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, position: 'absolute', top: 75, zIndex: 999, left: 315 }}>9</Text>
-                }
-                <RR />
+            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                <View style={{ justifyContent: "center", alignItems: 'center', width: 219, height: 217, position: 'relative' }}>
+                    <RR />
+                    <View style={{ width: 219, position: 'absolute' }}>
+                        {answer[0] ?
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: 0, zIndex: 999, left: 137 }}>1</Text> :
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: 0, zIndex: 999, left: 137 }}></Text>
+                        }
+                        {answer[1] ?
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: 40, zIndex: 999, left: 160 }}>3</Text> :
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: 40, zIndex: 999, left: 160 }}></Text>
+
+                        }
+                        {answer[2] ?
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: 70, zIndex: 999, left: 122 }}>5</Text> :
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: 70, zIndex: 999, left: 122 }}></Text>
+                        }
+                        {answer[3] ?
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: 50, zIndex: 999, left: 90 }}>6</Text> :
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: 50, zIndex: 999, left: 90 }}></Text>
+
+                        }
+                        {answer[4] ?
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: -20, zIndex: 999, left: 45 }}>8</Text> :
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: -40, zIndex: 999, left: 137 }}></Text>
+                        }
+                        {answer[5] ?
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: -75, zIndex: 999, left: 45 }}>9</Text> :
+                            <Text style={{ color: "#FFCC00", fontWeight: '900', fontSize: 15, top: -40, zIndex: 999, left: 137 }}></Text>
+                        }
+                    </View>
+
+                </View>
             </View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 {buuton.map((elm, i) => {

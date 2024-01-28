@@ -52,8 +52,8 @@ export const Level7_7 = ({ navigation }) => {
     const [position, setPosition] = useState(() => [
         { x: 48, y: 15 },
         { x: 292, y: 43 },
-        { x: 555, y: h - 150 },
-        { x: 434, y: 75 },
+        { x: w - 150, y: h - 150 },
+        { x: 434, y: 5 },
         { x: 44, y: 152 },
         { x: 304, y: h - 120 },
 

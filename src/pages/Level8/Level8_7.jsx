@@ -9,6 +9,7 @@ const windowHeight = Dimensions.get('window').height;
 export const Level8_7 = ({ navigation }) => {
 
     const [game1, setGame1] = useState(0)
+    const [nav, setNav] = useState(false)
 
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -68,7 +69,7 @@ export const Level8_7 = ({ navigation }) => {
             arr: [
                 { icon: <Image style={{ width: 90, height: 70 }} source={require('../../assets/img/level8/game7/caterpillar.png')} />, id: 2 },
                 { icon: <Image style={{ width: 95, height: 65 }} source={require('../../assets/img/level8/game7/frog.png')} />, id: 1 },
-                { icon: <Image style={{ width: 90, height: 70 }} source={require('../../assets/img/level8/game7/dragonfly.png')} />, id: 3 },
+                { icon: <Image style={{ width: 95, height: 65 }} source={require('../../assets/img/level8/game7/dragonfly.png')} />, id: 1 },
                 { icon: <Image style={{ width: 90, height: 70 }} source={require('../../assets/img/level8/game7/butterfly.png')} />, id: 4 },
             ]
 
@@ -97,6 +98,7 @@ export const Level8_7 = ({ navigation }) => {
     const [answer, setAnswr] = useState(false)
     const [activeArr, setActiveArr] = useState([])
 
+    const [count, setCount] = useState(0)
     const [answer1, setAnswer1] = useState(false)
 
     useEffect(() => {
@@ -107,34 +109,70 @@ export const Level8_7 = ({ navigation }) => {
                 sound1.play()
             }
             else {
-                sound3.play()
+                if (game1 == 2) {
+                    sound2.stop()
+                    sound.stop()
+                    sound3.stop()
+                    sound4.stop()
+
+                }
+                else {
+                    sound3.play()
+                }
             }
         }, 100)
         setTimeout(() => {
             setAnswr(true)
             if (game1 == 0) {
+                sound3.stop()
+                sound.stop()
                 sound2.play()
             }
             else {
-                sound.play()
+
+                sound2.stop()
+                sound3.stop()
+                if (!nav) {
+                    sound.play()
+                }
             }
         }, 3000);
         if (game1 == 1) {
             setTimeout(() => {
+                console.log(12)
+                sound.stop()
                 sound4.play()
+
                 setAnswer1(true)
             }, 6000);
+        }
+        if (game1 == 2) {
+            sound3.stop()
+            sound2.stop()
+            sound.stop()
+            sound4.stop()
         }
     }, [game1])
 
     const Play = (number) => {
+
         if (number == 1) {
+
             setTimeout(() => {
                 musicSuccess.play();
             }, 100);
-            setTimeout(() => {
+            if (game1 == 1) {
                 musicSuccess.stop()
+                sound4.stop()
+                sound3.stop()
+                sound2.stop()
+                sound.stop()
+            }
+            setTimeout(() => {
+
                 if (game1 == 1) {
+                    sound.stop()
+                    setNav(true)
                     navigation.navigate('Level8_8')
                 }
                 setGame1(game1 + 1)
@@ -150,11 +188,39 @@ export const Level8_7 = ({ navigation }) => {
         }
     }
 
+    const Play1 = (number, i) => {
+        let data = { ...activeArr }
+        if (number == 1) {
+            data.arr[i].id = 2
+            setActiveArr(data)
+            setCount(count + 1)
+            setTimeout(() => {
+                musicSuccess.play();
+            }, 100);
+            setTimeout(() => {
+                musicSuccess.stop()
+                if (count == 1) {
+                    setGame1(game1 + 1)
+                }
+            }, 2000);
+        }
+        else {
+            setTimeout(() => {
+                music.play();
+            }, 100);
+            setTimeout(() => {
+                music.stop()
+            }, 1000);
+        }
+    }
+
+
+
     if (!answer) {
         return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')}>
             <View style={[styles.block, { paddingHorizontal: 10 }]}>
                 {activeArr?.answer?.map((elm, i) => {
-                    return <ImgButton width={150} height={150} disable={true} key={i} svg={elm.icon} border={'rgba(153, 204, 51, 0.4)'} />
+                    return <ImgButton width={130} height={130} disable={true} key={i} svg={elm.icon} border={'rgba(153, 204, 51, 0.4)'} />
                 })}
             </View>
         </LevelWrapper>
@@ -163,7 +229,7 @@ export const Level8_7 = ({ navigation }) => {
         return <LevelWrapper img2={require('../../assets/img/1.2bg.png')} img={require('../../assets/img/1.2bgo.png')}>
             <View style={styles.block2}>
                 {activeArr?.arr.map((elm, i) => {
-                    return <ImgButton width={110} height={110} onPress={() => Play(elm.id)} key={i} svg={elm.icon} border={'rgba(153, 204, 51, 0.4)'} />
+                    return <ImgButton width={110} height={110} onPress={() => Play1(elm.id, i)} key={i} svg={elm.icon} border={'rgba(153, 204, 51, 0.4)'} />
                 })}
             </View>
         </LevelWrapper>
@@ -184,7 +250,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
         height: windowHeight - 80,
-        paddingHorizontal: 100
+        // paddingHorizontal: 100
     },
     block2: {
         alignItems: 'center',
@@ -192,6 +258,6 @@ const styles = StyleSheet.create({
         height: windowHeight - 80,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingHorizontal: 100,
+        // paddingHorizontal: 100,
     }
 })

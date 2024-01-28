@@ -52,23 +52,23 @@ export const Level6_8 = ({ navigation }) => {
     }, [])
     const Game = (id, i) => {
         let item = [...position]
-        if (id === selectCollor) {
-            item[i].active = true
-            setTimeout(() => {
-                musicSuccess.play();
-            }, 100);
-            setTimeout(() => {
-                musicSuccess.stop()
-            }, 2000);
-        }
-        else {
-            setTimeout(() => {
-                music.play();
-            }, 100);
-            setTimeout(() => {
-                music.stop()
-            }, 1000);
-        }
+        // if (id === 1) {
+        item[i].active = true
+        setTimeout(() => {
+            musicSuccess.play();
+        }, 100);
+        setTimeout(() => {
+            musicSuccess.stop()
+        }, 2000);
+        // }
+        // else {
+        //     setTimeout(() => {
+        //         music.play();
+        //     }, 100);
+        //     setTimeout(() => {
+        //         music.stop()
+        //     }, 1000);
+        // }
         setPosition(item)
     }
 
@@ -81,10 +81,9 @@ export const Level6_8 = ({ navigation }) => {
         })
         if (win) {
             sound.stop()
-
             setTimeout(() => {
                 navigation.navigate('LevelScreen')
-            }, 1000);
+            }, 2000);
 
 
         }
@@ -107,22 +106,10 @@ export const Level6_8 = ({ navigation }) => {
 
             })}
         <View style={{ alignItems: 'flex-end' }}>
-            <View style={{ flexDirection: 'row' }}>
-                <TouchableOpacity style={{ width: 90, height: 90 }} onPress={() => setSelectCollor(1)}>
-                    <Brown />
-                </TouchableOpacity>
-                <TouchableOpacity style={{ width: 90, height: 90 }} onPress={() => setSelectCollor(2)}>
-                    <Blue3 />
-                </TouchableOpacity>
-            </View>
-            <View style={{ flexDirection: 'row' }}>
-                <TouchableOpacity style={{ width: 90, height: 90 }} onPress={() => setSelectCollor(3)}>
-                    <Purple />
-                </TouchableOpacity>
-                <TouchableOpacity style={{ width: 90, height: 90 }} onPress={() => setSelectCollor(4)}>
-                    <Green2 />
-                </TouchableOpacity>
-            </View>
+            <TouchableOpacity onPress={() => setSelectCollor(1)}>
+                <Image style={{ width: 150, height: 100 }} source={require('../../assets/img/level6/game8/palitr.png')} />
+            </TouchableOpacity>
+
         </View>
     </LevelWrapper >
 }

@@ -47,7 +47,7 @@ export const Level10_2 = ({ navigation }) => {
 
             },
             {
-                icon: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/o2.png')} />,
+                icon: <Image style={{ width: 95, height: 67 }} source={require('../../assets/img/level10/game2/o2.png')} />,
                 id: 3,
                 activ: false,
                 icon1: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/01.png')} />,
@@ -75,10 +75,10 @@ export const Level10_2 = ({ navigation }) => {
                 icon1: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game2/p2.png')} />,
             },
             {
-                icon: <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level10/game2/k1.png')} />,
+                icon: <Image style={{ width: 50, height: 30 }} source={require('../../assets/img/level10/game2/k1.png')} />,
                 id: 2,
                 activ: true,
-                icon1: <Image style={{ width: 60, height: 60 }} source={require('../../assets/img/level10/game2/k1.png')} />,
+                icon1: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level10/game2/k1.png')} />,
             },
             {
                 icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level10/game2/k1.png')} />,
@@ -120,7 +120,7 @@ export const Level10_2 = ({ navigation }) => {
                 icon: <Image style={{ width: 110, height: 90 }} source={require('../../assets/img/level10/game2/t1.png')} />,
                 id: 2,
                 activ: true,
-                icon1: <Image style={{ width: 125, height: 90 }} source={require('../../assets/img/level10/game2/t1.png')} />,
+                icon1: <Image style={{ width: 120, height: 80 }} source={require('../../assets/img/level10/game2/t1.png')} />,
 
             }
         ],
@@ -141,14 +141,14 @@ export const Level10_2 = ({ navigation }) => {
                 icon: <Image style={{ width: 115, height: 80 }} source={require('../../assets/img/level10/game2/tr1.png')} />,
                 id: 2,
                 activ: true,
-                icon1: <Image style={{ width: 120, height: 105 }} source={require('../../assets/img/level10/game2/tr1.png')} />,
+                icon1: <Image style={{ width: 110, height: 95 }} source={require('../../assets/img/level10/game2/tr1.png')} />,
 
             },
             {
                 icon: <Image style={{ width: 110, height: 90 }} source={require('../../assets/img/level10/game2/tr1.png')} />,
                 id: 2,
                 activ: true,
-                icon1: <Image style={{ width: 135, height: 120 }} source={require('../../assets/img/level10/game2/tr1.png')} />,
+                icon1: <Image style={{ width: 120, height: 95 }} source={require('../../assets/img/level10/game2/tr1.png')} />,
 
             }
         ],
@@ -163,30 +163,37 @@ export const Level10_2 = ({ navigation }) => {
         setActiveArr(arr[game1])
     }, [game1])
 
-    const Game = (elm, i) => {
-        if (!elm.activ) {
-            setSelected({ id: elm.id, i: i })
-            setTimeout(() => {
-                musicSuccess.play();
-            }, 100);
-            setTimeout(() => {
-                musicSuccess.stop()
-            }, 2000);
-        }
-        else {
-            setTimeout(() => {
-                music.play();
-            }, 100);
-            setTimeout(() => {
-                music.stop()
-            }, 2000);
-        }
-    }
+    const [selectedIcon, setSelectedIcon] = useState('')
+
+    // const Game = (elm, i) => {
+    //     if (!elm.activ) {
+    //         setSelected({ id: elm.id, i: i })
+    //         setTimeout(() => {
+    //             musicSuccess.play();
+    //         }, 100);
+    //         setTimeout(() => {
+    //             musicSuccess.stop()
+    //         }, 2000);
+    //     }
+    //     else {
+    //         setTimeout(() => {
+    //             music.play();
+    //         }, 100);
+    //         setTimeout(() => {
+    //             music.stop()
+    //         }, 2000);
+    //     }
+    // }
+    console.log(selectedIcon)
 
     const Game1 = (i) => {
         let item = [...activArr]
-        if (i === selected.id) {
-            item[selected.i].activ = true
+        console.log(i)
+        if (i === selectedIcon) {
+            item.map((elm, i) => {
+                elm.activ = true
+            })
+            // item[i].activ = true
             setTimeout(() => {
                 musicSuccess.play();
             }, 100);
@@ -196,6 +203,7 @@ export const Level10_2 = ({ navigation }) => {
                     navigation.navigate('Level10_3')
                 }
                 else {
+                    setSelectedIcon('')
                     setGame1(game1 + 1)
                 }
                 musicSuccess.stop()
@@ -219,16 +227,16 @@ export const Level10_2 = ({ navigation }) => {
             <View style={{ flexDirection: 'row', justifyContent: "space-between" }}>
                 {activArr.map((elm, i) => {
                     if (!elm.activ) {
-                        return <ImgButton onPress={() => Game(elm, i)} width={150} height={150} key={i} svg={elm.icon} />
+                        return <ImgButton onPress={() => setSelectedIcon(elm.id)} width={130} height={130} key={i} svg={elm.icon} />
                     }
-                    return <ImgButton onPress={() => Game(elm, i)} width={150} height={150} key={i} svg={elm.icon1} />
+                    return <ImgButton onPress={() => setSelectedIcon(elm.id)} width={130} height={130} key={i} svg={elm.icon1} />
 
                 })}
             </View>
             <View style={{ flexDirection: "row", justifyContent: 'space-around', marginTop: 50 }}>
-                {/* <TouchableOpacity onPress={() => Game1(1)}>
+                <TouchableOpacity onPress={() => Game1(1)}>
                     <C1 />
-                </TouchableOpacity> */}
+                </TouchableOpacity>
                 <TouchableOpacity onPress={() => Game1(2)}>
                     <C2 />
                 </TouchableOpacity>

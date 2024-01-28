@@ -96,8 +96,8 @@ export const Butterfly = () => {
 
 export const MushRoom = () => {
     return <Svg
-        width={52}
-        height={50}
+        width={42}
+        height={40}
         viewBox="0 0 52 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -147,8 +147,8 @@ export const MushRoom = () => {
 
 export const MushRoom1 = () => {
     return <Svg
-        width={60}
-        height={80}
+        width={70}
+        height={90}
         viewBox="0 0 52 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

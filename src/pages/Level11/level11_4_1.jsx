@@ -1,10 +1,11 @@
-import { Image, View } from 'react-native'
+import { Dimensions, Image, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useState } from 'react'
 import Sound from 'react-native-sound'
 
 export const Level11_4_1 = ({ navigation }) => {
+    const windowWidth = Dimensions.get('window').width;
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -87,9 +88,9 @@ export const Level11_4_1 = ({ navigation }) => {
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 0 }}>
                 {answer.map((elm, i) => {
                     if (elm.show) {
-                        return <ImgButton width={70} height={70} disable={true} key={i} svg={elm.icone} />
+                        return <ImgButton width={windowWidth / 11} height={windowWidth / 11} disable={true} key={i} svg={elm.icone} />
                     }
-                    return <ImgButton width={70} height={70} disable={true} key={i} svg={''} />
+                    return <ImgButton width={windowWidth / 11} height={windowWidth / 11} disable={true} key={i} svg={''} />
                 })}
             </View>
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#9C3', borderRadius: 10 }}></View>

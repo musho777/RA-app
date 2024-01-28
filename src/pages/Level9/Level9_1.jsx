@@ -86,9 +86,9 @@ export const Level9_1 = ({ navigation }) => {
         { x: 0, y: 3 },
         { x: 80, y: 80 },
         { x: 0, y: h - 80 },
-        { x: 190, y: 144 },
+        { x: 270, y: 144 },
         { x: 178, y: 0 },
-        { x: w - 130, y: 5 },
+        { x: w - 50, y: 5 },
         { x: w - 100, y: h - 80 },
         { x: w, y: 59 },
         { x: w + 100, y: 140 },
@@ -97,8 +97,8 @@ export const Level9_1 = ({ navigation }) => {
     const [activeArr, setActiveArr] = useState({})
 
     useEffect(() => {
-        let item = GetRandomItemsFromArray(position, 9)
-        setPosition(item)
+        // let item = GetRandomItemsFromArray(position, 9)
+        // setPosition(item)
         setActiveArr(arr[game])
     }, [game])
 

@@ -86,7 +86,7 @@ export const Level7_2 = ({ navigation }) => {
                 { icon: <Image source={require('../../assets/img/level7/game2/composition3.png')} style={{ width: 70, height: 70 }} />, id: 3 },
             ],
             ansewer: [
-                { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/circleyellow.png')} />, id: 0 },
+                { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/squarepink.png')} />, id: 4 },
                 { icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level7/game2/triangleblue.png')} />, id: 4 },
                 { icon: <Image style={{ width: 50, height: 30 }} source={require('../../assets/img/level7/game2/ovallilac.png')} />, id: 0 },
             ]

@@ -90,7 +90,7 @@ export const Level9_2 = ({ navigation }) => {
 
     return <LevelWrapper img2={require('../../assets/img/bg4.png')} img={require('../../assets/img/4bg.png')} jC='center'>
         <View style={{ flexDirection: "row", justifyContent: 'space-around' }}>
-            <View style={{ gap: 7, width: '40%', height: '100%', flexDirection: "row", flexWrap: 'wrap' }}>
+            <View style={{ gap: 7, width: '55%', height: '100%', flexDirection: "row", flexWrap: 'wrap' }}>
                 {arr.map((elm, i) => {
                     if (!elm.active) {
                         return <ImgButton onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
@@ -101,7 +101,7 @@ export const Level9_2 = ({ navigation }) => {
                 })}
             </View>
             <View style={{ height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                <Image style={{ width: 300, height: 220 }} source={require('../../assets/img/level9/game2/c.png')} />
+                <Image style={{ width: 270, height: 220 }} source={require('../../assets/img/level9/game2/c.png')} />
             </View>
         </View>
     </LevelWrapper>

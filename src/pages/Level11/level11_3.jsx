@@ -1,4 +1,4 @@
-import { Image, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
@@ -7,6 +7,8 @@ import { Blue6 } from '../../assets/svg'
 import Sound from 'react-native-sound'
 
 export const Level11_3 = ({ navigation }) => {
+    const windowWidth = Dimensions.get('window').width;
+
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -36,93 +38,87 @@ export const Level11_3 = ({ navigation }) => {
     }, [])
     const [arr, setArr] = useState([
         {
-            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/4.png')} />,
+            icon1: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/4.png')} />,
             id: 3,
             active: true,
-            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/4.1.png')} />,
+            icon: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/4.1.png')} />,
         },
         {
-            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/7.1.png')} />,
+            icon1: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/7.1.png')} />,
             id: 2,
             active: true,
-            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/7.png')} />,
+            icon: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/7.png')} />,
         },
         {
-            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/9.png')} />,
             active: false,
             id: 1,
-            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/9голубая.png')} />,
+            icon1: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/9голубая.png')} />,
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/k1.png')} />,
+            icon: <Image style={{ width: windowWidth / 15, height: windowWidth / 15 }} source={require('../../assets/img/level10/game1/k1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
+            icon1: <Image style={{ width: windowWidth / 14, height: windowWidth / 20 }} source={require('../../assets/img/level10/game1/o2.png')} />,
         },
         {
-            icon: <Image style={{ width: 90, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
+            icon: <Image style={{ width: windowWidth / 14, height: windowWidth / 20 }} source={require('../../assets/img/level10/game1/p1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 60, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
+            icon1: <Image style={{ width: windowWidth / 14, height: windowWidth / 15 }} source={require('../../assets/img/level10/game1/r1.png')} />,
         },
         {
-            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/9.png')} />,
             active: false,
             id: 1,
-            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/9голубая.png')} />,
+            icon1: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/9голубая.png')} />,
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
+            icon: <Image style={{ width: windowWidth / 14, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/o2.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 60, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
+            icon1: <Image style={{ width: windowWidth / 14, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/r1.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
+            icon: <Image style={{ width: windowWidth / 14, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/r1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 60, height: 50 }} source={require('../../assets/img/level10/game1/r1.png')} />,
+            icon1: <Image style={{ width: windowWidth / 15, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/r1.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
+            icon: <Image style={{ width: windowWidth / 14, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/o2.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level10/game1/o2.png')} />,
+            icon1: <Image style={{ width: windowWidth / 14, height: windowWidth / 20 }} source={require('../../assets/img/level10/game1/o2.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/k1.png')} />,
+            icon: <Image style={{ width: windowWidth / 14, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/k1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/k1.png')} />,
+            icon1: <Image style={{ width: windowWidth / 12, height: windowWidth / 12 }} source={require('../../assets/img/level10/game1/k1.png')} />,
 
         },
         {
-            icon: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/level10/game1/9.png')} />,
+            icon: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/level10/game1/9.png')} />,
             active: false,
             id: 1,
-            icon1: <Image style={{ width: 40, height: 60 }} source={require('../../assets/img/9голубая.png')} />,
+            icon1: <Image style={{ width: windowWidth / 20, height: windowWidth / 14 }} source={require('../../assets/img/9голубая.png')} />,
         },
         {
             icon: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
             id: 3,
             active: true,
-            icon1: <Image style={{ width: 70, height: 50 }} source={require('../../assets/img/level10/game1/p1.png')} />,
+            icon1: <Image style={{ width: windowWidth / 17, height: windowWidth / 15 }} source={require('../../assets/img/level10/game1/p1.png')} />,
 
         },
     ])
 
-    useEffect(() => {
-        let item = GetRandomItemsFromArray(arr, arr.length)
-        setArr(item)
-    }, [])
-
     const [selctedColor, setSelectedColor] = useState()
 
     const Game = (elm, i) => {
-        console.log(elm.id)
         let item = [...arr]
         if (elm.id == selctedColor) {
             item[i].active = true
@@ -163,9 +159,9 @@ export const Level11_3 = ({ navigation }) => {
             <View style={{ width: '54%', height: '100%', flexDirection: 'row', gap: 10, flexWrap: 'wrap' }}>
                 {arr.map((elm, i) => {
                     if (!elm.active) {
-                        return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
+                        return <ImgButton width={windowWidth / 10} height={windowWidth / 10} onPress={() => Game(elm, i)} key={i} svg={elm.icon} />
                     }
-                    return <ImgButton width={80} height={80} onPress={() => Game(elm, i)} key={i} svg={elm.icon1} />
+                    return <ImgButton width={windowWidth / 10} height={windowWidth / 10} onPress={() => Game(elm, i)} key={i} svg={elm.icon1} />
 
                 })}
             </View>

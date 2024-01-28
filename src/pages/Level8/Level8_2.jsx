@@ -44,56 +44,56 @@ export const Level8_2 = ({ navigation }) => {
     const [arr, setArr] = useState([
         [
             {
-                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/ball.png')} />,
+                icon: <Image style={{ width: 70, height: 70 }} source={require('../../assets/img/level8/game2/ball.png')} />,
                 id: 1,
                 active: false,
                 icon1: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level8/game2/ball.png')} />,
 
             },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/binoculars.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/binoculars.png')} />,
                 id: 2,
                 active: false,
                 icon1: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level8/game2/binoculars.png')} />,
 
             },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/box.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/box.png')} />,
                 id: 2,
                 active: false,
                 icon1: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level8/game2/box.png')} />,
 
             },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/yarn.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/yarn.png')} />,
                 id: 1,
                 active: false,
                 icon1: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level8/game2/yarn.png')} />,
 
             },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/cubearch.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/cubearch.png')} />,
                 id: 2,
                 active: false,
                 icon1: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level8/game2/cubearch.png')} />,
 
             },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
                 id: 2,
                 active: false,
                 icon1: <Image style={{ width: 40, height: 50 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
 
             },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/yarn.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/yarn.png')} />,
                 id: 1,
                 active: false,
                 icon1: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level8/game2/yarn.png')} />,
 
             },
             {
-                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/ball.png')} />,
+                icon: <Image style={{ width: 80, height: 80 }} source={require('../../assets/img/level8/game2/ball.png')} />,
                 id: 1,
                 active: false,
                 icon1: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level8/game2/ball.png')} />,
@@ -102,27 +102,27 @@ export const Level8_2 = ({ navigation }) => {
         ],
 
         [
-            { icon: <Image style={{ width: 80, height: 120 }} source={require('../../assets/img/level8/game2/pyramid.png')} />, id: 2, active: false },
-            { icon: <Image style={{ width: 120, height: 90 }} source={require('../../assets/img/level8/game2/hammer.png')} />, id: 2, active: false },
+            { icon: <Image style={{ width: 70, height: 100 }} source={require('../../assets/img/level8/game2/pyramid.png')} />, id: 2, active: false },
+            { icon: <Image style={{ width: 100, height: 70 }} source={require('../../assets/img/level8/game2/hammer.png')} />, id: 2, active: false },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/box.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/box.png')} />,
                 id: 1,
                 active: false,
                 icon1: <Image style={{ width: 50, height: 50 }} source={require('../../assets/img/level8/game2/box.png')} />,
 
             },
-            { icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/yarn.png')} />, id: 2, active: false },
-            { icon: <Image style={{ width: 85, height: 120 }} source={require('../../assets/img/level8/game2/egg.png')} />, id: 2, active: false },
+            { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/yarn.png')} />, id: 2, active: false },
+            { icon: <Image style={{ width: 55, height: 80 }} source={require('../../assets/img/level8/game2/egg.png')} />, id: 2, active: false },
             { icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/hairdryer.png')} />, id: 2, active: false },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
                 id: 1,
                 active: false,
                 icon1: <Image style={{ width: 30, height: 30 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
 
             },
             {
-                icon: <Image style={{ width: 150, height: 150 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
+                icon: <Image style={{ width: 100, height: 100 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
                 id: 1, active: false,
                 icon1: <Image style={{ width: 30, height: 30 }} source={require('../../assets/img/level8/game2/cuttingboard.png')} />,
 
@@ -130,7 +130,7 @@ export const Level8_2 = ({ navigation }) => {
         ]
     ])
     const [count, setCount] = useState(0)
-    const [game1, setGame1] = useState(0)
+    const [game1, setGame1] = useState(1)
     const [activeGame, setActiveGame] = useState([])
     useEffect(() => {
         let item = 0
@@ -160,11 +160,11 @@ export const Level8_2 = ({ navigation }) => {
         { x: 1, y: 1 },
         { x: 100, y: 20 },
         { x: 15, y: h + 60 },
-        { x: w - 200, y: 175 },
-        { x: w - 120, y: -20 },
-        { x: w - 20, y: h + 50 },
-        { x: w - 100, y: h },
-        { x: 220, y: 200 },
+        { x: w - 80, y: 185 },
+        { x: w - 20, y: -20 },
+        { x: w - 20, y: h + 100 },
+        { x: w - 10, y: h },
+        { x: 180, y: 210 },
     ])
     const Game = (elm, i) => {
         let item = [...winArr]

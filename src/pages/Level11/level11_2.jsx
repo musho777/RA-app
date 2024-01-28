@@ -1,4 +1,4 @@
-import { View, Image } from 'react-native'
+import { View, Image, Dimensions } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
 import { NumberButton } from '../../components/NumberBuuton'
@@ -6,6 +6,8 @@ import { ImgButton } from '../../components/ImgButton'
 import Sound from 'react-native-sound'
 
 export const Level11_2 = ({ navigation }) => {
+    const windowWidth = Dimensions.get('window').width;
+
 
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
@@ -36,37 +38,37 @@ export const Level11_2 = ({ navigation }) => {
     }, [])
     const [arr, setArr] = useState([
         [
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/звезда.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 35, height: 35 }} source={require('../../assets/img/level11/game2/квадрат.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/прямоугольник.png')} />, id: 2 },
-            { icon: <Image style={{ width: 35, height: 35 }} source={require('../../assets/img/level11/game2/сердце.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 20, height: windowWidth / 20 }} source={require('../../assets/img/level11/game2/звезда.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/квадрат.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/прямоугольник.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/сердце.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
 
         ],
         [
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/ромб.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 35, height: 40 }} source={require('../../assets/img/level11/game2/трапеция.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/цветок.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/ромб.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/трапеция.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/цветок.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
 
 
         ],
         [
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/круг.png')} />, id: 2 },
-            { icon: <Image style={{ width: 35, height: 40 }} source={require('../../assets/img/level11/game2/шестиугольник.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/звезда.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/сердце.png')} />, id: 2 },
-            { icon: <Image style={{ width: 40, height: 40 }} source={require('../../assets/img/level11/game2/цветок.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/круг.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/шестиугольник.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/звезда.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/треугольник.png')} />, id: 1 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/сердце.png')} />, id: 2 },
+            { icon: <Image style={{ width: windowWidth / 22, height: windowWidth / 22 }} source={require('../../assets/img/level11/game2/цветок.png')} />, id: 2 },
 
         ]
     ])
@@ -139,9 +141,9 @@ export const Level11_2 = ({ navigation }) => {
     return <LevelWrapper img2={require('../../assets/img/3y.png')} img={require('../../assets/img/3yy.png')}>
         <View style={{ height: '100%', justifyContent: 'center', alignItems: "center", gap: 25 }}>
             <View style={{ flexDirection: 'row', gap: 20 }}>
-                <NumberButton bc={'rgba(255, 204, 0, 0.40)'} bg={'#FC0'} disabled={true} number={3} />
+                <NumberButton height={windowWidth / 14} bc={'rgba(255, 204, 0, 0.40)'} bg={'#FC0'} disabled={true} number={3} />
                 {arr[0].map((elm, i) => {
-                    return <ImgButton disable={winArr[0].length == 3} key={i} onPress={() => Game(elm.id, 0, i)} width={55} height={55}
+                    return <ImgButton disable={winArr[0].length == 3} key={i} onPress={() => Game(elm.id, 0, i)} width={windowWidth / 14} height={windowWidth / 14}
                         border={winArr[0].includes(i) ?
                             "green" :
                             'rgba(255, 204, 0, 0.40)'
@@ -150,9 +152,9 @@ export const Level11_2 = ({ navigation }) => {
                 })}
             </View>
             <View style={{ flexDirection: 'row', gap: 20 }}>
-                <NumberButton bc={'rgba(255, 204, 0, 0.40)'} bg={'#FC0'} disabled={true} number={4} />
+                <NumberButton height={windowWidth / 14} bc={'rgba(255, 204, 0, 0.40)'} bg={'#FC0'} disabled={true} number={4} />
                 {arr[1].map((elm, i) => {
-                    return <ImgButton key={i} disable={winArr[1].length == 4} onPress={() => Game(elm.id, 1, i)} width={55} height={55}
+                    return <ImgButton key={i} disable={winArr[1].length == 4} onPress={() => Game(elm.id, 1, i)} width={windowWidth / 14} height={windowWidth / 14}
                         border={winArr[1].includes(i) ?
                             "green" :
                             'rgba(255, 204, 0, 0.40)'
@@ -161,9 +163,9 @@ export const Level11_2 = ({ navigation }) => {
                 })}
             </View>
             <View style={{ flexDirection: 'row', gap: 20 }}>
-                <NumberButton bc={'rgba(255, 204, 0, 0.40)'} bg={'#FC0'} disabled={true} number={2} />
+                <NumberButton height={windowWidth / 14} bc={'rgba(255, 204, 0, 0.40)'} bg={'#FC0'} disabled={true} number={2} />
                 {arr[2].map((elm, i) => {
-                    return <ImgButton key={i} disable={winArr[2].length == 2} onPress={() => Game(elm.id, 2, i)} width={55} height={55}
+                    return <ImgButton key={i} disable={winArr[2].length == 2} onPress={() => Game(elm.id, 2, i)} width={windowWidth / 14} height={windowWidth / 14}
                         border={winArr[2].includes(i) ?
                             "green" :
                             'rgba(255, 204, 0, 0.40)'

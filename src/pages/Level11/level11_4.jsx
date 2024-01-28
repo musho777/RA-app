@@ -1,10 +1,12 @@
-import { Image, View } from 'react-native'
+import { Dimensions, Image, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { ImgButton } from '../../components/ImgButton'
 import { useEffect, useState } from 'react'
 import Sound from 'react-native-sound'
 
 export const Level11_4 = ({ navigation }) => {
+    const windowWidth = Dimensions.get('window').width;
+
     const music = new Sound('ding.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -20,20 +22,20 @@ export const Level11_4 = ({ navigation }) => {
             }
         });
     const [arr, setArr] = useState([
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцзеленый.png')} />, id: 2, },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, id: 5, },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцжелтый.png')} />, id: 3, },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердечкооранж.png')} />, id: 4, },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, id: 1, },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/полумесяцзеленый.png')} />, id: 2, },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, id: 5, },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/полумесяцжелтый.png')} />, id: 3, },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/сердечкооранж.png')} />, id: 4, },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, id: 1, },
         // { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/6.png')} />, id: 6, active: false },
     ])
     const [answer, setAnswer] = useState([
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: true },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: true },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: true },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: true },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: false },
-        { icone: <Image style={{ width: 60, height: 80 }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: false },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: true },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: true },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: true },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: true },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/полумесяцоранжевый.png')} />, show: false },
+        { icone: <Image style={{ width: windowWidth / 17, height: windowWidth / 12, }} source={require('../../assets/img/level11/game4/сердцезеленое.png')} />, show: false },
     ])
     const [count, setCount] = useState(1)
 
@@ -77,18 +79,18 @@ export const Level11_4 = ({ navigation }) => {
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 0 }}>
                 {answer.map((elm, i) => {
                     if (elm.show) {
-                        return <ImgButton width={100} height={100} disable={true} key={i} svg={elm.icone} />
+                        return <ImgButton width={windowWidth / 7} height={windowWidth / 7} disable={true} key={i} svg={elm.icone} />
                     }
-                    return <ImgButton width={100} height={100} disable={true} key={i} svg={''} />
+                    return <ImgButton width={windowWidth / 7} height={windowWidth / 7} disable={true} key={i} svg={''} />
                 })}
             </View>
             <View style={{ width: '100%', borderWidth: 2, borderColor: '#9C3', borderRadius: 10 }}></View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingHorizontal: 0 }}>
                 {arr.map((elm, i) => {
                     if (elm.active) {
-                        return <View key={i} style={{ width: 100, height: 100 }}></View>
+                        return <View key={i} style={{ width: windowWidth / 7, height: windowWidth / 7 }}></View>
                     }
-                    return <ImgButton width={100} height={100} onPress={() => Game(i,)} key={i} svg={elm.icone} />
+                    return <ImgButton width={windowWidth / 7} height={windowWidth / 7} onPress={() => Game(i,)} key={i} svg={elm.icone} />
                 })}
             </View>
         </View>

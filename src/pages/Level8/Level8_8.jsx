@@ -1,7 +1,6 @@
 import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { LevelWrapper } from '../../components/LevelWrapper'
 import { useEffect, useState } from 'react'
-import { GetRandomItemsFromArray } from '../../components/Funtion/getRandomItemsFromArray'
 import Sound from 'react-native-sound';
 
 const windowWidth = Dimensions.get('window').width;
@@ -27,6 +26,13 @@ export const Level8_8 = ({ navigation }) => {
         { x: w - 80, y: h, show: true },
     ])
 
+    const sound = new Sound('game871.mp3', Sound.MAIN_BUNDLE,
+        (error) => {
+            if (error) {
+                console.log('Error loading music:', error);
+                return
+            }
+        });
     const musicSuccess = new Sound('success.mp3', Sound.MAIN_BUNDLE,
         (error) => {
             if (error) {
@@ -44,10 +50,9 @@ export const Level8_8 = ({ navigation }) => {
 
     const [selectdItem, setSelectedItem] = useState('')
     useEffect(() => {
-        let newArr = GetRandomItemsFromArray(position, position.length)
-        // setPosition(newArr)
         setTimeout(function () {
             setGame(false)
+            sound.stop()
         }, 3000);
     }, [])
     const [game, setGame] = useState(true)
@@ -90,7 +95,6 @@ export const Level8_8 = ({ navigation }) => {
                 count = count + 1
             }
         })
-        console.log(count)
         if (count == 3) {
             let item = [...position]
             item[2].show = true
@@ -112,9 +116,7 @@ export const Level8_8 = ({ navigation }) => {
                 {position.map((elm, i) => {
                     if (elm.show)
                         if (!arr.includes(image[i].icon)) {
-                            // return <TouchableOpacity onPress={() => Game(image[i].id, image[i].icon)} key={i} style={{ position: 'absolute', left: elm.x, top: elm.y }}>
-                            //     {image[i].icon}
-                            // </TouchableOpacity>
+
                             return <TouchableOpacity onPress={() => setSelectedItem(image[i])} key={i} style={{ position: 'absolute', left: elm.x, top: elm.y }}>
                                 {image[i].icon}
                             </TouchableOpacity>
